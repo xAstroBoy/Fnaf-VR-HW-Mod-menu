@@ -161,6 +161,7 @@ void EnableAI()
 	}
 }
 
+
 void SetMonitorClock2(int hour)
 {
 	SDK::InitSdk("freddys-Win64-Shipping.exe", gObjectsOffset, gNamesOffset);
@@ -591,7 +592,6 @@ void ToggleWitheredsOff()
 }
 		
 
-	
 
 
 void TogglePuppetOn()
@@ -694,8 +694,6 @@ void TorchLevelCheats()
 
 void DestroyDoubleLightBlockers()
 {
-		SDK::InitSdk("freddys-Win64-Shipping.exe", gObjectsOffset, gNamesOffset);
-		auto LightBlocker2 = SDK::UObject::FindObjects<SDK::ALightBlockerDoubleFaced_C>();
 		
 		SDK::FVector Max_float_vector;
 
@@ -721,7 +719,8 @@ void DestroyDoubleLightBlockers()
 
 		while (nolightblocker)
 		{
-
+		SDK::InitSdk("freddys-Win64-Shipping.exe", gObjectsOffset, gNamesOffset);
+			auto LightBlocker2 = SDK::UObject::FindObjects<SDK::ALightBlockerDoubleFaced_C>();
 			if (!LightBlocker2.empty())
 			{
 				for (auto& mods : LightBlocker2)
@@ -757,13 +756,126 @@ void DestroyDoubleLightBlockers()
 			}
 			else
 			{
-				auto LightBlocker2 = SDK::UObject::FindObjects<SDK::ALightBlockerDoubleFaced_C>();
+				return;
 			}
 		}
 }
 		
-	
+void DestroyDoubleLightBlockers1()
+{
 
+	SDK::FVector Max_float_vector;
+
+	Max_float_vector.X = Max_float;
+	Max_float_vector.Y = Max_float;
+	Max_float_vector.Z = Max_float;
+
+	SDK::FVector Neg_float_vector;
+	Neg_float_vector.X = Neg_float;
+	Neg_float_vector.Y = Neg_float;
+	Neg_float_vector.Z = Neg_float;
+
+	SDK::FVector vector_zero;
+	vector_zero.X = 0.0f;
+	vector_zero.Y = 0.0f;
+	vector_zero.Z = 0.0f;
+
+	// BLANK ROTATION
+	SDK::FRotator Blank_Rotation;
+	Blank_Rotation.Pitch = 0.0f;
+	Blank_Rotation.Roll = 0.0f;
+	Blank_Rotation.Yaw = 0.0f;
+
+	while (nolightblocker)
+	{
+			SDK::InitSdk("freddys-Win64-Shipping.exe", gObjectsOffset, gNamesOffset);
+
+		auto LightBlocker2 = SDK::UObject::FindObjects<SDK::ADeskButton_Light_C>();
+		if (!LightBlocker2.empty())
+		{
+			for (auto& mods : LightBlocker2)
+			{
+				if (mods)
+				{
+					mods->LightblockVector = vector_zero;
+
+				}
+				if (mods->DoubleSidedLightBlocker != nullptr)
+				{
+					SDK::USceneComponent* DeleteMe;
+					DeleteMe = mods->DoubleSidedLightBlocker->K2_GetRootComponent();
+					mods->DoubleSidedLightBlocker->K2_DestroyComponent(DeleteMe);
+					mods->DoubleSidedLightBlocker->bActorIsBeingDestroyed = true;
+					mods->DoubleSidedLightBlocker->K2_DestroyActor();
+				}
+				if (mods->DoubleSidedLightBlocker->RootComponent != nullptr)
+				{
+					mods->DoubleSidedLightBlocker->RootComponent->bIsActive = false;
+					mods->DoubleSidedLightBlocker->RootComponent->bHiddenInGame = true;
+					mods->DoubleSidedLightBlocker->RootComponent->RelativeScale3D = vector_zero;
+					mods->DoubleSidedLightBlocker->RootComponent->bAbsoluteScale = zero;
+				}
+
+
+				if (ShowOutputLightBlock)
+				{
+					cout << "A DoubleLightblocker has been removed. \n";
+				}
+			}
+		}
+	}
+}
+
+
+void DestroyLightBlockers1()
+{
+
+	SDK::FVector Max_float_vector;
+
+	Max_float_vector.X = Max_float;
+	Max_float_vector.Y = Max_float;
+	Max_float_vector.Z = Max_float;
+
+	SDK::FVector Neg_float_vector;
+	Neg_float_vector.X = Neg_float;
+	Neg_float_vector.Y = Neg_float;
+	Neg_float_vector.Z = Neg_float;
+
+	SDK::FVector vector_zero;
+	vector_zero.X = 0.0f;
+	vector_zero.Y = 0.0f;
+	vector_zero.Z = 0.0f;
+
+	// BLANK ROTATION
+	SDK::FRotator Blank_Rotation;
+	Blank_Rotation.Pitch = 0.0f;
+	Blank_Rotation.Roll = 0.0f;
+	Blank_Rotation.Yaw = 0.0f;
+
+	while (nolightblocker)
+	{
+		SDK::InitSdk("freddys-Win64-Shipping.exe", gObjectsOffset, gNamesOffset);
+		auto LightBlocker2 = SDK::UObject::FindObjects<SDK::ATeleportSpot_BP_C>();
+		if (!LightBlocker2.empty())
+		{
+			for (auto& mods : LightBlocker2)
+			{
+				if (mods->LightBlockerID != nullptr)
+				{
+					SDK::USceneComponent* DeleteMe;
+					DeleteMe = mods->LightBlockerID->K2_GetRootComponent();
+					mods->LightBlockerID->K2_DestroyComponent(DeleteMe);
+					mods->LightBlockerID->bActorIsBeingDestroyed = true;
+					mods->LightBlockerID->K2_DestroyActor();
+				}
+				if (ShowOutputLightBlock)
+				{
+					cout << "A DoubleLightblocker has been removed. \n";
+				}
+			}
+		}
+	}
+}
 
 void DestroyLightBlockers()
 {
@@ -838,27 +950,6 @@ void DestroyLightBlockers()
 		}
 }
 
-
-
-
-
-
-//void DestroyDoubleLightblockersTrigger()
-//{
-//	if (nolightblocker)
-//	{
-//		DestroyDoubleLightBlockers();
-//	}
-//}
-
-
-//void DestroyLightBlockerTrigger()
-//{
-//	if (nolightblocker)
-//	{
-//		DestroyLightBlockers();
-//	}
-//}
 
 void DeactivateAI()
 {
@@ -1216,11 +1307,15 @@ void ConsoleInput()
 	{
 		thread FirstAntiLightblocker(DestroyDoubleLightBlockers);
 		thread SecondAntiLightblocker(DestroyLightBlockers);
+		thread ThirdAntiLightBlocker(DestroyDoubleLightBlockers1);
+		thread FourthAntiLightBlocker(DestroyLightBlockers1);
 		if (!nolightblocker)
 		{
 			nolightblocker = true;
 			FirstAntiLightblocker;
 			SecondAntiLightblocker;
+			ThirdAntiLightBlocker;
+			FourthAntiLightBlocker;
 			cout << "\n Removing all black walls in-game. \n";
 		}
 		else

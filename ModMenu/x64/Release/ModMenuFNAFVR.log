@@ -1,8 +1,8 @@
 ﻿D:\Development Stuff\VS2019\IDE\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(438,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
   dllmain.cpp
-C:\Users\marco\Documents\GitHub\Fnaf-VR-HW-Mod-menu\ModMenu\dllmain.cpp(1203,4): warning C4551:  function call missing argument list
+C:\Users\marco\Documents\GitHub\Fnaf-VR-HW-Mod-menu\ModMenu\dllmain.cpp(1294,4): warning C4551:  function call missing argument list
   Generating code
-  2 of 906 functions ( 0.2%) were compiled, the rest were copied from previous compilation.
+  4 of 1002 functions ( 0.4%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
     1 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
