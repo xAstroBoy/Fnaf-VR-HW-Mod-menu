@@ -33,7 +33,7 @@ private:
 
 public:
 	PxyLL(fs::path exec_path) {
-		fs::path pxyll_path = exec_path.replace_filename("FNAF HW Mod Menu.dll");
+		fs::path pxyll_path = exec_path.replace_filename("ModMenuFNAFVR.dll");
 		if (fs::exists(pxyll_path)) {
 			if (!inject(pxyll_path.string())) throw std::exception("Injection unsuccessful");
 		}

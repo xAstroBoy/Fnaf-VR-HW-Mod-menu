@@ -1,0 +1,12 @@
+﻿  dllmain.cpp
+C:\Users\marco\Documents\GitHub\Fnaf-VR-HW-Mod-menu\FNAFHWMod\dllmain.cpp(125,118): error C2664:  'BOOL SetConsoleTitleW(LPCWSTR)': cannot convert argument 1 from 'const char [91]' to 'LPCWSTR'
+C:\Users\marco\Documents\GitHub\Fnaf-VR-HW-Mod-menu\FNAFHWMod\dllmain.cpp(125,20): message :  Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+  mem.cpp
+  proc.cpp
+C:\Users\marco\Documents\GitHub\Fnaf-VR-HW-Mod-menu\FNAFHWMod\dllmain.cpp(1217,4): warning C4551:  function call missing argument list
+C:\Users\marco\Documents\GitHub\Fnaf-VR-HW-Mod-menu\FNAFHWMod\proc.cpp(18,8): error C2664:  'int _wcsicmp(const wchar_t *,const wchar_t *)': cannot convert argument 1 from 'CHAR [260]' to 'const wchar_t *'
+C:\Users\marco\Documents\GitHub\Fnaf-VR-HW-Mod-menu\FNAFHWMod\proc.cpp(18,28): message :  Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\Users\marco\Documents\GitHub\Fnaf-VR-HW-Mod-menu\FNAFHWMod\proc.cpp(43,8): error C2664:  'int _wcsicmp(const wchar_t *,const wchar_t *)': cannot convert argument 1 from 'char [256]' to 'const wchar_t *'
+  stdafx.cpp
+  Generating Code...
+C:\Users\marco\Documents\GitHub\Fnaf-VR-HW-Mod-menu\FNAFHWMod\proc.cpp(43,27): message :  Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
