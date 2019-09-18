@@ -970,7 +970,7 @@ void ConsoleInput()
 	if (input == "help")
 	{
 
-		cout << "\n For fullbright MOD ASK FOR SHADER HACK TO marcocorriero#1337 \n";
+		cout << "\n For fullbright MOD Download from here : https://github.com/marcocorriero/Fullbright-for-FNAF-VR \n";
 
 
 		cout << "FNAF VR Mod Console Available commands:\n";
@@ -1143,20 +1143,6 @@ void ConsoleInput()
 		ConsoleInput();
 	}
 
-	if (input == "debug_fullbright")
-	{
-		if (!ShowOutputLights)
-		{
-			cout << "\n Enabled Debugs Lights Outputs \n  ";
-			ShowOutputLights = true;
-		}
-		else
-		{
-			cout << "\n Deactivated Debugs Lights Outputs \n  ";
-			ShowOutputLights = false;
-		}
-		ConsoleInput();
-	}
 	if (input == "debug_cheats")
 	{
 		if (!showCheatOutput)
