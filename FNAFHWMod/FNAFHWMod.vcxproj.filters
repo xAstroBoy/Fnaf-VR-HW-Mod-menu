@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="SDK\AIModule_functions.cpp">
+      <Filter>CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\Basic.cpp">
+      <Filter>CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\BlackoutManager_functions.cpp">
+      <Filter>CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\Bedroom_ClockTime_functions.cpp">
+      <Filter>CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\CoreUObject_functions.cpp">
+      <Filter>CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\Engine_functions.cpp">
+      <Filter>CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\Flashlight_Battery_Finale_functions.cpp">
+      <Filter>CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\EngineSettings_functions.cpp">
+      <Filter>CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\Flashlight_Battery_functions.cpp">
+      <Filter>CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\FlashlightBase_functions.cpp">
+      <Filter>CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\FlashLight_Power_functions.cpp">
+      <Filter>CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\Floor_Flashlight_functions.cpp">
+      <Filter>CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\FNAFGM_FlashlightGame_functions.cpp">
+      <Filter>CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\FunWithNMBB_ABP_functions.cpp">
+      <Filter>CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\FNAFPlayerPawn_functions.cpp">
+      <Filter>CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\FunWithPlushtrap_ABP_functions.cpp">
+      <Filter>CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\HeadLight_functions.cpp">
+      <Filter>CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\IFlashLightInteractible_functions.cpp">
+      <Filter>CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\IFNAFVisionFilter_functions.cpp">
+      <Filter>CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\LightBlocker_functions.cpp">
+      <Filter>CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\LightManager_functions.cpp">
+      <Filter>CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\LightPropagationVolumeRuntime_functions.cpp">
+      <Filter>CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\LightSlider_functions.cpp">
+      <Filter>CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\Monitor_ClockTime_functions.cpp">
+      <Filter>CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\Vent_Repair_Power_functions.cpp">
+      <Filter>CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\SWGVR_functions.cpp">
+      <Filter>CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\Saul_MotionControllerPawn_functions.cpp">
+      <Filter>CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\PowerLVL_functions.cpp">
+      <Filter>CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\Power_functions.cpp">
+      <Filter>CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\OfficeAiBase-Bp_functions.cpp">
+      <Filter>CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\Office01_LightManager_Bp_functions.cpp">
+      <Filter>CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\Office03_Gamemanager_functions.cpp">
+      <Filter>CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\Office01_GameManager_functions.cpp">
+      <Filter>CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\Office01_Doors_functions.cpp">
+      <Filter>CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\Office01_Door_Bp_functions.cpp">
+      <Filter>CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\Office_BaseGamemanager_functions.cpp">
+      <Filter>CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\Office01_AiBase_BP_functions.cpp">
+      <Filter>CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\MonitorButton_MusicInteractable_BP_functions.cpp">
+      <Filter>CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="proc.cpp">
+      <Filter>CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="mem.cpp">
+      <Filter>CPP</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="SDK\CoreUObject_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="proc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dllmain.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{fcebab38-5032-483c-bbc2-254caf11e4b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CPP">
+      <UniqueIdentifier>{49417464-cfb3-4601-b614-9fad89f2cc6c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source">
+      <UniqueIdentifier>{84efe1d8-0602-481c-84f9-5fb15d8f46ef}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
