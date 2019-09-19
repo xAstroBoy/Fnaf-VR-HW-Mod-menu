@@ -141,7 +141,7 @@ void ConsoleWrite(string text)
 
 void EnableAI()
 {
-	SDK::InitSdk("freddys-Win64-Shipping.exe", gObjectsOffset, gNamesOffset);
+	
 	auto Office02 = SDK::UObject::FindObjects<SDK::AOfficeAiBase_Bp_C>();
 
 	if (!Office02.empty())
@@ -164,7 +164,7 @@ void EnableAI()
 
 void SetMonitorClock2(int hour)
 {
-	SDK::InitSdk("freddys-Win64-Shipping.exe", gObjectsOffset, gNamesOffset);
+	
 	auto MonitorClock = SDK::UObject::FindObjects<SDK::AMonitorBoard_BP_C>();
 	if (!MonitorClock.empty())
 	{
@@ -180,7 +180,7 @@ void SetMonitorClock2(int hour)
 
 void SetMonitorClock(int hour)
 {
-	SDK::InitSdk("freddys-Win64-Shipping.exe", gObjectsOffset, gNamesOffset);
+	
 	auto MonitorClock = SDK::UObject::FindObjects<SDK::AOffice_BaseGamemanager_C>();
 	if (!MonitorClock.empty())
 	{
@@ -197,7 +197,7 @@ void SetMonitorClock(int hour)
 
 void SetMonitorClockOff1(int hour)
 {
-	SDK::InitSdk("freddys-Win64-Shipping.exe", gObjectsOffset, gNamesOffset);
+	
 	auto MonitorClock = SDK::UObject::FindObjects<SDK::AOffice01_GameManager_C>();
 	if (!MonitorClock.empty())
 	{
@@ -213,7 +213,7 @@ void SetMonitorClockOff1(int hour)
 
 void SetMonitorClockOff2(int hour)
 {
-	SDK::InitSdk("freddys-Win64-Shipping.exe", gObjectsOffset, gNamesOffset);
+	
 	auto MonitorClock = SDK::UObject::FindObjects<SDK::AOffice02_GameManager_C>();
 	if (!MonitorClock.empty())
 	{
@@ -229,7 +229,7 @@ void SetMonitorClockOff2(int hour)
 
 void SetMonitorClockOff3(int hour)
 {
-	SDK::InitSdk("freddys-Win64-Shipping.exe", gObjectsOffset, gNamesOffset);
+	
 	auto MonitorClock = SDK::UObject::FindObjects<SDK::AOffice03_Gamemanager_C>();
 	if (!MonitorClock.empty())
 	{
@@ -251,7 +251,7 @@ void OfficeLVL1Cheat()
 {
 	while (cheatsactive)
 	{
-		SDK::InitSdk("freddys-Win64-Shipping.exe", gObjectsOffset, gNamesOffset);
+		
 		auto Office1Vars = SDK::UObject::FindObjects<SDK::AOffice01_GameManager_C>();
 		if (!Office1Vars.empty())
 		{
@@ -279,7 +279,7 @@ void OfficeLVL3Cheat()
 {
 	while (cheatsactive)
 	{
-		SDK::InitSdk("freddys-Win64-Shipping.exe", gObjectsOffset, gNamesOffset);
+		
 		auto Office1Vars = SDK::UObject::FindObjects<SDK::AOffice_BaseGamemanager_C>();
 		if (!Office1Vars.empty())
 		{
@@ -308,7 +308,7 @@ void MonitorBoardCheat()
 {
 	while (cheatsactive)
 	{
-		SDK::InitSdk("freddys-Win64-Shipping.exe", gObjectsOffset, gNamesOffset);
+		
 		auto Office1Vars = SDK::UObject::FindObjects<SDK::AMonitorBoard_BP_C>();
 		if (!Office1Vars.empty())
 		{
@@ -332,7 +332,7 @@ void MonitorBoardCheat()
 
 void batteryoff1(float powerbattery)
 {
-		SDK::InitSdk("freddys-Win64-Shipping.exe", gObjectsOffset, gNamesOffset);
+		
 		auto Office1Vars = SDK::UObject::FindObjects<SDK::AOffice01_GameManager_C>();
 		if (!Office1Vars.empty())
 		{
@@ -356,7 +356,7 @@ void batteryoff1(float powerbattery)
 
 void ToggleWitheredChicaOn()
 {
-	SDK::InitSdk("freddys-Win64-Shipping.exe", gObjectsOffset, gNamesOffset);
+	
 	auto Office1Vars = SDK::UObject::FindObjects<SDK::AOffice02_WitheredChica_C>();
 	if (!Office1Vars.empty())
 	{
@@ -376,7 +376,7 @@ void ToggleWitheredChicaOn()
 
 void ToggleWitheredChicaOff()
 {
-	SDK::InitSdk("freddys-Win64-Shipping.exe", gObjectsOffset, gNamesOffset);
+	
 	auto Office1Vars = SDK::UObject::FindObjects<SDK::AOffice02_WitheredChica_C>();
 	if (!Office1Vars.empty())
 	{
@@ -394,7 +394,7 @@ void ToggleWitheredChicaOff()
 
 void ToggleWitheredFreddyOn()
 {
-	SDK::InitSdk("freddys-Win64-Shipping.exe", gObjectsOffset, gNamesOffset);
+	
 	auto Office1Vars = SDK::UObject::FindObjects<SDK::AOffice02_WitheredFreddy_C>();
 	if (!Office1Vars.empty())
 	{
@@ -414,7 +414,7 @@ void ToggleWitheredFreddyOn()
 
 void ToggleWitheredFreddyOff()
 {
-	SDK::InitSdk("freddys-Win64-Shipping.exe", gObjectsOffset, gNamesOffset);
+	
 	auto Office1Vars = SDK::UObject::FindObjects<SDK::AOffice02_WitheredFreddy_C>();
 	if (!Office1Vars.empty())
 	{
@@ -432,7 +432,7 @@ void ToggleWitheredFreddyOff()
 
 void ToggleWitheredBonnieOn()
 {
-	SDK::InitSdk("freddys-Win64-Shipping.exe", gObjectsOffset, gNamesOffset);
+	
 	auto Office1Vars = SDK::UObject::FindObjects<SDK::AOffice02_WitheredBonnie_C>();
 	if (!Office1Vars.empty())
 	{
@@ -452,7 +452,7 @@ void ToggleWitheredBonnieOn()
 
 void ToggleWitheredBonnieOff()
 {
-	SDK::InitSdk("freddys-Win64-Shipping.exe", gObjectsOffset, gNamesOffset);
+	
 	auto Office1Vars = SDK::UObject::FindObjects<SDK::AOffice02_WitheredBonnie_C>();
 	if (!Office1Vars.empty())
 	{
@@ -471,7 +471,7 @@ void ToggleWitheredBonnieOff()
 
 //void ToggleEnnardsOn()
 //{
-//	SDK::InitSdk("freddys-Win64-Shipping.exe", gObjectsOffset, gNamesOffset);
+//	
 //	auto Office1Vars = SDK::UObject::FindObjects<SDK::AOffice02_CircusBaby_C>();
 //	if (!Office1Vars.empty())
 //	{
@@ -490,7 +490,7 @@ void ToggleWitheredBonnieOff()
 //
 //void ToggleEnnardsOff()
 //{
-//	SDK::InitSdk("freddys-Win64-Shipping.exe", gObjectsOffset, gNamesOffset);
+//	
 //	auto Office1Vars = SDK::UObject::FindObjects<SDK::>();
 //	if (!Office1Vars.empty())
 //	{
@@ -509,7 +509,7 @@ void ToggleWitheredBonnieOff()
 
 void ToggleWitheredFoxyOn()
 {
-	SDK::InitSdk("freddys-Win64-Shipping.exe", gObjectsOffset, gNamesOffset);
+	
 	auto Office1Vars = SDK::UObject::FindObjects<SDK::AOffice02_WitheredFoxy_C>();
 	if (!Office1Vars.empty())
 	{
@@ -532,7 +532,7 @@ void ToggleWitheredFoxyOn()
 
 void ToggleWitheredFoxyOff()
 {
-	SDK::InitSdk("freddys-Win64-Shipping.exe", gObjectsOffset, gNamesOffset);
+	
 	auto Office1Vars = SDK::UObject::FindObjects<SDK::AOffice02_WitheredFoxy_C>();
 	if (!Office1Vars.empty())
 	{
@@ -555,7 +555,7 @@ void ToggleWitheredFoxyOff()
 
 void ToggleWitheredsOn()
 {
-	SDK::InitSdk("freddys-Win64-Shipping.exe", gObjectsOffset, gNamesOffset);
+	
 	auto Office1Vars = SDK::UObject::FindObjects<SDK::AOffice02_GameManager_C>();
 	if (!Office1Vars.empty())
 	{
@@ -574,7 +574,7 @@ void ToggleWitheredsOn()
 				
 void ToggleWitheredsOff()
 {
-	SDK::InitSdk("freddys-Win64-Shipping.exe", gObjectsOffset, gNamesOffset);
+	
 	auto Office1Vars = SDK::UObject::FindObjects<SDK::AOffice02_GameManager_C>();
 	if (!Office1Vars.empty())
 	{
@@ -597,7 +597,7 @@ void ToggleWitheredsOff()
 void TogglePuppetOn()
 {
 
-			SDK::InitSdk("freddys-Win64-Shipping.exe", gObjectsOffset, gNamesOffset);
+			
 			auto Office1Vars = SDK::UObject::FindObjects<SDK::AOffice02_GameManager_C>();
 			if (!Office1Vars.empty())
 			{
@@ -620,7 +620,7 @@ void TogglePuppetOn()
 void TogglePuppetOff()
 {
 
-			SDK::InitSdk("freddys-Win64-Shipping.exe", gObjectsOffset, gNamesOffset);
+			
 			auto Office1Vars = SDK::UObject::FindObjects<SDK::AOffice02_GameManager_C>();
 			if (!Office1Vars.empty())
 			{
@@ -644,7 +644,7 @@ void TogglePuppetOff()
 //void NoFuckingBlackWalls()
 //{
 //
-//			SDK::InitSdk("freddys-Win64-Shipping.exe", gObjectsOffset, gNamesOffset);
+//			
 //			auto Office1Vars = SDK::UObject::FindObjects<SDK::AOffice02_GameManager_C>();
 //			if (!Office1Vars.empty())
 //			{
@@ -668,7 +668,7 @@ void TorchLevelCheats()
 {
 	while (cheatsactive)
 	{
-		SDK::InitSdk("freddys-Win64-Shipping.exe", gObjectsOffset, gNamesOffset);
+		
 		auto flashlight = SDK::UObject::FindObjects<SDK::AFNAFGM_FlashlightGame_C>();
 		if (!flashlight.empty())
 		{
@@ -719,8 +719,8 @@ void DestroyDoubleLightBlockers()
 
 		while (nolightblocker)
 		{
-		SDK::InitSdk("freddys-Win64-Shipping.exe", gObjectsOffset, gNamesOffset);
-			auto LightBlocker2 = SDK::UObject::FindObjects<SDK::ALightBlockerDoubleFaced_C>();
+		
+ 			auto LightBlocker2 = SDK::UObject::FindObjects<SDK::ALightBlockerDoubleFaced_C>();
 			if (!LightBlocker2.empty())
 			{
 				for (auto& mods : LightBlocker2)
@@ -788,7 +788,7 @@ void DestroyDoubleLightBlockers1()
 
 	while (nolightblocker)
 	{
-			SDK::InitSdk("freddys-Win64-Shipping.exe", gObjectsOffset, gNamesOffset);
+			
 
 		auto LightBlocker2 = SDK::UObject::FindObjects<SDK::ADeskButton_Light_C>();
 		if (!LightBlocker2.empty())
@@ -854,7 +854,7 @@ void DestroyLightBlockers1()
 
 	while (nolightblocker)
 	{
-		SDK::InitSdk("freddys-Win64-Shipping.exe", gObjectsOffset, gNamesOffset);
+		
 		auto LightBlocker2 = SDK::UObject::FindObjects<SDK::ATeleportSpot_BP_C>();
 		if (!LightBlocker2.empty())
 		{
@@ -905,7 +905,7 @@ void DestroyLightBlockers()
 
 		while (nolightblocker)
 		{
-			SDK::InitSdk("freddys-Win64-Shipping.exe", gObjectsOffset, gNamesOffset);
+			
 			auto LightBlocker = SDK::UObject::FindObjects<SDK::ALightBlocker_C>();
 			if (!LightBlocker.empty())
 			{
@@ -953,7 +953,7 @@ void DestroyLightBlockers()
 
 void DeactivateAI()
 {
-	SDK::InitSdk("freddys-Win64-Shipping.exe", gObjectsOffset, gNamesOffset);
+	
 
 	auto Office02 = SDK::UObject::FindObjects<SDK::AOfficeAiBase_Bp_C>();
 
@@ -976,7 +976,7 @@ void DeactivateAI()
 
 void InitiateSaveGen()
 {
-	SDK::InitSdk("freddys-Win64-Shipping.exe", gObjectsOffset, gNamesOffset);
+	
 
 	auto SaulMotion = SDK::UObject::FindObjects<SDK::ASaul_MotionControllerPawn_C>();
 
@@ -1014,7 +1014,7 @@ void SetClockTime(int Timer)
 
 void EnableDebugView()
 {
-	SDK::InitSdk("freddys-Win64-Shipping.exe", gObjectsOffset, gNamesOffset);
+	
 	justsayonce = true;
 	auto SceneComponent = SDK::UObject::FindObjects<SDK::USceneComponent>();
 
@@ -1032,7 +1032,7 @@ void EnableDebugView()
 
 void DeactivateDebugView()
 {
-	SDK::InitSdk("freddys-Win64-Shipping.exe", gObjectsOffset, gNamesOffset);
+	
 	auto SceneComponent = SDK::UObject::FindObjects<SDK::USceneComponent>();
 
 	if (!SceneComponent.empty())
@@ -1345,9 +1345,13 @@ DWORD WINAPI OnAttach(const HMODULE hModule)
 	allocate_console();
 	Sleep(6000);
 
+	SDK::InitSdk("freddys-Win64-Shipping.exe", gObjectsOffset, gNamesOffset);
 	cout << "\nThis mod has been coded by marcocorriero#0001, enjoy! \n";
 	cout << " FNAF MISC MODS V" << version + "\n";
 	cout << " FOR STEAM VERSION ONLY! \n";
+
+
+
 	//InitiateSaveGen();
 	
 

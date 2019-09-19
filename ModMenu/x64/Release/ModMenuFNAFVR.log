@@ -2,8 +2,8 @@
   dllmain.cpp
 C:\Users\marco\Documents\GitHub\Fnaf-VR-HW-Mod-menu\ModMenu\dllmain.cpp(1294,4): warning C4551:  function call missing argument list
   Generating code
-  4 of 1002 functions ( 0.4%) were compiled, the rest were copied from previous compilation.
+  36 of 1002 functions ( 3.6%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    1 functions had inline decision re-evaluated but remain unchanged
+    0 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   ModMenuFNAFVR.vcxproj -> C:\Users\marco\Documents\GitHub\Fnaf-VR-HW-Mod-menu\ModMenu\..\Latest Build\ModMenuFNAFVR.dll
