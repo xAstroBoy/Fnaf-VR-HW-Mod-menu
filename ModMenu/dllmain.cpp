@@ -249,7 +249,7 @@ void SetMonitorClockOff3(int hour)
 
 void OfficeLVL1Cheat()
 {
-	while (cheatsactive)
+	do
 	{
 		
 		auto Office1Vars = SDK::UObject::FindObjects<SDK::AOffice01_GameManager_C>();
@@ -271,13 +271,13 @@ void OfficeLVL1Cheat()
 				}
 			}
 		}
-	}
+	} while (cheatsactive);
 }
 
 
 void OfficeLVL3Cheat()
 {
-	while (cheatsactive)
+	do
 	{
 		
 		auto Office1Vars = SDK::UObject::FindObjects<SDK::AOffice_BaseGamemanager_C>();
@@ -300,13 +300,14 @@ void OfficeLVL3Cheat()
 				}
 			}
 		}
-	}
+	} while (cheatsactive);
+
 }
 
 
 void MonitorBoardCheat()
 {
-	while (cheatsactive)
+	do
 	{
 		
 		auto Office1Vars = SDK::UObject::FindObjects<SDK::AMonitorBoard_BP_C>();
@@ -326,7 +327,8 @@ void MonitorBoardCheat()
 					}
 				}
 			}
-		}
+	} while (cheatsactive);
+
 	}
 
 
@@ -666,7 +668,7 @@ void TogglePuppetOff()
 
 void TorchLevelCheats()
 {
-	while (cheatsactive)
+	do
 	{
 		
 		auto flashlight = SDK::UObject::FindObjects<SDK::AFNAFGM_FlashlightGame_C>();
@@ -687,78 +689,74 @@ void TorchLevelCheats()
 				}
 			}
 		}
-	}
+	} while (cheatsactive);
+
 }
 
 
 
 void DestroyDoubleLightBlockers()
 {
-		
-		SDK::FVector Max_float_vector;
 
-		Max_float_vector.X = Max_float;
-		Max_float_vector.Y = Max_float;
-		Max_float_vector.Z = Max_float;
+	SDK::FVector Max_float_vector;
 
-		SDK::FVector Neg_float_vector;
-		Neg_float_vector.X = Neg_float;
-		Neg_float_vector.Y = Neg_float;
-		Neg_float_vector.Z = Neg_float;
+	Max_float_vector.X = Max_float;
+	Max_float_vector.Y = Max_float;
+	Max_float_vector.Z = Max_float;
 
-		SDK::FVector vector_zero;
-		vector_zero.X = 0.0f;
-		vector_zero.Y = 0.0f;
-		vector_zero.Z = 0.0f;
+	SDK::FVector Neg_float_vector;
+	Neg_float_vector.X = Neg_float;
+	Neg_float_vector.Y = Neg_float;
+	Neg_float_vector.Z = Neg_float;
 
-		// BLANK ROTATION
-		SDK::FRotator Blank_Rotation;
-		Blank_Rotation.Pitch = 0.0f;
-		Blank_Rotation.Roll = 0.0f;
-		Blank_Rotation.Yaw = 0.0f;
+	SDK::FVector vector_zero;
+	vector_zero.X = 0.0f;
+	vector_zero.Y = 0.0f;
+	vector_zero.Z = 0.0f;
 
-		while (nolightblocker)
+	// BLANK ROTATION
+	SDK::FRotator Blank_Rotation;
+	Blank_Rotation.Pitch = 0.0f;
+	Blank_Rotation.Roll = 0.0f;
+	Blank_Rotation.Yaw = 0.0f;
+	do
+	{
+
+		auto LightBlocker2 = SDK::UObject::FindObjects<SDK::ALightBlockerDoubleFaced_C>();
+		if (!LightBlocker2.empty())
 		{
-		
- 			auto LightBlocker2 = SDK::UObject::FindObjects<SDK::ALightBlockerDoubleFaced_C>();
-			if (!LightBlocker2.empty())
+			for (auto& mods : LightBlocker2)
 			{
-				for (auto& mods : LightBlocker2)
+				if (mods)
 				{
-					if (mods)
+					mods->bIsEditorOnlyActor = true;
+					mods->bAlwaysRelevant = false;
+					mods->bHidden = true;
+					if (mods->RootComponent != nullptr)
 					{
-						mods->bIsEditorOnlyActor = true;
-						mods->bAlwaysRelevant = false;
-						mods->bHidden = true;
-						if (mods->RootComponent != nullptr)
-						{
-							mods->RootComponent->bIsActive = false;
-							mods->RootComponent->bHiddenInGame = true;
-							mods->RootComponent->RelativeScale3D = vector_zero;
-							mods->RootComponent->bAbsoluteScale = zero;
-							//mods->RootComponent->SetVisibility(false, true);
-							//SDK::USceneComponent* deletethis_one;
-							//deletethis_one = mods->RootComponent->K2_GetComponentToWorld;
-							//mods->RootComponent->K2_DestroyComponent(deletethis_one);
+						mods->RootComponent->bIsActive = false;
+						mods->RootComponent->bHiddenInGame = true;
+						mods->RootComponent->RelativeScale3D = vector_zero;
+						mods->RootComponent->bAbsoluteScale = zero;
+						//mods->RootComponent->SetVisibility(false, true);
+						//SDK::USceneComponent* deletethis_one;
+						//deletethis_one = mods->RootComponent->K2_GetComponentToWorld;
+						//mods->RootComponent->K2_DestroyComponent(deletethis_one);
 
-						}
-					}
-					SDK::USceneComponent* DeleteMe;
-					DeleteMe = mods->K2_GetRootComponent();
-					mods->K2_DestroyComponent(DeleteMe);
-					mods->bActorIsBeingDestroyed = true;
-					mods->K2_DestroyActor();
-					if (ShowOutputLightBlock)
-					{
-						cout << "A DoubleLightblocker has been removed. \n";
 					}
 				}
+				SDK::USceneComponent* DeleteMe;
+				DeleteMe = mods->K2_GetRootComponent();
+				mods->K2_DestroyComponent(DeleteMe);
+				mods->bActorIsBeingDestroyed = true;
+				mods->K2_DestroyActor();
+				if (ShowOutputLightBlock)
+				{
+					cout << "A DoubleLightblocker has been removed. \n";
+				}
 			}
-			else
-			{
-				return;
-			}
-		}
+		}		
+	} while (nolightblocker);
 }
 		
 void DestroyDoubleLightBlockers1()
@@ -785,8 +783,7 @@ void DestroyDoubleLightBlockers1()
 	Blank_Rotation.Pitch = 0.0f;
 	Blank_Rotation.Roll = 0.0f;
 	Blank_Rotation.Yaw = 0.0f;
-
-	while (nolightblocker)
+	do
 	{
 			
 
@@ -823,7 +820,8 @@ void DestroyDoubleLightBlockers1()
 				}
 			}
 		}
-	}
+	} while (nolightblocker);
+
 }
 
 
@@ -851,8 +849,7 @@ void DestroyLightBlockers1()
 	Blank_Rotation.Pitch = 0.0f;
 	Blank_Rotation.Roll = 0.0f;
 	Blank_Rotation.Yaw = 0.0f;
-
-	while (nolightblocker)
+	do
 	{
 		
 		auto LightBlocker2 = SDK::UObject::FindObjects<SDK::ATeleportSpot_BP_C>();
@@ -874,7 +871,8 @@ void DestroyLightBlockers1()
 				}
 			}
 		}
-	}
+	} while (nolightblocker); 
+
 }
 
 void DestroyLightBlockers()
@@ -902,8 +900,7 @@ void DestroyLightBlockers()
 		Blank_Rotation.Pitch = 0.0f;
 		Blank_Rotation.Roll = 0.0f;
 		Blank_Rotation.Yaw = 0.0f;
-
-		while (nolightblocker)
+		do
 		{
 			
 			auto LightBlocker = SDK::UObject::FindObjects<SDK::ALightBlocker_C>();
@@ -943,11 +940,9 @@ void DestroyLightBlockers()
 					}
 				}
 			}
-			else
-			{
-				auto LightBlocker = SDK::UObject::FindObjects<SDK::ALightBlocker_C>();
-			}
-		}
+
+		} while (nolightblocker);
+
 }
 
 

@@ -1,3 +1,17 @@
 
 .vs/*
 ModMenu/.vs/*
+
+Injector/Debug/*
+Injector/Release/*
+Injector/x64/Debug/*
+Injector/x64/Release/*
+*.ilk
+*.pdb
+*.pdb
+*.ipdb
+*.iobj
+ModMenu/x64/Release/*
+ModMenu/x64/Debug/*
+ModMenu/Release/*
+ModMenu/Debug/*
