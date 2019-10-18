@@ -15,3 +15,9 @@ ModMenu/x64/Release/*
 ModMenu/x64/Debug/*
 ModMenu/Release/*
 ModMenu/Debug/*
+Latest Build/Injector.iobj
+Latest Build/Injector.ipdb
+Latest Build/Injector.pdb
+Latest Build/ModMenuFNAFVR.iobj
+*.ipdb
+*.pdb
