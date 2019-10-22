@@ -300,6 +300,27 @@ public:
 };
 
 
+// Class MovieSceneCapture.MovieSceneCaptureEnvironment
+// 0x0000 (0x0028 - 0x0028)
+class UMovieSceneCaptureEnvironment : public UObject
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class MovieSceneCapture.MovieSceneCaptureEnvironment");
+		return ptr;
+	}
+
+
+	bool STATIC_IsCaptureInProgress();
+	int STATIC_GetCaptureFrameNumber();
+	float STATIC_GetCaptureElapsedTime();
+	class UMovieSceneImageCaptureProtocolBase* STATIC_FindImageCaptureProtocol();
+	class UMovieSceneAudioCaptureProtocolBase* STATIC_FindAudioCaptureProtocol();
+};
+
+
 // Class MovieSceneCapture.UserDefinedCaptureProtocol
 // 0x0088 (0x00E0 - 0x0058)
 class UUserDefinedCaptureProtocol : public UMovieSceneImageCaptureProtocolBase
@@ -375,27 +396,6 @@ public:
 		return ptr;
 	}
 
-};
-
-
-// Class MovieSceneCapture.MovieSceneCaptureEnvironment
-// 0x0000 (0x0028 - 0x0028)
-class UMovieSceneCaptureEnvironment : public UObject
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class MovieSceneCapture.MovieSceneCaptureEnvironment");
-		return ptr;
-	}
-
-
-	bool STATIC_IsCaptureInProgress();
-	int STATIC_GetCaptureFrameNumber();
-	float STATIC_GetCaptureElapsedTime();
-	class UMovieSceneImageCaptureProtocolBase* STATIC_FindImageCaptureProtocol();
-	class UMovieSceneAudioCaptureProtocolBase* STATIC_FindAudioCaptureProtocol();
 };
 
 

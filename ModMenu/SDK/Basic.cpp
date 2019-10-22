@@ -19,12 +19,8 @@ void InitSdk(const std::string& moduleName, const size_t gObjectsOffset, const s
 {
 	auto mBaseAddress = reinterpret_cast<uintptr_t>(GetModuleHandleA(moduleName.c_str()));
 
-	UObject::GObjects = reinterpret_cast<SDK::FUObjectArray*>(mBaseAddress + gObjectsOffset - 0x10);
+	UObject::GObjects = reinterpret_cast<SDK::FUObjectArray*>(mBaseAddress + gObjectsOffset);
 	FName::GNames = reinterpret_cast<SDK::TNameEntryArray*>(mBaseAddress + gNamesOffset);
-}
-void InitSdk()
-{
-	InitSdk("freddys-Win64-Shipping.exe", 0x320BB70, 0x30C9A78);
 }
 //---------------------------------------------------------------------------
 bool FWeakObjectPtr::IsValid() const

@@ -289,6 +289,30 @@ public:
 };
 
 
+// Class Landscape.LandscapeInfo
+// 0x01D8 (0x0200 - 0x0028)
+class ULandscapeInfo : public UObject
+{
+public:
+	TLazyObjectPtr<class ALandscape>                   LandscapeActor;                                           // 0x0028(0x001C) (IsPlainOldData)
+	struct FGuid                                       LandscapeGuid;                                            // 0x0044(0x0010) (ZeroConstructor, IsPlainOldData)
+	int                                                ComponentSizeQuads;                                       // 0x0054(0x0004) (ZeroConstructor, IsPlainOldData)
+	int                                                SubsectionSizeQuads;                                      // 0x0058(0x0004) (ZeroConstructor, IsPlainOldData)
+	int                                                ComponentNumSubsections;                                  // 0x005C(0x0004) (ZeroConstructor, IsPlainOldData)
+	struct FVector                                     DrawScale;                                                // 0x0060(0x000C) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x54];                                      // 0x006C(0x0054) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x50];                                      // 0x006C(0x0050) UNKNOWN PROPERTY: SetProperty Landscape.LandscapeInfo.Proxies
+	unsigned char                                      UnknownData02[0xF0];                                      // 0x0110(0x00F0) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Landscape.LandscapeInfo");
+		return ptr;
+	}
+
+};
+
+
 // Class Landscape.LandscapeInfoMap
 // 0x0058 (0x0080 - 0x0028)
 class ULandscapeInfoMap : public UObject
@@ -325,30 +349,6 @@ public:
 };
 
 
-// Class Landscape.LandscapeInfo
-// 0x01D8 (0x0200 - 0x0028)
-class ULandscapeInfo : public UObject
-{
-public:
-	TLazyObjectPtr<class ALandscape>                   LandscapeActor;                                           // 0x0028(0x001C) (IsPlainOldData)
-	struct FGuid                                       LandscapeGuid;                                            // 0x0044(0x0010) (ZeroConstructor, IsPlainOldData)
-	int                                                ComponentSizeQuads;                                       // 0x0054(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                SubsectionSizeQuads;                                      // 0x0058(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                ComponentNumSubsections;                                  // 0x005C(0x0004) (ZeroConstructor, IsPlainOldData)
-	struct FVector                                     DrawScale;                                                // 0x0060(0x000C) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x54];                                      // 0x006C(0x0054) MISSED OFFSET
-	unsigned char                                      UnknownData01[0x50];                                      // 0x006C(0x0050) UNKNOWN PROPERTY: SetProperty Landscape.LandscapeInfo.Proxies
-	unsigned char                                      UnknownData02[0xF0];                                      // 0x0110(0x00F0) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Landscape.LandscapeInfo");
-		return ptr;
-	}
-
-};
-
-
 // Class Landscape.LandscapeMaterialInstanceConstant
 // 0x0008 (0x01F0 - 0x01E8)
 class ULandscapeMaterialInstanceConstant : public UMaterialInstanceConstant
@@ -363,22 +363,6 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class Landscape.LandscapeMaterialInstanceConstant");
-		return ptr;
-	}
-
-};
-
-
-// Class Landscape.LandscapeMeshProxyActor
-// 0x0008 (0x0330 - 0x0328)
-class ALandscapeMeshProxyActor : public AActor
-{
-public:
-	class ULandscapeMeshProxyComponent*                LandscapeMeshProxyComponent;                              // 0x0328(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Landscape.LandscapeMeshProxyActor");
 		return ptr;
 	}
 
@@ -401,6 +385,22 @@ public:
 };
 
 
+// Class Landscape.LandscapeMeshProxyActor
+// 0x0008 (0x0330 - 0x0328)
+class ALandscapeMeshProxyActor : public AActor
+{
+public:
+	class ULandscapeMeshProxyComponent*                LandscapeMeshProxyComponent;                              // 0x0328(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Landscape.LandscapeMeshProxyActor");
+		return ptr;
+	}
+
+};
+
+
 // Class Landscape.LandscapeMeshProxyComponent
 // 0x0020 (0x0610 - 0x05F0)
 class ULandscapeMeshProxyComponent : public UStaticMeshComponent
@@ -414,27 +414,6 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class Landscape.LandscapeMeshProxyComponent");
-		return ptr;
-	}
-
-};
-
-
-// Class Landscape.LandscapeSplineSegment
-// 0x0088 (0x00B0 - 0x0028)
-class ULandscapeSplineSegment : public UObject
-{
-public:
-	struct FLandscapeSplineSegmentConnection           Connections[0x2];                                         // 0x0028(0x0018) (Edit, EditFixedSize)
-	struct FInterpCurveVector                          SplineInfo;                                               // 0x0058(0x0018) (ZeroConstructor)
-	TArray<struct FLandscapeSplineInterpPoint>         Points;                                                   // 0x0070(0x0010) (ZeroConstructor)
-	struct FBox                                        Bounds;                                                   // 0x0080(0x001C) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x009C(0x0004) MISSED OFFSET
-	TArray<class USplineMeshComponent*>                LocalMeshComponents;                                      // 0x00A0(0x0010) (ExportObject, ZeroConstructor)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Landscape.LandscapeSplineSegment");
 		return ptr;
 	}
 
@@ -488,6 +467,44 @@ public:
 };
 
 
+// Class Landscape.LandscapeSplineSegment
+// 0x0088 (0x00B0 - 0x0028)
+class ULandscapeSplineSegment : public UObject
+{
+public:
+	struct FLandscapeSplineSegmentConnection           Connections[0x2];                                         // 0x0028(0x0018) (Edit, EditFixedSize)
+	struct FInterpCurveVector                          SplineInfo;                                               // 0x0058(0x0018) (ZeroConstructor)
+	TArray<struct FLandscapeSplineInterpPoint>         Points;                                                   // 0x0070(0x0010) (ZeroConstructor)
+	struct FBox                                        Bounds;                                                   // 0x0080(0x001C) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x009C(0x0004) MISSED OFFSET
+	TArray<class USplineMeshComponent*>                LocalMeshComponents;                                      // 0x00A0(0x0010) (ExportObject, ZeroConstructor)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Landscape.LandscapeSplineSegment");
+		return ptr;
+	}
+
+};
+
+
+// Class Landscape.LandscapeStreamingProxy
+// 0x0020 (0x0660 - 0x0640)
+class ALandscapeStreamingProxy : public ALandscapeProxy
+{
+public:
+	TLazyObjectPtr<class ALandscape>                   LandscapeActor;                                           // 0x0640(0x001C) (Edit, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x065C(0x0004) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Landscape.LandscapeStreamingProxy");
+		return ptr;
+	}
+
+};
+
+
 // Class Landscape.MaterialExpressionLandscapeGrassOutput
 // 0x0010 (0x0050 - 0x0040)
 class UMaterialExpressionLandscapeGrassOutput : public UMaterialExpressionCustomOutput
@@ -498,6 +515,23 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class Landscape.MaterialExpressionLandscapeGrassOutput");
+		return ptr;
+	}
+
+};
+
+
+// Class Landscape.MaterialExpressionLandscapeLayerBlend
+// 0x0020 (0x0060 - 0x0040)
+class UMaterialExpressionLandscapeLayerBlend : public UMaterialExpression
+{
+public:
+	TArray<struct FLayerBlendInput>                    Layers;                                                   // 0x0040(0x0010) (Edit, ZeroConstructor)
+	struct FGuid                                       ExpressionGUID;                                           // 0x0050(0x0010) (ZeroConstructor, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Landscape.MaterialExpressionLandscapeLayerBlend");
 		return ptr;
 	}
 
@@ -521,23 +555,6 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class Landscape.MaterialExpressionLandscapeLayerCoords");
-		return ptr;
-	}
-
-};
-
-
-// Class Landscape.MaterialExpressionLandscapeLayerBlend
-// 0x0020 (0x0060 - 0x0040)
-class UMaterialExpressionLandscapeLayerBlend : public UMaterialExpression
-{
-public:
-	TArray<struct FLayerBlendInput>                    Layers;                                                   // 0x0040(0x0010) (Edit, ZeroConstructor)
-	struct FGuid                                       ExpressionGUID;                                           // 0x0050(0x0010) (ZeroConstructor, IsPlainOldData)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Landscape.MaterialExpressionLandscapeLayerBlend");
 		return ptr;
 	}
 
@@ -620,23 +637,6 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class Landscape.MaterialExpressionLandscapeVisibilityMask");
-		return ptr;
-	}
-
-};
-
-
-// Class Landscape.LandscapeStreamingProxy
-// 0x0020 (0x0660 - 0x0640)
-class ALandscapeStreamingProxy : public ALandscapeProxy
-{
-public:
-	TLazyObjectPtr<class ALandscape>                   LandscapeActor;                                           // 0x0640(0x001C) (Edit, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x065C(0x0004) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Landscape.LandscapeStreamingProxy");
 		return ptr;
 	}
 

@@ -52,6 +52,20 @@ enum class ENiagaraScriptUsage : uint8_t
 };
 
 
+// Enum Niagara.ENiagaraScriptCompileStatus
+enum class ENiagaraScriptCompileStatus : uint8_t
+{
+	ENiagaraScriptCompileStatus__NCS_Unknown = 0,
+	ENiagaraScriptCompileStatus__NCS_Dirty = 1,
+	ENiagaraScriptCompileStatus__NCS_Error = 2,
+	ENiagaraScriptCompileStatus__NCS_UpToDate = 3,
+	ENiagaraScriptCompileStatus__NCS_BeingCreated = 4,
+	ENiagaraScriptCompileStatus__NCS_UpToDateWithWarnings = 5,
+	ENiagaraScriptCompileStatus__NCS_ComputeUpToDateWithWarnings = 6,
+	ENiagaraScriptCompileStatus__NCS_MAX = 7
+};
+
+
 // Enum Niagara.ENiagaraInputNodeUsage
 enum class ENiagaraInputNodeUsage : uint8_t
 {
@@ -104,17 +118,13 @@ enum class ENDISkeletalMesh_SkinningMode : uint8_t
 };
 
 
-// Enum Niagara.ENiagaraScriptCompileStatus
-enum class ENiagaraScriptCompileStatus : uint8_t
+// Enum Niagara.EScriptExecutionMode
+enum class EScriptExecutionMode : uint8_t
 {
-	ENiagaraScriptCompileStatus__NCS_Unknown = 0,
-	ENiagaraScriptCompileStatus__NCS_Dirty = 1,
-	ENiagaraScriptCompileStatus__NCS_Error = 2,
-	ENiagaraScriptCompileStatus__NCS_UpToDate = 3,
-	ENiagaraScriptCompileStatus__NCS_BeingCreated = 4,
-	ENiagaraScriptCompileStatus__NCS_UpToDateWithWarnings = 5,
-	ENiagaraScriptCompileStatus__NCS_ComputeUpToDateWithWarnings = 6,
-	ENiagaraScriptCompileStatus__NCS_MAX = 7
+	EScriptExecutionMode__EveryParticle = 0,
+	EScriptExecutionMode__SpawnedParticles = 1,
+	EScriptExecutionMode__SingleParticle = 2,
+	EScriptExecutionMode__EScriptExecutionMode_MAX = 3
 };
 
 
@@ -126,16 +136,6 @@ enum class ENiagaraMeshFacingMode : uint8_t
 	ENiagaraMeshFacingMode__CameraPosition = 2,
 	ENiagaraMeshFacingMode__CameraPlane = 3,
 	ENiagaraMeshFacingMode__ENiagaraMeshFacingMode_MAX = 4
-};
-
-
-// Enum Niagara.EScriptExecutionMode
-enum class EScriptExecutionMode : uint8_t
-{
-	EScriptExecutionMode__EveryParticle = 0,
-	EScriptExecutionMode__SpawnedParticles = 1,
-	EScriptExecutionMode__SingleParticle = 2,
-	EScriptExecutionMode__EScriptExecutionMode_MAX = 3
 };
 
 
@@ -151,12 +151,12 @@ enum class ENiagaraSortMode : uint8_t
 };
 
 
-// Enum Niagara.ENiagaraRibbonAgeOffsetMode
-enum class ENiagaraRibbonAgeOffsetMode : uint8_t
+// Enum Niagara.ENiagaraRibbonDrawDirection
+enum class ENiagaraRibbonDrawDirection : uint8_t
 {
-	ENiagaraRibbonAgeOffsetMode__Scale = 0,
-	ENiagaraRibbonAgeOffsetMode__Clip = 1,
-	ENiagaraRibbonAgeOffsetMode__ENiagaraRibbonAgeOffsetMode_MAX = 2
+	ENiagaraRibbonDrawDirection__FrontToBack = 0,
+	ENiagaraRibbonDrawDirection__BackToFront = 1,
+	ENiagaraRibbonDrawDirection__ENiagaraRibbonDrawDirection_MAX = 2
 };
 
 
@@ -166,6 +166,24 @@ enum class ENiagaraRibbonFacingMode : uint8_t
 	ENiagaraRibbonFacingMode__Screen = 0,
 	ENiagaraRibbonFacingMode__Custom = 1,
 	ENiagaraRibbonFacingMode__ENiagaraRibbonFacingMode_MAX = 2
+};
+
+
+// Enum Niagara.ENiagaraModuleDependencyType
+enum class ENiagaraModuleDependencyType : uint8_t
+{
+	ENiagaraModuleDependencyType__PreDependency = 0,
+	ENiagaraModuleDependencyType__PostDependency = 1,
+	ENiagaraModuleDependencyType__ENiagaraModuleDependencyType_MAX = 2
+};
+
+
+// Enum Niagara.ENiagaraRibbonAgeOffsetMode
+enum class ENiagaraRibbonAgeOffsetMode : uint8_t
+{
+	ENiagaraRibbonAgeOffsetMode__Scale = 0,
+	ENiagaraRibbonAgeOffsetMode__Clip = 1,
+	ENiagaraRibbonAgeOffsetMode__ENiagaraRibbonAgeOffsetMode_MAX = 2
 };
 
 
@@ -193,24 +211,6 @@ enum class ENiagaraSpriteFacingMode : uint8_t
 };
 
 
-// Enum Niagara.ENiagaraModuleDependencyType
-enum class ENiagaraModuleDependencyType : uint8_t
-{
-	ENiagaraModuleDependencyType__PreDependency = 0,
-	ENiagaraModuleDependencyType__PostDependency = 1,
-	ENiagaraModuleDependencyType__ENiagaraModuleDependencyType_MAX = 2
-};
-
-
-// Enum Niagara.ENiagaraRibbonDrawDirection
-enum class ENiagaraRibbonDrawDirection : uint8_t
-{
-	ENiagaraRibbonDrawDirection__FrontToBack = 0,
-	ENiagaraRibbonDrawDirection__BackToFront = 1,
-	ENiagaraRibbonDrawDirection__ENiagaraRibbonDrawDirection_MAX = 2
-};
-
-
 // Enum Niagara.ENiagaraExecutionState
 enum class ENiagaraExecutionState : uint8_t
 {
@@ -221,6 +221,17 @@ enum class ENiagaraExecutionState : uint8_t
 	ENiagaraExecutionState__Disabled = 4,
 	ENiagaraExecutionState__Num    = 5,
 	ENiagaraExecutionState__ENiagaraExecutionState_MAX = 6
+};
+
+
+// Enum Niagara.ENiagaraExecutionStateSource
+enum class ENiagaraExecutionStateSource : uint8_t
+{
+	ENiagaraExecutionStateSource__Scalability = 0,
+	ENiagaraExecutionStateSource__Internal = 1,
+	ENiagaraExecutionStateSource__Owner = 2,
+	ENiagaraExecutionStateSource__InternalCompletion = 3,
+	ENiagaraExecutionStateSource__ENiagaraExecutionStateSource_MAX = 4
 };
 
 
@@ -242,17 +253,6 @@ enum class ENiagaraNumericOutputTypeSelectionMode : uint8_t
 	ENiagaraNumericOutputTypeSelectionMode__Smallest = 2,
 	ENiagaraNumericOutputTypeSelectionMode__Scalar = 3,
 	ENiagaraNumericOutputTypeSelectionMode__ENiagaraNumericOutputTypeSelectionMode_MAX = 4
-};
-
-
-// Enum Niagara.ENiagaraExecutionStateSource
-enum class ENiagaraExecutionStateSource : uint8_t
-{
-	ENiagaraExecutionStateSource__Scalability = 0,
-	ENiagaraExecutionStateSource__Internal = 1,
-	ENiagaraExecutionStateSource__Owner = 2,
-	ENiagaraExecutionStateSource__InternalCompletion = 3,
-	ENiagaraExecutionStateSource__ENiagaraExecutionStateSource_MAX = 4
 };
 
 
@@ -572,11 +572,11 @@ struct FMovieSceneNiagaraIntegerParameterSectionTemplate : public FMovieSceneNia
 	struct FMovieSceneIntegerChannel                   IntegerChannel;                                           // 0x0050(0x0090)
 };
 
-// ScriptStruct Niagara.MovieSceneNiagaraSystemTrackTemplate
-// 0x0000 (0x0020 - 0x0020)
-struct FMovieSceneNiagaraSystemTrackTemplate : public FMovieSceneEvalTemplate
+// ScriptStruct Niagara.MovieSceneNiagaraSystemTrackImplementation
+// 0x0008 (0x0018 - 0x0010)
+struct FMovieSceneNiagaraSystemTrackImplementation : public FMovieSceneTrackImplementation
 {
-
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0010(0x0008) MISSED OFFSET
 };
 
 // ScriptStruct Niagara.MovieSceneNiagaraVectorParameterSectionTemplate
@@ -597,11 +597,11 @@ struct FNiagaraVariableInfo
 	class UNiagaraDataInterface*                       DataInterface;                                            // 0x0048(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
-// ScriptStruct Niagara.MovieSceneNiagaraSystemTrackImplementation
-// 0x0008 (0x0018 - 0x0010)
-struct FMovieSceneNiagaraSystemTrackImplementation : public FMovieSceneTrackImplementation
+// ScriptStruct Niagara.MovieSceneNiagaraSystemTrackTemplate
+// 0x0000 (0x0020 - 0x0020)
+struct FMovieSceneNiagaraSystemTrackTemplate : public FMovieSceneEvalTemplate
 {
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0010(0x0008) MISSED OFFSET
+
 };
 
 // ScriptStruct Niagara.MeshTriCoordinate

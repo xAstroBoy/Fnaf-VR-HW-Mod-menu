@@ -752,6 +752,28 @@ struct FHeldGrabbableInfo ASWGVRCharacter::GetGrabbableInfo(class AActor* HeldAc
 }
 
 
+// Function SWGVR.SWGVRCharacter.GetControllerDeviceType
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// EControllerType                ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+EControllerType ASWGVRCharacter::GetControllerDeviceType()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function SWGVR.SWGVRCharacter.GetControllerDeviceType");
+
+	ASWGVRCharacter_GetControllerDeviceType_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function SWGVR.SWGVRCharacter.AddHeldOffset
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:

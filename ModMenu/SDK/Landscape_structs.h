@@ -23,6 +23,16 @@ enum class ELandscapeSetupErrors : uint8_t
 };
 
 
+// Enum Landscape.ELandscapeGizmoType
+enum class ELandscapeGizmoType : uint8_t
+{
+	LGT_None                       = 0,
+	LGT_Height                     = 1,
+	LGT_Weight                     = 2,
+	LGT_MAX                        = 3
+};
+
+
 // Enum Landscape.EGrassScaling
 enum class EGrassScaling : uint8_t
 {
@@ -42,13 +52,13 @@ enum class ELandscapeLODFalloff : uint8_t
 };
 
 
-// Enum Landscape.ELandscapeGizmoType
-enum class ELandscapeGizmoType : uint8_t
+// Enum Landscape.ELandscapeLayerDisplayMode
+enum class ELandscapeLayerDisplayMode : uint8_t
 {
-	LGT_None                       = 0,
-	LGT_Height                     = 1,
-	LGT_Weight                     = 2,
-	LGT_MAX                        = 3
+	ELandscapeLayerDisplayMode__Default = 0,
+	ELandscapeLayerDisplayMode__Alphabetical = 1,
+	ELandscapeLayerDisplayMode__UserSpecific = 2,
+	ELandscapeLayerDisplayMode__ELandscapeLayerDisplayMode_MAX = 3
 };
 
 
@@ -60,6 +70,15 @@ enum class ELandscapeLayerPaintingRestriction : uint8_t
 	ELandscapeLayerPaintingRestriction__ExistingOnly = 2,
 	ELandscapeLayerPaintingRestriction__UseComponentWhitelist = 3,
 	ELandscapeLayerPaintingRestriction__ELandscapeLayerPaintingRestriction_MAX = 4
+};
+
+
+// Enum Landscape.ELandscapeImportAlphamapType
+enum class ELandscapeImportAlphamapType : uint8_t
+{
+	ELandscapeImportAlphamapType__Additive = 0,
+	ELandscapeImportAlphamapType__Layered = 1,
+	ELandscapeImportAlphamapType__ELandscapeImportAlphamapType_MAX = 2
 };
 
 
@@ -102,25 +121,6 @@ enum class ETerrainCoordMappingType : uint8_t
 	TCMT_XZ                        = 2,
 	TCMT_YZ                        = 3,
 	TCMT_MAX                       = 4
-};
-
-
-// Enum Landscape.ELandscapeLayerDisplayMode
-enum class ELandscapeLayerDisplayMode : uint8_t
-{
-	ELandscapeLayerDisplayMode__Default = 0,
-	ELandscapeLayerDisplayMode__Alphabetical = 1,
-	ELandscapeLayerDisplayMode__UserSpecific = 2,
-	ELandscapeLayerDisplayMode__ELandscapeLayerDisplayMode_MAX = 3
-};
-
-
-// Enum Landscape.ELandscapeImportAlphamapType
-enum class ELandscapeImportAlphamapType : uint8_t
-{
-	ELandscapeImportAlphamapType__Additive = 0,
-	ELandscapeImportAlphamapType__Layered = 1,
-	ELandscapeImportAlphamapType__ELandscapeImportAlphamapType_MAX = 2
 };
 
 
@@ -184,14 +184,13 @@ struct FGrassVariety
 	unsigned char                                      UnknownData02[0x5];                                       // 0x0043(0x0005) MISSED OFFSET
 };
 
-// ScriptStruct Landscape.LandscapeSplineSegmentConnection
-// 0x0018
-struct FLandscapeSplineSegmentConnection
+// ScriptStruct Landscape.LandscapeSplineConnection
+// 0x0010
+struct FLandscapeSplineConnection
 {
-	class ULandscapeSplineControlPoint*                ControlPoint;                                             // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	float                                              TangentLen;                                               // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
-	struct FName                                       SocketName;                                               // 0x0010(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class ULandscapeSplineSegment*                     Segment;                                                  // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      End : 1;                                                  // 0x0008(0x0001)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0009(0x0007) MISSED OFFSET
 };
 
 // ScriptStruct Landscape.LandscapeSplineInterpPoint
@@ -206,13 +205,14 @@ struct FLandscapeSplineInterpPoint
 	float                                              StartEndFalloff;                                          // 0x003C(0x0004) (ZeroConstructor, IsPlainOldData)
 };
 
-// ScriptStruct Landscape.LandscapeSplineConnection
-// 0x0010
-struct FLandscapeSplineConnection
+// ScriptStruct Landscape.LandscapeSplineSegmentConnection
+// 0x0018
+struct FLandscapeSplineSegmentConnection
 {
-	class ULandscapeSplineSegment*                     Segment;                                                  // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      End : 1;                                                  // 0x0008(0x0001)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0009(0x0007) MISSED OFFSET
+	class ULandscapeSplineControlPoint*                ControlPoint;                                             // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	float                                              TangentLen;                                               // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
+	struct FName                                       SocketName;                                               // 0x0010(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Landscape.GrassInput

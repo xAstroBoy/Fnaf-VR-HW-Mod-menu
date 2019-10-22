@@ -12,13 +12,14 @@ namespace SDK
 // Enums
 //---------------------------------------------------------------------------
 
-// Enum NavigationSystem.ERecastPartitioning
-enum class ERecastPartitioning : uint8_t
+// Enum NavigationSystem.ERuntimeGenerationType
+enum class ERuntimeGenerationType : uint8_t
 {
-	ERecastPartitioning__Monotone  = 0,
-	ERecastPartitioning__Watershed = 1,
-	ERecastPartitioning__ChunkyMonotone = 2,
-	ERecastPartitioning__ERecastPartitioning_MAX = 3
+	ERuntimeGenerationType__Static = 0,
+	ERuntimeGenerationType__DynamicModifiersOnly = 1,
+	ERuntimeGenerationType__Dynamic = 2,
+	ERuntimeGenerationType__LegacyGeneration = 3,
+	ERuntimeGenerationType__ERuntimeGenerationType_MAX = 4
 };
 
 
@@ -32,14 +33,13 @@ enum class ENavCostDisplay : uint8_t
 };
 
 
-// Enum NavigationSystem.ERuntimeGenerationType
-enum class ERuntimeGenerationType : uint8_t
+// Enum NavigationSystem.ERecastPartitioning
+enum class ERecastPartitioning : uint8_t
 {
-	ERuntimeGenerationType__Static = 0,
-	ERuntimeGenerationType__DynamicModifiersOnly = 1,
-	ERuntimeGenerationType__Dynamic = 2,
-	ERuntimeGenerationType__LegacyGeneration = 3,
-	ERuntimeGenerationType__ERuntimeGenerationType_MAX = 4
+	ERecastPartitioning__Monotone  = 0,
+	ERecastPartitioning__Watershed = 1,
+	ERecastPartitioning__ChunkyMonotone = 2,
+	ERecastPartitioning__ERecastPartitioning_MAX = 3
 };
 
 

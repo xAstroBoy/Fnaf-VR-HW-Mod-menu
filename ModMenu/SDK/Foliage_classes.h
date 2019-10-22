@@ -253,6 +253,26 @@ public:
 };
 
 
+// Class Foliage.ProceduralFoliageComponent
+// 0x0028 (0x0118 - 0x00F0)
+class UProceduralFoliageComponent : public UActorComponent
+{
+public:
+	class UProceduralFoliageSpawner*                   FoliageSpawner;                                           // 0x00F0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              TileOverlap;                                              // 0x00F8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x00FC(0x0004) MISSED OFFSET
+	class AVolume*                                     SpawningVolume;                                           // 0x0100(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FGuid                                       ProceduralGuid;                                           // 0x0108(0x0010) (ZeroConstructor, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Foliage.ProceduralFoliageComponent");
+		return ptr;
+	}
+
+};
+
+
 // Class Foliage.ProceduralFoliageSpawner
 // 0x0048 (0x0070 - 0x0028)
 class UProceduralFoliageSpawner : public UObject
@@ -307,26 +327,6 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class Foliage.ProceduralFoliageVolume");
-		return ptr;
-	}
-
-};
-
-
-// Class Foliage.ProceduralFoliageComponent
-// 0x0028 (0x0118 - 0x00F0)
-class UProceduralFoliageComponent : public UActorComponent
-{
-public:
-	class UProceduralFoliageSpawner*                   FoliageSpawner;                                           // 0x00F0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              TileOverlap;                                              // 0x00F8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x00FC(0x0004) MISSED OFFSET
-	class AVolume*                                     SpawningVolume;                                           // 0x0100(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FGuid                                       ProceduralGuid;                                           // 0x0108(0x0010) (ZeroConstructor, IsPlainOldData)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Foliage.ProceduralFoliageComponent");
 		return ptr;
 	}
 

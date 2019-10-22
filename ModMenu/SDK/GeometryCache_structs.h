@@ -26,18 +26,18 @@ struct FTrackRenderData
 	unsigned char                                      UnknownData00[0x70];                                      // 0x0000(0x0070) MISSED OFFSET
 };
 
-// ScriptStruct GeometryCache.GeometryCacheVertexInfo
-// 0x0008
-struct FGeometryCacheVertexInfo
-{
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0000(0x0008) MISSED OFFSET
-};
-
 // ScriptStruct GeometryCache.GeometryCacheMeshBatchInfo
 // 0x000C
 struct FGeometryCacheMeshBatchInfo
 {
 	unsigned char                                      UnknownData00[0xC];                                       // 0x0000(0x000C) MISSED OFFSET
+};
+
+// ScriptStruct GeometryCache.GeometryCacheVertexInfo
+// 0x0008
+struct FGeometryCacheVertexInfo
+{
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0000(0x0008) MISSED OFFSET
 };
 
 }

@@ -181,50 +181,6 @@ void AFlashlightBase_C::UserConstructionScript()
 }
 
 
-// Function FlashlightBase.FlashlightBase_C.OnVRInteract
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// class ASWGVRCharacter*         VRCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// EVRHandType                    Hand                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-
-void AFlashlightBase_C::OnVRInteract(class ASWGVRCharacter* VRCharacter, EVRHandType Hand)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function FlashlightBase.FlashlightBase_C.OnVRInteract");
-
-	AFlashlightBase_C_OnVRInteract_Params params;
-	params.VRCharacter = VRCharacter;
-	params.Hand = Hand;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function FlashlightBase.FlashlightBase_C.OnVRGrabbed
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// class ASWGVRCharacter*         Grabber                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// EVRHandType                    Hand                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-
-void AFlashlightBase_C::OnVRGrabbed(class ASWGVRCharacter* Grabber, EVRHandType Hand)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function FlashlightBase.FlashlightBase_C.OnVRGrabbed");
-
-	AFlashlightBase_C_OnVRGrabbed_Params params;
-	params.Grabber = Grabber;
-	params.Hand = Hand;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function FlashlightBase.FlashlightBase_C.OnVRReleased
 // (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
@@ -280,6 +236,50 @@ void AFlashlightBase_C::BndEvt__FNAFVisionDetector_K2Node_ComponentBoundEvent_3_
 
 	AFlashlightBase_C_BndEvt__FNAFVisionDetector_K2Node_ComponentBoundEvent_3_OnVisionEnter__DelegateSignature_Params params;
 	params.Actor = Actor;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function FlashlightBase.FlashlightBase_C.OnVRInteract
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// class ASWGVRCharacter*         VRCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// EVRHandType                    Hand                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void AFlashlightBase_C::OnVRInteract(class ASWGVRCharacter* VRCharacter, EVRHandType Hand)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function FlashlightBase.FlashlightBase_C.OnVRInteract");
+
+	AFlashlightBase_C_OnVRInteract_Params params;
+	params.VRCharacter = VRCharacter;
+	params.Hand = Hand;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function FlashlightBase.FlashlightBase_C.OnVRGrabbed
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// class ASWGVRCharacter*         Grabber                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// EVRHandType                    Hand                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void AFlashlightBase_C::OnVRGrabbed(class ASWGVRCharacter* Grabber, EVRHandType Hand)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function FlashlightBase.FlashlightBase_C.OnVRGrabbed");
+
+	AFlashlightBase_C_OnVRGrabbed_Params params;
+	params.Grabber = Grabber;
+	params.Hand = Hand;
 
 	auto flags = fn->FunctionFlags;
 

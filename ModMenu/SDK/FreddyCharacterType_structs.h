@@ -31,7 +31,11 @@ enum class EFreddyCharacterType : uint8_t
 	FreddyCharacterType__NewEnumerator15 = 13,
 	FreddyCharacterType__NewEnumerator11 = 14,
 	FreddyCharacterType__NewEnumerator12 = 15,
-	FreddyCharacterType__FreddyCharacterType_MAX = 16
+	FreddyCharacterType__NewEnumerator17 = 16,
+	FreddyCharacterType__NewEnumerator18 = 17,
+	FreddyCharacterType__NewEnumerator19 = 18,
+	FreddyCharacterType__NewEnumerator20 = 19,
+	FreddyCharacterType__FreddyCharacterType_MAX = 20
 };
 
 

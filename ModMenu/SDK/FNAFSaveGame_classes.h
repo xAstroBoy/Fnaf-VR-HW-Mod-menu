@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass FNAFSaveGame.FNAFSaveGame_C
-// 0x0272 (0x029A - 0x0028)
+// 0x0278 (0x02A0 - 0x0028)
 class UFNAFSaveGame_C : public USaveGame
 {
 public:
@@ -39,6 +39,9 @@ public:
 	unsigned char                                      UnknownData08[0x50];                                      // 0x0248(0x0050) UNKNOWN PROPERTY: SetProperty FNAFSaveGame.FNAFSaveGame_C.CollectedCoins
 	bool                                               SubtitlesOn;                                              // 0x0298(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData)
 	bool                                               EULAAgreed;                                               // 0x0299(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData)
+	bool                                               Has_Seen_H_Title;                                         // 0x029A(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData)
+	unsigned char                                      UnknownData09[0x1];                                       // 0x029B(0x0001) MISSED OFFSET
+	int                                                DarkRideHighScore;                                        // 0x029C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

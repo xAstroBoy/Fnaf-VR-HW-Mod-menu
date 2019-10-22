@@ -12,6 +12,17 @@ namespace SDK
 // Enums
 //---------------------------------------------------------------------------
 
+// Enum SWGVR.EControllerType
+enum class EControllerType : uint8_t
+{
+	EControllerType__SteamVR       = 0,
+	EControllerType__Oculus        = 1,
+	EControllerType__PS4Move       = 2,
+	EControllerType__DUALSHOCK4    = 3,
+	EControllerType__EControllerType_MAX = 4
+};
+
+
 // Enum SWGVR.EGrabSnapType
 enum class EGrabSnapType : uint8_t
 {

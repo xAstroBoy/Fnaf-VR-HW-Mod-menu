@@ -59,7 +59,7 @@ struct ASaul_MotionControllerPawn_C_ToggleMenu_Params
 // Function Saul_MotionControllerPawn.Saul_MotionControllerPawn_C.Game Mode Ref
 struct ASaul_MotionControllerPawn_C_Game_Mode_Ref_Params
 {
-	class AFNAFGM_FlashlightGame_C*                    Game_Mode_Ref;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               Toggle_Flashlight_State;                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Saul_MotionControllerPawn.Saul_MotionControllerPawn_C.UserConstructionScript
@@ -533,6 +533,21 @@ struct ASaul_MotionControllerPawn_C_BndEvt__VRNotifications_K2Node_ComponentBoun
 {
 };
 
+// Function Saul_MotionControllerPawn.Saul_MotionControllerPawn_C.Force Turn Off Flashlight
+struct ASaul_MotionControllerPawn_C_Force_Turn_Off_Flashlight_Params
+{
+};
+
+// Function Saul_MotionControllerPawn.Saul_MotionControllerPawn_C.Turn On Flashlight
+struct ASaul_MotionControllerPawn_C_Turn_On_Flashlight_Params
+{
+};
+
+// Function Saul_MotionControllerPawn.Saul_MotionControllerPawn_C.TurnOffFLashlight
+struct ASaul_MotionControllerPawn_C_TurnOffFLashlight_Params
+{
+};
+
 // Function Saul_MotionControllerPawn.Saul_MotionControllerPawn_C.WinCurrentLevel
 struct ASaul_MotionControllerPawn_C_WinCurrentLevel_Params
 {
@@ -542,6 +557,11 @@ struct ASaul_MotionControllerPawn_C_WinCurrentLevel_Params
 struct ASaul_MotionControllerPawn_C_ExecuteUbergraph_Saul_MotionControllerPawn_Params
 {
 	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Saul_MotionControllerPawn.Saul_MotionControllerPawn_C.GrabRight__DelegateSignature
+struct ASaul_MotionControllerPawn_C_GrabRight__DelegateSignature_Params
+{
 };
 
 // Function Saul_MotionControllerPawn.Saul_MotionControllerPawn_C.GamepadLeftTriggerPressed__DelegateSignature

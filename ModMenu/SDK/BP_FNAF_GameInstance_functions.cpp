@@ -229,7 +229,7 @@ void UBP_FNAF_GameInstance_C::GetInstructionWidget(class UClass** Next_Level_Inf
 
 
 // Function BP_FNAF_GameInstance.BP_FNAF_GameInstance_C.UnlockAllPrizes
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UBP_FNAF_GameInstance_C::UnlockAllPrizes()
 {
@@ -670,16 +670,16 @@ void UBP_FNAF_GameInstance_C::GetRandomAvailablePrize(bool* ValidPrize, struct F
 }
 
 
-// Function BP_FNAF_GameInstance.BP_FNAF_GameInstance_C.GetAvailablePrizes
+// Function BP_FNAF_GameInstance.BP_FNAF_GameInstance_C.GetAvailablePrizesBase
 // (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<struct FName>           AvailablePrizes                (Parm, OutParm, ZeroConstructor)
 
-void UBP_FNAF_GameInstance_C::GetAvailablePrizes(TArray<struct FName>* AvailablePrizes)
+void UBP_FNAF_GameInstance_C::GetAvailablePrizesBase(TArray<struct FName>* AvailablePrizes)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_FNAF_GameInstance.BP_FNAF_GameInstance_C.GetAvailablePrizes");
+	static auto fn = UObject::FindObject<UFunction>("Function BP_FNAF_GameInstance.BP_FNAF_GameInstance_C.GetAvailablePrizesBase");
 
-	UBP_FNAF_GameInstance_C_GetAvailablePrizes_Params params;
+	UBP_FNAF_GameInstance_C_GetAvailablePrizesBase_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1079,14 +1079,14 @@ void UBP_FNAF_GameInstance_C::LoadLevel(const struct FName& LevelID, const struc
 // Function BP_FNAF_GameInstance.BP_FNAF_GameInstance_C.FinishCaveat
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int                            Difficulty_Adjustment          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int                            Difficulty                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_FNAF_GameInstance_C::FinishCaveat(int Difficulty_Adjustment)
+void UBP_FNAF_GameInstance_C::FinishCaveat(int Difficulty)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FNAF_GameInstance.BP_FNAF_GameInstance_C.FinishCaveat");
 
 	UBP_FNAF_GameInstance_C_FinishCaveat_Params params;
-	params.Difficulty_Adjustment = Difficulty_Adjustment;
+	params.Difficulty = Difficulty;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1384,6 +1384,57 @@ void UBP_FNAF_GameInstance_C::LoadGameOver()
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FNAF_GameInstance.BP_FNAF_GameInstance_C.LoadGameOver");
 
 	UBP_FNAF_GameInstance_C_LoadGameOver_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_FNAF_GameInstance.BP_FNAF_GameInstance_C.LoadHalloweenHub
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_FNAF_GameInstance_C::LoadHalloweenHub()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_FNAF_GameInstance.BP_FNAF_GameInstance_C.LoadHalloweenHub");
+
+	UBP_FNAF_GameInstance_C_LoadHalloweenHub_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_FNAF_GameInstance.BP_FNAF_GameInstance_C.ForceLoadHTitle
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_FNAF_GameInstance_C::ForceLoadHTitle()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_FNAF_GameInstance.BP_FNAF_GameInstance_C.ForceLoadHTitle");
+
+	UBP_FNAF_GameInstance_C_ForceLoadHTitle_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_FNAF_GameInstance.BP_FNAF_GameInstance_C.LoadMainHub
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_FNAF_GameInstance_C::LoadMainHub()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_FNAF_GameInstance.BP_FNAF_GameInstance_C.LoadMainHub");
+
+	UBP_FNAF_GameInstance_C_LoadMainHub_Params params;
 
 	auto flags = fn->FunctionFlags;
 

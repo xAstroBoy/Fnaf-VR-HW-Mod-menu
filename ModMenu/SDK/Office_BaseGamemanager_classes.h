@@ -55,6 +55,8 @@ public:
 	}
 
 
+	void GetTwoPreviousRoomTransitions(const struct FName& Room, TArray<struct FOfficeRoomTransition_Struct>* RoomTransitions);
+	void GetPreviousRoomTransitions(const struct FName& Room, TArray<struct FOfficeRoomTransition_Struct>* RoomTransitions);
 	void GetAIData(TEnumAsByte<EFreddyCharacterType> CharacterType, struct FOfficeAIDataStruct* AIDataStruct, bool* DataWasFound);
 	void ClockCountDown();
 	void GetRoomInfo(const struct FName& RoomName, class ARoomInfo_Bp_C** Value);

@@ -30,12 +30,16 @@ enum class ESubstanceInputType : uint8_t
 };
 
 
-// Enum SubstanceCore.ESubstanceEngineType
-enum class ESubstanceEngineType : uint8_t
+// Enum SubstanceCore.ESubstanceGenerationMode
+enum class ESubstanceGenerationMode : uint8_t
 {
-	SET_CPU                        = 0,
-	SET_GPU                        = 1,
-	SET_MAX                        = 2
+	SGM_PlatformDefault            = 0,
+	SGM_Baked                      = 1,
+	SGM_OnLoadSync                 = 2,
+	SGM_OnLoadSyncAndCache         = 3,
+	SGM_OnLoadAsync                = 4,
+	SGM_OnLoadAsyncAndCache        = 5,
+	SGM_MAX                        = 6
 };
 
 
@@ -55,20 +59,12 @@ enum class EDefaultSubstanceTextureSize : uint8_t
 };
 
 
-// Enum SubstanceCore.ESubstanceTextureSize
-enum class ESubstanceTextureSize : uint8_t
+// Enum SubstanceCore.ESubstanceEngineType
+enum class ESubstanceEngineType : uint8_t
 {
-	ERL                            = 0,
-	ERL01                          = 1,
-	ERL02                          = 2,
-	ERL03                          = 3,
-	ERL04                          = 4,
-	ERL05                          = 5,
-	ERL06                          = 6,
-	ERL07                          = 7,
-	ERL08                          = 8,
-	ERL09                          = 9,
-	ERL_MAX                        = 10
+	SET_CPU                        = 0,
+	SET_GPU                        = 1,
+	SET_MAX                        = 2
 };
 
 
@@ -95,16 +91,20 @@ enum class ESubChannelType : uint8_t
 };
 
 
-// Enum SubstanceCore.ESubstanceGenerationMode
-enum class ESubstanceGenerationMode : uint8_t
+// Enum SubstanceCore.ESubstanceTextureSize
+enum class ESubstanceTextureSize : uint8_t
 {
-	SGM_PlatformDefault            = 0,
-	SGM_Baked                      = 1,
-	SGM_OnLoadSync                 = 2,
-	SGM_OnLoadSyncAndCache         = 3,
-	SGM_OnLoadAsync                = 4,
-	SGM_OnLoadAsyncAndCache        = 5,
-	SGM_MAX                        = 6
+	ERL                            = 0,
+	ERL01                          = 1,
+	ERL02                          = 2,
+	ERL03                          = 3,
+	ERL04                          = 4,
+	ERL05                          = 5,
+	ERL06                          = 6,
+	ERL07                          = 7,
+	ERL08                          = 8,
+	ERL09                          = 9,
+	ERL_MAX                        = 10
 };
 
 

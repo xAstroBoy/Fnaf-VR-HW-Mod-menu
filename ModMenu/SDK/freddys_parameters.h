@@ -14,6 +14,12 @@ namespace SDK
 // Parameters
 //---------------------------------------------------------------------------
 
+// Function freddys.AchievementsFunctions.ClearAllAchievements
+struct UAchievementsFunctions_ClearAllAchievements_Params
+{
+	class UObject*                                     WorldContextObject;                                       // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function freddys.AICommonFunctionalities.isVerticalAxis
 struct UAICommonFunctionalities_isVerticalAxis_Params
 {
@@ -34,62 +40,6 @@ struct UAICommonFunctionalities_isHorizontalAxis_Params
 {
 	EAIScareDirection                                  Direction;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function freddys.FlowGraphConnector.OnDisconnected
-struct UFlowGraphConnector_OnDisconnected_Params
-{
-};
-
-// Function freddys.FlowGraphConnector.OnConnectorRegistered
-struct UFlowGraphConnector_OnConnectorRegistered_Params
-{
-};
-
-// Function freddys.FlowGraphConnector.OnConnected
-struct UFlowGraphConnector_OnConnected_Params
-{
-	class UFlowGraphConnector*                         OtherConnector;                                           // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-};
-
-// Function freddys.FlowGraphConnector.HasFlow
-struct UFlowGraphConnector_HasFlow_Params
-{
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function freddys.FlowGraphConnector.GetNodeOwner
-struct UFlowGraphConnector_GetNodeOwner_Params
-{
-	class AFlowGraphNode*                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function freddys.FlowGraphConnector.GetConnectedNode
-struct UFlowGraphConnector_GetConnectedNode_Params
-{
-	class AFlowGraphNode*                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function freddys.FlowGraphConnector.GetConnectedConnector
-struct UFlowGraphConnector_GetConnectedConnector_Params
-{
-	class UFlowGraphConnector*                         ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
-};
-
-// Function freddys.FlowGraphConnector.Disconnect
-struct UFlowGraphConnector_Disconnect_Params
-{
-};
-
-// Function freddys.FlowGraphConnector.Connect
-struct UFlowGraphConnector_Connect_Params
-{
-	class UFlowGraphConnector*                         OtherConnector;                                           // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-};
-
-// Function freddys.FlowGraphConnector.CheckConnection
-struct UFlowGraphConnector_CheckConnection_Params
-{
 };
 
 // Function freddys.FlowGraphNode.UnregisterConnector
@@ -157,12 +107,6 @@ struct AFlowGraphNode_CheckConnections_Params
 {
 };
 
-// Function freddys.AchievementsFunctions.ClearAllAchievements
-struct UAchievementsFunctions_ClearAllAchievements_Params
-{
-	class UObject*                                     WorldContextObject;                                       // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
 // Function freddys.FNAFGameMode.SpawnLevelDB
 struct AFNAFGameMode_SpawnLevelDB_Params
 {
@@ -217,6 +161,13 @@ struct UFNAF_GameInstanceBase_IsInDemoMode_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function freddys.FNAF_GameInstanceBase.HasDLC
+struct UFNAF_GameInstanceBase_HasDLC_Params
+{
+	EFNAFDLCType                                       DLC;                                                      // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function freddys.FNAF_GameInstanceBase.GetPrimaryGPUBrand
 struct UFNAF_GameInstanceBase_GetPrimaryGPUBrand_Params
 {
@@ -239,6 +190,168 @@ struct UFNAF_GameInstanceBase_GetGameType_Params
 struct UFNAF_GameInstanceBase_GetForcedVariantNumber_Params
 {
 	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function freddys.GridCalculatorActor.SetCellDebugDisplay
+struct AGridCalculatorActor_SetCellDebugDisplay_Params
+{
+	int                                                CellID;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                CellX;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                CellY;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                CellDistance;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function freddys.GridCalculatorActor.ResetDistances
+struct AGridCalculatorActor_ResetDistances_Params
+{
+};
+
+// Function freddys.GridCalculatorActor.GetGridSize
+struct AGridCalculatorActor_GetGridSize_Params
+{
+	int                                                Width;                                                    // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	int                                                Height;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function freddys.GridCalculatorActor.GetDistanceToCellAtWorldPosition
+struct AGridCalculatorActor_GetDistanceToCellAtWorldPosition_Params
+{
+	struct FVector                                     WorldPosition;                                            // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function freddys.GridCalculatorActor.GetDistanceToCell
+struct AGridCalculatorActor_GetDistanceToCell_Params
+{
+	int                                                CellID;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function freddys.GridCalculatorActor.GetCellWorldPositionByCellPos
+struct AGridCalculatorActor_GetCellWorldPositionByCellPos_Params
+{
+	int                                                CellX;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                CellY;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function freddys.GridCalculatorActor.GetCellWorldPosition
+struct AGridCalculatorActor_GetCellWorldPosition_Params
+{
+	int                                                CellID;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function freddys.GridCalculatorActor.GetCellsBetweenDistances
+struct AGridCalculatorActor_GetCellsBetweenDistances_Params
+{
+	int                                                MinDistance;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                MaxDistance;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	TArray<int>                                        ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
+};
+
+// Function freddys.GridCalculatorActor.GetCellsAtDistance
+struct AGridCalculatorActor_GetCellsAtDistance_Params
+{
+	int                                                Distance;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	TArray<int>                                        ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
+};
+
+// Function freddys.GridCalculatorActor.GetCellPosition
+struct AGridCalculatorActor_GetCellPosition_Params
+{
+	int                                                CellID;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                CellX;                                                    // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	int                                                CellY;                                                    // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function freddys.GridCalculatorActor.GetCellPosFromWorldPosition
+struct AGridCalculatorActor_GetCellPosFromWorldPosition_Params
+{
+	struct FVector                                     WorldPosition;                                            // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+	int                                                CellX;                                                    // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	int                                                CellY;                                                    // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function freddys.GridCalculatorActor.GetCellIDFromWorldPosition
+struct AGridCalculatorActor_GetCellIDFromWorldPosition_Params
+{
+	struct FVector                                     WorldPosition;                                            // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function freddys.GridCalculatorActor.GetCellIDFromGridPosition
+struct AGridCalculatorActor_GetCellIDFromGridPosition_Params
+{
+	int                                                CellX;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                CellY;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function freddys.GridCalculatorActor.FindPathFromWorldPositions
+struct AGridCalculatorActor_FindPathFromWorldPositions_Params
+{
+	struct FVector                                     WorldPositionStart;                                       // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+	struct FVector                                     WorldPositionEnd;                                         // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+	TArray<int>                                        ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
+};
+
+// Function freddys.GridCalculatorActor.FindPathFromCellIDs
+struct AGridCalculatorActor_FindPathFromCellIDs_Params
+{
+	int                                                StartCellID;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                EndCellID;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	TArray<int>                                        ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
+};
+
+// Function freddys.GridCalculatorActor.CalculateDistancesFromWorldPosition
+struct AGridCalculatorActor_CalculateDistancesFromWorldPosition_Params
+{
+	struct FVector                                     WorldPosition;                                            // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+};
+
+// Function freddys.GridCalculatorActor.CalculateDistancesFromGridPosition
+struct AGridCalculatorActor_CalculateDistancesFromGridPosition_Params
+{
+	int                                                GridX;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                GridY;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function freddys.LevelDB.LoadLevelByName
+struct ULevelDB_LoadLevelByName_Params
+{
+	struct FString                                     LevelName;                                                // (Parm, ZeroConstructor)
+};
+
+// Function freddys.LevelDB.LoadLevelByID
+struct ULevelDB_LoadLevelByID_Params
+{
+	int                                                LevelID;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function freddys.LevelDB.LoadLevel
+struct ULevelDB_LoadLevel_Params
+{
+};
+
+// Function freddys.LevelDB.GetLevelIDByName
+struct ULevelDB_GetLevelIDByName_Params
+{
+	struct FString                                     Name;                                                     // (Parm, ZeroConstructor)
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function freddys.LevelDB.GetLevelID
+struct ULevelDB_GetLevelID_Params
+{
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function freddys.LevelDB.CreateLevelDB
+struct ULevelDB_CreateLevelDB_Params
+{
+	class UObject*                                     Owner;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	class ULevelDB*                                    ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function freddys.NPCBaseInterface.SetHealth
@@ -450,41 +563,60 @@ struct USWS_GroupComponent_GetTotalAmplitude_Params
 	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function freddys.LevelDB.LoadLevelByName
-struct ULevelDB_LoadLevelByName_Params
-{
-	struct FString                                     LevelName;                                                // (Parm, ZeroConstructor)
-};
-
-// Function freddys.LevelDB.LoadLevelByID
-struct ULevelDB_LoadLevelByID_Params
-{
-	int                                                LevelID;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function freddys.LevelDB.LoadLevel
-struct ULevelDB_LoadLevel_Params
+// Function freddys.FlowGraphConnector.OnDisconnected
+struct UFlowGraphConnector_OnDisconnected_Params
 {
 };
 
-// Function freddys.LevelDB.GetLevelIDByName
-struct ULevelDB_GetLevelIDByName_Params
+// Function freddys.FlowGraphConnector.OnConnectorRegistered
+struct UFlowGraphConnector_OnConnectorRegistered_Params
 {
-	struct FString                                     Name;                                                     // (Parm, ZeroConstructor)
-	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function freddys.LevelDB.GetLevelID
-struct ULevelDB_GetLevelID_Params
+// Function freddys.FlowGraphConnector.OnConnected
+struct UFlowGraphConnector_OnConnected_Params
 {
-	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+	class UFlowGraphConnector*                         OtherConnector;                                           // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
-// Function freddys.LevelDB.CreateLevelDB
-struct ULevelDB_CreateLevelDB_Params
+// Function freddys.FlowGraphConnector.HasFlow
+struct UFlowGraphConnector_HasFlow_Params
 {
-	class UObject*                                     Owner;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
-	class ULevelDB*                                    ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function freddys.FlowGraphConnector.GetNodeOwner
+struct UFlowGraphConnector_GetNodeOwner_Params
+{
+	class AFlowGraphNode*                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function freddys.FlowGraphConnector.GetConnectedNode
+struct UFlowGraphConnector_GetConnectedNode_Params
+{
+	class AFlowGraphNode*                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function freddys.FlowGraphConnector.GetConnectedConnector
+struct UFlowGraphConnector_GetConnectedConnector_Params
+{
+	class UFlowGraphConnector*                         ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+};
+
+// Function freddys.FlowGraphConnector.Disconnect
+struct UFlowGraphConnector_Disconnect_Params
+{
+};
+
+// Function freddys.FlowGraphConnector.Connect
+struct UFlowGraphConnector_Connect_Params
+{
+	class UFlowGraphConnector*                         OtherConnector;                                           // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+};
+
+// Function freddys.FlowGraphConnector.CheckConnection
+struct UFlowGraphConnector_CheckConnection_Params
+{
 };
 
 }

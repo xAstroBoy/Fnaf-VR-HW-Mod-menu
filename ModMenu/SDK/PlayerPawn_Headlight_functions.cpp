@@ -166,6 +166,23 @@ void APlayerPawn_Headlight_C::ExecuteUbergraph_PlayerPawn_Headlight(int EntryPoi
 }
 
 
+// Function PlayerPawn_Headlight.PlayerPawn_Headlight_C.LightTriggered__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+
+void APlayerPawn_Headlight_C::LightTriggered__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function PlayerPawn_Headlight.PlayerPawn_Headlight_C.LightTriggered__DelegateSignature");
+
+	APlayerPawn_Headlight_C_LightTriggered__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 }
 
 #ifdef _MSC_VER

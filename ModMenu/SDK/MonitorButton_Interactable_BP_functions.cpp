@@ -195,6 +195,23 @@ void AMonitorButton_Interactable_BP_C::ReceiveBeginPlay()
 }
 
 
+// Function MonitorButton_Interactable_BP.MonitorButton_Interactable_BP_C.Debug_InputEvent
+// (BlueprintCallable, BlueprintEvent)
+
+void AMonitorButton_Interactable_BP_C::Debug_InputEvent()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function MonitorButton_Interactable_BP.MonitorButton_Interactable_BP_C.Debug_InputEvent");
+
+	AMonitorButton_Interactable_BP_C_Debug_InputEvent_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function MonitorButton_Interactable_BP.MonitorButton_Interactable_BP_C.ExecuteUbergraph_MonitorButton_Interactable_BP
 // (Final, HasDefaults)
 // Parameters:

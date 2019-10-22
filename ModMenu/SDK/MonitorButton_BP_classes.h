@@ -79,10 +79,13 @@ public:
 	void Timeline_0__UpdateFunc();
 	void Timeline_2__FinishedFunc();
 	void Timeline_2__UpdateFunc();
+	void ReceiveBeginPlay();
 	void ReceiveTick(float* DeltaSeconds);
 	void StopFlicker();
 	void BndEvt__ButtonCollision_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
-	void ReceiveBeginPlay();
+	void Debug_EventInput();
+	void ReEnableButtons();
+	void Disable_Button();
 	void ExecuteUbergraph_MonitorButton_BP(int EntryPoint);
 };
 

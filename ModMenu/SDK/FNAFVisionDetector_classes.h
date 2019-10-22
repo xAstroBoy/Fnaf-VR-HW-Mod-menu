@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass FNAFVisionDetector.FNAFVisionDetector_C
-// 0x0060 (0x0150 - 0x00F0)
+// 0x0061 (0x0151 - 0x00F0)
 class UFNAFVisionDetector_C : public UActorComponent
 {
 public:
@@ -25,6 +25,7 @@ public:
 	struct FScriptMulticastDelegate                    OnVisionEnter;                                            // 0x0128(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
 	TScriptInterface<class UIFNAFVisionFilter_C>       VisionFilter;                                             // 0x0138(0x0030) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	class USceneComponent*                             VisionComponent;                                          // 0x0148(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	bool                                               UseLineTrace;                                             // 0x0150(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

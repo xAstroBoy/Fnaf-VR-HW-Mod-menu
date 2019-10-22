@@ -135,6 +135,7 @@ public:
 	EVRHandType GetHandForPad();
 	class USceneComponent* GetHandAttachPoint(EVRHandType Hand);
 	struct FHeldGrabbableInfo GetGrabbableInfo(class AActor* HeldActor);
+	EControllerType GetControllerDeviceType();
 	void AddHeldOffset(EVRHandType Hand, const struct FVector& AdditiveValue, int ItemIndex);
 };
 

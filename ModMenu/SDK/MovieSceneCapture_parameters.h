@@ -50,6 +50,36 @@ struct UMovieSceneCapture_GetAudioCaptureProtocol_Params
 	class UMovieSceneCaptureProtocolBase*              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function MovieSceneCapture.MovieSceneCaptureEnvironment.IsCaptureInProgress
+struct UMovieSceneCaptureEnvironment_IsCaptureInProgress_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function MovieSceneCapture.MovieSceneCaptureEnvironment.GetCaptureFrameNumber
+struct UMovieSceneCaptureEnvironment_GetCaptureFrameNumber_Params
+{
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function MovieSceneCapture.MovieSceneCaptureEnvironment.GetCaptureElapsedTime
+struct UMovieSceneCaptureEnvironment_GetCaptureElapsedTime_Params
+{
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function MovieSceneCapture.MovieSceneCaptureEnvironment.FindImageCaptureProtocol
+struct UMovieSceneCaptureEnvironment_FindImageCaptureProtocol_Params
+{
+	class UMovieSceneImageCaptureProtocolBase*         ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function MovieSceneCapture.MovieSceneCaptureEnvironment.FindAudioCaptureProtocol
+struct UMovieSceneCaptureEnvironment_FindAudioCaptureProtocol_Params
+{
+	class UMovieSceneAudioCaptureProtocolBase*         ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function MovieSceneCapture.UserDefinedCaptureProtocol.StopCapturingFinalPixels
 struct UUserDefinedCaptureProtocol_StopCapturingFinalPixels_Params
 {
@@ -169,36 +199,6 @@ struct UUserDefinedImageCaptureProtocol_GenerateFilenameForBuffer_Params
 	class UTexture*                                    Buffer;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FName                                       StreamName;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FString                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
-};
-
-// Function MovieSceneCapture.MovieSceneCaptureEnvironment.IsCaptureInProgress
-struct UMovieSceneCaptureEnvironment_IsCaptureInProgress_Params
-{
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function MovieSceneCapture.MovieSceneCaptureEnvironment.GetCaptureFrameNumber
-struct UMovieSceneCaptureEnvironment_GetCaptureFrameNumber_Params
-{
-	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function MovieSceneCapture.MovieSceneCaptureEnvironment.GetCaptureElapsedTime
-struct UMovieSceneCaptureEnvironment_GetCaptureElapsedTime_Params
-{
-	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function MovieSceneCapture.MovieSceneCaptureEnvironment.FindImageCaptureProtocol
-struct UMovieSceneCaptureEnvironment_FindImageCaptureProtocol_Params
-{
-	class UMovieSceneImageCaptureProtocolBase*         ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function MovieSceneCapture.MovieSceneCaptureEnvironment.FindAudioCaptureProtocol
-struct UMovieSceneCaptureEnvironment_FindAudioCaptureProtocol_Params
-{
-	class UMovieSceneAudioCaptureProtocolBase*         ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 }

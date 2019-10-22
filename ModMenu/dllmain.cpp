@@ -22,7 +22,7 @@ using namespace std;
 const size_t gObjectsOffset = 0x320BB70;
 const size_t gNamesOffset = 0x30C9A78;
 
-string version = "3.1";
+string version = "3.1.1";
 
 // THREADS BOOLS
 bool fullbrightthreadmade = false;

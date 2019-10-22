@@ -84,15 +84,6 @@ enum class EUMGSequencePlayMode : uint8_t
 };
 
 
-// Enum UMG.EWidgetTickFrequency
-enum class EWidgetTickFrequency : uint8_t
-{
-	EWidgetTickFrequency__Never    = 0,
-	EWidgetTickFrequency__Auto     = 1,
-	EWidgetTickFrequency__EWidgetTickFrequency_MAX = 2
-};
-
-
 // Enum UMG.EWidgetDesignFlags
 enum class EWidgetDesignFlags : uint8_t
 {
@@ -161,6 +152,15 @@ enum class EWidgetInteractionSource : uint8_t
 };
 
 
+// Enum UMG.EWidgetTickFrequency
+enum class EWidgetTickFrequency : uint8_t
+{
+	EWidgetTickFrequency__Never    = 0,
+	EWidgetTickFrequency__Auto     = 1,
+	EWidgetTickFrequency__EWidgetTickFrequency_MAX = 2
+};
+
+
 
 //---------------------------------------------------------------------------
 // Script Structs
@@ -199,6 +199,15 @@ struct FAnchorData
 	struct FVector2D                                   Alignment;                                                // 0x0020(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
+// ScriptStruct UMG.SlateChildSize
+// 0x0008
+struct FSlateChildSize
+{
+	float                                              Value;                                                    // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<ESlateSizeRule>                        SizeRule;                                                 // 0x0004(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0005(0x0003) MISSED OFFSET
+};
+
 // ScriptStruct UMG.ShapedTextOptions
 // 0x0003
 struct FShapedTextOptions
@@ -207,15 +216,6 @@ struct FShapedTextOptions
 	unsigned char                                      bOverride_TextFlowDirection : 1;                          // 0x0000(0x0001) (Edit)
 	ETextShapingMethod                                 TextShapingMethod;                                        // 0x0001(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	ETextFlowDirection                                 TextFlowDirection;                                        // 0x0002(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct UMG.SlateChildSize
-// 0x0008
-struct FSlateChildSize
-{
-	float                                              Value;                                                    // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<ESlateSizeRule>                        SizeRule;                                                 // 0x0004(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0005(0x0003) MISSED OFFSET
 };
 
 // ScriptStruct UMG.MovieScene2DTransformMask
@@ -239,6 +239,21 @@ struct FSlateMeshVertex
 	struct FVector2D                                   UV5;                                                      // 0x0034(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
+// ScriptStruct UMG.NamedSlotBinding
+// 0x0010
+struct FNamedSlotBinding
+{
+	struct FName                                       Name;                                                     // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UWidget*                                     Content;                                                  // 0x0008(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+};
+
+// ScriptStruct UMG.PaintContext
+// 0x0030
+struct FPaintContext
+{
+	unsigned char                                      UnknownData00[0x30];                                      // 0x0000(0x0030) MISSED OFFSET
+};
+
 // ScriptStruct UMG.WidgetAnimationBinding
 // 0x0028
 struct FWidgetAnimationBinding
@@ -260,21 +275,6 @@ struct FDelegateRuntimeBinding
 	struct FDynamicPropertyPath                        SourcePath;                                               // 0x0020(0x0028)
 	EBindingKind                                       Kind;                                                     // 0x0048(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0049(0x0007) MISSED OFFSET
-};
-
-// ScriptStruct UMG.PaintContext
-// 0x0030
-struct FPaintContext
-{
-	unsigned char                                      UnknownData00[0x30];                                      // 0x0000(0x0030) MISSED OFFSET
-};
-
-// ScriptStruct UMG.NamedSlotBinding
-// 0x0010
-struct FNamedSlotBinding
-{
-	struct FName                                       Name;                                                     // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UWidget*                                     Content;                                                  // 0x0008(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // ScriptStruct UMG.WidgetNavigationData

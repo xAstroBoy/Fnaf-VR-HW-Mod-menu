@@ -13,6 +13,27 @@ namespace SDK
 // Functions
 //---------------------------------------------------------------------------
 
+// Function freddys.AchievementsFunctions.ClearAllAchievements
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
+
+void UAchievementsFunctions::STATIC_ClearAllAchievements(class UObject* WorldContextObject)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function freddys.AchievementsFunctions.ClearAllAchievements");
+
+	UAchievementsFunctions_ClearAllAchievements_Params params;
+	params.WorldContextObject = WorldContextObject;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function freddys.AICommonFunctionalities.isVerticalAxis
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -84,205 +105,6 @@ bool UAICommonFunctionalities::STATIC_isHorizontalAxis(EAIScareDirection Directi
 	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
-}
-
-
-// Function freddys.FlowGraphConnector.OnDisconnected
-// (Event, Protected, BlueprintEvent)
-
-void UFlowGraphConnector::OnDisconnected()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function freddys.FlowGraphConnector.OnDisconnected");
-
-	UFlowGraphConnector_OnDisconnected_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function freddys.FlowGraphConnector.OnConnectorRegistered
-// (Event, Protected, BlueprintEvent)
-
-void UFlowGraphConnector::OnConnectorRegistered()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function freddys.FlowGraphConnector.OnConnectorRegistered");
-
-	UFlowGraphConnector_OnConnectorRegistered_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function freddys.FlowGraphConnector.OnConnected
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// class UFlowGraphConnector*     OtherConnector                 (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-
-void UFlowGraphConnector::OnConnected(class UFlowGraphConnector* OtherConnector)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function freddys.FlowGraphConnector.OnConnected");
-
-	UFlowGraphConnector_OnConnected_Params params;
-	params.OtherConnector = OtherConnector;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function freddys.FlowGraphConnector.HasFlow
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UFlowGraphConnector::HasFlow()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function freddys.FlowGraphConnector.HasFlow");
-
-	UFlowGraphConnector_HasFlow_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function freddys.FlowGraphConnector.GetNodeOwner
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class AFlowGraphNode*          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class AFlowGraphNode* UFlowGraphConnector::GetNodeOwner()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function freddys.FlowGraphConnector.GetNodeOwner");
-
-	UFlowGraphConnector_GetNodeOwner_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function freddys.FlowGraphConnector.GetConnectedNode
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class AFlowGraphNode*          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class AFlowGraphNode* UFlowGraphConnector::GetConnectedNode()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function freddys.FlowGraphConnector.GetConnectedNode");
-
-	UFlowGraphConnector_GetConnectedNode_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function freddys.FlowGraphConnector.GetConnectedConnector
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class UFlowGraphConnector*     ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
-
-class UFlowGraphConnector* UFlowGraphConnector::GetConnectedConnector()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function freddys.FlowGraphConnector.GetConnectedConnector");
-
-	UFlowGraphConnector_GetConnectedConnector_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function freddys.FlowGraphConnector.Disconnect
-// (Final, Native, Public, BlueprintCallable)
-
-void UFlowGraphConnector::Disconnect()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function freddys.FlowGraphConnector.Disconnect");
-
-	UFlowGraphConnector_Disconnect_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function freddys.FlowGraphConnector.Connect
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UFlowGraphConnector*     OtherConnector                 (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-
-void UFlowGraphConnector::Connect(class UFlowGraphConnector* OtherConnector)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function freddys.FlowGraphConnector.Connect");
-
-	UFlowGraphConnector_Connect_Params params;
-	params.OtherConnector = OtherConnector;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function freddys.FlowGraphConnector.CheckConnection
-// (Final, Native, Public, BlueprintCallable)
-
-void UFlowGraphConnector::CheckConnection()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function freddys.FlowGraphConnector.CheckConnection");
-
-	UFlowGraphConnector_CheckConnection_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -515,27 +337,6 @@ void AFlowGraphNode::CheckConnections()
 }
 
 
-// Function freddys.AchievementsFunctions.ClearAllAchievements
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-
-void UAchievementsFunctions::STATIC_ClearAllAchievements(class UObject* WorldContextObject)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function freddys.AchievementsFunctions.ClearAllAchievements");
-
-	UAchievementsFunctions_ClearAllAchievements_Params params;
-	params.WorldContextObject = WorldContextObject;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function freddys.FNAFGameMode.SpawnLevelDB
 // (Final, Native, Public, BlueprintCallable)
 
@@ -727,6 +528,30 @@ bool UFNAF_GameInstanceBase::IsInDemoMode()
 }
 
 
+// Function freddys.FNAF_GameInstanceBase.HasDLC
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// EFNAFDLCType                   DLC                            (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UFNAF_GameInstanceBase::HasDLC(EFNAFDLCType DLC)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function freddys.FNAF_GameInstanceBase.HasDLC");
+
+	UFNAF_GameInstanceBase_HasDLC_Params params;
+	params.DLC = DLC;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function freddys.FNAF_GameInstanceBase.GetPrimaryGPUBrand
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
@@ -803,6 +628,556 @@ int UFNAF_GameInstanceBase::GetForcedVariantNumber()
 	static auto fn = UObject::FindObject<UFunction>("Function freddys.FNAF_GameInstanceBase.GetForcedVariantNumber");
 
 	UFNAF_GameInstanceBase_GetForcedVariantNumber_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function freddys.GridCalculatorActor.SetCellDebugDisplay
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// int                            CellID                         (Parm, ZeroConstructor, IsPlainOldData)
+// int                            CellX                          (Parm, ZeroConstructor, IsPlainOldData)
+// int                            CellY                          (Parm, ZeroConstructor, IsPlainOldData)
+// int                            CellDistance                   (Parm, ZeroConstructor, IsPlainOldData)
+
+void AGridCalculatorActor::SetCellDebugDisplay(int CellID, int CellX, int CellY, int CellDistance)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function freddys.GridCalculatorActor.SetCellDebugDisplay");
+
+	AGridCalculatorActor_SetCellDebugDisplay_Params params;
+	params.CellID = CellID;
+	params.CellX = CellX;
+	params.CellY = CellY;
+	params.CellDistance = CellDistance;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function freddys.GridCalculatorActor.ResetDistances
+// (Final, Native, Public, BlueprintCallable)
+
+void AGridCalculatorActor::ResetDistances()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function freddys.GridCalculatorActor.ResetDistances");
+
+	AGridCalculatorActor_ResetDistances_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function freddys.GridCalculatorActor.GetGridSize
+// (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int                            Width                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// int                            Height                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void AGridCalculatorActor::GetGridSize(int* Width, int* Height)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function freddys.GridCalculatorActor.GetGridSize");
+
+	AGridCalculatorActor_GetGridSize_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Width != nullptr)
+		*Width = params.Width;
+	if (Height != nullptr)
+		*Height = params.Height;
+}
+
+
+// Function freddys.GridCalculatorActor.GetDistanceToCellAtWorldPosition
+// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FVector                 WorldPosition                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int AGridCalculatorActor::GetDistanceToCellAtWorldPosition(const struct FVector& WorldPosition)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function freddys.GridCalculatorActor.GetDistanceToCellAtWorldPosition");
+
+	AGridCalculatorActor_GetDistanceToCellAtWorldPosition_Params params;
+	params.WorldPosition = WorldPosition;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function freddys.GridCalculatorActor.GetDistanceToCell
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int                            CellID                         (Parm, ZeroConstructor, IsPlainOldData)
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int AGridCalculatorActor::GetDistanceToCell(int CellID)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function freddys.GridCalculatorActor.GetDistanceToCell");
+
+	AGridCalculatorActor_GetDistanceToCell_Params params;
+	params.CellID = CellID;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function freddys.GridCalculatorActor.GetCellWorldPositionByCellPos
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int                            CellX                          (Parm, ZeroConstructor, IsPlainOldData)
+// int                            CellY                          (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FVector AGridCalculatorActor::GetCellWorldPositionByCellPos(int CellX, int CellY)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function freddys.GridCalculatorActor.GetCellWorldPositionByCellPos");
+
+	AGridCalculatorActor_GetCellWorldPositionByCellPos_Params params;
+	params.CellX = CellX;
+	params.CellY = CellY;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function freddys.GridCalculatorActor.GetCellWorldPosition
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int                            CellID                         (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FVector AGridCalculatorActor::GetCellWorldPosition(int CellID)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function freddys.GridCalculatorActor.GetCellWorldPosition");
+
+	AGridCalculatorActor_GetCellWorldPosition_Params params;
+	params.CellID = CellID;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function freddys.GridCalculatorActor.GetCellsBetweenDistances
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int                            MinDistance                    (Parm, ZeroConstructor, IsPlainOldData)
+// int                            MaxDistance                    (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<int>                    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+TArray<int> AGridCalculatorActor::GetCellsBetweenDistances(int MinDistance, int MaxDistance)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function freddys.GridCalculatorActor.GetCellsBetweenDistances");
+
+	AGridCalculatorActor_GetCellsBetweenDistances_Params params;
+	params.MinDistance = MinDistance;
+	params.MaxDistance = MaxDistance;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function freddys.GridCalculatorActor.GetCellsAtDistance
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int                            Distance                       (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<int>                    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+TArray<int> AGridCalculatorActor::GetCellsAtDistance(int Distance)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function freddys.GridCalculatorActor.GetCellsAtDistance");
+
+	AGridCalculatorActor_GetCellsAtDistance_Params params;
+	params.Distance = Distance;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function freddys.GridCalculatorActor.GetCellPosition
+// (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int                            CellID                         (Parm, ZeroConstructor, IsPlainOldData)
+// int                            CellX                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// int                            CellY                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void AGridCalculatorActor::GetCellPosition(int CellID, int* CellX, int* CellY)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function freddys.GridCalculatorActor.GetCellPosition");
+
+	AGridCalculatorActor_GetCellPosition_Params params;
+	params.CellID = CellID;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (CellX != nullptr)
+		*CellX = params.CellX;
+	if (CellY != nullptr)
+		*CellY = params.CellY;
+}
+
+
+// Function freddys.GridCalculatorActor.GetCellPosFromWorldPosition
+// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FVector                 WorldPosition                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// int                            CellX                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// int                            CellY                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void AGridCalculatorActor::GetCellPosFromWorldPosition(const struct FVector& WorldPosition, int* CellX, int* CellY)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function freddys.GridCalculatorActor.GetCellPosFromWorldPosition");
+
+	AGridCalculatorActor_GetCellPosFromWorldPosition_Params params;
+	params.WorldPosition = WorldPosition;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (CellX != nullptr)
+		*CellX = params.CellX;
+	if (CellY != nullptr)
+		*CellY = params.CellY;
+}
+
+
+// Function freddys.GridCalculatorActor.GetCellIDFromWorldPosition
+// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FVector                 WorldPosition                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int AGridCalculatorActor::GetCellIDFromWorldPosition(const struct FVector& WorldPosition)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function freddys.GridCalculatorActor.GetCellIDFromWorldPosition");
+
+	AGridCalculatorActor_GetCellIDFromWorldPosition_Params params;
+	params.WorldPosition = WorldPosition;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function freddys.GridCalculatorActor.GetCellIDFromGridPosition
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int                            CellX                          (Parm, ZeroConstructor, IsPlainOldData)
+// int                            CellY                          (Parm, ZeroConstructor, IsPlainOldData)
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int AGridCalculatorActor::GetCellIDFromGridPosition(int CellX, int CellY)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function freddys.GridCalculatorActor.GetCellIDFromGridPosition");
+
+	AGridCalculatorActor_GetCellIDFromGridPosition_Params params;
+	params.CellX = CellX;
+	params.CellY = CellY;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function freddys.GridCalculatorActor.FindPathFromWorldPositions
+// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FVector                 WorldPositionStart             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FVector                 WorldPositionEnd               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// TArray<int>                    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+TArray<int> AGridCalculatorActor::FindPathFromWorldPositions(const struct FVector& WorldPositionStart, const struct FVector& WorldPositionEnd)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function freddys.GridCalculatorActor.FindPathFromWorldPositions");
+
+	AGridCalculatorActor_FindPathFromWorldPositions_Params params;
+	params.WorldPositionStart = WorldPositionStart;
+	params.WorldPositionEnd = WorldPositionEnd;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function freddys.GridCalculatorActor.FindPathFromCellIDs
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int                            StartCellID                    (Parm, ZeroConstructor, IsPlainOldData)
+// int                            EndCellID                      (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<int>                    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+TArray<int> AGridCalculatorActor::FindPathFromCellIDs(int StartCellID, int EndCellID)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function freddys.GridCalculatorActor.FindPathFromCellIDs");
+
+	AGridCalculatorActor_FindPathFromCellIDs_Params params;
+	params.StartCellID = StartCellID;
+	params.EndCellID = EndCellID;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function freddys.GridCalculatorActor.CalculateDistancesFromWorldPosition
+// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FVector                 WorldPosition                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+
+void AGridCalculatorActor::CalculateDistancesFromWorldPosition(const struct FVector& WorldPosition)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function freddys.GridCalculatorActor.CalculateDistancesFromWorldPosition");
+
+	AGridCalculatorActor_CalculateDistancesFromWorldPosition_Params params;
+	params.WorldPosition = WorldPosition;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function freddys.GridCalculatorActor.CalculateDistancesFromGridPosition
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// int                            GridX                          (Parm, ZeroConstructor, IsPlainOldData)
+// int                            GridY                          (Parm, ZeroConstructor, IsPlainOldData)
+
+void AGridCalculatorActor::CalculateDistancesFromGridPosition(int GridX, int GridY)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function freddys.GridCalculatorActor.CalculateDistancesFromGridPosition");
+
+	AGridCalculatorActor_CalculateDistancesFromGridPosition_Params params;
+	params.GridX = GridX;
+	params.GridY = GridY;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function freddys.LevelDB.LoadLevelByName
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// struct FString                 LevelName                      (Parm, ZeroConstructor)
+
+void ULevelDB::LoadLevelByName(const struct FString& LevelName)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function freddys.LevelDB.LoadLevelByName");
+
+	ULevelDB_LoadLevelByName_Params params;
+	params.LevelName = LevelName;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function freddys.LevelDB.LoadLevelByID
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// int                            LevelID                        (Parm, ZeroConstructor, IsPlainOldData)
+
+void ULevelDB::LoadLevelByID(int LevelID)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function freddys.LevelDB.LoadLevelByID");
+
+	ULevelDB_LoadLevelByID_Params params;
+	params.LevelID = LevelID;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function freddys.LevelDB.LoadLevel
+// (Native, Public, BlueprintCallable)
+
+void ULevelDB::LoadLevel()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function freddys.LevelDB.LoadLevel");
+
+	ULevelDB_LoadLevel_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function freddys.LevelDB.GetLevelIDByName
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// struct FString                 Name                           (Parm, ZeroConstructor)
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int ULevelDB::GetLevelIDByName(const struct FString& Name)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function freddys.LevelDB.GetLevelIDByName");
+
+	ULevelDB_GetLevelIDByName_Params params;
+	params.Name = Name;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function freddys.LevelDB.GetLevelID
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int ULevelDB::GetLevelID()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function freddys.LevelDB.GetLevelID");
+
+	ULevelDB_GetLevelID_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function freddys.LevelDB.CreateLevelDB
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                 Owner                          (Parm, ZeroConstructor, IsPlainOldData)
+// class ULevelDB*                ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class ULevelDB* ULevelDB::STATIC_CreateLevelDB(class UObject* Owner)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function freddys.LevelDB.CreateLevelDB");
+
+	ULevelDB_CreateLevelDB_Params params;
+	params.Owner = Owner;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -1483,20 +1858,16 @@ int USWS_GroupComponent::GetTotalAmplitude()
 }
 
 
-// Function freddys.LevelDB.LoadLevelByName
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// struct FString                 LevelName                      (Parm, ZeroConstructor)
+// Function freddys.FlowGraphConnector.OnDisconnected
+// (Event, Protected, BlueprintEvent)
 
-void ULevelDB::LoadLevelByName(const struct FString& LevelName)
+void UFlowGraphConnector::OnDisconnected()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function freddys.LevelDB.LoadLevelByName");
+	static auto fn = UObject::FindObject<UFunction>("Function freddys.FlowGraphConnector.OnDisconnected");
 
-	ULevelDB_LoadLevelByName_Params params;
-	params.LevelName = LevelName;
+	UFlowGraphConnector_OnDisconnected_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1504,20 +1875,16 @@ void ULevelDB::LoadLevelByName(const struct FString& LevelName)
 }
 
 
-// Function freddys.LevelDB.LoadLevelByID
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// int                            LevelID                        (Parm, ZeroConstructor, IsPlainOldData)
+// Function freddys.FlowGraphConnector.OnConnectorRegistered
+// (Event, Protected, BlueprintEvent)
 
-void ULevelDB::LoadLevelByID(int LevelID)
+void UFlowGraphConnector::OnConnectorRegistered()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function freddys.LevelDB.LoadLevelByID");
+	static auto fn = UObject::FindObject<UFunction>("Function freddys.FlowGraphConnector.OnConnectorRegistered");
 
-	ULevelDB_LoadLevelByID_Params params;
-	params.LevelID = LevelID;
+	UFlowGraphConnector_OnConnectorRegistered_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1525,17 +1892,19 @@ void ULevelDB::LoadLevelByID(int LevelID)
 }
 
 
-// Function freddys.LevelDB.LoadLevel
-// (Native, Public, BlueprintCallable)
+// Function freddys.FlowGraphConnector.OnConnected
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class UFlowGraphConnector*     OtherConnector                 (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void ULevelDB::LoadLevel()
+void UFlowGraphConnector::OnConnected(class UFlowGraphConnector* OtherConnector)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function freddys.LevelDB.LoadLevel");
+	static auto fn = UObject::FindObject<UFunction>("Function freddys.FlowGraphConnector.OnConnected");
 
-	ULevelDB_LoadLevel_Params params;
+	UFlowGraphConnector_OnConnected_Params params;
+	params.OtherConnector = OtherConnector;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1543,18 +1912,16 @@ void ULevelDB::LoadLevel()
 }
 
 
-// Function freddys.LevelDB.GetLevelIDByName
-// (Final, Native, Public, BlueprintCallable)
+// Function freddys.FlowGraphConnector.HasFlow
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FString                 Name                           (Parm, ZeroConstructor)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int ULevelDB::GetLevelIDByName(const struct FString& Name)
+bool UFlowGraphConnector::HasFlow()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function freddys.LevelDB.GetLevelIDByName");
+	static auto fn = UObject::FindObject<UFunction>("Function freddys.FlowGraphConnector.HasFlow");
 
-	ULevelDB_GetLevelIDByName_Params params;
-	params.Name = Name;
+	UFlowGraphConnector_HasFlow_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -1567,16 +1934,16 @@ int ULevelDB::GetLevelIDByName(const struct FString& Name)
 }
 
 
-// Function freddys.LevelDB.GetLevelID
-// (Final, Native, Public, BlueprintCallable)
+// Function freddys.FlowGraphConnector.GetNodeOwner
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class AFlowGraphNode*          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int ULevelDB::GetLevelID()
+class AFlowGraphNode* UFlowGraphConnector::GetNodeOwner()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function freddys.LevelDB.GetLevelID");
+	static auto fn = UObject::FindObject<UFunction>("Function freddys.FlowGraphConnector.GetNodeOwner");
 
-	ULevelDB_GetLevelID_Params params;
+	UFlowGraphConnector_GetNodeOwner_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -1589,18 +1956,16 @@ int ULevelDB::GetLevelID()
 }
 
 
-// Function freddys.LevelDB.CreateLevelDB
-// (Final, Native, Static, Public, BlueprintCallable)
+// Function freddys.FlowGraphConnector.GetConnectedNode
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UObject*                 Owner                          (Parm, ZeroConstructor, IsPlainOldData)
-// class ULevelDB*                ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class AFlowGraphNode*          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class ULevelDB* ULevelDB::STATIC_CreateLevelDB(class UObject* Owner)
+class AFlowGraphNode* UFlowGraphConnector::GetConnectedNode()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function freddys.LevelDB.CreateLevelDB");
+	static auto fn = UObject::FindObject<UFunction>("Function freddys.FlowGraphConnector.GetConnectedNode");
 
-	ULevelDB_CreateLevelDB_Params params;
-	params.Owner = Owner;
+	UFlowGraphConnector_GetConnectedNode_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -1610,6 +1975,85 @@ class ULevelDB* ULevelDB::STATIC_CreateLevelDB(class UObject* Owner)
 	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
+}
+
+
+// Function freddys.FlowGraphConnector.GetConnectedConnector
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UFlowGraphConnector*     ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+
+class UFlowGraphConnector* UFlowGraphConnector::GetConnectedConnector()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function freddys.FlowGraphConnector.GetConnectedConnector");
+
+	UFlowGraphConnector_GetConnectedConnector_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function freddys.FlowGraphConnector.Disconnect
+// (Final, Native, Public, BlueprintCallable)
+
+void UFlowGraphConnector::Disconnect()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function freddys.FlowGraphConnector.Disconnect");
+
+	UFlowGraphConnector_Disconnect_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function freddys.FlowGraphConnector.Connect
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UFlowGraphConnector*     OtherConnector                 (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+
+void UFlowGraphConnector::Connect(class UFlowGraphConnector* OtherConnector)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function freddys.FlowGraphConnector.Connect");
+
+	UFlowGraphConnector_Connect_Params params;
+	params.OtherConnector = OtherConnector;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function freddys.FlowGraphConnector.CheckConnection
+// (Final, Native, Public, BlueprintCallable)
+
+void UFlowGraphConnector::CheckConnection()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function freddys.FlowGraphConnector.CheckConnection");
+
+	UFlowGraphConnector_CheckConnection_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
 }
 
 

@@ -105,6 +105,16 @@ enum class EVectorVMOp : uint8_t
 };
 
 
+// Enum VectorVM.EVectorVMOperandLocation
+enum class EVectorVMOperandLocation : uint8_t
+{
+	EVectorVMOperandLocation__Register = 0,
+	EVectorVMOperandLocation__Constant = 1,
+	EVectorVMOperandLocation__Num  = 2,
+	EVectorVMOperandLocation__EVectorVMOperandLocation_MAX = 3
+};
+
+
 // Enum VectorVM.EVectorVMBaseTypes
 enum class EVectorVMBaseTypes : uint8_t
 {
@@ -113,16 +123,6 @@ enum class EVectorVMBaseTypes : uint8_t
 	EVectorVMBaseTypes__Bool       = 2,
 	EVectorVMBaseTypes__Num        = 3,
 	EVectorVMBaseTypes__EVectorVMBaseTypes_MAX = 4
-};
-
-
-// Enum VectorVM.EVectorVMOperandLocation
-enum class EVectorVMOperandLocation : uint8_t
-{
-	EVectorVMOperandLocation__Register = 0,
-	EVectorVMOperandLocation__Constant = 1,
-	EVectorVMOperandLocation__Num  = 2,
-	EVectorVMOperandLocation__EVectorVMOperandLocation_MAX = 3
 };
 
 

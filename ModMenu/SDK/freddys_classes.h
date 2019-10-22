@@ -12,6 +12,23 @@ namespace SDK
 // Classes
 //---------------------------------------------------------------------------
 
+// Class freddys.AchievementsFunctions
+// 0x0000 (0x0028 - 0x0028)
+class UAchievementsFunctions : public UBlueprintFunctionLibrary
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class freddys.AchievementsFunctions");
+		return ptr;
+	}
+
+
+	void STATIC_ClearAllAchievements(class UObject* WorldContextObject);
+};
+
+
 // Class freddys.AICharacterBase
 // 0x0000 (0x0740 - 0x0740)
 class AAICharacterBase : public ACharacter
@@ -46,37 +63,6 @@ public:
 };
 
 
-// Class freddys.FlowGraphConnector
-// 0x0030 (0x0270 - 0x0240)
-class UFlowGraphConnector : public USceneComponent
-{
-public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0240(0x0008) MISSED OFFSET
-	struct FScriptMulticastDelegate                    OnFlowGraphDisconnected;                                  // 0x0248(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	class UFlowGraphConnector*                         ConnectedTo;                                              // 0x0258(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
-	float                                              FlowConnectorDistance;                                    // 0x0260(0x0004) (ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData01[0xC];                                       // 0x0264(0x000C) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class freddys.FlowGraphConnector");
-		return ptr;
-	}
-
-
-	void OnDisconnected();
-	void OnConnectorRegistered();
-	void OnConnected(class UFlowGraphConnector* OtherConnector);
-	bool HasFlow();
-	class AFlowGraphNode* GetNodeOwner();
-	class AFlowGraphNode* GetConnectedNode();
-	class UFlowGraphConnector* GetConnectedConnector();
-	void Disconnect();
-	void Connect(class UFlowGraphConnector* OtherConnector);
-	void CheckConnection();
-};
-
-
 // Class freddys.FlowGraphNode
 // 0x0058 (0x0380 - 0x0328)
 class AFlowGraphNode : public AActor
@@ -107,30 +93,14 @@ public:
 };
 
 
-// Class freddys.AchievementsFunctions
-// 0x0000 (0x0028 - 0x0028)
-class UAchievementsFunctions : public UBlueprintFunctionLibrary
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class freddys.AchievementsFunctions");
-		return ptr;
-	}
-
-
-	void STATIC_ClearAllAchievements(class UObject* WorldContextObject);
-};
-
-
 // Class freddys.FNAFEditorSettings
 // 0x0008 (0x0040 - 0x0038)
 class UFNAFEditorSettings : public UDeveloperSettings
 {
 public:
 	EFNAFGameType                                      GameType;                                                 // 0x0038(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0039(0x0007) MISSED OFFSET
+	bool                                               HasHalloweenDLC;                                          // 0x0039(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x6];                                       // 0x003A(0x0006) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -200,12 +170,12 @@ public:
 
 
 // Class freddys.FNAF_GameInstanceBase
-// 0x0008 (0x00A8 - 0x00A0)
+// 0x0018 (0x00B8 - 0x00A0)
 class UFNAF_GameInstanceBase : public UGameInstance
 {
 public:
 	int                                                ForcedVariantNumber;                                      // 0x00A0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x00A4(0x0004) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x14];                                      // 0x00A4(0x0014) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -217,6 +187,7 @@ public:
 	void SwitchFNAFGameType(EFNAFGameType* GameType);
 	void StartAsyncSaveGame(class USaveGame* SaveGame, const struct FString& SlotName, int UserIndex);
 	bool IsInDemoMode();
+	bool HasDLC(EFNAFDLCType DLC);
 	struct FString STATIC_GetPrimaryGPUBrand();
 	struct FString STATIC_GetGPUBrandName();
 	EFNAFGameType GetGameType();
@@ -236,6 +207,70 @@ public:
 		return ptr;
 	}
 
+};
+
+
+// Class freddys.GridCalculatorActor
+// 0x0048 (0x0370 - 0x0328)
+class AGridCalculatorActor : public AActor
+{
+public:
+	class USceneComponent*                             Root;                                                     // 0x0328(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	int                                                GridWidth;                                                // 0x0330(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	int                                                GridHeight;                                               // 0x0334(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              GridCellSize;                                             // 0x0338(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               bShowDebug;                                               // 0x033C(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x033D(0x0003) MISSED OFFSET
+	TArray<class UTextRenderComponent*>                TextRenderers;                                            // 0x0340(0x0010) (Edit, ExportObject, ZeroConstructor, EditConst)
+	unsigned char                                      UnknownData01[0x20];                                      // 0x0350(0x0020) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class freddys.GridCalculatorActor");
+		return ptr;
+	}
+
+
+	void SetCellDebugDisplay(int CellID, int CellX, int CellY, int CellDistance);
+	void ResetDistances();
+	void GetGridSize(int* Width, int* Height);
+	int GetDistanceToCellAtWorldPosition(const struct FVector& WorldPosition);
+	int GetDistanceToCell(int CellID);
+	struct FVector GetCellWorldPositionByCellPos(int CellX, int CellY);
+	struct FVector GetCellWorldPosition(int CellID);
+	TArray<int> GetCellsBetweenDistances(int MinDistance, int MaxDistance);
+	TArray<int> GetCellsAtDistance(int Distance);
+	void GetCellPosition(int CellID, int* CellX, int* CellY);
+	void GetCellPosFromWorldPosition(const struct FVector& WorldPosition, int* CellX, int* CellY);
+	int GetCellIDFromWorldPosition(const struct FVector& WorldPosition);
+	int GetCellIDFromGridPosition(int CellX, int CellY);
+	TArray<int> FindPathFromWorldPositions(const struct FVector& WorldPositionStart, const struct FVector& WorldPositionEnd);
+	TArray<int> FindPathFromCellIDs(int StartCellID, int EndCellID);
+	void CalculateDistancesFromWorldPosition(const struct FVector& WorldPosition);
+	void CalculateDistancesFromGridPosition(int GridX, int GridY);
+};
+
+
+// Class freddys.LevelDB
+// 0x0010 (0x0038 - 0x0028)
+class ULevelDB : public UObject
+{
+public:
+	TArray<struct FGameLevels>                         GameLevels;                                               // 0x0028(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class freddys.LevelDB");
+		return ptr;
+	}
+
+
+	void LoadLevelByName(const struct FString& LevelName);
+	void LoadLevelByID(int LevelID);
+	void LoadLevel();
+	int GetLevelIDByName(const struct FString& Name);
+	int GetLevelID();
+	class ULevelDB* STATIC_CreateLevelDB(class UObject* Owner);
 };
 
 
@@ -418,26 +453,34 @@ public:
 };
 
 
-// Class freddys.LevelDB
-// 0x0010 (0x0038 - 0x0028)
-class ULevelDB : public UObject
+// Class freddys.FlowGraphConnector
+// 0x0030 (0x0270 - 0x0240)
+class UFlowGraphConnector : public USceneComponent
 {
 public:
-	TArray<struct FGameLevels>                         GameLevels;                                               // 0x0028(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0240(0x0008) MISSED OFFSET
+	struct FScriptMulticastDelegate                    OnFlowGraphDisconnected;                                  // 0x0248(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	class UFlowGraphConnector*                         ConnectedTo;                                              // 0x0258(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	float                                              FlowConnectorDistance;                                    // 0x0260(0x0004) (ZeroConstructor, Config, IsPlainOldData)
+	unsigned char                                      UnknownData01[0xC];                                       // 0x0264(0x000C) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class freddys.LevelDB");
+		static auto ptr = UObject::FindClass("Class freddys.FlowGraphConnector");
 		return ptr;
 	}
 
 
-	void LoadLevelByName(const struct FString& LevelName);
-	void LoadLevelByID(int LevelID);
-	void LoadLevel();
-	int GetLevelIDByName(const struct FString& Name);
-	int GetLevelID();
-	class ULevelDB* STATIC_CreateLevelDB(class UObject* Owner);
+	void OnDisconnected();
+	void OnConnectorRegistered();
+	void OnConnected(class UFlowGraphConnector* OtherConnector);
+	bool HasFlow();
+	class AFlowGraphNode* GetNodeOwner();
+	class AFlowGraphNode* GetConnectedNode();
+	class UFlowGraphConnector* GetConnectedConnector();
+	void Disconnect();
+	void Connect(class UFlowGraphConnector* OtherConnector);
+	void CheckConnection();
 };
 
 

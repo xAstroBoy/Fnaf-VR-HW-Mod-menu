@@ -51,6 +51,18 @@ enum class EMovieSceneBuiltInEasing : uint8_t
 };
 
 
+// Enum MovieScene.EMovieSceneKeyInterpolation
+enum class EMovieSceneKeyInterpolation : uint8_t
+{
+	EMovieSceneKeyInterpolation__Auto = 0,
+	EMovieSceneKeyInterpolation__User = 1,
+	EMovieSceneKeyInterpolation__Break = 2,
+	EMovieSceneKeyInterpolation__Linear = 3,
+	EMovieSceneKeyInterpolation__Constant = 4,
+	EMovieSceneKeyInterpolation__EMovieSceneKeyInterpolation_MAX = 5
+};
+
+
 // Enum MovieScene.EUpdateClockSource
 enum class EUpdateClockSource : uint8_t
 {
@@ -70,15 +82,17 @@ enum class EMovieSceneEvaluationType : uint8_t
 };
 
 
-// Enum MovieScene.EMovieSceneKeyInterpolation
-enum class EMovieSceneKeyInterpolation : uint8_t
+// Enum MovieScene.EMovieScenePlayerStatus
+enum class EMovieScenePlayerStatus : uint8_t
 {
-	EMovieSceneKeyInterpolation__Auto = 0,
-	EMovieSceneKeyInterpolation__User = 1,
-	EMovieSceneKeyInterpolation__Break = 2,
-	EMovieSceneKeyInterpolation__Linear = 3,
-	EMovieSceneKeyInterpolation__Constant = 4,
-	EMovieSceneKeyInterpolation__EMovieSceneKeyInterpolation_MAX = 5
+	EMovieScenePlayerStatus__Stopped = 0,
+	EMovieScenePlayerStatus__Playing = 1,
+	EMovieScenePlayerStatus__Recording = 2,
+	EMovieScenePlayerStatus__Scrubbing = 3,
+	EMovieScenePlayerStatus__Jumping = 4,
+	EMovieScenePlayerStatus__Stepping = 5,
+	EMovieScenePlayerStatus__Paused = 6,
+	EMovieScenePlayerStatus__MAX   = 7
 };
 
 
@@ -118,20 +132,6 @@ enum class ESpawnOwnership : uint8_t
 	ESpawnOwnership__MasterSequence = 1,
 	ESpawnOwnership__External      = 2,
 	ESpawnOwnership__ESpawnOwnership_MAX = 3
-};
-
-
-// Enum MovieScene.EMovieScenePlayerStatus
-enum class EMovieScenePlayerStatus : uint8_t
-{
-	EMovieScenePlayerStatus__Stopped = 0,
-	EMovieScenePlayerStatus__Playing = 1,
-	EMovieScenePlayerStatus__Recording = 2,
-	EMovieScenePlayerStatus__Scrubbing = 3,
-	EMovieScenePlayerStatus__Jumping = 4,
-	EMovieScenePlayerStatus__Stepping = 5,
-	EMovieScenePlayerStatus__Paused = 6,
-	EMovieScenePlayerStatus__MAX   = 7
 };
 
 
@@ -669,14 +669,6 @@ struct FMovieSceneEditorData
 	struct FFloatRange                                 ViewRange;                                                // 0x00D0(0x0010) (ZeroConstructor, Deprecated, IsPlainOldData)
 };
 
-// ScriptStruct MovieScene.MovieSceneTimecodeSource
-// 0x0018
-struct FMovieSceneTimecodeSource
-{
-	struct FTimecode                                   Timecode;                                                 // 0x0000(0x0014) (ZeroConstructor, IsPlainOldData)
-	struct FFrameNumber                                DeltaFrame;                                               // 0x0014(0x0004)
-};
-
 // ScriptStruct MovieScene.MovieSceneByteChannel
 // 0x0090 (0x0098 - 0x0008)
 struct FMovieSceneByteChannel : public FMovieSceneChannel
@@ -688,6 +680,14 @@ struct FMovieSceneByteChannel : public FMovieSceneChannel
 	TArray<unsigned char>                              Values;                                                   // 0x0020(0x0010) (ZeroConstructor)
 	class UEnum*                                       Enum;                                                     // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x60];                                      // 0x0038(0x0060) MISSED OFFSET
+};
+
+// ScriptStruct MovieScene.MovieSceneTimecodeSource
+// 0x0018
+struct FMovieSceneTimecodeSource
+{
+	struct FTimecode                                   Timecode;                                                 // 0x0000(0x0014) (ZeroConstructor, IsPlainOldData)
+	struct FFrameNumber                                DeltaFrame;                                               // 0x0014(0x0004)
 };
 
 // ScriptStruct MovieScene.MovieSceneEmptyStruct

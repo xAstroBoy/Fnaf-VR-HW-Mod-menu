@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Saul_MotionControllerPawn.Saul_MotionControllerPawn_C
-// 0x0405 (0x0E55 - 0x0A50)
+// 0x0419 (0x0E69 - 0x0A50)
 class ASaul_MotionControllerPawn_C : public ASWGVRCharacter
 {
 public:
@@ -31,110 +31,114 @@ public:
 	class USceneComponent*                             VR_View_Locator_Dummy;                                    // 0x0AA8(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 	class UArrowComponent*                             Left_TeleportArrow;                                       // 0x0AB0(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 	class UArrowComponent*                             Right_TeleportArrow;                                      // 0x0AB8(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class USpotLightComponent*                         SpotLight;                                                // 0x0AC0(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UAudioComponent*                             Flashlight_High;                                          // 0x0AC8(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	bool                                               bShowChaperone;                                           // 0x0AD0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0AD1(0x0007) MISSED OFFSET
-	class ASaul_BP_MotionController_C*                 LeftController;                                           // 0x0AD8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
-	class ASaul_BP_MotionController_C*                 RightController;                                          // 0x0AE0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
-	float                                              FadeOutDuration;                                          // 0x0AE8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              FadeInDuration;                                           // 0x0AEC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               IsTeleporting;                                            // 0x0AF0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x0AF1(0x0003) MISSED OFFSET
-	struct FLinearColor                                TeleportFadeColor;                                        // 0x0AF4(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              ThumbDeadzone;                                            // 0x0B04(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               RightStickDown;                                           // 0x0B08(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               LeftStickDown;                                            // 0x0B09(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               UseControllerRollToRotate;                                // 0x0B0A(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x5];                                       // 0x0B0B(0x0005) MISSED OFFSET
-	struct FScriptMulticastDelegate                    Turn_On_Light;                                            // 0x0B10(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    PlayerIsKilled;                                           // 0x0B20(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
-	float                                              Flashlight_Pitch;                                         // 0x0B30(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x4];                                       // 0x0B34(0x0004) MISSED OFFSET
-	struct FScriptMulticastDelegate                    Player_Win;                                               // 0x0B38(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    Turn_On_Menu;                                             // 0x0B48(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
-	bool                                               bTeleportDelay;                                           // 0x0B58(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x3];                                       // 0x0B59(0x0003) MISSED OFFSET
-	float                                              TeleportFadeOutDuration;                                  // 0x0B5C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              TeleportFadeInDuration;                                   // 0x0B60(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData05[0x4];                                       // 0x0B64(0x0004) MISSED OFFSET
-	TArray<TEnumAsByte<EObjectTypeQuery>>              TeleportArrayList;                                        // 0x0B68(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	class ATeleport_Manager_BP_C*                      Teleportmanager;                                          // 0x0B78(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData)
-	bool                                               bSetHandToPointerOnly;                                    // 0x0B80(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bAllowTeleportation;                                      // 0x0B81(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               RightGripDown;                                            // 0x0B82(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               LeftGripDown;                                             // 0x0B83(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               bTeleportSpotsAlwaysOn;                                   // 0x0B84(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               MaskAttached;                                             // 0x0B85(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData06[0x2];                                       // 0x0B86(0x0002) MISSED OFFSET
-	struct FScriptMulticastDelegate                    Trigger_Mangle_Scare;                                     // 0x0B88(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
-	bool                                               HideHandOnGrab;                                           // 0x0B98(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               TeleportSpotFound;                                        // 0x0B99(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               DisablePlayerInputs;                                      // 0x0B9A(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData07[0x5];                                       // 0x0B9B(0x0005) MISSED OFFSET
-	struct FScriptMulticastDelegate                    Enter;                                                    // 0x0BA0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    DpadRight;                                                // 0x0BB0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    DpadLeft;                                                 // 0x0BC0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    DpadUP;                                                   // 0x0BD0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    DpadDown;                                                 // 0x0BE0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    Update_Player_Teleport_Location;                          // 0x0BF0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
-	float                                              DeltaSeconds;                                             // 0x0C00(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              SpectatorCamInterpSpeed;                                  // 0x0C04(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FHitResult                                  LookAtHitResults;                                         // 0x0C08(0x0088) (Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData)
-	bool                                               DisableSpectatorMode;                                     // 0x0C90(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData08[0x7];                                       // 0x0C91(0x0007) MISSED OFFSET
-	struct FHitResult                                  FlashlightHitResults;                                     // 0x0C98(0x0088) (Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData)
-	struct FScriptMulticastDelegate                    Paused_DpadRight;                                         // 0x0D20(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    Paused_DpadLeft;                                          // 0x0D30(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    Paused_DpadUp;                                            // 0x0D40(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    Paused_DpadDown;                                          // 0x0D50(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    Paused_Enter;                                             // 0x0D60(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
-	int                                                Choked;                                                   // 0x0D70(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData09[0x4];                                       // 0x0D74(0x0004) MISSED OFFSET
-	TArray<struct FText>                               ThingsEaten;                                              // 0x0D78(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	bool                                               GettingAchievement;                                       // 0x0D88(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData10[0x7];                                       // 0x0D89(0x0007) MISSED OFFSET
-	struct FTimerHandle                                Time_Handle;                                              // 0x0D90(0x0008) (Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FScriptMulticastDelegate                    GamepadRightShoulderPressed;                              // 0x0D98(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    GamepadRightTriggerPressed;                               // 0x0DA8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    GamepadLeftShoulderPressed;                               // 0x0DB8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    GamepadLeftTriggerPressed;                                // 0x0DC8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
-	bool                                               EitherTriggerPulled;                                      // 0x0DD8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               IngameMenuOpen;                                           // 0x0DD9(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               IsRunning;                                                // 0x0DDA(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData11[0x1];                                       // 0x0DDB(0x0001) MISSED OFFSET
-	float                                              CurrentDisplayTime;                                       // 0x0DDC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	int                                                RowName;                                                  // 0x0DE0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData12[0x4];                                       // 0x0DE4(0x0004) MISSED OFFSET
-	struct FTimerHandle                                SubtitleTimer;                                            // 0x0DE8(0x0008) (Edit, BlueprintVisible, DisableEditOnInstance)
-	bool                                               SubtitlesOff;                                             // 0x0DF0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               Upside_Down_Mode;                                         // 0x0DF1(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               World_Meters_set_to_70;                                   // 0x0DF2(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData13[0x1];                                       // 0x0DF3(0x0001) MISSED OFFSET
-	struct FRotator                                    Store_Player_s_Current_Rotation;                          // 0x0DF4(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               Enable_Roation_Snap;                                      // 0x0E00(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData14[0x7];                                       // 0x0E01(0x0007) MISSED OFFSET
-	struct FTimerHandle                                Roation_Time_Handle;                                      // 0x0E08(0x0008) (Edit, BlueprintVisible, DisableEditOnInstance)
-	class UObject*                                     MRComponent;                                              // 0x0E10(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
-	bool                                               Enable_Map;                                               // 0x0E18(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               HideRightHandAndDualShock;                                // 0x0E19(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData15[0x6];                                       // 0x0E1A(0x0006) MISSED OFFSET
-	class ASaul_BP_MotionController_C*                 BPMotionController;                                       // 0x0E20(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
-	float                                              DualShockContrillerScale;                                 // 0x0E28(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               Hide_Hands;                                               // 0x0E2C(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               Mangle_Disable_Teleportation;                             // 0x0E2D(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData16[0x2];                                       // 0x0E2E(0x0002) MISSED OFFSET
-	float                                              SnapRotationAmount;                                       // 0x0E30(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              SnapRotationMax;                                          // 0x0E34(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              SnapRotationCurrentAngle;                                 // 0x0E38(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              DS4ThrowSpeed;                                            // 0x0E3C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              HeightAdjustAmount;                                       // 0x0E40(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	int                                                HeightAdjustMax;                                          // 0x0E44(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	int                                                CurrentHeight;                                            // 0x0E48(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               CanAdjustHeightMotionController;                          // 0x0E4C(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData17[0x3];                                       // 0x0E4D(0x0003) MISSED OFFSET
-	float                                              Set_Head_Collision_Scale;                                 // 0x0E50(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               CanAdjustHeightDS4;                                       // 0x0E54(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UAudioComponent*                             Flashlight_High;                                          // 0x0AC0(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	bool                                               bShowChaperone;                                           // 0x0AC8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0AC9(0x0007) MISSED OFFSET
+	class ASaul_BP_MotionController_C*                 LeftController;                                           // 0x0AD0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
+	class ASaul_BP_MotionController_C*                 RightController;                                          // 0x0AD8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
+	float                                              FadeOutDuration;                                          // 0x0AE0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              FadeInDuration;                                           // 0x0AE4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               IsTeleporting;                                            // 0x0AE8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x0AE9(0x0003) MISSED OFFSET
+	struct FLinearColor                                TeleportFadeColor;                                        // 0x0AEC(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              ThumbDeadzone;                                            // 0x0AFC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               RightStickDown;                                           // 0x0B00(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               LeftStickDown;                                            // 0x0B01(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               UseControllerRollToRotate;                                // 0x0B02(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x5];                                       // 0x0B03(0x0005) MISSED OFFSET
+	struct FScriptMulticastDelegate                    Turn_On_Light;                                            // 0x0B08(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    PlayerIsKilled;                                           // 0x0B18(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
+	float                                              Flashlight_Pitch;                                         // 0x0B28(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x4];                                       // 0x0B2C(0x0004) MISSED OFFSET
+	struct FScriptMulticastDelegate                    Player_Win;                                               // 0x0B30(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    Turn_On_Menu;                                             // 0x0B40(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
+	bool                                               bTeleportDelay;                                           // 0x0B50(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x3];                                       // 0x0B51(0x0003) MISSED OFFSET
+	float                                              TeleportFadeOutDuration;                                  // 0x0B54(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              TeleportFadeInDuration;                                   // 0x0B58(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData05[0x4];                                       // 0x0B5C(0x0004) MISSED OFFSET
+	TArray<TEnumAsByte<EObjectTypeQuery>>              TeleportArrayList;                                        // 0x0B60(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	class ATeleport_Manager_BP_C*                      Teleportmanager;                                          // 0x0B70(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData)
+	bool                                               bSetHandToPointerOnly;                                    // 0x0B78(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               bAllowTeleportation;                                      // 0x0B79(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               RightGripDown;                                            // 0x0B7A(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               LeftGripDown;                                             // 0x0B7B(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               bTeleportSpotsAlwaysOn;                                   // 0x0B7C(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               MaskAttached;                                             // 0x0B7D(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData06[0x2];                                       // 0x0B7E(0x0002) MISSED OFFSET
+	struct FScriptMulticastDelegate                    Trigger_Mangle_Scare;                                     // 0x0B80(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
+	bool                                               HideHandOnGrab;                                           // 0x0B90(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               TeleportSpotFound;                                        // 0x0B91(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               DisablePlayerInputs;                                      // 0x0B92(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData07[0x5];                                       // 0x0B93(0x0005) MISSED OFFSET
+	struct FScriptMulticastDelegate                    Enter;                                                    // 0x0B98(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    DpadRight;                                                // 0x0BA8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    DpadLeft;                                                 // 0x0BB8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    DpadUP;                                                   // 0x0BC8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    DpadDown;                                                 // 0x0BD8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    Update_Player_Teleport_Location;                          // 0x0BE8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
+	float                                              DeltaSeconds;                                             // 0x0BF8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              SpectatorCamInterpSpeed;                                  // 0x0BFC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FHitResult                                  LookAtHitResults;                                         // 0x0C00(0x0088) (Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData)
+	bool                                               DisableSpectatorMode;                                     // 0x0C88(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData08[0x7];                                       // 0x0C89(0x0007) MISSED OFFSET
+	struct FHitResult                                  FlashlightHitResults;                                     // 0x0C90(0x0088) (Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData)
+	struct FScriptMulticastDelegate                    Paused_DpadRight;                                         // 0x0D18(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    Paused_DpadLeft;                                          // 0x0D28(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    Paused_DpadUp;                                            // 0x0D38(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    Paused_DpadDown;                                          // 0x0D48(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    Paused_Enter;                                             // 0x0D58(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
+	int                                                Choked;                                                   // 0x0D68(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData09[0x4];                                       // 0x0D6C(0x0004) MISSED OFFSET
+	TArray<struct FText>                               ThingsEaten;                                              // 0x0D70(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	bool                                               GettingAchievement;                                       // 0x0D80(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData10[0x7];                                       // 0x0D81(0x0007) MISSED OFFSET
+	struct FTimerHandle                                Time_Handle;                                              // 0x0D88(0x0008) (Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FScriptMulticastDelegate                    GamepadRightShoulderPressed;                              // 0x0D90(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    GamepadRightTriggerPressed;                               // 0x0DA0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    GamepadLeftShoulderPressed;                               // 0x0DB0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    GamepadLeftTriggerPressed;                                // 0x0DC0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
+	bool                                               EitherTriggerPulled;                                      // 0x0DD0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               IngameMenuOpen;                                           // 0x0DD1(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               IsRunning;                                                // 0x0DD2(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData11[0x1];                                       // 0x0DD3(0x0001) MISSED OFFSET
+	float                                              CurrentDisplayTime;                                       // 0x0DD4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                RowName;                                                  // 0x0DD8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData12[0x4];                                       // 0x0DDC(0x0004) MISSED OFFSET
+	struct FTimerHandle                                SubtitleTimer;                                            // 0x0DE0(0x0008) (Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                               SubtitlesOff;                                             // 0x0DE8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               Upside_Down_Mode;                                         // 0x0DE9(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               World_Meters_set_to_70;                                   // 0x0DEA(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData13[0x1];                                       // 0x0DEB(0x0001) MISSED OFFSET
+	struct FRotator                                    Store_Player_s_Current_Rotation;                          // 0x0DEC(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               Enable_Roation_Snap;                                      // 0x0DF8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData14[0x7];                                       // 0x0DF9(0x0007) MISSED OFFSET
+	struct FTimerHandle                                Roation_Time_Handle;                                      // 0x0E00(0x0008) (Edit, BlueprintVisible, DisableEditOnInstance)
+	class UObject*                                     MRComponent;                                              // 0x0E08(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
+	bool                                               Enable_Map;                                               // 0x0E10(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               HideRightHandAndDualShock;                                // 0x0E11(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData15[0x6];                                       // 0x0E12(0x0006) MISSED OFFSET
+	class ASaul_BP_MotionController_C*                 BPMotionController;                                       // 0x0E18(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
+	float                                              DualShockContrillerScale;                                 // 0x0E20(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               Hide_Hands;                                               // 0x0E24(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               Mangle_Disable_Teleportation;                             // 0x0E25(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData16[0x2];                                       // 0x0E26(0x0002) MISSED OFFSET
+	float                                              SnapRotationAmount;                                       // 0x0E28(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              SnapRotationMax;                                          // 0x0E2C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              SnapRotationCurrentAngle;                                 // 0x0E30(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              DS4ThrowSpeed;                                            // 0x0E34(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              HeightAdjustAmount;                                       // 0x0E38(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                HeightAdjustMax;                                          // 0x0E3C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                CurrentHeight;                                            // 0x0E40(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               CanAdjustHeightMotionController;                          // 0x0E44(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData17[0x3];                                       // 0x0E45(0x0003) MISSED OFFSET
+	float                                              Set_Head_Collision_Scale;                                 // 0x0E48(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               CanAdjustHeightDS4;                                       // 0x0E4C(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               SnapRotationNoLimit;                                      // 0x0E4D(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData18[0x2];                                       // 0x0E4E(0x0002) MISSED OFFSET
+	struct FScriptMulticastDelegate                    GrabRight;                                                // 0x0E50(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
+	class APlayerPawn_Headlight_C*                     HauntedRidePlayerPawn;                                    // 0x0E60(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
+	bool                                               CanTurnOffFlashlight;                                     // 0x0E68(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -150,7 +154,7 @@ public:
 	struct FTransform GetHeadTransform();
 	void TeleportCheck(bool RightHand, bool* TeleportSpotFound, struct FVector* TeleportLocation, struct FRotator* TeleportRotation, bool* Set_player_rotation_to_Collision);
 	void ToggleMenu();
-	void Game_Mode_Ref(class AFNAFGM_FlashlightGame_C** Game_Mode_Ref);
+	void Game_Mode_Ref(bool Toggle_Flashlight_State);
 	void UserConstructionScript();
 	void Action_K2Node_InputActionEvent_36(const struct FKey& Key);
 	void Action_K2Node_InputActionEvent_35(const struct FKey& Key);
@@ -230,8 +234,12 @@ public:
 	void BndEvt__VRNotifications_K2Node_ComponentBoundEvent_5_VRNotificationsDelegate__DelegateSignature();
 	void BndEvt__VRNotifications_K2Node_ComponentBoundEvent_6_VRNotificationsDelegate__DelegateSignature();
 	void BndEvt__VRNotifications_K2Node_ComponentBoundEvent_7_VRNotificationsDelegate__DelegateSignature();
+	void Force_Turn_Off_Flashlight();
+	void Turn_On_Flashlight();
+	void TurnOffFLashlight();
 	void WinCurrentLevel();
 	void ExecuteUbergraph_Saul_MotionControllerPawn(int EntryPoint);
+	void GrabRight__DelegateSignature();
 	void GamepadLeftTriggerPressed__DelegateSignature();
 	void GamepadLeftShoulderPressed__DelegateSignature();
 	void GamepadRightTriggerPressed__DelegateSignature();

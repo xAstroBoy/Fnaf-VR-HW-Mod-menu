@@ -175,6 +175,17 @@ enum class EBTNodeResult : uint8_t
 };
 
 
+// Enum AIModule.ETextKeyOperation
+enum class ETextKeyOperation : uint8_t
+{
+	ETextKeyOperation__Equal       = 0,
+	ETextKeyOperation__NotEqual    = 1,
+	ETextKeyOperation__Contain     = 2,
+	ETextKeyOperation__NotContain  = 3,
+	ETextKeyOperation__ETextKeyOperation_MAX = 4
+};
+
+
 // Enum AIModule.EArithmeticKeyOperation
 enum class EArithmeticKeyOperation : uint8_t
 {
@@ -188,23 +199,21 @@ enum class EArithmeticKeyOperation : uint8_t
 };
 
 
-// Enum AIModule.ETextKeyOperation
-enum class ETextKeyOperation : uint8_t
-{
-	ETextKeyOperation__Equal       = 0,
-	ETextKeyOperation__NotEqual    = 1,
-	ETextKeyOperation__Contain     = 2,
-	ETextKeyOperation__NotContain  = 3,
-	ETextKeyOperation__ETextKeyOperation_MAX = 4
-};
-
-
 // Enum AIModule.EBasicKeyOperation
 enum class EBasicKeyOperation : uint8_t
 {
 	EBasicKeyOperation__Set        = 0,
 	EBasicKeyOperation__NotSet     = 1,
 	EBasicKeyOperation__EBasicKeyOperation_MAX = 2
+};
+
+
+// Enum AIModule.EBTParallelMode
+enum class EBTParallelMode : uint8_t
+{
+	EBTParallelMode__AbortBackground = 0,
+	EBTParallelMode__WaitForBackground = 1,
+	EBTParallelMode__EBTParallelMode_MAX = 2
 };
 
 
@@ -286,21 +295,22 @@ enum class EEnvTestDistance : uint8_t
 };
 
 
-// Enum AIModule.EBTParallelMode
-enum class EBTParallelMode : uint8_t
-{
-	EBTParallelMode__AbortBackground = 0,
-	EBTParallelMode__WaitForBackground = 1,
-	EBTParallelMode__EBTParallelMode_MAX = 2
-};
-
-
 // Enum AIModule.EEnvTestDot
 enum class EEnvTestDot : uint8_t
 {
 	EEnvTestDot__Dot3D             = 0,
 	EEnvTestDot__Dot2D             = 1,
 	EEnvTestDot__EEnvTestDot_MAX   = 2
+};
+
+
+// Enum AIModule.EEnvTestPathfinding
+enum class EEnvTestPathfinding : uint8_t
+{
+	EEnvTestPathfinding__PathExist = 0,
+	EEnvTestPathfinding__PathCost  = 1,
+	EEnvTestPathfinding__PathLength = 2,
+	EEnvTestPathfinding__EEnvTestPathfinding_MAX = 3
 };
 
 
@@ -314,6 +324,15 @@ enum class EEnvQueryTestClamping : uint8_t
 };
 
 
+// Enum AIModule.EEnvDirection
+enum class EEnvDirection : uint8_t
+{
+	EEnvDirection__TwoPoints       = 0,
+	EEnvDirection__Rotation        = 1,
+	EEnvDirection__EEnvDirection_MAX = 2
+};
+
+
 // Enum AIModule.EEnvOverlapShape
 enum class EEnvOverlapShape : uint8_t
 {
@@ -324,12 +343,14 @@ enum class EEnvOverlapShape : uint8_t
 };
 
 
-// Enum AIModule.EEnvDirection
-enum class EEnvDirection : uint8_t
+// Enum AIModule.EEnvTraceShape
+enum class EEnvTraceShape : uint8_t
 {
-	EEnvDirection__TwoPoints       = 0,
-	EEnvDirection__Rotation        = 1,
-	EEnvDirection__EEnvDirection_MAX = 2
+	EEnvTraceShape__Line           = 0,
+	EEnvTraceShape__Box            = 1,
+	EEnvTraceShape__Sphere         = 2,
+	EEnvTraceShape__Capsule        = 3,
+	EEnvTraceShape__EEnvTraceShape_MAX = 4
 };
 
 
@@ -372,17 +393,6 @@ enum class EEnvQueryRunMode : uint8_t
 	EEnvQueryRunMode__RandomBest25Pct = 2,
 	EEnvQueryRunMode__AllMatching  = 3,
 	EEnvQueryRunMode__EEnvQueryRunMode_MAX = 4
-};
-
-
-// Enum AIModule.EEnvTraceShape
-enum class EEnvTraceShape : uint8_t
-{
-	EEnvTraceShape__Line           = 0,
-	EEnvTraceShape__Box            = 1,
-	EEnvTraceShape__Sphere         = 2,
-	EEnvTraceShape__Capsule        = 3,
-	EEnvTraceShape__EEnvTraceShape_MAX = 4
 };
 
 
@@ -503,6 +513,17 @@ enum class EPathFollowingAction : uint8_t
 };
 
 
+// Enum AIModule.EPathFollowingStatus
+enum class EPathFollowingStatus : uint8_t
+{
+	EPathFollowingStatus__Idle     = 0,
+	EPathFollowingStatus__Waiting  = 1,
+	EPathFollowingStatus__Paused   = 2,
+	EPathFollowingStatus__Moving   = 3,
+	EPathFollowingStatus__EPathFollowingStatus_MAX = 4
+};
+
+
 // Enum AIModule.EPawnActionFailHandling
 enum class EPawnActionFailHandling : uint8_t
 {
@@ -530,31 +551,17 @@ enum class EPawnActionMoveMode : uint8_t
 };
 
 
-// Enum AIModule.EPathFollowingStatus
-enum class EPathFollowingStatus : uint8_t
-{
-	EPathFollowingStatus__Idle     = 0,
-	EPathFollowingStatus__Waiting  = 1,
-	EPathFollowingStatus__Paused   = 2,
-	EPathFollowingStatus__Moving   = 3,
-	EPathFollowingStatus__EPathFollowingStatus_MAX = 4
-};
-
-
-// Enum AIModule.EEnvTestPathfinding
-enum class EEnvTestPathfinding : uint8_t
-{
-	EEnvTestPathfinding__PathExist = 0,
-	EEnvTestPathfinding__PathCost  = 1,
-	EEnvTestPathfinding__PathLength = 2,
-	EEnvTestPathfinding__EEnvTestPathfinding_MAX = 3
-};
-
-
 
 //---------------------------------------------------------------------------
 // Script Structs
 //---------------------------------------------------------------------------
+
+// ScriptStruct AIModule.AIRequestID
+// 0x0004
+struct FAIRequestID
+{
+	uint32_t                                           RequestID;                                                // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
+};
 
 // ScriptStruct AIModule.AIStimulus
 // 0x0048
@@ -595,15 +602,6 @@ struct FAIDamageEvent
 	class AActor*                                      Instigator;                                               // 0x0028(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
-// ScriptStruct AIModule.AIPredictionEvent
-// 0x0018
-struct FAIPredictionEvent
-{
-	class AActor*                                      Requestor;                                                // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	class AActor*                                      PredictedActor;                                           // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0010(0x0008) MISSED OFFSET
-};
-
 // ScriptStruct AIModule.AINoiseEvent
 // 0x0030
 struct FAINoiseEvent
@@ -617,13 +615,13 @@ struct FAINoiseEvent
 	unsigned char                                      UnknownData01[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
 };
 
-// ScriptStruct AIModule.AITouchEvent
-// 0x0020
-struct FAITouchEvent
+// ScriptStruct AIModule.AIPredictionEvent
+// 0x0018
+struct FAIPredictionEvent
 {
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0000(0x0010) MISSED OFFSET
-	class AActor*                                      TouchReceiver;                                            // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData)
-	class AActor*                                      OtherActor;                                               // 0x0018(0x0008) (ZeroConstructor, IsPlainOldData)
+	class AActor*                                      Requestor;                                                // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	class AActor*                                      PredictedActor;                                           // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0010(0x0008) MISSED OFFSET
 };
 
 // ScriptStruct AIModule.AITeamStimulusEvent
@@ -633,6 +631,15 @@ struct FAITeamStimulusEvent
 	unsigned char                                      UnknownData00[0x28];                                      // 0x0000(0x0028) MISSED OFFSET
 	class AActor*                                      Broadcaster;                                              // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData)
 	class AActor*                                      Enemy;                                                    // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct AIModule.AITouchEvent
+// 0x0020
+struct FAITouchEvent
+{
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0000(0x0010) MISSED OFFSET
+	class AActor*                                      TouchReceiver;                                            // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData)
+	class AActor*                                      OtherActor;                                               // 0x0018(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct AIModule.AISenseAffiliationFilter
@@ -753,6 +760,16 @@ struct FEQSParametrizedQueryExecutionRequest
 	unsigned char                                      UnknownData01[0x3];                                       // 0x0045(0x0003) MISSED OFFSET
 };
 
+// ScriptStruct AIModule.EnvNamedValue
+// 0x0010
+struct FEnvNamedValue
+{
+	struct FName                                       ParamName;                                                // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	EAIParamType                                       ParamType;                                                // 0x0008(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0009(0x0003) MISSED OFFSET
+	float                                              Value;                                                    // 0x000C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+};
+
 // ScriptStruct AIModule.CrowdAvoidanceConfig
 // 0x001C
 struct FCrowdAvoidanceConfig
@@ -775,16 +792,6 @@ struct FCrowdAvoidanceSamplingPattern
 {
 	TArray<float>                                      Angles;                                                   // 0x0000(0x0010) (Edit, ZeroConstructor)
 	TArray<float>                                      Radii;                                                    // 0x0010(0x0010) (Edit, ZeroConstructor)
-};
-
-// ScriptStruct AIModule.EnvNamedValue
-// 0x0010
-struct FEnvNamedValue
-{
-	struct FName                                       ParamName;                                                // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	EAIParamType                                       ParamType;                                                // 0x0008(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0009(0x0003) MISSED OFFSET
-	float                                              Value;                                                    // 0x000C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct AIModule.AIDataProviderBoolValue
@@ -877,13 +884,6 @@ struct FPawnActionEvent
 {
 	class UPawnAction*                                 Action;                                                   // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x10];                                      // 0x0008(0x0010) MISSED OFFSET
-};
-
-// ScriptStruct AIModule.AIRequestID
-// 0x0004
-struct FAIRequestID
-{
-	uint32_t                                           RequestID;                                                // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct AIModule.AIDataProviderStructValue

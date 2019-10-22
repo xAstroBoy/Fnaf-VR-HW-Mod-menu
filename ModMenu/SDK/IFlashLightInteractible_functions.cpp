@@ -16,9 +16,9 @@ namespace SDK
 // Function IFlashLightInteractible.IFlashLightInteractible_C.OnFlashLightEndHover
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AFlashlightBase_C*       Flashlight                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AFlashlight_Battery_C*   Flashlight                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UIFlashLightInteractible_C::OnFlashLightEndHover(class AFlashlightBase_C* Flashlight)
+void UIFlashLightInteractible_C::OnFlashLightEndHover(class AFlashlight_Battery_C* Flashlight)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function IFlashLightInteractible.IFlashLightInteractible_C.OnFlashLightEndHover");
 
@@ -36,9 +36,9 @@ void UIFlashLightInteractible_C::OnFlashLightEndHover(class AFlashlightBase_C* F
 // Function IFlashLightInteractible.IFlashLightInteractible_C.OnFlashLightBeginHover
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AFlashlightBase_C*       Flashlight                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AFlashlight_Battery_C*   Flashlight                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UIFlashLightInteractible_C::OnFlashLightBeginHover(class AFlashlightBase_C* Flashlight)
+void UIFlashLightInteractible_C::OnFlashLightBeginHover(class AFlashlight_Battery_C* Flashlight)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function IFlashLightInteractible.IFlashLightInteractible_C.OnFlashLightBeginHover");
 

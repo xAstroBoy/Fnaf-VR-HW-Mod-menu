@@ -465,6 +465,13 @@ struct FMovieSceneComponentMaterialSectionTemplate : public FMovieSceneParameter
 	unsigned char                                      UnknownData00[0x4];                                       // 0x0054(0x0004) MISSED OFFSET
 };
 
+// ScriptStruct MovieSceneTracks.MovieSceneParticleParameterSectionTemplate
+// 0x0000 (0x0050 - 0x0050)
+struct FMovieSceneParticleParameterSectionTemplate : public FMovieSceneParameterSectionTemplate
+{
+
+};
+
 // ScriptStruct MovieSceneTracks.MovieSceneParticleSectionTemplate
 // 0x0098 (0x00B8 - 0x0020)
 struct FMovieSceneParticleSectionTemplate : public FMovieSceneEvalTemplate
@@ -484,13 +491,6 @@ struct FMovieSceneEulerTransformPropertySectionTemplate : public FMovieSceneProp
 struct FMovieSceneTransformPropertySectionTemplate : public FMovieScenePropertySectionTemplate
 {
 	struct FMovieScene3DTransformTemplateData          TemplateData;                                             // 0x0048(0x0650)
-};
-
-// ScriptStruct MovieSceneTracks.MovieSceneParticleParameterSectionTemplate
-// 0x0000 (0x0050 - 0x0050)
-struct FMovieSceneParticleParameterSectionTemplate : public FMovieSceneParameterSectionTemplate
-{
-
 };
 
 // ScriptStruct MovieSceneTracks.MovieSceneVectorPropertySectionTemplate

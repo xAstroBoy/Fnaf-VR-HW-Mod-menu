@@ -64,20 +64,6 @@ struct AFlashlightBase_C_UserConstructionScript_Params
 {
 };
 
-// Function FlashlightBase.FlashlightBase_C.OnVRInteract
-struct AFlashlightBase_C_OnVRInteract_Params
-{
-	class ASWGVRCharacter*                             VRCharacter;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	EVRHandType                                        Hand;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function FlashlightBase.FlashlightBase_C.OnVRGrabbed
-struct AFlashlightBase_C_OnVRGrabbed_Params
-{
-	class ASWGVRCharacter*                             Grabber;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	EVRHandType                                        Hand;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-};
-
 // Function FlashlightBase.FlashlightBase_C.OnVRReleased
 struct AFlashlightBase_C_OnVRReleased_Params
 {
@@ -96,6 +82,20 @@ struct AFlashlightBase_C_BndEvt__FNAFVisionDetector_K2Node_ComponentBoundEvent_2
 struct AFlashlightBase_C_BndEvt__FNAFVisionDetector_K2Node_ComponentBoundEvent_3_OnVisionEnter__DelegateSignature_Params
 {
 	class AActor*                                      Actor;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function FlashlightBase.FlashlightBase_C.OnVRInteract
+struct AFlashlightBase_C_OnVRInteract_Params
+{
+	class ASWGVRCharacter*                             VRCharacter;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	EVRHandType                                        Hand;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function FlashlightBase.FlashlightBase_C.OnVRGrabbed
+struct AFlashlightBase_C_OnVRGrabbed_Params
+{
+	class ASWGVRCharacter*                             Grabber;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	EVRHandType                                        Hand;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function FlashlightBase.FlashlightBase_C.ExecuteUbergraph_FlashlightBase

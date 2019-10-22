@@ -156,24 +156,22 @@ void ASaul_MotionControllerPawn_C::ToggleMenu()
 
 
 // Function Saul_MotionControllerPawn.Saul_MotionControllerPawn_C.Game Mode Ref
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AFNAFGM_FlashlightGame_C* Game_Mode_Ref                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           Toggle_Flashlight_State        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ASaul_MotionControllerPawn_C::Game_Mode_Ref(class AFNAFGM_FlashlightGame_C** Game_Mode_Ref)
+void ASaul_MotionControllerPawn_C::Game_Mode_Ref(bool Toggle_Flashlight_State)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Saul_MotionControllerPawn.Saul_MotionControllerPawn_C.Game Mode Ref");
 
 	ASaul_MotionControllerPawn_C_Game_Mode_Ref_Params params;
+	params.Toggle_Flashlight_State = Toggle_Flashlight_State;
 
 	auto flags = fn->FunctionFlags;
 
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
-
-	if (Game_Mode_Ref != nullptr)
-		*Game_Mode_Ref = params.Game_Mode_Ref;
 }
 
 
@@ -1728,6 +1726,57 @@ void ASaul_MotionControllerPawn_C::BndEvt__VRNotifications_K2Node_ComponentBound
 }
 
 
+// Function Saul_MotionControllerPawn.Saul_MotionControllerPawn_C.Force Turn Off Flashlight
+// (BlueprintCallable, BlueprintEvent)
+
+void ASaul_MotionControllerPawn_C::Force_Turn_Off_Flashlight()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Saul_MotionControllerPawn.Saul_MotionControllerPawn_C.Force Turn Off Flashlight");
+
+	ASaul_MotionControllerPawn_C_Force_Turn_Off_Flashlight_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Saul_MotionControllerPawn.Saul_MotionControllerPawn_C.Turn On Flashlight
+// (BlueprintCallable, BlueprintEvent)
+
+void ASaul_MotionControllerPawn_C::Turn_On_Flashlight()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Saul_MotionControllerPawn.Saul_MotionControllerPawn_C.Turn On Flashlight");
+
+	ASaul_MotionControllerPawn_C_Turn_On_Flashlight_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Saul_MotionControllerPawn.Saul_MotionControllerPawn_C.TurnOffFLashlight
+// (BlueprintCallable, BlueprintEvent)
+
+void ASaul_MotionControllerPawn_C::TurnOffFLashlight()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Saul_MotionControllerPawn.Saul_MotionControllerPawn_C.TurnOffFLashlight");
+
+	ASaul_MotionControllerPawn_C_TurnOffFLashlight_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Saul_MotionControllerPawn.Saul_MotionControllerPawn_C.WinCurrentLevel
 // (BlueprintCallable, BlueprintEvent)
 
@@ -1756,6 +1805,23 @@ void ASaul_MotionControllerPawn_C::ExecuteUbergraph_Saul_MotionControllerPawn(in
 
 	ASaul_MotionControllerPawn_C_ExecuteUbergraph_Saul_MotionControllerPawn_Params params;
 	params.EntryPoint = EntryPoint;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Saul_MotionControllerPawn.Saul_MotionControllerPawn_C.GrabRight__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+
+void ASaul_MotionControllerPawn_C::GrabRight__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Saul_MotionControllerPawn.Saul_MotionControllerPawn_C.GrabRight__DelegateSignature");
+
+	ASaul_MotionControllerPawn_C_GrabRight__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
 

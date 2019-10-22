@@ -12,19 +12,6 @@ namespace SDK
 // Enums
 //---------------------------------------------------------------------------
 
-// Enum HeadMountedDisplay.EXRTrackedDeviceType
-enum class EXRTrackedDeviceType : uint8_t
-{
-	EXRTrackedDeviceType__HeadMountedDisplay = 0,
-	EXRTrackedDeviceType__Controller = 1,
-	EXRTrackedDeviceType__TrackingReference = 2,
-	EXRTrackedDeviceType__Other    = 3,
-	EXRTrackedDeviceType__Invalid  = 4,
-	EXRTrackedDeviceType__Any      = 5,
-	EXRTrackedDeviceType__EXRTrackedDeviceType_MAX = 6
-};
-
-
 // Enum HeadMountedDisplay.ESpectatorScreenMode
 enum class ESpectatorScreenMode : uint8_t
 {
@@ -56,6 +43,19 @@ enum class EHMDTrackingOrigin : uint8_t
 	EHMDTrackingOrigin__Floor      = 0,
 	EHMDTrackingOrigin__Eye        = 1,
 	EHMDTrackingOrigin__EHMDTrackingOrigin_MAX = 2
+};
+
+
+// Enum HeadMountedDisplay.EXRTrackedDeviceType
+enum class EXRTrackedDeviceType : uint8_t
+{
+	EXRTrackedDeviceType__HeadMountedDisplay = 0,
+	EXRTrackedDeviceType__Controller = 1,
+	EXRTrackedDeviceType__TrackingReference = 2,
+	EXRTrackedDeviceType__Other    = 3,
+	EXRTrackedDeviceType__Invalid  = 4,
+	EXRTrackedDeviceType__Any      = 5,
+	EXRTrackedDeviceType__EXRTrackedDeviceType_MAX = 6
 };
 
 

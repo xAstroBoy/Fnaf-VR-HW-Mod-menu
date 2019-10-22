@@ -16,9 +16,9 @@ namespace SDK
 // Function MPFreddyPawnBase.MPFreddyPawnBase_C.IsInPlayerVis
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// bool                           IsInvis                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           IsInVis                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AMPFreddyPawnBase_C::IsInPlayerVis(bool* IsInvis)
+void AMPFreddyPawnBase_C::IsInPlayerVis(bool* IsInVis)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MPFreddyPawnBase.MPFreddyPawnBase_C.IsInPlayerVis");
 
@@ -30,8 +30,8 @@ void AMPFreddyPawnBase_C::IsInPlayerVis(bool* IsInvis)
 
 	fn->FunctionFlags = flags;
 
-	if (IsInvis != nullptr)
-		*IsInvis = params.IsInvis;
+	if (IsInVis != nullptr)
+		*IsInVis = params.IsInVis;
 }
 
 
@@ -58,9 +58,9 @@ void AMPFreddyPawnBase_C::ChangePlayerVisStatus(bool IsInVision)
 // Function MPFreddyPawnBase.MPFreddyPawnBase_C.IsInFlashLight
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// bool                           InFlashlight                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           InFlashLight                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AMPFreddyPawnBase_C::IsInFlashLight(bool* InFlashlight)
+void AMPFreddyPawnBase_C::IsInFlashLight(bool* InFlashLight)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MPFreddyPawnBase.MPFreddyPawnBase_C.IsInFlashLight");
 
@@ -72,8 +72,8 @@ void AMPFreddyPawnBase_C::IsInFlashLight(bool* InFlashlight)
 
 	fn->FunctionFlags = flags;
 
-	if (InFlashlight != nullptr)
-		*InFlashlight = params.InFlashlight;
+	if (InFlashLight != nullptr)
+		*InFlashLight = params.InFlashLight;
 }
 
 
@@ -134,9 +134,9 @@ void AMPFreddyPawnBase_C::ReceiveBeginPlay()
 // Function MPFreddyPawnBase.MPFreddyPawnBase_C.OnFlashLightBeginHover
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AFlashlightBase_C*       Flashlight                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AFlashlight_Battery_C*   Flashlight                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AMPFreddyPawnBase_C::OnFlashLightBeginHover(class AFlashlightBase_C* Flashlight)
+void AMPFreddyPawnBase_C::OnFlashLightBeginHover(class AFlashlight_Battery_C* Flashlight)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MPFreddyPawnBase.MPFreddyPawnBase_C.OnFlashLightBeginHover");
 
@@ -154,9 +154,9 @@ void AMPFreddyPawnBase_C::OnFlashLightBeginHover(class AFlashlightBase_C* Flashl
 // Function MPFreddyPawnBase.MPFreddyPawnBase_C.OnFlashLightEndHover
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AFlashlightBase_C*       Flashlight                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AFlashlight_Battery_C*   Flashlight                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AMPFreddyPawnBase_C::OnFlashLightEndHover(class AFlashlightBase_C* Flashlight)
+void AMPFreddyPawnBase_C::OnFlashLightEndHover(class AFlashlight_Battery_C* Flashlight)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MPFreddyPawnBase.MPFreddyPawnBase_C.OnFlashLightEndHover");
 

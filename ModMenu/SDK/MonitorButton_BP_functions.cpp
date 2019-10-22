@@ -234,6 +234,23 @@ void AMonitorButton_BP_C::Timeline_2__UpdateFunc()
 }
 
 
+// Function MonitorButton_BP.MonitorButton_BP_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void AMonitorButton_BP_C::ReceiveBeginPlay()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function MonitorButton_BP.MonitorButton_BP_C.ReceiveBeginPlay");
+
+	AMonitorButton_BP_C_ReceiveBeginPlay_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function MonitorButton_BP.MonitorButton_BP_C.ReceiveTick
 // (Event, Public, BlueprintEvent)
 // Parameters:
@@ -301,14 +318,48 @@ void AMonitorButton_BP_C::BndEvt__ButtonCollision_K2Node_ComponentBoundEvent_1_C
 }
 
 
-// Function MonitorButton_BP.MonitorButton_BP_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// Function MonitorButton_BP.MonitorButton_BP_C.Debug_EventInput
+// (BlueprintCallable, BlueprintEvent)
 
-void AMonitorButton_BP_C::ReceiveBeginPlay()
+void AMonitorButton_BP_C::Debug_EventInput()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MonitorButton_BP.MonitorButton_BP_C.ReceiveBeginPlay");
+	static auto fn = UObject::FindObject<UFunction>("Function MonitorButton_BP.MonitorButton_BP_C.Debug_EventInput");
 
-	AMonitorButton_BP_C_ReceiveBeginPlay_Params params;
+	AMonitorButton_BP_C_Debug_EventInput_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function MonitorButton_BP.MonitorButton_BP_C.ReEnableButtons
+// (BlueprintCallable, BlueprintEvent)
+
+void AMonitorButton_BP_C::ReEnableButtons()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function MonitorButton_BP.MonitorButton_BP_C.ReEnableButtons");
+
+	AMonitorButton_BP_C_ReEnableButtons_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function MonitorButton_BP.MonitorButton_BP_C.Disable Button
+// (BlueprintCallable, BlueprintEvent)
+
+void AMonitorButton_BP_C::Disable_Button()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function MonitorButton_BP.MonitorButton_BP_C.Disable Button");
+
+	AMonitorButton_BP_C_Disable_Button_Params params;
 
 	auto flags = fn->FunctionFlags;
 

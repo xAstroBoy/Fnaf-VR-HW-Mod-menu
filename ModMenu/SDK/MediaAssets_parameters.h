@@ -594,25 +594,6 @@ struct UMediaPlaylist_Add_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function MediaAssets.MediaSoundComponent.SetMediaPlayer
-struct UMediaSoundComponent_SetMediaPlayer_Params
-{
-	class UMediaPlayer*                                NewMediaPlayer;                                           // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function MediaAssets.MediaSoundComponent.GetMediaPlayer
-struct UMediaSoundComponent_GetMediaPlayer_Params
-{
-	class UMediaPlayer*                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function MediaAssets.MediaSoundComponent.BP_GetAttenuationSettingsToApply
-struct UMediaSoundComponent_BP_GetAttenuationSettingsToApply_Params
-{
-	struct FSoundAttenuationSettings                   OutAttenuationSettings;                                   // (Parm, OutParm)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
 // Function MediaAssets.MediaTexture.SetMediaPlayer
 struct UMediaTexture_SetMediaPlayer_Params
 {
@@ -641,6 +622,25 @@ struct UMediaTexture_GetHeight_Params
 struct UMediaTexture_GetAspectRatio_Params
 {
 	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function MediaAssets.MediaSoundComponent.SetMediaPlayer
+struct UMediaSoundComponent_SetMediaPlayer_Params
+{
+	class UMediaPlayer*                                NewMediaPlayer;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function MediaAssets.MediaSoundComponent.GetMediaPlayer
+struct UMediaSoundComponent_GetMediaPlayer_Params
+{
+	class UMediaPlayer*                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function MediaAssets.MediaSoundComponent.BP_GetAttenuationSettingsToApply
+struct UMediaSoundComponent_BP_GetAttenuationSettingsToApply_Params
+{
+	struct FSoundAttenuationSettings                   OutAttenuationSettings;                                   // (Parm, OutParm)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 }

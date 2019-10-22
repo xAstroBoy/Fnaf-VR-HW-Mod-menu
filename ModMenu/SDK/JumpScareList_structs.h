@@ -63,7 +63,16 @@ enum class EJumpScareList : uint8_t
 	JumpScareList__NewEnumerator46 = 45,
 	JumpScareList__NewEnumerator47 = 46,
 	JumpScareList__NewEnumerator48 = 47,
-	JumpScareList__JumpScareList_MAX = 48
+	JumpScareList__NewEnumerator49 = 48,
+	JumpScareList__NewEnumerator50 = 49,
+	JumpScareList__NewEnumerator51 = 50,
+	JumpScareList__NewEnumerator52 = 51,
+	JumpScareList__NewEnumerator53 = 52,
+	JumpScareList__NewEnumerator54 = 53,
+	JumpScareList__NewEnumerator55 = 54,
+	JumpScareList__NewEnumerator56 = 55,
+	JumpScareList__NewEnumerator57 = 56,
+	JumpScareList__JumpScareList_MAX = 57
 };
 
 

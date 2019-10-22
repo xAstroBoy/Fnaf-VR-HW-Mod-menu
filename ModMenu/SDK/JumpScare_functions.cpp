@@ -13,6 +13,142 @@ namespace SDK
 // Functions
 //---------------------------------------------------------------------------
 
+// Function JumpScare.JumpScare_C.NightmareFreddy_Ref
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void AJumpScare_C::NightmareFreddy_Ref()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function JumpScare.JumpScare_C.NightmareFreddy_Ref");
+
+	AJumpScare_C_NightmareFreddy_Ref_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function JumpScare.JumpScare_C.NightmareFoxy_Ref
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void AJumpScare_C::NightmareFoxy_Ref()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function JumpScare.JumpScare_C.NightmareFoxy_Ref");
+
+	AJumpScare_C_NightmareFoxy_Ref_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function JumpScare.JumpScare_C.NightmareBonnie_Ref
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void AJumpScare_C::NightmareBonnie_Ref()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function JumpScare.JumpScare_C.NightmareBonnie_Ref");
+
+	AJumpScare_C_NightmareBonnie_Ref_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function JumpScare.JumpScare_C.NightmareChica_Ref
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void AJumpScare_C::NightmareChica_Ref()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function JumpScare.JumpScare_C.NightmareChica_Ref");
+
+	AJumpScare_C_NightmareChica_Ref_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function JumpScare.JumpScare_C.DLCFoxy_Ref
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void AJumpScare_C::DLCFoxy_Ref()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function JumpScare.JumpScare_C.DLCFoxy_Ref");
+
+	AJumpScare_C_DLCFoxy_Ref_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function JumpScare.JumpScare_C.JackOBonnie_Ref
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void AJumpScare_C::JackOBonnie_Ref()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function JumpScare.JumpScare_C.JackOBonnie_Ref");
+
+	AJumpScare_C_JackOBonnie_Ref_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function JumpScare.JumpScare_C.JackOChica_Ref
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void AJumpScare_C::JackOChica_Ref()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function JumpScare.JumpScare_C.JackOChica_Ref");
+
+	AJumpScare_C_JackOChica_Ref_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function JumpScare.JumpScare_C.DLCFreddy_Ref
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void AJumpScare_C::DLCFreddy_Ref()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function JumpScare.JumpScare_C.DLCFreddy_Ref");
+
+	AJumpScare_C_DLCFreddy_Ref_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function JumpScare.JumpScare_C.WitheredFoxy_Ref
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
@@ -78,6 +214,31 @@ void AJumpScare_C::WitheredFreddy_Ref()
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
+}
+
+
+// Function JumpScare.JumpScare_C.FreddleJumpscare_OneGuy
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class USkeletalMeshComponent*  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+// class USkeletalMeshComponent*  ReturnValue1                   (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
+
+class USkeletalMeshComponent* AJumpScare_C::FreddleJumpscare_OneGuy(class USkeletalMeshComponent** ReturnValue1)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function JumpScare.JumpScare_C.FreddleJumpscare_OneGuy");
+
+	AJumpScare_C_FreddleJumpscare_OneGuy_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (ReturnValue1 != nullptr)
+		*ReturnValue1 = params.ReturnValue1;
+
+	return params.ReturnValue;
 }
 
 
@@ -320,9 +481,12 @@ void AJumpScare_C::FuntimeFoxy_Fake_JumpScare()
 
 
 // Function JumpScare.JumpScare_C.FreddleJumpscare_Ref
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class USkeletalMeshComponent*  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+// class USkeletalMeshComponent*  ReturnValue1                   (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void AJumpScare_C::FreddleJumpscare_Ref()
+class USkeletalMeshComponent* AJumpScare_C::FreddleJumpscare_Ref(class USkeletalMeshComponent** ReturnValue1)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function JumpScare.JumpScare_C.FreddleJumpscare_Ref");
 
@@ -333,6 +497,11 @@ void AJumpScare_C::FreddleJumpscare_Ref()
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
+
+	if (ReturnValue1 != nullptr)
+		*ReturnValue1 = params.ReturnValue1;
+
+	return params.ReturnValue;
 }
 
 
@@ -795,6 +964,57 @@ void AJumpScare_C::UserConstructionScript()
 }
 
 
+// Function JumpScare.JumpScare_C.Timeline_1__FinishedFunc
+// (BlueprintEvent)
+
+void AJumpScare_C::Timeline_1__FinishedFunc()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function JumpScare.JumpScare_C.Timeline_1__FinishedFunc");
+
+	AJumpScare_C_Timeline_1__FinishedFunc_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function JumpScare.JumpScare_C.Timeline_1__UpdateFunc
+// (BlueprintEvent)
+
+void AJumpScare_C::Timeline_1__UpdateFunc()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function JumpScare.JumpScare_C.Timeline_1__UpdateFunc");
+
+	AJumpScare_C_Timeline_1__UpdateFunc_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function JumpScare.JumpScare_C.Timeline_1__NewTrack_1__EventFunc
+// (BlueprintEvent)
+
+void AJumpScare_C::Timeline_1__NewTrack_1__EventFunc()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function JumpScare.JumpScare_C.Timeline_1__NewTrack_1__EventFunc");
+
+	AJumpScare_C_Timeline_1__NewTrack_1__EventFunc_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function JumpScare.JumpScare_C.Timeline_0__FinishedFunc
 // (BlueprintEvent)
 
@@ -852,8 +1072,9 @@ void AJumpScare_C::Timeline_0__NewTrack_1__EventFunc()
 // bool                           DarkenRoomBeforeJumpscare      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<EJumpScareList>    Character                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ResetLevelAfterScare           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           Pulled_In_Jumpscare            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AJumpScare_C::TriggerKillState(bool DarkenRoomBeforeJumpscare, TEnumAsByte<EJumpScareList> Character, bool ResetLevelAfterScare)
+void AJumpScare_C::TriggerKillState(bool DarkenRoomBeforeJumpscare, TEnumAsByte<EJumpScareList> Character, bool ResetLevelAfterScare, bool Pulled_In_Jumpscare)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function JumpScare.JumpScare_C.TriggerKillState");
 
@@ -861,6 +1082,7 @@ void AJumpScare_C::TriggerKillState(bool DarkenRoomBeforeJumpscare, TEnumAsByte<
 	params.DarkenRoomBeforeJumpscare = DarkenRoomBeforeJumpscare;
 	params.Character = Character;
 	params.ResetLevelAfterScare = ResetLevelAfterScare;
+	params.Pulled_In_Jumpscare = Pulled_In_Jumpscare;
 
 	auto flags = fn->FunctionFlags;
 

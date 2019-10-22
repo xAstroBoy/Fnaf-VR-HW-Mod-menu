@@ -43,11 +43,11 @@ public:
 	void GetIsOn(bool* IsOn);
 	void ToggleFlashlight();
 	void UserConstructionScript();
-	void OnVRInteract(class ASWGVRCharacter* VRCharacter, EVRHandType Hand);
-	void OnVRGrabbed(class ASWGVRCharacter* Grabber, EVRHandType Hand);
 	void OnVRReleased(class ASWGVRCharacter* Grabber, EVRHandType Hand, const struct FVector& ReleaseVelocity);
 	void BndEvt__FNAFVisionDetector_K2Node_ComponentBoundEvent_2_OnVisionExit__DelegateSignature(class AActor* Actor);
 	void BndEvt__FNAFVisionDetector_K2Node_ComponentBoundEvent_3_OnVisionEnter__DelegateSignature(class AActor* Actor);
+	void OnVRInteract(class ASWGVRCharacter* VRCharacter, EVRHandType Hand);
+	void OnVRGrabbed(class ASWGVRCharacter* Grabber, EVRHandType Hand);
 	void ExecuteUbergraph_FlashlightBase(int EntryPoint);
 	void OnFlashlightStatusChanged__DelegateSignature(bool FlashLightOn);
 };

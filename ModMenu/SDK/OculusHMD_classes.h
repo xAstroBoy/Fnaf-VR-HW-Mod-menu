@@ -12,42 +12,6 @@ namespace SDK
 // Classes
 //---------------------------------------------------------------------------
 
-// Class OculusHMD.OculusHMDRuntimeSettings
-// 0x0018 (0x0040 - 0x0028)
-class UOculusHMDRuntimeSettings : public UObject
-{
-public:
-	bool                                               bAutoEnabled;                                             // 0x0028(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0029(0x0007) MISSED OFFSET
-	TArray<struct FOculusSplashDesc>                   SplashDescs;                                              // 0x0030(0x0010) (Edit, ZeroConstructor, Config)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class OculusHMD.OculusHMDRuntimeSettings");
-		return ptr;
-	}
-
-};
-
-
-// Class OculusHMD.OculusSceneCaptureCubemap
-// 0x0068 (0x0090 - 0x0028)
-class UOculusSceneCaptureCubemap : public UObject
-{
-public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0028(0x0010) MISSED OFFSET
-	TArray<class USceneCaptureComponent2D*>            CaptureComponents;                                        // 0x0038(0x0010) (ExportObject, ZeroConstructor)
-	unsigned char                                      UnknownData01[0x48];                                      // 0x0048(0x0048) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class OculusHMD.OculusSceneCaptureCubemap");
-		return ptr;
-	}
-
-};
-
-
 // Class OculusHMD.OculusFunctionLibrary
 // 0x0000 (0x0028 - 0x0028)
 class UOculusFunctionLibrary : public UBlueprintFunctionLibrary
@@ -102,6 +66,42 @@ public:
 	void STATIC_EnableAutoLoadingSplashScreen(bool bAutoShowEnabled);
 	void STATIC_ClearLoadingSplashScreens();
 	void STATIC_AddLoadingSplashScreen(class UTexture2D* Texture, const struct FVector& TranslationInMeters, const struct FRotator& Rotation, const struct FVector2D& SizeInMeters, const struct FRotator& DeltaRotation, bool bClearBeforeAdd);
+};
+
+
+// Class OculusHMD.OculusHMDRuntimeSettings
+// 0x0018 (0x0040 - 0x0028)
+class UOculusHMDRuntimeSettings : public UObject
+{
+public:
+	bool                                               bAutoEnabled;                                             // 0x0028(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0029(0x0007) MISSED OFFSET
+	TArray<struct FOculusSplashDesc>                   SplashDescs;                                              // 0x0030(0x0010) (Edit, ZeroConstructor, Config)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class OculusHMD.OculusHMDRuntimeSettings");
+		return ptr;
+	}
+
+};
+
+
+// Class OculusHMD.OculusSceneCaptureCubemap
+// 0x0068 (0x0090 - 0x0028)
+class UOculusSceneCaptureCubemap : public UObject
+{
+public:
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0028(0x0010) MISSED OFFSET
+	TArray<class USceneCaptureComponent2D*>            CaptureComponents;                                        // 0x0038(0x0010) (ExportObject, ZeroConstructor)
+	unsigned char                                      UnknownData01[0x48];                                      // 0x0048(0x0048) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class OculusHMD.OculusSceneCaptureCubemap");
+		return ptr;
+	}
+
 };
 
 

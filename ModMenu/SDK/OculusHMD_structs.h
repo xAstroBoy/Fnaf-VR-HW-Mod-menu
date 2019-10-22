@@ -51,22 +51,6 @@ enum class ETrackedDeviceType : uint8_t
 // Script Structs
 //---------------------------------------------------------------------------
 
-// ScriptStruct OculusHMD.OculusSplashDesc
-// 0x00A0
-struct FOculusSplashDesc
-{
-	struct FSoftObjectPath                             TexturePath;                                              // 0x0000(0x0018) (Edit, ZeroConstructor, Config)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0018(0x0008) MISSED OFFSET
-	struct FTransform                                  TransformInMeters;                                        // 0x0020(0x0030) (Edit, Config, IsPlainOldData)
-	struct FVector2D                                   QuadSizeInMeters;                                         // 0x0050(0x0008) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x0058(0x0008) MISSED OFFSET
-	struct FQuat                                       DeltaRotation;                                            // 0x0060(0x0010) (Edit, Config, IsPlainOldData)
-	struct FVector2D                                   TextureOffset;                                            // 0x0070(0x0008) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	struct FVector2D                                   TextureScale;                                             // 0x0078(0x0008) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	bool                                               bNoAlphaChannel;                                          // 0x0080(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x1F];                                      // 0x0081(0x001F) MISSED OFFSET
-};
-
 // ScriptStruct OculusHMD.HmdUserProfileField
 // 0x0020
 struct FHmdUserProfileField
@@ -99,6 +83,22 @@ struct FGuardianTestResult
 	float                                              ClosestDistance;                                          // 0x0004(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     ClosestPoint;                                             // 0x0008(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     ClosestPointNormal;                                       // 0x0014(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct OculusHMD.OculusSplashDesc
+// 0x00A0
+struct FOculusSplashDesc
+{
+	struct FSoftObjectPath                             TexturePath;                                              // 0x0000(0x0018) (Edit, ZeroConstructor, Config)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0018(0x0008) MISSED OFFSET
+	struct FTransform                                  TransformInMeters;                                        // 0x0020(0x0030) (Edit, Config, IsPlainOldData)
+	struct FVector2D                                   QuadSizeInMeters;                                         // 0x0050(0x0008) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x8];                                       // 0x0058(0x0008) MISSED OFFSET
+	struct FQuat                                       DeltaRotation;                                            // 0x0060(0x0010) (Edit, Config, IsPlainOldData)
+	struct FVector2D                                   TextureOffset;                                            // 0x0070(0x0008) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	struct FVector2D                                   TextureScale;                                             // 0x0078(0x0008) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	bool                                               bNoAlphaChannel;                                          // 0x0080(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x1F];                                      // 0x0081(0x001F) MISSED OFFSET
 };
 
 }

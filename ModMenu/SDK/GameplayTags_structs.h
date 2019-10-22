@@ -35,6 +35,15 @@ enum class EGameplayContainerMatchType : uint8_t
 };
 
 
+// Enum GameplayTags.EGameplayTagMatchType
+enum class EGameplayTagMatchType : uint8_t
+{
+	EGameplayTagMatchType__Explicit = 0,
+	EGameplayTagMatchType__IncludeParentTags = 1,
+	EGameplayTagMatchType__EGameplayTagMatchType_MAX = 2
+};
+
+
 // Enum GameplayTags.EGameplayTagSelectionType
 enum class EGameplayTagSelectionType : uint8_t
 {
@@ -56,15 +65,6 @@ enum class EGameplayTagSourceType : uint8_t
 	EGameplayTagSourceType__DataTable = 4,
 	EGameplayTagSourceType__Invalid = 5,
 	EGameplayTagSourceType__EGameplayTagSourceType_MAX = 6
-};
-
-
-// Enum GameplayTags.EGameplayTagMatchType
-enum class EGameplayTagMatchType : uint8_t
-{
-	EGameplayTagMatchType__Explicit = 0,
-	EGameplayTagMatchType__IncludeParentTags = 1,
-	EGameplayTagMatchType__EGameplayTagMatchType_MAX = 2
 };
 
 
@@ -151,18 +151,18 @@ struct FRestrictedConfigInfo
 	TArray<struct FString>                             Owners;                                                   // 0x0010(0x0010) (Edit, ZeroConstructor, Config)
 };
 
-// ScriptStruct GameplayTags.GameplayTagReferenceHelper
-// 0x0010
-struct FGameplayTagReferenceHelper
-{
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0000(0x0010) MISSED OFFSET
-};
-
 // ScriptStruct GameplayTags.GameplayTagCreationWidgetHelper
 // 0x0001
 struct FGameplayTagCreationWidgetHelper
 {
 	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
+};
+
+// ScriptStruct GameplayTags.GameplayTagReferenceHelper
+// 0x0010
+struct FGameplayTagReferenceHelper
+{
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0000(0x0010) MISSED OFFSET
 };
 
 // ScriptStruct GameplayTags.GameplayTagNode

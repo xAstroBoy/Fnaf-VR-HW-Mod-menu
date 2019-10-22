@@ -58,6 +58,7 @@ public:
 	void BndEvt__BoxCollider_K2Node_ComponentBoundEvent_3_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
 	void ReceiveTick(float* DeltaSeconds);
 	void ReceiveBeginPlay();
+	void Debug_InputEvent();
 	void ExecuteUbergraph_MonitorButton_Interactable_BP(int EntryPoint);
 };
 

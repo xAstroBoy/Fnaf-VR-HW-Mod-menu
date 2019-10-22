@@ -2026,75 +2026,6 @@ bool UMediaPlaylist::Add(class UMediaSource* MediaSource)
 }
 
 
-// Function MediaAssets.MediaSoundComponent.SetMediaPlayer
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UMediaPlayer*            NewMediaPlayer                 (Parm, ZeroConstructor, IsPlainOldData)
-
-void UMediaSoundComponent::SetMediaPlayer(class UMediaPlayer* NewMediaPlayer)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaSoundComponent.SetMediaPlayer");
-
-	UMediaSoundComponent_SetMediaPlayer_Params params;
-	params.NewMediaPlayer = NewMediaPlayer;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function MediaAssets.MediaSoundComponent.GetMediaPlayer
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class UMediaPlayer*            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class UMediaPlayer* UMediaSoundComponent::GetMediaPlayer()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaSoundComponent.GetMediaPlayer");
-
-	UMediaSoundComponent_GetMediaPlayer_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function MediaAssets.MediaSoundComponent.BP_GetAttenuationSettingsToApply
-// (Final, Native, Public, HasOutParms, BlueprintCallable)
-// Parameters:
-// struct FSoundAttenuationSettings OutAttenuationSettings         (Parm, OutParm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UMediaSoundComponent::BP_GetAttenuationSettingsToApply(struct FSoundAttenuationSettings* OutAttenuationSettings)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaSoundComponent.BP_GetAttenuationSettingsToApply");
-
-	UMediaSoundComponent_BP_GetAttenuationSettingsToApply_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	if (OutAttenuationSettings != nullptr)
-		*OutAttenuationSettings = params.OutAttenuationSettings;
-
-	return params.ReturnValue;
-}
-
-
 // Function MediaAssets.MediaTexture.SetMediaPlayer
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -2199,6 +2130,75 @@ float UMediaTexture::GetAspectRatio()
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function MediaAssets.MediaSoundComponent.SetMediaPlayer
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UMediaPlayer*            NewMediaPlayer                 (Parm, ZeroConstructor, IsPlainOldData)
+
+void UMediaSoundComponent::SetMediaPlayer(class UMediaPlayer* NewMediaPlayer)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaSoundComponent.SetMediaPlayer");
+
+	UMediaSoundComponent_SetMediaPlayer_Params params;
+	params.NewMediaPlayer = NewMediaPlayer;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function MediaAssets.MediaSoundComponent.GetMediaPlayer
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UMediaPlayer*            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UMediaPlayer* UMediaSoundComponent::GetMediaPlayer()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaSoundComponent.GetMediaPlayer");
+
+	UMediaSoundComponent_GetMediaPlayer_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function MediaAssets.MediaSoundComponent.BP_GetAttenuationSettingsToApply
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// struct FSoundAttenuationSettings OutAttenuationSettings         (Parm, OutParm)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UMediaSoundComponent::BP_GetAttenuationSettingsToApply(struct FSoundAttenuationSettings* OutAttenuationSettings)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaSoundComponent.BP_GetAttenuationSettingsToApply");
+
+	UMediaSoundComponent_BP_GetAttenuationSettingsToApply_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (OutAttenuationSettings != nullptr)
+		*OutAttenuationSettings = params.OutAttenuationSettings;
 
 	return params.ReturnValue;
 }

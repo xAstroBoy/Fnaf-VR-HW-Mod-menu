@@ -14,6 +14,20 @@ namespace SDK
 // Parameters
 //---------------------------------------------------------------------------
 
+// Function Office_BaseGamemanager.Office_BaseGamemanager_C.GetTwoPreviousRoomTransitions
+struct AOffice_BaseGamemanager_C_GetTwoPreviousRoomTransitions_Params
+{
+	struct FName                                       Room;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	TArray<struct FOfficeRoomTransition_Struct>        RoomTransitions;                                          // (Parm, OutParm, ZeroConstructor)
+};
+
+// Function Office_BaseGamemanager.Office_BaseGamemanager_C.GetPreviousRoomTransitions
+struct AOffice_BaseGamemanager_C_GetPreviousRoomTransitions_Params
+{
+	struct FName                                       Room;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	TArray<struct FOfficeRoomTransition_Struct>        RoomTransitions;                                          // (Parm, OutParm, ZeroConstructor)
+};
+
 // Function Office_BaseGamemanager.Office_BaseGamemanager_C.GetAIData
 struct AOffice_BaseGamemanager_C_GetAIData_Params
 {

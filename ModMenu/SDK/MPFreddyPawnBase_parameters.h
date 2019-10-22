@@ -17,7 +17,7 @@ namespace SDK
 // Function MPFreddyPawnBase.MPFreddyPawnBase_C.IsInPlayerVis
 struct AMPFreddyPawnBase_C_IsInPlayerVis_Params
 {
-	bool                                               IsInvis;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               IsInVis;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function MPFreddyPawnBase.MPFreddyPawnBase_C.ChangePlayerVisStatus
@@ -29,7 +29,7 @@ struct AMPFreddyPawnBase_C_ChangePlayerVisStatus_Params
 // Function MPFreddyPawnBase.MPFreddyPawnBase_C.IsInFlashLight
 struct AMPFreddyPawnBase_C_IsInFlashLight_Params
 {
-	bool                                               InFlashlight;                                             // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               InFlashLight;                                             // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function MPFreddyPawnBase.MPFreddyPawnBase_C.ChangeFlashStatus
@@ -51,13 +51,13 @@ struct AMPFreddyPawnBase_C_ReceiveBeginPlay_Params
 // Function MPFreddyPawnBase.MPFreddyPawnBase_C.OnFlashLightBeginHover
 struct AMPFreddyPawnBase_C_OnFlashLightBeginHover_Params
 {
-	class AFlashlightBase_C*                           Flashlight;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class AFlashlight_Battery_C*                       Flashlight;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function MPFreddyPawnBase.MPFreddyPawnBase_C.OnFlashLightEndHover
 struct AMPFreddyPawnBase_C_OnFlashLightEndHover_Params
 {
-	class AFlashlightBase_C*                           Flashlight;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class AFlashlight_Battery_C*                       Flashlight;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function MPFreddyPawnBase.MPFreddyPawnBase_C.ReceivePossessed

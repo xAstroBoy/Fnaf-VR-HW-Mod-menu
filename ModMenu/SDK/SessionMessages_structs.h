@@ -19,6 +19,13 @@ struct FSessionServiceLogUnsubscribe
 	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
 };
 
+// ScriptStruct SessionMessages.SessionServiceLogSubscribe
+// 0x0001
+struct FSessionServiceLogSubscribe
+{
+	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
+};
+
 // ScriptStruct SessionMessages.SessionServiceLog
 // 0x0038
 struct FSessionServiceLog
@@ -56,13 +63,6 @@ struct FSessionServicePong
 struct FSessionServicePing
 {
 	struct FString                                     UserName;                                                 // 0x0000(0x0010) (Edit, ZeroConstructor)
-};
-
-// ScriptStruct SessionMessages.SessionServiceLogSubscribe
-// 0x0001
-struct FSessionServiceLogSubscribe
-{
-	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
 };
 
 }

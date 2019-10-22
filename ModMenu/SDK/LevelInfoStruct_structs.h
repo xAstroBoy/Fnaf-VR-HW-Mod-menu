@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // UserDefinedStruct LevelInfoStruct.LevelInfoStruct
-// 0x0070
+// 0x0071
 struct FLevelInfoStruct
 {
 	TEnumAsByte<EGameTypeEnum>                         GameType_32_7BD9D16C469E17DC4AF2FA8AAABAD8A1;             // 0x0000(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
@@ -30,6 +30,7 @@ struct FLevelInfoStruct
 	struct FText                                       Legacy_Instructions_38_0A6819674FFA815C28BD7EABA3042AE5;  // 0x0048(0x0018) (Edit, BlueprintVisible)
 	class UTexture2D*                                  LevelImage_20_73275F5643BB5CBE7FC2C2B37C1B76C9;           // 0x0060(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	class UClass*                                      InstructionsWidget_43_22CCAC434D64B6385DA2CEA8F93BA630;   // 0x0068(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	EFNAFDLCType                                       DLC_46_CE3C0D8B43F968470712D69FD1CC5B3E;                  // 0x0070(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
 }

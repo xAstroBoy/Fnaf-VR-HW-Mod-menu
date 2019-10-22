@@ -241,6 +241,12 @@ struct ASWGVRCharacter_GetGrabbableInfo_Params
 	struct FHeldGrabbableInfo                          ReturnValue;                                              // (ConstParm, Parm, OutParm, ReturnParm, ReferenceParm)
 };
 
+// Function SWGVR.SWGVRCharacter.GetControllerDeviceType
+struct ASWGVRCharacter_GetControllerDeviceType_Params
+{
+	EControllerType                                    ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function SWGVR.SWGVRCharacter.AddHeldOffset
 struct ASWGVRCharacter_AddHeldOffset_Params
 {

@@ -50,6 +50,23 @@ void AFNAFGM_FlashlightGame_C::Flashlight_State(bool Toggle)
 }
 
 
+// Function FNAFGM_FlashlightGame.FNAFGM_FlashlightGame_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void AFNAFGM_FlashlightGame_C::ReceiveBeginPlay()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function FNAFGM_FlashlightGame.FNAFGM_FlashlightGame_C.ReceiveBeginPlay");
+
+	AFNAFGM_FlashlightGame_C_ReceiveBeginPlay_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function FNAFGM_FlashlightGame.FNAFGM_FlashlightGame_C.ExecuteUbergraph_FNAFGM_FlashlightGame
 // (Final)
 // Parameters:

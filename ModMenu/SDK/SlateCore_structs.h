@@ -12,15 +12,12 @@ namespace SDK
 // Enums
 //---------------------------------------------------------------------------
 
-// Enum SlateCore.EWidgetClipping
-enum class EWidgetClipping : uint8_t
+// Enum SlateCore.EFontLayoutMethod
+enum class EFontLayoutMethod : uint8_t
 {
-	EWidgetClipping__Inherit       = 0,
-	EWidgetClipping__ClipToBounds  = 1,
-	EWidgetClipping__ClipToBoundsWithoutIntersecting = 2,
-	EWidgetClipping__ClipToBoundsAlways = 3,
-	EWidgetClipping__OnDemand      = 4,
-	EWidgetClipping__EWidgetClipping_MAX = 5
+	EFontLayoutMethod__Metrics     = 0,
+	EFontLayoutMethod__BoundingBox = 1,
+	EFontLayoutMethod__EFontLayoutMethod_MAX = 2
 };
 
 
@@ -46,12 +43,16 @@ enum class EFontHinting : uint8_t
 };
 
 
-// Enum SlateCore.EFontLayoutMethod
-enum class EFontLayoutMethod : uint8_t
+// Enum SlateCore.EFocusCause
+enum class EFocusCause : uint8_t
 {
-	EFontLayoutMethod__Metrics     = 0,
-	EFontLayoutMethod__BoundingBox = 1,
-	EFontLayoutMethod__EFontLayoutMethod_MAX = 2
+	EFocusCause__Mouse             = 0,
+	EFocusCause__Navigation        = 1,
+	EFocusCause__SetDirectly       = 2,
+	EFocusCause__Cleared           = 3,
+	EFocusCause__OtherWidgetLostFocus = 4,
+	EFocusCause__WindowActivate    = 5,
+	EFocusCause__EFocusCause_MAX   = 6
 };
 
 
@@ -226,19 +227,6 @@ enum class EHorizontalAlignment : uint8_t
 };
 
 
-// Enum SlateCore.EFocusCause
-enum class EFocusCause : uint8_t
-{
-	EFocusCause__Mouse             = 0,
-	EFocusCause__Navigation        = 1,
-	EFocusCause__SetDirectly       = 2,
-	EFocusCause__Cleared           = 3,
-	EFocusCause__OtherWidgetLostFocus = 4,
-	EFocusCause__WindowActivate    = 5,
-	EFocusCause__EFocusCause_MAX   = 6
-};
-
-
 // Enum SlateCore.ENavigationGenesis
 enum class ENavigationGenesis : uint8_t
 {
@@ -246,6 +234,15 @@ enum class ENavigationGenesis : uint8_t
 	ENavigationGenesis__Controller = 1,
 	ENavigationGenesis__User       = 2,
 	ENavigationGenesis__ENavigationGenesis_MAX = 3
+};
+
+
+// Enum SlateCore.ENavigationSource
+enum class ENavigationSource : uint8_t
+{
+	ENavigationSource__FocusedWidget = 0,
+	ENavigationSource__WidgetUnderCursor = 1,
+	ENavigationSource__ENavigationSource_MAX = 2
 };
 
 
@@ -283,16 +280,6 @@ enum class EButtonTouchMethod : uint8_t
 };
 
 
-// Enum SlateCore.EFontFallback
-enum class EFontFallback : uint8_t
-{
-	EFontFallback__FF_NoFallback   = 0,
-	EFontFallback__FF_LocalizedFallback = 1,
-	EFontFallback__FF_LastResortFallback = 2,
-	EFontFallback__FF_Max          = 3
-};
-
-
 // Enum SlateCore.EButtonClickMethod
 enum class EButtonClickMethod : uint8_t
 {
@@ -304,12 +291,13 @@ enum class EButtonClickMethod : uint8_t
 };
 
 
-// Enum SlateCore.ESlateCheckBoxType
-enum class ESlateCheckBoxType : uint8_t
+// Enum SlateCore.EFontFallback
+enum class EFontFallback : uint8_t
 {
-	ESlateCheckBoxType__CheckBox   = 0,
-	ESlateCheckBoxType__ToggleButton = 1,
-	ESlateCheckBoxType__ESlateCheckBoxType_MAX = 2
+	EFontFallback__FF_NoFallback   = 0,
+	EFontFallback__FF_LocalizedFallback = 1,
+	EFontFallback__FF_LastResortFallback = 2,
+	EFontFallback__FF_Max          = 3
 };
 
 
@@ -320,6 +308,15 @@ enum class ECheckBoxState : uint8_t
 	ECheckBoxState__Checked        = 1,
 	ECheckBoxState__Undetermined   = 2,
 	ECheckBoxState__ECheckBoxState_MAX = 3
+};
+
+
+// Enum SlateCore.ESlateCheckBoxType
+enum class ESlateCheckBoxType : uint8_t
+{
+	ESlateCheckBoxType__CheckBox   = 0,
+	ESlateCheckBoxType__ToggleButton = 1,
+	ESlateCheckBoxType__ESlateCheckBoxType_MAX = 2
 };
 
 
@@ -342,12 +339,15 @@ enum class EConsumeMouseWheel : uint8_t
 };
 
 
-// Enum SlateCore.ENavigationSource
-enum class ENavigationSource : uint8_t
+// Enum SlateCore.EWidgetClipping
+enum class EWidgetClipping : uint8_t
 {
-	ENavigationSource__FocusedWidget = 0,
-	ENavigationSource__WidgetUnderCursor = 1,
-	ENavigationSource__ENavigationSource_MAX = 2
+	EWidgetClipping__Inherit       = 0,
+	EWidgetClipping__ClipToBounds  = 1,
+	EWidgetClipping__ClipToBoundsWithoutIntersecting = 2,
+	EWidgetClipping__ClipToBoundsAlways = 3,
+	EWidgetClipping__OnDemand      = 4,
+	EWidgetClipping__EWidgetClipping_MAX = 5
 };
 
 
@@ -670,6 +670,13 @@ struct FMotionEvent : public FInputEvent
 	unsigned char                                      UnknownData00[0x30];                                      // 0x0018(0x0030) MISSED OFFSET
 };
 
+// ScriptStruct SlateCore.CaptureLostEvent
+// 0x0008
+struct FCaptureLostEvent
+{
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0000(0x0008) MISSED OFFSET
+};
+
 // ScriptStruct SlateCore.FocusEvent
 // 0x0008
 struct FFocusEvent
@@ -695,13 +702,6 @@ struct FWindowStyle : public FSlateWidgetStyle
 	struct FSlateBrush                                 BorderBrush;                                              // 0x0E40(0x0088) (Edit, BlueprintVisible)
 	struct FSlateBrush                                 BackgroundBrush;                                          // 0x0EC8(0x0088) (Edit, BlueprintVisible)
 	struct FSlateBrush                                 ChildBackgroundBrush;                                     // 0x0F50(0x0088) (Edit, BlueprintVisible)
-};
-
-// ScriptStruct SlateCore.CaptureLostEvent
-// 0x0008
-struct FCaptureLostEvent
-{
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0000(0x0008) MISSED OFFSET
 };
 
 // ScriptStruct SlateCore.ScrollBorderStyle

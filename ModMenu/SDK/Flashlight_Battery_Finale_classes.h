@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Flashlight_Battery_Finale.Flashlight_Battery_Finale_C
-// 0x0000 (0x0551 - 0x0551)
+// 0x0000 (0x05F0 - 0x05F0)
 class AFlashlight_Battery_Finale_C : public AFlashlight_Battery_C
 {
 public:

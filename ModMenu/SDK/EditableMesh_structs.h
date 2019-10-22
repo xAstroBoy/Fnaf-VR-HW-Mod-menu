@@ -31,6 +31,17 @@ enum class EInsetPolygonsMode : uint8_t
 };
 
 
+// Enum EditableMesh.EPolygonEdgeHardness
+enum class EPolygonEdgeHardness : uint8_t
+{
+	EPolygonEdgeHardness__NewEdgesSoft = 0,
+	EPolygonEdgeHardness__NewEdgesHard = 1,
+	EPolygonEdgeHardness__AllEdgesSoft = 2,
+	EPolygonEdgeHardness__AllEdgesHard = 3,
+	EPolygonEdgeHardness__EPolygonEdgeHardness_MAX = 4
+};
+
+
 // Enum EditableMesh.EMeshElementAttributeType
 enum class EMeshElementAttributeType : uint8_t
 {
@@ -62,17 +73,6 @@ enum class EMeshModificationType : uint8_t
 	EMeshModificationType__Interim = 1,
 	EMeshModificationType__Final   = 2,
 	EMeshModificationType__EMeshModificationType_MAX = 3
-};
-
-
-// Enum EditableMesh.EPolygonEdgeHardness
-enum class EPolygonEdgeHardness : uint8_t
-{
-	EPolygonEdgeHardness__NewEdgesSoft = 0,
-	EPolygonEdgeHardness__NewEdgesHard = 1,
-	EPolygonEdgeHardness__AllEdgesSoft = 2,
-	EPolygonEdgeHardness__AllEdgesHard = 3,
-	EPolygonEdgeHardness__EPolygonEdgeHardness_MAX = 4
 };
 
 

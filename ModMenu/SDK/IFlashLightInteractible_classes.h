@@ -25,8 +25,8 @@ public:
 	}
 
 
-	void OnFlashLightEndHover(class AFlashlightBase_C* Flashlight);
-	void OnFlashLightBeginHover(class AFlashlightBase_C* Flashlight);
+	void OnFlashLightEndHover(class AFlashlight_Battery_C* Flashlight);
+	void OnFlashLightBeginHover(class AFlashlight_Battery_C* Flashlight);
 };
 
 

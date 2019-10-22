@@ -21,7 +21,8 @@ enum class EPrizeType : uint8_t
 	PrizeType__NewEnumerator4      = 3,
 	PrizeType__NewEnumerator5      = 4,
 	PrizeType__NewEnumerator6      = 5,
-	PrizeType__PrizeType_MAX       = 6
+	PrizeType__NewEnumerator8      = 6,
+	PrizeType__PrizeType_MAX       = 7
 };
 
 

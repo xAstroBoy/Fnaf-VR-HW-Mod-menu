@@ -79,6 +79,11 @@ struct AMonitorButton_BP_C_Timeline_2__UpdateFunc_Params
 {
 };
 
+// Function MonitorButton_BP.MonitorButton_BP_C.ReceiveBeginPlay
+struct AMonitorButton_BP_C_ReceiveBeginPlay_Params
+{
+};
+
 // Function MonitorButton_BP.MonitorButton_BP_C.ReceiveTick
 struct AMonitorButton_BP_C_ReceiveTick_Params
 {
@@ -101,8 +106,18 @@ struct AMonitorButton_BP_C_BndEvt__ButtonCollision_K2Node_ComponentBoundEvent_1_
 	struct FHitResult                                  SweepResult;                                              // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
 };
 
-// Function MonitorButton_BP.MonitorButton_BP_C.ReceiveBeginPlay
-struct AMonitorButton_BP_C_ReceiveBeginPlay_Params
+// Function MonitorButton_BP.MonitorButton_BP_C.Debug_EventInput
+struct AMonitorButton_BP_C_Debug_EventInput_Params
+{
+};
+
+// Function MonitorButton_BP.MonitorButton_BP_C.ReEnableButtons
+struct AMonitorButton_BP_C_ReEnableButtons_Params
+{
+};
+
+// Function MonitorButton_BP.MonitorButton_BP_C.Disable Button
+struct AMonitorButton_BP_C_Disable_Button_Params
 {
 };
 

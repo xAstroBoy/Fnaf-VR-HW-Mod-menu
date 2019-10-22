@@ -13,6 +13,54 @@ namespace SDK
 // Functions
 //---------------------------------------------------------------------------
 
+// Function Office_BaseGamemanager.Office_BaseGamemanager_C.GetTwoPreviousRoomTransitions
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
+// Parameters:
+// struct FName                   Room                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FOfficeRoomTransition_Struct> RoomTransitions                (Parm, OutParm, ZeroConstructor)
+
+void AOffice_BaseGamemanager_C::GetTwoPreviousRoomTransitions(const struct FName& Room, TArray<struct FOfficeRoomTransition_Struct>* RoomTransitions)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Office_BaseGamemanager.Office_BaseGamemanager_C.GetTwoPreviousRoomTransitions");
+
+	AOffice_BaseGamemanager_C_GetTwoPreviousRoomTransitions_Params params;
+	params.Room = Room;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (RoomTransitions != nullptr)
+		*RoomTransitions = params.RoomTransitions;
+}
+
+
+// Function Office_BaseGamemanager.Office_BaseGamemanager_C.GetPreviousRoomTransitions
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
+// Parameters:
+// struct FName                   Room                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FOfficeRoomTransition_Struct> RoomTransitions                (Parm, OutParm, ZeroConstructor)
+
+void AOffice_BaseGamemanager_C::GetPreviousRoomTransitions(const struct FName& Room, TArray<struct FOfficeRoomTransition_Struct>* RoomTransitions)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Office_BaseGamemanager.Office_BaseGamemanager_C.GetPreviousRoomTransitions");
+
+	AOffice_BaseGamemanager_C_GetPreviousRoomTransitions_Params params;
+	params.Room = Room;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (RoomTransitions != nullptr)
+		*RoomTransitions = params.RoomTransitions;
+}
+
+
 // Function Office_BaseGamemanager.Office_BaseGamemanager_C.GetAIData
 // (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:

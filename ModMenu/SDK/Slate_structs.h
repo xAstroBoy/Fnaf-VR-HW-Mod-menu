@@ -12,6 +12,16 @@ namespace SDK
 // Enums
 //---------------------------------------------------------------------------
 
+// Enum Slate.EVirtualKeyboardDismissAction
+enum class EVirtualKeyboardDismissAction : uint8_t
+{
+	EVirtualKeyboardDismissAction__TextChangeOnDismiss = 0,
+	EVirtualKeyboardDismissAction__TextCommitOnAccept = 1,
+	EVirtualKeyboardDismissAction__TextCommitOnDismiss = 2,
+	EVirtualKeyboardDismissAction__EVirtualKeyboardDismissAction_MAX = 3
+};
+
+
 // Enum Slate.ETableViewMode
 enum class ETableViewMode : uint8_t
 {
@@ -30,16 +40,6 @@ enum class ESelectionMode : uint8_t
 	ESelectionMode__SingleToggle   = 2,
 	ESelectionMode__Multi          = 3,
 	ESelectionMode__ESelectionMode_MAX = 4
-};
-
-
-// Enum Slate.EVirtualKeyboardDismissAction
-enum class EVirtualKeyboardDismissAction : uint8_t
-{
-	EVirtualKeyboardDismissAction__TextChangeOnDismiss = 0,
-	EVirtualKeyboardDismissAction__TextCommitOnAccept = 1,
-	EVirtualKeyboardDismissAction__TextCommitOnDismiss = 2,
-	EVirtualKeyboardDismissAction__EVirtualKeyboardDismissAction_MAX = 3
 };
 
 

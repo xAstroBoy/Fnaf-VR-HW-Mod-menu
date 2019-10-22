@@ -12,13 +12,12 @@ namespace SDK
 // Enums
 //---------------------------------------------------------------------------
 
-// Enum freddys.GLVictoryState
-enum class EGLVictoryState : uint8_t
+// Enum freddys.EFlowGraphFlowType
+enum class EFlowGraphFlowType : uint8_t
 {
-	GLVictoryState__InProgress     = 0,
-	GLVictoryState__Victory        = 1,
-	GLVictoryState__Defeat         = 2,
-	GLVictoryState__GLVictoryState_MAX = 3
+	EFlowGraphFlowType__HasFlow    = 0,
+	EFlowGraphFlowType__NoFlow     = 1,
+	EFlowGraphFlowType__EFlowGraphFlowType_MAX = 2
 };
 
 
@@ -43,21 +42,22 @@ enum class EFNAFGameType : uint8_t
 };
 
 
-// Enum freddys.EFlowGraphFlowType
-enum class EFlowGraphFlowType : uint8_t
-{
-	EFlowGraphFlowType__HasFlow    = 0,
-	EFlowGraphFlowType__NoFlow     = 1,
-	EFlowGraphFlowType__EFlowGraphFlowType_MAX = 2
-};
-
-
 // Enum freddys.ELevelType
 enum class ELevelType : uint8_t
 {
 	Playable                       = 0,
 	Visual                         = 1,
 	ELevelType_MAX                 = 2
+};
+
+
+// Enum freddys.GLVictoryState
+enum class EGLVictoryState : uint8_t
+{
+	GLVictoryState__InProgress     = 0,
+	GLVictoryState__Victory        = 1,
+	GLVictoryState__Defeat         = 2,
+	GLVictoryState__GLVictoryState_MAX = 3
 };
 
 
@@ -109,10 +109,31 @@ enum class EAudioCategory : uint8_t
 };
 
 
+// Enum freddys.EFNAFDLCType
+enum class EFNAFDLCType : uint8_t
+{
+	EFNAFDLCType__BaseGame         = 0,
+	EFNAFDLCType__Halloween        = 1,
+	EFNAFDLCType__EFNAFDLCType_MAX = 2
+};
+
+
 
 //---------------------------------------------------------------------------
 // Script Structs
 //---------------------------------------------------------------------------
+
+// ScriptStruct freddys.GameLevels
+// 0x0038 (0x0040 - 0x0008)
+struct FGameLevels : public FTableRowBase
+{
+	int                                                TokenRequired;                                            // 0x0008(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x28];                                      // 0x000C(0x0028) UNKNOWN PROPERTY: SoftObjectProperty freddys.GameLevels.Level
+	int                                                LevelID;                                                  // 0x0038(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<ELevelType>                            LevelType;                                                // 0x003C(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x3];                                       // 0x003D(0x0003) MISSED OFFSET
+};
 
 // ScriptStruct freddys.AudioData
 // 0x0028 (0x0030 - 0x0008)
@@ -132,18 +153,6 @@ struct FAudioHandle
 {
 	struct FAudioData                                  AudioData;                                                // 0x0000(0x0030) (Edit, EditConst)
 	class UAudioComponent*                             AudioComponent;                                           // 0x0030(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-};
-
-// ScriptStruct freddys.GameLevels
-// 0x0038 (0x0040 - 0x0008)
-struct FGameLevels : public FTableRowBase
-{
-	int                                                TokenRequired;                                            // 0x0008(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
-	unsigned char                                      UnknownData01[0x28];                                      // 0x000C(0x0028) UNKNOWN PROPERTY: SoftObjectProperty freddys.GameLevels.Level
-	int                                                LevelID;                                                  // 0x0038(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<ELevelType>                            LevelType;                                                // 0x003C(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x3];                                       // 0x003D(0x0003) MISSED OFFSET
 };
 
 // ScriptStruct freddys.AIOffsetData

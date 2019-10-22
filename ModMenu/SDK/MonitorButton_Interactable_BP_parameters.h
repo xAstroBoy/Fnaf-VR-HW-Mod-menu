@@ -71,6 +71,11 @@ struct AMonitorButton_Interactable_BP_C_ReceiveBeginPlay_Params
 {
 };
 
+// Function MonitorButton_Interactable_BP.MonitorButton_Interactable_BP_C.Debug_InputEvent
+struct AMonitorButton_Interactable_BP_C_Debug_InputEvent_Params
+{
+};
+
 // Function MonitorButton_Interactable_BP.MonitorButton_Interactable_BP_C.ExecuteUbergraph_MonitorButton_Interactable_BP
 struct AMonitorButton_Interactable_BP_C_ExecuteUbergraph_MonitorButton_Interactable_BP_Params
 {

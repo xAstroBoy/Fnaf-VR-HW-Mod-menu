@@ -205,8 +205,8 @@ struct UBP_FNAF_GameInstance_C_GetRandomAvailablePrize_Params
 	struct FName                                       PrizeID;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function BP_FNAF_GameInstance.BP_FNAF_GameInstance_C.GetAvailablePrizes
-struct UBP_FNAF_GameInstance_C_GetAvailablePrizes_Params
+// Function BP_FNAF_GameInstance.BP_FNAF_GameInstance_C.GetAvailablePrizesBase
+struct UBP_FNAF_GameInstance_C_GetAvailablePrizesBase_Params
 {
 	TArray<struct FName>                               AvailablePrizes;                                          // (Parm, OutParm, ZeroConstructor)
 };
@@ -324,7 +324,7 @@ struct UBP_FNAF_GameInstance_C_LoadLevel_Params
 // Function BP_FNAF_GameInstance.BP_FNAF_GameInstance_C.FinishCaveat
 struct UBP_FNAF_GameInstance_C_FinishCaveat_Params
 {
-	int                                                Difficulty_Adjustment;                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int                                                Difficulty;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_FNAF_GameInstance.BP_FNAF_GameInstance_C.RestartCurrentLevel
@@ -412,6 +412,21 @@ struct UBP_FNAF_GameInstance_C_LoadCasetteRoom_Params
 
 // Function BP_FNAF_GameInstance.BP_FNAF_GameInstance_C.LoadGameOver
 struct UBP_FNAF_GameInstance_C_LoadGameOver_Params
+{
+};
+
+// Function BP_FNAF_GameInstance.BP_FNAF_GameInstance_C.LoadHalloweenHub
+struct UBP_FNAF_GameInstance_C_LoadHalloweenHub_Params
+{
+};
+
+// Function BP_FNAF_GameInstance.BP_FNAF_GameInstance_C.ForceLoadHTitle
+struct UBP_FNAF_GameInstance_C_ForceLoadHTitle_Params
+{
+};
+
+// Function BP_FNAF_GameInstance.BP_FNAF_GameInstance_C.LoadMainHub
+struct UBP_FNAF_GameInstance_C_LoadMainHub_Params
 {
 };
 

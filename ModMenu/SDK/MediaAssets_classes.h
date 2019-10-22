@@ -225,31 +225,32 @@ public:
 };
 
 
-// Class MediaAssets.MediaSoundComponent
-// 0x00A0 (0x0660 - 0x05C0)
-class UMediaSoundComponent : public USynthComponent
+// Class MediaAssets.MediaTexture
+// 0x0090 (0x0140 - 0x00B0)
+class UMediaTexture : public UTexture
 {
 public:
-	EMediaSoundChannels                                Channels;                                                 // 0x05C0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x05C0(0x0003) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	bool                                               DynamicRateAdjustment;                                    // 0x05C4(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x05C5(0x0003) MISSED OFFSET
-	float                                              RateAdjustmentFactor;                                     // 0x05C8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FFloatRange                                 RateAdjustmentRange;                                      // 0x05CC(0x0010) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x05DC(0x0004) MISSED OFFSET
-	class UMediaPlayer*                                MediaPlayer;                                              // 0x05E0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x78];                                      // 0x05E8(0x0078) MISSED OFFSET
+	TEnumAsByte<ETextureAddress>                       AddressX;                                                 // 0x00B0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<ETextureAddress>                       AddressY;                                                 // 0x00B1(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               AutoClear;                                                // 0x00B2(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x1];                                       // 0x00B3(0x0001) MISSED OFFSET
+	struct FLinearColor                                ClearColor;                                               // 0x00B4(0x0010) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x00C4(0x0004) MISSED OFFSET
+	class UMediaPlayer*                                MediaPlayer;                                              // 0x00C8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x70];                                      // 0x00D0(0x0070) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class MediaAssets.MediaSoundComponent");
+		static auto ptr = UObject::FindClass("Class MediaAssets.MediaTexture");
 		return ptr;
 	}
 
 
 	void SetMediaPlayer(class UMediaPlayer* NewMediaPlayer);
+	int GetWidth();
 	class UMediaPlayer* GetMediaPlayer();
-	bool BP_GetAttenuationSettingsToApply(struct FSoundAttenuationSettings* OutAttenuationSettings);
+	int GetHeight();
+	float GetAspectRatio();
 };
 
 
@@ -302,32 +303,31 @@ public:
 };
 
 
-// Class MediaAssets.MediaTexture
-// 0x0090 (0x0140 - 0x00B0)
-class UMediaTexture : public UTexture
+// Class MediaAssets.MediaSoundComponent
+// 0x00A0 (0x0660 - 0x05C0)
+class UMediaSoundComponent : public USynthComponent
 {
 public:
-	TEnumAsByte<ETextureAddress>                       AddressX;                                                 // 0x00B0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<ETextureAddress>                       AddressY;                                                 // 0x00B1(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               AutoClear;                                                // 0x00B2(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x1];                                       // 0x00B3(0x0001) MISSED OFFSET
-	struct FLinearColor                                ClearColor;                                               // 0x00B4(0x0010) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x00C4(0x0004) MISSED OFFSET
-	class UMediaPlayer*                                MediaPlayer;                                              // 0x00C8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x70];                                      // 0x00D0(0x0070) MISSED OFFSET
+	EMediaSoundChannels                                Channels;                                                 // 0x05C0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x05C0(0x0003) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	bool                                               DynamicRateAdjustment;                                    // 0x05C4(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x05C5(0x0003) MISSED OFFSET
+	float                                              RateAdjustmentFactor;                                     // 0x05C8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FFloatRange                                 RateAdjustmentRange;                                      // 0x05CC(0x0010) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x05DC(0x0004) MISSED OFFSET
+	class UMediaPlayer*                                MediaPlayer;                                              // 0x05E0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x78];                                      // 0x05E8(0x0078) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class MediaAssets.MediaTexture");
+		static auto ptr = UObject::FindClass("Class MediaAssets.MediaSoundComponent");
 		return ptr;
 	}
 
 
 	void SetMediaPlayer(class UMediaPlayer* NewMediaPlayer);
-	int GetWidth();
 	class UMediaPlayer* GetMediaPlayer();
-	int GetHeight();
-	float GetAspectRatio();
+	bool BP_GetAttenuationSettingsToApply(struct FSoundAttenuationSettings* OutAttenuationSettings);
 };
 
 

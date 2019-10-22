@@ -35,6 +35,14 @@ struct FEngineServiceExecuteCommand
 	struct FString                                     UserName;                                                 // 0x0010(0x0010) (Edit, ZeroConstructor)
 };
 
+// ScriptStruct EngineMessages.EngineServiceAuthGrant
+// 0x0020
+struct FEngineServiceAuthGrant
+{
+	struct FString                                     UserName;                                                 // 0x0000(0x0010) (Edit, ZeroConstructor)
+	struct FString                                     UserToGrant;                                              // 0x0010(0x0010) (Edit, ZeroConstructor)
+};
+
 // ScriptStruct EngineMessages.EngineServiceAuthDeny
 // 0x0020
 struct FEngineServiceAuthDeny
@@ -63,14 +71,6 @@ struct FEngineServicePong
 struct FEngineServicePing
 {
 	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
-};
-
-// ScriptStruct EngineMessages.EngineServiceAuthGrant
-// 0x0020
-struct FEngineServiceAuthGrant
-{
-	struct FString                                     UserName;                                                 // 0x0000(0x0010) (Edit, ZeroConstructor)
-	struct FString                                     UserToGrant;                                              // 0x0010(0x0010) (Edit, ZeroConstructor)
 };
 
 }

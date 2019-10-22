@@ -248,6 +248,21 @@ public:
 };
 
 
+// Class MovieScene.MovieSceneBindingOwnerInterface
+// 0x0000 (0x0028 - 0x0028)
+class UMovieSceneBindingOwnerInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class MovieScene.MovieSceneBindingOwnerInterface");
+		return ptr;
+	}
+
+};
+
+
 // Class MovieScene.MovieSceneBuiltInEasingFunction
 // 0x0010 (0x0038 - 0x0028)
 class UMovieSceneBuiltInEasingFunction : public UObject
@@ -283,32 +298,20 @@ public:
 };
 
 
-// Class MovieScene.MovieSceneEasingFunction
-// 0x0000 (0x0028 - 0x0028)
-class UMovieSceneEasingFunction : public UInterface
+// Class MovieScene.MovieSceneFolder
+// 0x0048 (0x0070 - 0x0028)
+class UMovieSceneFolder : public UObject
 {
 public:
+	struct FName                                       FolderName;                                               // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData)
+	TArray<class UMovieSceneFolder*>                   ChildFolders;                                             // 0x0030(0x0010) (ExportObject, ZeroConstructor)
+	TArray<class UMovieSceneTrack*>                    ChildMasterTracks;                                        // 0x0040(0x0010) (ExportObject, ZeroConstructor)
+	TArray<struct FString>                             ChildObjectBindingStrings;                                // 0x0050(0x0010) (ZeroConstructor)
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0060(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class MovieScene.MovieSceneEasingFunction");
-		return ptr;
-	}
-
-
-	float OnEvaluate(float Interp);
-};
-
-
-// Class MovieScene.MovieSceneBindingOwnerInterface
-// 0x0000 (0x0028 - 0x0028)
-class UMovieSceneBindingOwnerInterface : public UInterface
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class MovieScene.MovieSceneBindingOwnerInterface");
+		static auto ptr = UObject::FindClass("Class MovieScene.MovieSceneFolder");
 		return ptr;
 	}
 
@@ -355,6 +358,23 @@ public:
 };
 
 
+// Class MovieScene.MovieSceneEasingFunction
+// 0x0000 (0x0028 - 0x0028)
+class UMovieSceneEasingFunction : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class MovieScene.MovieSceneEasingFunction");
+		return ptr;
+	}
+
+
+	float OnEvaluate(float Interp);
+};
+
+
 // Class MovieScene.MovieSceneSubTrack
 // 0x0010 (0x0068 - 0x0058)
 class UMovieSceneSubTrack : public UMovieSceneNameableTrack
@@ -371,20 +391,18 @@ public:
 };
 
 
-// Class MovieScene.MovieSceneFolder
-// 0x0048 (0x0070 - 0x0028)
-class UMovieSceneFolder : public UObject
+// Class MovieScene.TestMovieSceneTrack
+// 0x0018 (0x0070 - 0x0058)
+class UTestMovieSceneTrack : public UMovieSceneTrack
 {
 public:
-	struct FName                                       FolderName;                                               // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData)
-	TArray<class UMovieSceneFolder*>                   ChildFolders;                                             // 0x0030(0x0010) (ExportObject, ZeroConstructor)
-	TArray<class UMovieSceneTrack*>                    ChildMasterTracks;                                        // 0x0040(0x0010) (ExportObject, ZeroConstructor)
-	TArray<struct FString>                             ChildObjectBindingStrings;                                // 0x0050(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0060(0x0010) MISSED OFFSET
+	bool                                               bHighPassFilter;                                          // 0x0058(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0059(0x0007) MISSED OFFSET
+	TArray<class UMovieSceneSection*>                  SectionArray;                                             // 0x0060(0x0010) (ExportObject, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class MovieScene.MovieSceneFolder");
+		static auto ptr = UObject::FindClass("Class MovieScene.TestMovieSceneTrack");
 		return ptr;
 	}
 
@@ -416,24 +434,6 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class MovieScene.TestMovieSceneSequence");
-		return ptr;
-	}
-
-};
-
-
-// Class MovieScene.TestMovieSceneTrack
-// 0x0018 (0x0070 - 0x0058)
-class UTestMovieSceneTrack : public UMovieSceneTrack
-{
-public:
-	bool                                               bHighPassFilter;                                          // 0x0058(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0059(0x0007) MISSED OFFSET
-	TArray<class UMovieSceneSection*>                  SectionArray;                                             // 0x0060(0x0010) (ExportObject, ZeroConstructor)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class MovieScene.TestMovieSceneTrack");
 		return ptr;
 	}
 

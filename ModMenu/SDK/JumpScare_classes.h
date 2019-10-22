@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass JumpScare.JumpScare_C
-// 0x0270 (0x05F8 - 0x0388)
+// 0x0298 (0x0620 - 0x0388)
 class AJumpScare_C : public APawn
 {
 public:
@@ -80,28 +80,35 @@ public:
 	class USceneComponent*                             AttatchmentOffset;                                        // 0x0568(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 	class USkeletalMeshComponent*                      Character;                                                // 0x0570(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 	class USceneComponent*                             Scene;                                                    // 0x0578(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	float                                              Timeline_0_PhantomJumpscareFade_61CCD1624CEDF63E4563D39948CF2292;// 0x0580(0x0004) (ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<ETimelineDirection>                    Timeline_0__Direction_61CCD1624CEDF63E4563D39948CF2292;   // 0x0584(0x0001) (ZeroConstructor, IsPlainOldData)
+	float                                              Timeline_1_PhantomJumpscareFade_883E56244783E62136CC258CCA3F3336;// 0x0580(0x0004) (ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<ETimelineDirection>                    Timeline_1__Direction_883E56244783E62136CC258CCA3F3336;   // 0x0584(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x0585(0x0003) MISSED OFFSET
-	class UTimelineComponent*                          Timeline_1;                                               // 0x0588(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class ASaul_MotionControllerPawn_C*                MotionControllerPawnRef;                                  // 0x0590(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData)
-	class USoundWave*                                  JumpscareSFX;                                             // 0x0598(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class USkeletalMesh*                               FoxyMesh;                                                 // 0x05A0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              JumpscareDelay;                                           // 0x05A8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               ResetLevelAfterScare_;                                    // 0x05AC(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x05AD(0x0003) MISSED OFFSET
-	struct FVector                                     Store_Location_Before_Jumpscare;                          // 0x05B0(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               IsFoxyHeadOn;                                             // 0x05BC(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               IsNightmareMode;                                          // 0x05BD(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               BonnieLeftEyeInFaceOpen;                                  // 0x05BE(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               BonnieLeftEyeHide;                                        // 0x05BF(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               Bonnie_Right_Eye_Hide;                                    // 0x05C0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x7];                                       // 0x05C1(0x0007) MISSED OFFSET
-	TArray<class USceneComponent*>                     ArrayOfLightingScenarios;                                 // 0x05C8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	int                                                LightingScenario;                                         // 0x05D8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x4];                                       // 0x05DC(0x0004) MISSED OFFSET
-	TArray<class USceneComponent*>                     Destroy_These_children;                                   // 0x05E0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	class USceneComponent*                             CurrentLight;                                             // 0x05F0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UTimelineComponent*                          Timeline_2;                                               // 0x0588(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	float                                              Timeline_0_PhantomJumpscareFade_61CCD1624CEDF63E4563D39948CF2292;// 0x0590(0x0004) (ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<ETimelineDirection>                    Timeline_0__Direction_61CCD1624CEDF63E4563D39948CF2292;   // 0x0594(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x0595(0x0003) MISSED OFFSET
+	class UTimelineComponent*                          Timeline_1;                                               // 0x0598(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class ASaul_MotionControllerPawn_C*                MotionControllerPawnRef;                                  // 0x05A0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData)
+	class USoundWave*                                  JumpscareSFX;                                             // 0x05A8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class USkeletalMesh*                               FoxyMesh;                                                 // 0x05B0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              JumpscareDelay;                                           // 0x05B8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               ResetLevelAfterScare_;                                    // 0x05BC(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x3];                                       // 0x05BD(0x0003) MISSED OFFSET
+	struct FVector                                     Store_Location_Before_Jumpscare;                          // 0x05C0(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               IsFoxyHeadOn;                                             // 0x05CC(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               IsNightmareMode;                                          // 0x05CD(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               BonnieLeftEyeInFaceOpen;                                  // 0x05CE(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               BonnieLeftEyeHide;                                        // 0x05CF(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               Bonnie_Right_Eye_Hide;                                    // 0x05D0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x7];                                       // 0x05D1(0x0007) MISSED OFFSET
+	TArray<class USceneComponent*>                     ArrayOfLightingScenarios;                                 // 0x05D8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	int                                                LightingScenario;                                         // 0x05E8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x4];                                       // 0x05EC(0x0004) MISSED OFFSET
+	TArray<class USceneComponent*>                     Destroy_These_children;                                   // 0x05F0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	class USceneComponent*                             CurrentLight;                                             // 0x0600(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	bool                                               JumpscareTestDisabled;                                    // 0x0608(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData05[0x7];                                       // 0x0609(0x0007) MISSED OFFSET
+	TArray<class USkeletalMeshComponent*>              MultiplePCBSkeletalMeshes;                                // 0x0610(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
@@ -110,10 +117,19 @@ public:
 	}
 
 
+	void NightmareFreddy_Ref();
+	void NightmareFoxy_Ref();
+	void NightmareBonnie_Ref();
+	void NightmareChica_Ref();
+	void DLCFoxy_Ref();
+	void JackOBonnie_Ref();
+	void JackOChica_Ref();
+	void DLCFreddy_Ref();
 	void WitheredFoxy_Ref();
 	void WitheredBonnie_Ref();
 	void WitheredChica_Ref();
 	void WitheredFreddy_Ref();
+	class USkeletalMeshComponent* FreddleJumpscare_OneGuy(class USkeletalMeshComponent** ReturnValue1);
 	void BonnieWithEyeControl();
 	void BonnetJumpscare_Ref();
 	void PhantomBalloonBoy_Ref();
@@ -128,7 +144,7 @@ public:
 	void FoxyRepairJumpscare_NoHead();
 	void FoxyRepairJumpscare();
 	void FuntimeFoxy_Fake_JumpScare();
-	void FreddleJumpscare_Ref();
+	class USkeletalMeshComponent* FreddleJumpscare_Ref(class USkeletalMeshComponent** ReturnValue1);
 	void NightmarionneJumpscare_Ref();
 	void PhantomFreddyJumpscare_Ref();
 	void PuppetJumpscare_Ref();
@@ -156,10 +172,13 @@ public:
 	void ChicaJumpScare_Ref();
 	void BonnieJumpScare_Ref();
 	void UserConstructionScript();
+	void Timeline_1__FinishedFunc();
+	void Timeline_1__UpdateFunc();
+	void Timeline_1__NewTrack_1__EventFunc();
 	void Timeline_0__FinishedFunc();
 	void Timeline_0__UpdateFunc();
 	void Timeline_0__NewTrack_1__EventFunc();
-	void TriggerKillState(bool DarkenRoomBeforeJumpscare, TEnumAsByte<EJumpScareList> Character, bool ResetLevelAfterScare);
+	void TriggerKillState(bool DarkenRoomBeforeJumpscare, TEnumAsByte<EJumpScareList> Character, bool ResetLevelAfterScare, bool Pulled_In_Jumpscare);
 	void ReceiveBeginPlay();
 	void ExecuteUbergraph_JumpScare(int EntryPoint);
 };

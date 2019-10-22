@@ -27,6 +27,22 @@ public:
 };
 
 
+// Class Overlay.BasicOverlays
+// 0x0010 (0x0038 - 0x0028)
+class UBasicOverlays : public UOverlays
+{
+public:
+	TArray<struct FOverlayItem>                        Overlays;                                                 // 0x0028(0x0010) (Edit, ZeroConstructor)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Overlay.BasicOverlays");
+		return ptr;
+	}
+
+};
+
+
 // Class Overlay.LocalizedOverlays
 // 0x0058 (0x0080 - 0x0028)
 class ULocalizedOverlays : public UOverlays
@@ -38,22 +54,6 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class Overlay.LocalizedOverlays");
-		return ptr;
-	}
-
-};
-
-
-// Class Overlay.BasicOverlays
-// 0x0010 (0x0038 - 0x0028)
-class UBasicOverlays : public UOverlays
-{
-public:
-	TArray<struct FOverlayItem>                        Overlays;                                                 // 0x0028(0x0010) (Edit, ZeroConstructor)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Overlay.BasicOverlays");
 		return ptr;
 	}
 

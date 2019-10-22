@@ -25,6 +25,11 @@ struct AFNAFGM_FlashlightGame_C_Flashlight_State_Params
 	bool                                               Toggle;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function FNAFGM_FlashlightGame.FNAFGM_FlashlightGame_C.ReceiveBeginPlay
+struct AFNAFGM_FlashlightGame_C_ReceiveBeginPlay_Params
+{
+};
+
 // Function FNAFGM_FlashlightGame.FNAFGM_FlashlightGame_C.ExecuteUbergraph_FNAFGM_FlashlightGame
 struct AFNAFGM_FlashlightGame_C_ExecuteUbergraph_FNAFGM_FlashlightGame_Params
 {

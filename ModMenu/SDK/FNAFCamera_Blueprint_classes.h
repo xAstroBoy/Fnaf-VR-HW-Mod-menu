@@ -27,7 +27,7 @@ public:
 	float                                              MaxRight;                                                 // 0x035C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              RotationSpeed;                                            // 0x0360(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               CanRotate;                                                // 0x0364(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               bIsEnabled;                                               // 0x0365(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               bIsEnabled;                                               // 0x0365(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x2];                                       // 0x0366(0x0002) MISSED OFFSET
 	struct FString                                     CameraID;                                                 // 0x0368(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 	bool                                               AllowConstantCapture;                                     // 0x0378(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)

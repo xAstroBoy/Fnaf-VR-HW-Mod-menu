@@ -96,26 +96,6 @@ public:
 };
 
 
-// Class GameplayTasks.GameplayTaskResource
-// 0x0010 (0x0038 - 0x0028)
-class UGameplayTaskResource : public UObject
-{
-public:
-	int                                                ManualResourceID;                                         // 0x0028(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
-	int8_t                                             AutoResourceID;                                           // 0x002C(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x002D(0x0003) MISSED OFFSET
-	unsigned char                                      bManuallySetID : 1;                                       // 0x0030(0x0001) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0031(0x0007) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class GameplayTasks.GameplayTaskResource");
-		return ptr;
-	}
-
-};
-
-
 // Class GameplayTasks.GameplayTask_WaitDelay
 // 0x0018 (0x0080 - 0x0068)
 class UGameplayTask_WaitDelay : public UGameplayTask
@@ -145,6 +125,26 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class GameplayTasks.GameplayTaskOwnerInterface");
+		return ptr;
+	}
+
+};
+
+
+// Class GameplayTasks.GameplayTaskResource
+// 0x0010 (0x0038 - 0x0028)
+class UGameplayTaskResource : public UObject
+{
+public:
+	int                                                ManualResourceID;                                         // 0x0028(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
+	int8_t                                             AutoResourceID;                                           // 0x002C(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x002D(0x0003) MISSED OFFSET
+	unsigned char                                      bManuallySetID : 1;                                       // 0x0030(0x0001) (Edit, DisableEditOnInstance)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x0031(0x0007) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayTasks.GameplayTaskResource");
 		return ptr;
 	}
 

@@ -60,6 +60,11 @@ struct APlayerPawn_Headlight_C_ExecuteUbergraph_PlayerPawn_Headlight_Params
 	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function PlayerPawn_Headlight.PlayerPawn_Headlight_C.LightTriggered__DelegateSignature
+struct APlayerPawn_Headlight_C_LightTriggered__DelegateSignature_Params
+{
+};
+
 }
 
 #ifdef _MSC_VER

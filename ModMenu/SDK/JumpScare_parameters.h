@@ -14,6 +14,46 @@ namespace SDK
 // Parameters
 //---------------------------------------------------------------------------
 
+// Function JumpScare.JumpScare_C.NightmareFreddy_Ref
+struct AJumpScare_C_NightmareFreddy_Ref_Params
+{
+};
+
+// Function JumpScare.JumpScare_C.NightmareFoxy_Ref
+struct AJumpScare_C_NightmareFoxy_Ref_Params
+{
+};
+
+// Function JumpScare.JumpScare_C.NightmareBonnie_Ref
+struct AJumpScare_C_NightmareBonnie_Ref_Params
+{
+};
+
+// Function JumpScare.JumpScare_C.NightmareChica_Ref
+struct AJumpScare_C_NightmareChica_Ref_Params
+{
+};
+
+// Function JumpScare.JumpScare_C.DLCFoxy_Ref
+struct AJumpScare_C_DLCFoxy_Ref_Params
+{
+};
+
+// Function JumpScare.JumpScare_C.JackOBonnie_Ref
+struct AJumpScare_C_JackOBonnie_Ref_Params
+{
+};
+
+// Function JumpScare.JumpScare_C.JackOChica_Ref
+struct AJumpScare_C_JackOChica_Ref_Params
+{
+};
+
+// Function JumpScare.JumpScare_C.DLCFreddy_Ref
+struct AJumpScare_C_DLCFreddy_Ref_Params
+{
+};
+
 // Function JumpScare.JumpScare_C.WitheredFoxy_Ref
 struct AJumpScare_C_WitheredFoxy_Ref_Params
 {
@@ -32,6 +72,13 @@ struct AJumpScare_C_WitheredChica_Ref_Params
 // Function JumpScare.JumpScare_C.WitheredFreddy_Ref
 struct AJumpScare_C_WitheredFreddy_Ref_Params
 {
+};
+
+// Function JumpScare.JumpScare_C.FreddleJumpscare_OneGuy
+struct AJumpScare_C_FreddleJumpscare_OneGuy_Params
+{
+	class USkeletalMeshComponent*                      ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+	class USkeletalMeshComponent*                      ReturnValue1;                                             // (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // Function JumpScare.JumpScare_C.BonnieWithEyeControl
@@ -107,6 +154,8 @@ struct AJumpScare_C_FuntimeFoxy_Fake_JumpScare_Params
 // Function JumpScare.JumpScare_C.FreddleJumpscare_Ref
 struct AJumpScare_C_FreddleJumpscare_Ref_Params
 {
+	class USkeletalMeshComponent*                      ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+	class USkeletalMeshComponent*                      ReturnValue1;                                             // (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // Function JumpScare.JumpScare_C.NightmarionneJumpscare_Ref
@@ -244,6 +293,21 @@ struct AJumpScare_C_UserConstructionScript_Params
 {
 };
 
+// Function JumpScare.JumpScare_C.Timeline_1__FinishedFunc
+struct AJumpScare_C_Timeline_1__FinishedFunc_Params
+{
+};
+
+// Function JumpScare.JumpScare_C.Timeline_1__UpdateFunc
+struct AJumpScare_C_Timeline_1__UpdateFunc_Params
+{
+};
+
+// Function JumpScare.JumpScare_C.Timeline_1__NewTrack_1__EventFunc
+struct AJumpScare_C_Timeline_1__NewTrack_1__EventFunc_Params
+{
+};
+
 // Function JumpScare.JumpScare_C.Timeline_0__FinishedFunc
 struct AJumpScare_C_Timeline_0__FinishedFunc_Params
 {
@@ -265,6 +329,7 @@ struct AJumpScare_C_TriggerKillState_Params
 	bool                                               DarkenRoomBeforeJumpscare;                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<EJumpScareList>                        Character;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               ResetLevelAfterScare;                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Pulled_In_Jumpscare;                                      // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function JumpScare.JumpScare_C.ReceiveBeginPlay

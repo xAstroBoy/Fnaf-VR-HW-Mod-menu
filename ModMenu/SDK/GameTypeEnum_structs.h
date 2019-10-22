@@ -22,7 +22,10 @@ enum class EGameTypeEnum : uint8_t
 	GameTypeEnum__NewEnumerator4   = 4,
 	GameTypeEnum__NewEnumerator5   = 5,
 	GameTypeEnum__NewEnumerator6   = 6,
-	GameTypeEnum__GameTypeEnum_MAX = 7
+	GameTypeEnum__NewEnumerator7   = 7,
+	GameTypeEnum__NewEnumerator8   = 8,
+	GameTypeEnum__NewEnumerator9   = 9,
+	GameTypeEnum__GameTypeEnum_MAX = 10
 };
 
 

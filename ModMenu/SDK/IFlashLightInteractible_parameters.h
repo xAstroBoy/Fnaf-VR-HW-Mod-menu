@@ -17,13 +17,13 @@ namespace SDK
 // Function IFlashLightInteractible.IFlashLightInteractible_C.OnFlashLightEndHover
 struct UIFlashLightInteractible_C_OnFlashLightEndHover_Params
 {
-	class AFlashlightBase_C*                           Flashlight;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class AFlashlight_Battery_C*                       Flashlight;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function IFlashLightInteractible.IFlashLightInteractible_C.OnFlashLightBeginHover
 struct UIFlashLightInteractible_C_OnFlashLightBeginHover_Params
 {
-	class AFlashlightBase_C*                           Flashlight;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class AFlashlight_Battery_C*                       Flashlight;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

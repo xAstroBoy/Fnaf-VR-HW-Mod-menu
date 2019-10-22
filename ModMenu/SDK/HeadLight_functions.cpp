@@ -186,54 +186,6 @@ void AHeadLight_C::Timeline_2__UpdateFunc()
 }
 
 
-// Function HeadLight.HeadLight_C.OnVRHoverComponentBegin
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class ASWGVRCharacter*         Sender                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class UPrimitiveComponent*     HoveredComponent               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// EVRHandType                    Hand                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-
-void AHeadLight_C::OnVRHoverComponentBegin(class ASWGVRCharacter* Sender, class UPrimitiveComponent* HoveredComponent, EVRHandType Hand)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function HeadLight.HeadLight_C.OnVRHoverComponentBegin");
-
-	AHeadLight_C_OnVRHoverComponentBegin_Params params;
-	params.Sender = Sender;
-	params.HoveredComponent = HoveredComponent;
-	params.Hand = Hand;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function HeadLight.HeadLight_C.OnVRHoverComponentEnd
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class ASWGVRCharacter*         Sender                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class UPrimitiveComponent*     HoveredComponent               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// EVRHandType                    Hand                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-
-void AHeadLight_C::OnVRHoverComponentEnd(class ASWGVRCharacter* Sender, class UPrimitiveComponent* HoveredComponent, EVRHandType Hand)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function HeadLight.HeadLight_C.OnVRHoverComponentEnd");
-
-	AHeadLight_C_OnVRHoverComponentEnd_Params params;
-	params.Sender = Sender;
-	params.HoveredComponent = HoveredComponent;
-	params.Hand = Hand;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function HeadLight.HeadLight_C.OnVRHoverEnd
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -418,6 +370,74 @@ void AHeadLight_C::HeavyFlickerEvent()
 	static auto fn = UObject::FindObject<UFunction>("Function HeadLight.HeadLight_C.HeavyFlickerEvent");
 
 	AHeadLight_C_HeavyFlickerEvent_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function HeadLight.HeadLight_C.ReceiveTick
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float*                         DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void AHeadLight_C::ReceiveTick(float* DeltaSeconds)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function HeadLight.HeadLight_C.ReceiveTick");
+
+	AHeadLight_C_ReceiveTick_Params params;
+	params.DeltaSeconds = DeltaSeconds;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function HeadLight.HeadLight_C.OnVRHoverComponentEnd
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class ASWGVRCharacter*         Sender                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UPrimitiveComponent*     HoveredComponent               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// EVRHandType                    Hand                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void AHeadLight_C::OnVRHoverComponentEnd(class ASWGVRCharacter* Sender, class UPrimitiveComponent* HoveredComponent, EVRHandType Hand)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function HeadLight.HeadLight_C.OnVRHoverComponentEnd");
+
+	AHeadLight_C_OnVRHoverComponentEnd_Params params;
+	params.Sender = Sender;
+	params.HoveredComponent = HoveredComponent;
+	params.Hand = Hand;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function HeadLight.HeadLight_C.OnVRHoverComponentBegin
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class ASWGVRCharacter*         Sender                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UPrimitiveComponent*     HoveredComponent               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// EVRHandType                    Hand                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void AHeadLight_C::OnVRHoverComponentBegin(class ASWGVRCharacter* Sender, class UPrimitiveComponent* HoveredComponent, EVRHandType Hand)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function HeadLight.HeadLight_C.OnVRHoverComponentBegin");
+
+	AHeadLight_C_OnVRHoverComponentBegin_Params params;
+	params.Sender = Sender;
+	params.HoveredComponent = HoveredComponent;
+	params.Hand = Hand;
 
 	auto flags = fn->FunctionFlags;
 

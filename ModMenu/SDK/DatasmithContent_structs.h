@@ -33,6 +33,16 @@ enum class EDatasmithImportHierarchy : uint8_t
 };
 
 
+// Enum DatasmithContent.EDatasmithImportScene
+enum class EDatasmithImportScene : uint8_t
+{
+	EDatasmithImportScene__NewLevel = 0,
+	EDatasmithImportScene__CurrentLevel = 1,
+	EDatasmithImportScene__AssetsOnly = 2,
+	EDatasmithImportScene__EDatasmithImportScene_MAX = 3
+};
+
+
 // Enum DatasmithContent.EDatasmithAreaLightActorShape
 enum class EDatasmithAreaLightActorShape : uint8_t
 {
@@ -58,6 +68,19 @@ enum class EDatasmithImportLightmapMax : uint8_t
 };
 
 
+// Enum DatasmithContent.EDatasmithImportLightmapMin
+enum class EDatasmithImportLightmapMin : uint8_t
+{
+	EDatasmithImportLightmapMin__LIGHTMAP = 0,
+	EDatasmithImportLightmapMin__LIGHTMAP01 = 1,
+	EDatasmithImportLightmapMin__LIGHTMAP02 = 2,
+	EDatasmithImportLightmapMin__LIGHTMAP03 = 3,
+	EDatasmithImportLightmapMin__LIGHTMAP04 = 4,
+	EDatasmithImportLightmapMin__LIGHTMAP05 = 5,
+	EDatasmithImportLightmapMin__LIGHTMAP_MAX = 6
+};
+
+
 // Enum DatasmithContent.EDatasmithImportMaterialQuality
 enum class EDatasmithImportMaterialQuality : uint8_t
 {
@@ -75,29 +98,6 @@ enum class EDatasmithImportActorPolicy : uint8_t
 	EDatasmithImportActorPolicy__Full = 1,
 	EDatasmithImportActorPolicy__Ignore = 2,
 	EDatasmithImportActorPolicy__EDatasmithImportActorPolicy_MAX = 3
-};
-
-
-// Enum DatasmithContent.EDatasmithImportScene
-enum class EDatasmithImportScene : uint8_t
-{
-	EDatasmithImportScene__NewLevel = 0,
-	EDatasmithImportScene__CurrentLevel = 1,
-	EDatasmithImportScene__AssetsOnly = 2,
-	EDatasmithImportScene__EDatasmithImportScene_MAX = 3
-};
-
-
-// Enum DatasmithContent.EDatasmithImportLightmapMin
-enum class EDatasmithImportLightmapMin : uint8_t
-{
-	EDatasmithImportLightmapMin__LIGHTMAP = 0,
-	EDatasmithImportLightmapMin__LIGHTMAP01 = 1,
-	EDatasmithImportLightmapMin__LIGHTMAP02 = 2,
-	EDatasmithImportLightmapMin__LIGHTMAP03 = 3,
-	EDatasmithImportLightmapMin__LIGHTMAP04 = 4,
-	EDatasmithImportLightmapMin__LIGHTMAP05 = 5,
-	EDatasmithImportLightmapMin__LIGHTMAP_MAX = 6
 };
 
 

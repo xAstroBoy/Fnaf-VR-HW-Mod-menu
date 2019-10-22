@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Office04_RoomInfo_BP.Office04_RoomInfo_BP_C
-// 0x0001 (0x0349 - 0x0348)
+// 0x0001 (0x0379 - 0x0378)
 class AOffice04_RoomInfo_BP_C : public ARoomInfo_Bp_C
 {
 public:
-	TEnumAsByte<EOffice4_Locations>                    CurrentRoomType;                                          // 0x0348(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EOffice4_Locations>                    CurrentRoomType;                                          // 0x0378(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

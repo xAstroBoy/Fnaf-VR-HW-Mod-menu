@@ -61,8 +61,6 @@ public:
 	void Timeline_1__UpdateFunc();
 	void Timeline_2__FinishedFunc();
 	void Timeline_2__UpdateFunc();
-	void OnVRHoverComponentBegin(class ASWGVRCharacter* Sender, class UPrimitiveComponent* HoveredComponent, EVRHandType Hand);
-	void OnVRHoverComponentEnd(class ASWGVRCharacter* Sender, class UPrimitiveComponent* HoveredComponent, EVRHandType Hand);
 	void OnVRHoverEnd(class ASWGVRCharacter* Sender, EVRHandType Hand);
 	void OnVRHoverBegin(class ASWGVRCharacter* Sender, EVRHandType Hand);
 	void Turn_Off();
@@ -73,6 +71,9 @@ public:
 	void Pickup(class USceneComponent* AttachTo);
 	void Toggle_Flicker_Test(bool Enable_Collision, bool OffAfterFlicker);
 	void HeavyFlickerEvent();
+	void ReceiveTick(float* DeltaSeconds);
+	void OnVRHoverComponentEnd(class ASWGVRCharacter* Sender, class UPrimitiveComponent* HoveredComponent, EVRHandType Hand);
+	void OnVRHoverComponentBegin(class ASWGVRCharacter* Sender, class UPrimitiveComponent* HoveredComponent, EVRHandType Hand);
 	void ExecuteUbergraph_HeadLight(int EntryPoint);
 	void Toggle_Flicker__DelegateSignature();
 	void Freddy_Is_Hit_by_the_light__DelegateSignature();

@@ -13,6 +13,29 @@ namespace SDK
 // Functions
 //---------------------------------------------------------------------------
 
+// Function AIModule.AIAsyncTaskBlueprintProxy.OnMoveCompleted
+// (Final, Native, Public)
+// Parameters:
+// struct FAIRequestID            RequestID                      (Parm)
+// TEnumAsByte<EPathFollowingResult> MovementResult                 (Parm, ZeroConstructor, IsPlainOldData)
+
+void UAIAsyncTaskBlueprintProxy::OnMoveCompleted(const struct FAIRequestID& RequestID, TEnumAsByte<EPathFollowingResult> MovementResult)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AIModule.AIAsyncTaskBlueprintProxy.OnMoveCompleted");
+
+	UAIAsyncTaskBlueprintProxy_OnMoveCompleted_Params params;
+	params.RequestID = RequestID;
+	params.MovementResult = MovementResult;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function AIModule.AIBlueprintHelperLibrary.UnlockAIResourcesWithAnimation
 // (Final, BlueprintAuthorityOnly, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -1456,6 +1479,37 @@ void UAISense_Damage::STATIC_ReportDamageEvent(class UObject* WorldContextObject
 }
 
 
+// Function AIModule.AISense_Hearing.ReportNoiseEvent
+// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 NoiseLocation                  (Parm, ZeroConstructor, IsPlainOldData)
+// float                          Loudness                       (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor*                  Instigator                     (Parm, ZeroConstructor, IsPlainOldData)
+// float                          MaxRange                       (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName                   Tag                            (Parm, ZeroConstructor, IsPlainOldData)
+
+void UAISense_Hearing::STATIC_ReportNoiseEvent(class UObject* WorldContextObject, const struct FVector& NoiseLocation, float Loudness, class AActor* Instigator, float MaxRange, const struct FName& Tag)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AIModule.AISense_Hearing.ReportNoiseEvent");
+
+	UAISense_Hearing_ReportNoiseEvent_Params params;
+	params.WorldContextObject = WorldContextObject;
+	params.NoiseLocation = NoiseLocation;
+	params.Loudness = Loudness;
+	params.Instigator = Instigator;
+	params.MaxRange = MaxRange;
+	params.Tag = Tag;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function AIModule.AISense_Prediction.RequestPawnPredictionEvent
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -1496,37 +1550,6 @@ void UAISense_Prediction::STATIC_RequestControllerPredictionEvent(class AAIContr
 	params.Requestor = Requestor;
 	params.PredictedActor = PredictedActor;
 	params.PredictionTime = PredictionTime;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function AIModule.AISense_Hearing.ReportNoiseEvent
-// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 NoiseLocation                  (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Loudness                       (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  Instigator                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          MaxRange                       (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   Tag                            (Parm, ZeroConstructor, IsPlainOldData)
-
-void UAISense_Hearing::STATIC_ReportNoiseEvent(class UObject* WorldContextObject, const struct FVector& NoiseLocation, float Loudness, class AActor* Instigator, float MaxRange, const struct FName& Tag)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function AIModule.AISense_Hearing.ReportNoiseEvent");
-
-	UAISense_Hearing_ReportNoiseEvent_Params params;
-	params.WorldContextObject = WorldContextObject;
-	params.NoiseLocation = NoiseLocation;
-	params.Loudness = Loudness;
-	params.Instigator = Instigator;
-	params.MaxRange = MaxRange;
-	params.Tag = Tag;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -4746,110 +4769,6 @@ void UPawnAction_BlueprintBase::ActionFinished(class APawn* ControlledPawn, TEnu
 }
 
 
-// Function AIModule.PawnActionsComponent.K2_PushAction
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UPawnAction*             NewAction                      (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<EAIRequestPriority> Priority                       (Parm, ZeroConstructor, IsPlainOldData)
-// class UObject*                 Instigator                     (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UPawnActionsComponent::K2_PushAction(class UPawnAction* NewAction, TEnumAsByte<EAIRequestPriority> Priority, class UObject* Instigator)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function AIModule.PawnActionsComponent.K2_PushAction");
-
-	UPawnActionsComponent_K2_PushAction_Params params;
-	params.NewAction = NewAction;
-	params.Priority = Priority;
-	params.Instigator = Instigator;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function AIModule.PawnActionsComponent.K2_PerformAction
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class APawn*                   Pawn                           (Parm, ZeroConstructor, IsPlainOldData)
-// class UPawnAction*             Action                         (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<EAIRequestPriority> Priority                       (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UPawnActionsComponent::STATIC_K2_PerformAction(class APawn* Pawn, class UPawnAction* Action, TEnumAsByte<EAIRequestPriority> Priority)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function AIModule.PawnActionsComponent.K2_PerformAction");
-
-	UPawnActionsComponent_K2_PerformAction_Params params;
-	params.Pawn = Pawn;
-	params.Action = Action;
-	params.Priority = Priority;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function AIModule.PawnActionsComponent.K2_ForceAbortAction
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UPawnAction*             ActionToAbort                  (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<EPawnActionAbortState> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-TEnumAsByte<EPawnActionAbortState> UPawnActionsComponent::K2_ForceAbortAction(class UPawnAction* ActionToAbort)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function AIModule.PawnActionsComponent.K2_ForceAbortAction");
-
-	UPawnActionsComponent_K2_ForceAbortAction_Params params;
-	params.ActionToAbort = ActionToAbort;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function AIModule.PawnActionsComponent.K2_AbortAction
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UPawnAction*             ActionToAbort                  (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<EPawnActionAbortState> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-TEnumAsByte<EPawnActionAbortState> UPawnActionsComponent::K2_AbortAction(class UPawnAction* ActionToAbort)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function AIModule.PawnActionsComponent.K2_AbortAction");
-
-	UPawnActionsComponent_K2_AbortAction_Params params;
-	params.ActionToAbort = ActionToAbort;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
 // Function AIModule.PawnSensingComponent.SetSensingUpdatesEnabled
 // (BlueprintAuthorityOnly, Native, Public, BlueprintCallable)
 // Parameters:
@@ -5001,19 +4920,22 @@ float UPawnSensingComponent::GetPeripheralVisionAngle()
 }
 
 
-// Function AIModule.AIAsyncTaskBlueprintProxy.OnMoveCompleted
-// (Final, Native, Public)
+// Function AIModule.PawnActionsComponent.K2_PushAction
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FAIRequestID            RequestID                      (Parm)
-// TEnumAsByte<EPathFollowingResult> MovementResult                 (Parm, ZeroConstructor, IsPlainOldData)
+// class UPawnAction*             NewAction                      (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<EAIRequestPriority> Priority                       (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject*                 Instigator                     (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-void UAIAsyncTaskBlueprintProxy::OnMoveCompleted(const struct FAIRequestID& RequestID, TEnumAsByte<EPathFollowingResult> MovementResult)
+bool UPawnActionsComponent::K2_PushAction(class UPawnAction* NewAction, TEnumAsByte<EAIRequestPriority> Priority, class UObject* Instigator)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AIModule.AIAsyncTaskBlueprintProxy.OnMoveCompleted");
+	static auto fn = UObject::FindObject<UFunction>("Function AIModule.PawnActionsComponent.K2_PushAction");
 
-	UAIAsyncTaskBlueprintProxy_OnMoveCompleted_Params params;
-	params.RequestID = RequestID;
-	params.MovementResult = MovementResult;
+	UPawnActionsComponent_K2_PushAction_Params params;
+	params.NewAction = NewAction;
+	params.Priority = Priority;
+	params.Instigator = Instigator;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -5021,6 +4943,84 @@ void UAIAsyncTaskBlueprintProxy::OnMoveCompleted(const struct FAIRequestID& Requ
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function AIModule.PawnActionsComponent.K2_PerformAction
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class APawn*                   Pawn                           (Parm, ZeroConstructor, IsPlainOldData)
+// class UPawnAction*             Action                         (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<EAIRequestPriority> Priority                       (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UPawnActionsComponent::STATIC_K2_PerformAction(class APawn* Pawn, class UPawnAction* Action, TEnumAsByte<EAIRequestPriority> Priority)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AIModule.PawnActionsComponent.K2_PerformAction");
+
+	UPawnActionsComponent_K2_PerformAction_Params params;
+	params.Pawn = Pawn;
+	params.Action = Action;
+	params.Priority = Priority;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function AIModule.PawnActionsComponent.K2_ForceAbortAction
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UPawnAction*             ActionToAbort                  (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<EPawnActionAbortState> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+TEnumAsByte<EPawnActionAbortState> UPawnActionsComponent::K2_ForceAbortAction(class UPawnAction* ActionToAbort)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AIModule.PawnActionsComponent.K2_ForceAbortAction");
+
+	UPawnActionsComponent_K2_ForceAbortAction_Params params;
+	params.ActionToAbort = ActionToAbort;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function AIModule.PawnActionsComponent.K2_AbortAction
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UPawnAction*             ActionToAbort                  (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<EPawnActionAbortState> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+TEnumAsByte<EPawnActionAbortState> UPawnActionsComponent::K2_AbortAction(class UPawnAction* ActionToAbort)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AIModule.PawnActionsComponent.K2_AbortAction");
+
+	UPawnActionsComponent_K2_AbortAction_Params params;
+	params.ActionToAbort = ActionToAbort;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
 }
 
 

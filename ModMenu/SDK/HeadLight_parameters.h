@@ -65,22 +65,6 @@ struct AHeadLight_C_Timeline_2__UpdateFunc_Params
 {
 };
 
-// Function HeadLight.HeadLight_C.OnVRHoverComponentBegin
-struct AHeadLight_C_OnVRHoverComponentBegin_Params
-{
-	class ASWGVRCharacter*                             Sender;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	class UPrimitiveComponent*                         HoveredComponent;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-	EVRHandType                                        Hand;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function HeadLight.HeadLight_C.OnVRHoverComponentEnd
-struct AHeadLight_C_OnVRHoverComponentEnd_Params
-{
-	class ASWGVRCharacter*                             Sender;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	class UPrimitiveComponent*                         HoveredComponent;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-	EVRHandType                                        Hand;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-};
-
 // Function HeadLight.HeadLight_C.OnVRHoverEnd
 struct AHeadLight_C_OnVRHoverEnd_Params
 {
@@ -138,6 +122,28 @@ struct AHeadLight_C_Toggle_Flicker_Test_Params
 // Function HeadLight.HeadLight_C.HeavyFlickerEvent
 struct AHeadLight_C_HeavyFlickerEvent_Params
 {
+};
+
+// Function HeadLight.HeadLight_C.ReceiveTick
+struct AHeadLight_C_ReceiveTick_Params
+{
+	float*                                             DeltaSeconds;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function HeadLight.HeadLight_C.OnVRHoverComponentEnd
+struct AHeadLight_C_OnVRHoverComponentEnd_Params
+{
+	class ASWGVRCharacter*                             Sender;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UPrimitiveComponent*                         HoveredComponent;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	EVRHandType                                        Hand;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function HeadLight.HeadLight_C.OnVRHoverComponentBegin
+struct AHeadLight_C_OnVRHoverComponentBegin_Params
+{
+	class ASWGVRCharacter*                             Sender;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UPrimitiveComponent*                         HoveredComponent;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	EVRHandType                                        Hand;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function HeadLight.HeadLight_C.ExecuteUbergraph_HeadLight
