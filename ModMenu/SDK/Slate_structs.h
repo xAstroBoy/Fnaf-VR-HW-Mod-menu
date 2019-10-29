@@ -32,29 +32,6 @@ enum class ETableViewMode : uint8_t
 };
 
 
-// Enum Slate.ESelectionMode
-enum class ESelectionMode : uint8_t
-{
-	ESelectionMode__None           = 0,
-	ESelectionMode__Single         = 1,
-	ESelectionMode__SingleToggle   = 2,
-	ESelectionMode__Multi          = 3,
-	ESelectionMode__ESelectionMode_MAX = 4
-};
-
-
-// Enum Slate.EProgressBarFillType
-enum class EProgressBarFillType : uint8_t
-{
-	EProgressBarFillType__LeftToRight = 0,
-	EProgressBarFillType__RightToLeft = 1,
-	EProgressBarFillType__FillFromCenter = 2,
-	EProgressBarFillType__TopToBottom = 3,
-	EProgressBarFillType__BottomToTop = 4,
-	EProgressBarFillType__EProgressBarFillType_MAX = 5
-};
-
-
 // Enum Slate.EStretch
 enum class EStretch : uint8_t
 {
@@ -80,6 +57,18 @@ enum class EStretchDirection : uint8_t
 };
 
 
+// Enum Slate.EProgressBarFillType
+enum class EProgressBarFillType : uint8_t
+{
+	EProgressBarFillType__LeftToRight = 0,
+	EProgressBarFillType__RightToLeft = 1,
+	EProgressBarFillType__FillFromCenter = 2,
+	EProgressBarFillType__TopToBottom = 3,
+	EProgressBarFillType__BottomToTop = 4,
+	EProgressBarFillType__EProgressBarFillType_MAX = 5
+};
+
+
 // Enum Slate.EDescendantScrollDestination
 enum class EDescendantScrollDestination : uint8_t
 {
@@ -90,27 +79,14 @@ enum class EDescendantScrollDestination : uint8_t
 };
 
 
-// Enum Slate.EListItemAlignment
-enum class EListItemAlignment : uint8_t
+// Enum Slate.ESelectionMode
+enum class ESelectionMode : uint8_t
 {
-	EListItemAlignment__EvenlyDistributed = 0,
-	EListItemAlignment__EvenlySize = 1,
-	EListItemAlignment__EvenlyWide = 2,
-	EListItemAlignment__LeftAligned = 3,
-	EListItemAlignment__RightAligned = 4,
-	EListItemAlignment__CenterAligned = 5,
-	EListItemAlignment__Fill       = 6,
-	EListItemAlignment__EListItemAlignment_MAX = 7
-};
-
-
-// Enum Slate.ETextFlowDirection
-enum class ETextFlowDirection : uint8_t
-{
-	ETextFlowDirection__Auto       = 0,
-	ETextFlowDirection__LeftToRight = 1,
-	ETextFlowDirection__RightToLeft = 2,
-	ETextFlowDirection__ETextFlowDirection_MAX = 3
+	ESelectionMode__None           = 0,
+	ESelectionMode__Single         = 1,
+	ESelectionMode__SingleToggle   = 2,
+	ESelectionMode__Multi          = 3,
+	ESelectionMode__ESelectionMode_MAX = 4
 };
 
 
@@ -133,6 +109,16 @@ enum class ETextJustify : uint8_t
 };
 
 
+// Enum Slate.ETextFlowDirection
+enum class ETextFlowDirection : uint8_t
+{
+	ETextFlowDirection__Auto       = 0,
+	ETextFlowDirection__LeftToRight = 1,
+	ETextFlowDirection__RightToLeft = 2,
+	ETextFlowDirection__ETextFlowDirection_MAX = 3
+};
+
+
 // Enum Slate.EMultipleKeyBindingIndex
 enum class EMultipleKeyBindingIndex : uint8_t
 {
@@ -140,6 +126,20 @@ enum class EMultipleKeyBindingIndex : uint8_t
 	EMultipleKeyBindingIndex__Secondary = 1,
 	EMultipleKeyBindingIndex__NumChords = 2,
 	EMultipleKeyBindingIndex__EMultipleKeyBindingIndex_MAX = 3
+};
+
+
+// Enum Slate.EListItemAlignment
+enum class EListItemAlignment : uint8_t
+{
+	EListItemAlignment__EvenlyDistributed = 0,
+	EListItemAlignment__EvenlySize = 1,
+	EListItemAlignment__EvenlyWide = 2,
+	EListItemAlignment__LeftAligned = 3,
+	EListItemAlignment__RightAligned = 4,
+	EListItemAlignment__CenterAligned = 5,
+	EListItemAlignment__Fill       = 6,
+	EListItemAlignment__EListItemAlignment_MAX = 7
 };
 
 

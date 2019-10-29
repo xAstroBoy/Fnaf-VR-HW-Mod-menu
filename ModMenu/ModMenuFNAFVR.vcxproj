@@ -186,7 +186,6 @@
     <ClCompile Include="SDK\CoreUObject_functions.cpp" />
     <ClCompile Include="SDK\Engine_functions.cpp" />
     <ClCompile Include="SDK\FNAFGM_FlashlightGame_functions.cpp" />
-    <ClCompile Include="SDK\LightBlockerDoubleFaced_functions.cpp" />
     <ClCompile Include="SDK\LightBlocker_functions.cpp" />
     <ClCompile Include="SDK\MonitorBoard_BP_functions.cpp" />
     <ClCompile Include="SDK\Office01_GameManager_functions.cpp" />

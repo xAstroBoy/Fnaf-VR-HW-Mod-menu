@@ -19,7 +19,7 @@ enum class EGripEnum : uint8_t
 	GripEnum__NewEnumerator1       = 1,
 	GripEnum__NewEnumerator3       = 2,
 	GripEnum__NewEnumerator2       = 3,
-	GripEnum__GripEnum_0_MAX       = 4
+	GripEnum__GripEnum_MAX         = 4
 };
 
 

@@ -12,6 +12,27 @@ namespace SDK
 // Enums
 //---------------------------------------------------------------------------
 
+// Enum VectorVM.EVectorVMOperandLocation
+enum class EVectorVMOperandLocation : uint8_t
+{
+	EVectorVMOperandLocation__Register = 0,
+	EVectorVMOperandLocation__Constant = 1,
+	EVectorVMOperandLocation__Num  = 2,
+	EVectorVMOperandLocation__EVectorVMOperandLocation_MAX = 3
+};
+
+
+// Enum VectorVM.EVectorVMBaseTypes
+enum class EVectorVMBaseTypes : uint8_t
+{
+	EVectorVMBaseTypes__Float      = 0,
+	EVectorVMBaseTypes__Int        = 1,
+	EVectorVMBaseTypes__Bool       = 2,
+	EVectorVMBaseTypes__Num        = 3,
+	EVectorVMBaseTypes__EVectorVMBaseTypes_MAX = 4
+};
+
+
 // Enum VectorVM.EVectorVMOp
 enum class EVectorVMOp : uint8_t
 {
@@ -102,27 +123,6 @@ enum class EVectorVMOp : uint8_t
 	EVectorVMOp__update_id         = 84,
 	EVectorVMOp__acquire_id        = 85,
 	EVectorVMOp__NumOpcodes        = 86
-};
-
-
-// Enum VectorVM.EVectorVMOperandLocation
-enum class EVectorVMOperandLocation : uint8_t
-{
-	EVectorVMOperandLocation__Register = 0,
-	EVectorVMOperandLocation__Constant = 1,
-	EVectorVMOperandLocation__Num  = 2,
-	EVectorVMOperandLocation__EVectorVMOperandLocation_MAX = 3
-};
-
-
-// Enum VectorVM.EVectorVMBaseTypes
-enum class EVectorVMBaseTypes : uint8_t
-{
-	EVectorVMBaseTypes__Float      = 0,
-	EVectorVMBaseTypes__Int        = 1,
-	EVectorVMBaseTypes__Bool       = 2,
-	EVectorVMBaseTypes__Num        = 3,
-	EVectorVMBaseTypes__EVectorVMBaseTypes_MAX = 4
 };
 
 

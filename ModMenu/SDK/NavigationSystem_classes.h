@@ -667,27 +667,6 @@ public:
 };
 
 
-// Class NavigationSystem.NavModifierComponent
-// 0x0028 (0x0148 - 0x0120)
-class UNavModifierComponent : public UNavRelevantComponent
-{
-public:
-	class UClass*                                      AreaClass;                                                // 0x0120(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     FailsafeExtent;                                           // 0x0128(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bIncludeAgentHeight : 1;                                  // 0x0134(0x0001) (Edit, Config)
-	unsigned char                                      UnknownData00[0x13];                                      // 0x0135(0x0013) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class NavigationSystem.NavModifierComponent");
-		return ptr;
-	}
-
-
-	void SetAreaClass(class UClass* NewAreaClass);
-};
-
-
 // Class NavigationSystem.NavModifierVolume
 // 0x0010 (0x0370 - 0x0360)
 class ANavModifierVolume : public AVolume
@@ -722,21 +701,24 @@ public:
 };
 
 
-// Class NavigationSystem.NavSystemConfigOverride
-// 0x0010 (0x0338 - 0x0328)
-class ANavSystemConfigOverride : public AActor
+// Class NavigationSystem.NavModifierComponent
+// 0x0028 (0x0148 - 0x0120)
+class UNavModifierComponent : public UNavRelevantComponent
 {
 public:
-	class UNavigationSystemConfig*                     NavigationSystemConfig;                                   // 0x0328(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
-	unsigned char                                      bLoadOnClient : 1;                                        // 0x0330(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0331(0x0007) MISSED OFFSET
+	class UClass*                                      AreaClass;                                                // 0x0120(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     FailsafeExtent;                                           // 0x0128(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      bIncludeAgentHeight : 1;                                  // 0x0134(0x0001) (Edit, Config)
+	unsigned char                                      UnknownData00[0x13];                                      // 0x0135(0x0013) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class NavigationSystem.NavSystemConfigOverride");
+		static auto ptr = UObject::FindClass("Class NavigationSystem.NavModifierComponent");
 		return ptr;
 	}
 
+
+	void SetAreaClass(class UClass* NewAreaClass);
 };
 
 
@@ -749,6 +731,24 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class NavigationSystem.NavTestRenderingComponent");
+		return ptr;
+	}
+
+};
+
+
+// Class NavigationSystem.NavSystemConfigOverride
+// 0x0010 (0x0338 - 0x0328)
+class ANavSystemConfigOverride : public AActor
+{
+public:
+	class UNavigationSystemConfig*                     NavigationSystemConfig;                                   // 0x0328(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char                                      bLoadOnClient : 1;                                        // 0x0330(0x0001) (Edit, BlueprintVisible)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0331(0x0007) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class NavigationSystem.NavSystemConfigOverride");
 		return ptr;
 	}
 

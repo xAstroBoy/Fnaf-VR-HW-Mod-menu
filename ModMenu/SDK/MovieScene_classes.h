@@ -233,21 +233,6 @@ public:
 };
 
 
-// Class MovieScene.MovieSceneBindingOverridesInterface
-// 0x0000 (0x0028 - 0x0028)
-class UMovieSceneBindingOverridesInterface : public UInterface
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class MovieScene.MovieSceneBindingOverridesInterface");
-		return ptr;
-	}
-
-};
-
-
 // Class MovieScene.MovieSceneBindingOwnerInterface
 // 0x0000 (0x0028 - 0x0028)
 class UMovieSceneBindingOwnerInterface : public UInterface
@@ -295,6 +280,23 @@ public:
 		return ptr;
 	}
 
+};
+
+
+// Class MovieScene.MovieSceneEasingFunction
+// 0x0000 (0x0028 - 0x0028)
+class UMovieSceneEasingFunction : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class MovieScene.MovieSceneEasingFunction");
+		return ptr;
+	}
+
+
+	float OnEvaluate(float Interp);
 };
 
 
@@ -358,23 +360,6 @@ public:
 };
 
 
-// Class MovieScene.MovieSceneEasingFunction
-// 0x0000 (0x0028 - 0x0028)
-class UMovieSceneEasingFunction : public UInterface
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class MovieScene.MovieSceneEasingFunction");
-		return ptr;
-	}
-
-
-	float OnEvaluate(float Interp);
-};
-
-
 // Class MovieScene.MovieSceneSubTrack
 // 0x0010 (0x0068 - 0x0058)
 class UMovieSceneSubTrack : public UMovieSceneNameableTrack
@@ -434,6 +419,21 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class MovieScene.TestMovieSceneSequence");
+		return ptr;
+	}
+
+};
+
+
+// Class MovieScene.MovieSceneBindingOverridesInterface
+// 0x0000 (0x0028 - 0x0028)
+class UMovieSceneBindingOverridesInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class MovieScene.MovieSceneBindingOverridesInterface");
 		return ptr;
 	}
 

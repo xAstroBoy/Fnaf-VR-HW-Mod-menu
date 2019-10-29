@@ -13,6 +13,30 @@ namespace SDK
 // Functions
 //---------------------------------------------------------------------------
 
+// Function LinearTimecode.DropTimecodeToStringConversion.Conv_DropTimecodeToString
+// (Final, Native, Static, Private, HasOutParms, BlueprintCallable, BlueprintPure)
+// Parameters:
+// struct FDropTimecode           InTimecode                     (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+struct FString UDropTimecodeToStringConversion::STATIC_Conv_DropTimecodeToString(const struct FDropTimecode& InTimecode)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function LinearTimecode.DropTimecodeToStringConversion.Conv_DropTimecodeToString");
+
+	UDropTimecodeToStringConversion_Conv_DropTimecodeToString_Params params;
+	params.InTimecode = InTimecode;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function LinearTimecode.LinearTimecodeComponent.SetDropTimecodeFrameNumber
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
@@ -75,30 +99,6 @@ int ULinearTimecodeComponent::GetDropFrameNumber()
 	static auto fn = UObject::FindObject<UFunction>("Function LinearTimecode.LinearTimecodeComponent.GetDropFrameNumber");
 
 	ULinearTimecodeComponent_GetDropFrameNumber_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function LinearTimecode.DropTimecodeToStringConversion.Conv_DropTimecodeToString
-// (Final, Native, Static, Private, HasOutParms, BlueprintCallable, BlueprintPure)
-// Parameters:
-// struct FDropTimecode           InTimecode                     (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
-
-struct FString UDropTimecodeToStringConversion::STATIC_Conv_DropTimecodeToString(const struct FDropTimecode& InTimecode)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function LinearTimecode.DropTimecodeToStringConversion.Conv_DropTimecodeToString");
-
-	UDropTimecodeToStringConversion_Conv_DropTimecodeToString_Params params;
-	params.InTimecode = InTimecode;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;

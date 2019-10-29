@@ -12,20 +12,19 @@ namespace SDK
 // Classes
 //---------------------------------------------------------------------------
 
-// Class LevelSequence.LevelSequence
-// 0x0150 (0x0498 - 0x0348)
-class ULevelSequence : public UMovieSceneSequence
+// Class LevelSequence.DefaultLevelSequenceInstanceData
+// 0x0048 (0x0070 - 0x0028)
+class UDefaultLevelSequenceInstanceData : public UObject
 {
 public:
-	class UMovieScene*                                 MovieScene;                                               // 0x0348(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UBlueprintGeneratedClass*                    DirectorClass;                                            // 0x0350(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FLevelSequenceObjectReferenceMap            ObjectReferences;                                         // 0x0358(0x0050)
-	struct FLevelSequenceBindingReferences             BindingReferences;                                        // 0x03A8(0x00A0)
-	TMap<struct FString, struct FLevelSequenceObject>  PossessedObjects;                                         // 0x0448(0x0050) (ZeroConstructor, Deprecated)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
+	class AActor*                                      TransformOriginActor;                                     // 0x0030(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x8];                                       // 0x0038(0x0008) MISSED OFFSET
+	struct FTransform                                  TransformOrigin;                                          // 0x0040(0x0030) (Edit, BlueprintVisible, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class LevelSequence.LevelSequence");
+		static auto ptr = UObject::FindClass("Class LevelSequence.DefaultLevelSequenceInstanceData");
 		return ptr;
 	}
 
@@ -105,23 +104,23 @@ public:
 };
 
 
-// Class LevelSequence.LevelSequenceBurnIn
-// 0x0090 (0x0298 - 0x0208)
-class ULevelSequenceBurnIn : public UUserWidget
+// Class LevelSequence.LevelSequence
+// 0x0150 (0x0498 - 0x0348)
+class ULevelSequence : public UMovieSceneSequence
 {
 public:
-	struct FLevelSequencePlayerSnapshot                FrameInformation;                                         // 0x0208(0x0088) (BlueprintVisible, BlueprintReadOnly)
-	class ALevelSequenceActor*                         LevelSequenceActor;                                       // 0x0290(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	class UMovieScene*                                 MovieScene;                                               // 0x0348(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UBlueprintGeneratedClass*                    DirectorClass;                                            // 0x0350(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FLevelSequenceObjectReferenceMap            ObjectReferences;                                         // 0x0358(0x0050)
+	struct FLevelSequenceBindingReferences             BindingReferences;                                        // 0x03A8(0x00A0)
+	TMap<struct FString, struct FLevelSequenceObject>  PossessedObjects;                                         // 0x0448(0x0050) (ZeroConstructor, Deprecated)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class LevelSequence.LevelSequenceBurnIn");
+		static auto ptr = UObject::FindClass("Class LevelSequence.LevelSequence");
 		return ptr;
 	}
 
-
-	void SetSettings(class UObject* InSettings);
-	class UClass* GetSettingsClass();
 };
 
 
@@ -143,18 +142,23 @@ public:
 };
 
 
-// Class LevelSequence.LegacyLevelSequenceDirectorBlueprint
-// 0x0000 (0x00E0 - 0x00E0)
-class ULegacyLevelSequenceDirectorBlueprint : public UBlueprint
+// Class LevelSequence.LevelSequenceBurnIn
+// 0x0090 (0x0298 - 0x0208)
+class ULevelSequenceBurnIn : public UUserWidget
 {
 public:
+	struct FLevelSequencePlayerSnapshot                FrameInformation;                                         // 0x0208(0x0088) (BlueprintVisible, BlueprintReadOnly)
+	class ALevelSequenceActor*                         LevelSequenceActor;                                       // 0x0290(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class LevelSequence.LegacyLevelSequenceDirectorBlueprint");
+		static auto ptr = UObject::FindClass("Class LevelSequence.LevelSequenceBurnIn");
 		return ptr;
 	}
 
+
+	void SetSettings(class UObject* InSettings);
+	class UClass* GetSettingsClass();
 };
 
 
@@ -179,19 +183,15 @@ public:
 };
 
 
-// Class LevelSequence.DefaultLevelSequenceInstanceData
-// 0x0048 (0x0070 - 0x0028)
-class UDefaultLevelSequenceInstanceData : public UObject
+// Class LevelSequence.LegacyLevelSequenceDirectorBlueprint
+// 0x0000 (0x00E0 - 0x00E0)
+class ULegacyLevelSequenceDirectorBlueprint : public UBlueprint
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
-	class AActor*                                      TransformOriginActor;                                     // 0x0030(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x0038(0x0008) MISSED OFFSET
-	struct FTransform                                  TransformOrigin;                                          // 0x0040(0x0030) (Edit, BlueprintVisible, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class LevelSequence.DefaultLevelSequenceInstanceData");
+		static auto ptr = UObject::FindClass("Class LevelSequence.LegacyLevelSequenceDirectorBlueprint");
 		return ptr;
 	}
 

@@ -214,6 +214,23 @@ void ALevelSequenceActor::AddBinding(const struct FMovieSceneObjectBindingID& Bi
 }
 
 
+// Function LevelSequence.LevelSequenceDirector.OnCreated
+// (Event, Public, BlueprintEvent)
+
+void ULevelSequenceDirector::OnCreated()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceDirector.OnCreated");
+
+	ULevelSequenceDirector_OnCreated_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function LevelSequence.LevelSequenceBurnIn.SetSettings
 // (Event, Public, BlueprintEvent)
 // Parameters:
@@ -253,23 +270,6 @@ class UClass* ULevelSequenceBurnIn::GetSettingsClass()
 	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
-}
-
-
-// Function LevelSequence.LevelSequenceDirector.OnCreated
-// (Event, Public, BlueprintEvent)
-
-void ULevelSequenceDirector::OnCreated()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceDirector.OnCreated");
-
-	ULevelSequenceDirector_OnCreated_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

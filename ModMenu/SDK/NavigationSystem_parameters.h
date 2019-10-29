@@ -269,14 +269,14 @@ struct UNavRelevantComponent_SetNavigationRelevancy_Params
 	bool                                               bRelevant;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function NavigationSystem.NavModifierComponent.SetAreaClass
-struct UNavModifierComponent_SetAreaClass_Params
+// Function NavigationSystem.NavModifierVolume.SetAreaClass
+struct ANavModifierVolume_SetAreaClass_Params
 {
 	class UClass*                                      NewAreaClass;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function NavigationSystem.NavModifierVolume.SetAreaClass
-struct ANavModifierVolume_SetAreaClass_Params
+// Function NavigationSystem.NavModifierComponent.SetAreaClass
+struct UNavModifierComponent_SetAreaClass_Params
 {
 	class UClass*                                      NewAreaClass;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 };

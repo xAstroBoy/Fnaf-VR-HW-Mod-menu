@@ -16,9 +16,9 @@ namespace SDK
 // Function MPFreddyPawnBase.MPFreddyPawnBase_C.IsInPlayerVis
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// bool                           IsInVis                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           IsInvis                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AMPFreddyPawnBase_C::IsInPlayerVis(bool* IsInVis)
+void AMPFreddyPawnBase_C::IsInPlayerVis(bool* IsInvis)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MPFreddyPawnBase.MPFreddyPawnBase_C.IsInPlayerVis");
 
@@ -30,8 +30,8 @@ void AMPFreddyPawnBase_C::IsInPlayerVis(bool* IsInVis)
 
 	fn->FunctionFlags = flags;
 
-	if (IsInVis != nullptr)
-		*IsInVis = params.IsInVis;
+	if (IsInvis != nullptr)
+		*IsInvis = params.IsInvis;
 }
 
 

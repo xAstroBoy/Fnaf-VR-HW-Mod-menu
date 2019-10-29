@@ -12,6 +12,17 @@ namespace SDK
 // Enums
 //---------------------------------------------------------------------------
 
+// Enum DatasmithContent.EDatasmithAreaLightActorShape
+enum class EDatasmithAreaLightActorShape : uint8_t
+{
+	EDatasmithAreaLightActorShape__Rectangle = 0,
+	EDatasmithAreaLightActorShape__Disc = 1,
+	EDatasmithAreaLightActorShape__Sphere = 2,
+	EDatasmithAreaLightActorShape__Cylinder = 3,
+	EDatasmithAreaLightActorShape__EDatasmithAreaLightActorShape_MAX = 4
+};
+
+
 // Enum DatasmithContent.EVREDDataTableType
 enum class EVREDDataTableType : uint8_t
 {
@@ -40,17 +51,6 @@ enum class EDatasmithImportScene : uint8_t
 	EDatasmithImportScene__CurrentLevel = 1,
 	EDatasmithImportScene__AssetsOnly = 2,
 	EDatasmithImportScene__EDatasmithImportScene_MAX = 3
-};
-
-
-// Enum DatasmithContent.EDatasmithAreaLightActorShape
-enum class EDatasmithAreaLightActorShape : uint8_t
-{
-	EDatasmithAreaLightActorShape__Rectangle = 0,
-	EDatasmithAreaLightActorShape__Disc = 1,
-	EDatasmithAreaLightActorShape__Sphere = 2,
-	EDatasmithAreaLightActorShape__Cylinder = 3,
-	EDatasmithAreaLightActorShape__EDatasmithAreaLightActorShape_MAX = 4
 };
 
 

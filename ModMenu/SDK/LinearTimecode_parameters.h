@@ -14,6 +14,13 @@ namespace SDK
 // Parameters
 //---------------------------------------------------------------------------
 
+// Function LinearTimecode.DropTimecodeToStringConversion.Conv_DropTimecodeToString
+struct UDropTimecodeToStringConversion_Conv_DropTimecodeToString_Params
+{
+	struct FDropTimecode                               InTimecode;                                               // (ConstParm, Parm, OutParm, ReferenceParm)
+	struct FString                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
+};
+
 // Function LinearTimecode.LinearTimecodeComponent.SetDropTimecodeFrameNumber
 struct ULinearTimecodeComponent_SetDropTimecodeFrameNumber_Params
 {
@@ -33,13 +40,6 @@ struct ULinearTimecodeComponent_GetDropTimeCodeFrameNumber_Params
 struct ULinearTimecodeComponent_GetDropFrameNumber_Params
 {
 	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function LinearTimecode.DropTimecodeToStringConversion.Conv_DropTimecodeToString
-struct UDropTimecodeToStringConversion_Conv_DropTimecodeToString_Params
-{
-	struct FDropTimecode                               InTimecode;                                               // (ConstParm, Parm, OutParm, ReferenceParm)
-	struct FString                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
 };
 
 }

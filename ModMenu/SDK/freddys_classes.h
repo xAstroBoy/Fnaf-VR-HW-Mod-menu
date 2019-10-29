@@ -63,6 +63,37 @@ public:
 };
 
 
+// Class freddys.FlowGraphConnector
+// 0x0030 (0x0270 - 0x0240)
+class UFlowGraphConnector : public USceneComponent
+{
+public:
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0240(0x0008) MISSED OFFSET
+	struct FScriptMulticastDelegate                    OnFlowGraphDisconnected;                                  // 0x0248(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	class UFlowGraphConnector*                         ConnectedTo;                                              // 0x0258(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	float                                              FlowConnectorDistance;                                    // 0x0260(0x0004) (ZeroConstructor, Config, IsPlainOldData)
+	unsigned char                                      UnknownData01[0xC];                                       // 0x0264(0x000C) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class freddys.FlowGraphConnector");
+		return ptr;
+	}
+
+
+	void OnDisconnected();
+	void OnConnectorRegistered();
+	void OnConnected(class UFlowGraphConnector* OtherConnector);
+	bool HasFlow();
+	class AFlowGraphNode* GetNodeOwner();
+	class AFlowGraphNode* GetConnectedNode();
+	class UFlowGraphConnector* GetConnectedConnector();
+	void Disconnect();
+	void Connect(class UFlowGraphConnector* OtherConnector);
+	void CheckConnection();
+};
+
+
 // Class freddys.FlowGraphNode
 // 0x0058 (0x0380 - 0x0328)
 class AFlowGraphNode : public AActor
@@ -450,37 +481,6 @@ public:
 		return ptr;
 	}
 
-};
-
-
-// Class freddys.FlowGraphConnector
-// 0x0030 (0x0270 - 0x0240)
-class UFlowGraphConnector : public USceneComponent
-{
-public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0240(0x0008) MISSED OFFSET
-	struct FScriptMulticastDelegate                    OnFlowGraphDisconnected;                                  // 0x0248(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	class UFlowGraphConnector*                         ConnectedTo;                                              // 0x0258(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
-	float                                              FlowConnectorDistance;                                    // 0x0260(0x0004) (ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData01[0xC];                                       // 0x0264(0x000C) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class freddys.FlowGraphConnector");
-		return ptr;
-	}
-
-
-	void OnDisconnected();
-	void OnConnectorRegistered();
-	void OnConnected(class UFlowGraphConnector* OtherConnector);
-	bool HasFlow();
-	class AFlowGraphNode* GetNodeOwner();
-	class AFlowGraphNode* GetConnectedNode();
-	class UFlowGraphConnector* GetConnectedConnector();
-	void Disconnect();
-	void Connect(class UFlowGraphConnector* OtherConnector);
-	void CheckConnection();
 };
 
 

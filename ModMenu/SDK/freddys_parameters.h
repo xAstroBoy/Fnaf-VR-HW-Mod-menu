@@ -42,6 +42,62 @@ struct UAICommonFunctionalities_isHorizontalAxis_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function freddys.FlowGraphConnector.OnDisconnected
+struct UFlowGraphConnector_OnDisconnected_Params
+{
+};
+
+// Function freddys.FlowGraphConnector.OnConnectorRegistered
+struct UFlowGraphConnector_OnConnectorRegistered_Params
+{
+};
+
+// Function freddys.FlowGraphConnector.OnConnected
+struct UFlowGraphConnector_OnConnected_Params
+{
+	class UFlowGraphConnector*                         OtherConnector;                                           // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+};
+
+// Function freddys.FlowGraphConnector.HasFlow
+struct UFlowGraphConnector_HasFlow_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function freddys.FlowGraphConnector.GetNodeOwner
+struct UFlowGraphConnector_GetNodeOwner_Params
+{
+	class AFlowGraphNode*                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function freddys.FlowGraphConnector.GetConnectedNode
+struct UFlowGraphConnector_GetConnectedNode_Params
+{
+	class AFlowGraphNode*                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function freddys.FlowGraphConnector.GetConnectedConnector
+struct UFlowGraphConnector_GetConnectedConnector_Params
+{
+	class UFlowGraphConnector*                         ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+};
+
+// Function freddys.FlowGraphConnector.Disconnect
+struct UFlowGraphConnector_Disconnect_Params
+{
+};
+
+// Function freddys.FlowGraphConnector.Connect
+struct UFlowGraphConnector_Connect_Params
+{
+	class UFlowGraphConnector*                         OtherConnector;                                           // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+};
+
+// Function freddys.FlowGraphConnector.CheckConnection
+struct UFlowGraphConnector_CheckConnection_Params
+{
+};
+
 // Function freddys.FlowGraphNode.UnregisterConnector
 struct AFlowGraphNode_UnregisterConnector_Params
 {
@@ -561,62 +617,6 @@ struct USWS_GroupComponent_GetTotalFrequency_Params
 struct USWS_GroupComponent_GetTotalAmplitude_Params
 {
 	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function freddys.FlowGraphConnector.OnDisconnected
-struct UFlowGraphConnector_OnDisconnected_Params
-{
-};
-
-// Function freddys.FlowGraphConnector.OnConnectorRegistered
-struct UFlowGraphConnector_OnConnectorRegistered_Params
-{
-};
-
-// Function freddys.FlowGraphConnector.OnConnected
-struct UFlowGraphConnector_OnConnected_Params
-{
-	class UFlowGraphConnector*                         OtherConnector;                                           // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-};
-
-// Function freddys.FlowGraphConnector.HasFlow
-struct UFlowGraphConnector_HasFlow_Params
-{
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function freddys.FlowGraphConnector.GetNodeOwner
-struct UFlowGraphConnector_GetNodeOwner_Params
-{
-	class AFlowGraphNode*                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function freddys.FlowGraphConnector.GetConnectedNode
-struct UFlowGraphConnector_GetConnectedNode_Params
-{
-	class AFlowGraphNode*                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function freddys.FlowGraphConnector.GetConnectedConnector
-struct UFlowGraphConnector_GetConnectedConnector_Params
-{
-	class UFlowGraphConnector*                         ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
-};
-
-// Function freddys.FlowGraphConnector.Disconnect
-struct UFlowGraphConnector_Disconnect_Params
-{
-};
-
-// Function freddys.FlowGraphConnector.Connect
-struct UFlowGraphConnector_Connect_Params
-{
-	class UFlowGraphConnector*                         OtherConnector;                                           // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-};
-
-// Function freddys.FlowGraphConnector.CheckConnection
-struct UFlowGraphConnector_CheckConnection_Params
-{
 };
 
 }

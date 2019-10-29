@@ -17,7 +17,7 @@ namespace SDK
 // Function MPFreddyPawnBase.MPFreddyPawnBase_C.IsInPlayerVis
 struct AMPFreddyPawnBase_C_IsInPlayerVis_Params
 {
-	bool                                               IsInVis;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               IsInvis;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function MPFreddyPawnBase.MPFreddyPawnBase_C.ChangePlayerVisStatus

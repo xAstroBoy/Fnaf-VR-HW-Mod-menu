@@ -12,6 +12,23 @@ namespace SDK
 // Classes
 //---------------------------------------------------------------------------
 
+// Class LinearTimecode.DropTimecodeToStringConversion
+// 0x0000 (0x0028 - 0x0028)
+class UDropTimecodeToStringConversion : public UBlueprintFunctionLibrary
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class LinearTimecode.DropTimecodeToStringConversion");
+		return ptr;
+	}
+
+
+	struct FString STATIC_Conv_DropTimecodeToString(const struct FDropTimecode& InTimecode);
+};
+
+
 // Class LinearTimecode.LinearTimecodeComponent
 // 0x0060 (0x02A0 - 0x0240)
 class ULinearTimecodeComponent : public USceneComponent
@@ -32,23 +49,6 @@ public:
 	void STATIC_SetDropTimecodeFrameNumber(const struct FDropTimecode& Timecode, int FrameNumber, struct FDropTimecode* OutTimecode);
 	void STATIC_GetDropTimeCodeFrameNumber(const struct FDropTimecode& Timecode, int* FrameNumber);
 	int GetDropFrameNumber();
-};
-
-
-// Class LinearTimecode.DropTimecodeToStringConversion
-// 0x0000 (0x0028 - 0x0028)
-class UDropTimecodeToStringConversion : public UBlueprintFunctionLibrary
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class LinearTimecode.DropTimecodeToStringConversion");
-		return ptr;
-	}
-
-
-	struct FString STATIC_Conv_DropTimecodeToString(const struct FDropTimecode& InTimecode);
 };
 
 

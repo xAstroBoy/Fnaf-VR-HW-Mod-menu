@@ -26,15 +26,6 @@ enum class EGameplayTagQueryExprType : uint8_t
 };
 
 
-// Enum GameplayTags.EGameplayContainerMatchType
-enum class EGameplayContainerMatchType : uint8_t
-{
-	EGameplayContainerMatchType__Any = 0,
-	EGameplayContainerMatchType__All = 1,
-	EGameplayContainerMatchType__EGameplayContainerMatchType_MAX = 2
-};
-
-
 // Enum GameplayTags.EGameplayTagMatchType
 enum class EGameplayTagMatchType : uint8_t
 {
@@ -44,14 +35,12 @@ enum class EGameplayTagMatchType : uint8_t
 };
 
 
-// Enum GameplayTags.EGameplayTagSelectionType
-enum class EGameplayTagSelectionType : uint8_t
+// Enum GameplayTags.EGameplayContainerMatchType
+enum class EGameplayContainerMatchType : uint8_t
 {
-	EGameplayTagSelectionType__None = 0,
-	EGameplayTagSelectionType__NonRestrictedOnly = 1,
-	EGameplayTagSelectionType__RestrictedOnly = 2,
-	EGameplayTagSelectionType__All = 3,
-	EGameplayTagSelectionType__EGameplayTagSelectionType_MAX = 4
+	EGameplayContainerMatchType__Any = 0,
+	EGameplayContainerMatchType__All = 1,
+	EGameplayContainerMatchType__EGameplayContainerMatchType_MAX = 2
 };
 
 
@@ -65,6 +54,17 @@ enum class EGameplayTagSourceType : uint8_t
 	EGameplayTagSourceType__DataTable = 4,
 	EGameplayTagSourceType__Invalid = 5,
 	EGameplayTagSourceType__EGameplayTagSourceType_MAX = 6
+};
+
+
+// Enum GameplayTags.EGameplayTagSelectionType
+enum class EGameplayTagSelectionType : uint8_t
+{
+	EGameplayTagSelectionType__None = 0,
+	EGameplayTagSelectionType__NonRestrictedOnly = 1,
+	EGameplayTagSelectionType__RestrictedOnly = 2,
+	EGameplayTagSelectionType__All = 3,
+	EGameplayTagSelectionType__EGameplayTagSelectionType_MAX = 4
 };
 
 

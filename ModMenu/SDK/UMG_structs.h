@@ -84,6 +84,15 @@ enum class EUMGSequencePlayMode : uint8_t
 };
 
 
+// Enum UMG.EWidgetTickFrequency
+enum class EWidgetTickFrequency : uint8_t
+{
+	EWidgetTickFrequency__Never    = 0,
+	EWidgetTickFrequency__Auto     = 1,
+	EWidgetTickFrequency__EWidgetTickFrequency_MAX = 2
+};
+
+
 // Enum UMG.EWidgetDesignFlags
 enum class EWidgetDesignFlags : uint8_t
 {
@@ -149,15 +158,6 @@ enum class EWidgetInteractionSource : uint8_t
 	EWidgetInteractionSource__CenterScreen = 2,
 	EWidgetInteractionSource__Custom = 3,
 	EWidgetInteractionSource__EWidgetInteractionSource_MAX = 4
-};
-
-
-// Enum UMG.EWidgetTickFrequency
-enum class EWidgetTickFrequency : uint8_t
-{
-	EWidgetTickFrequency__Never    = 0,
-	EWidgetTickFrequency__Auto     = 1,
-	EWidgetTickFrequency__EWidgetTickFrequency_MAX = 2
 };
 
 

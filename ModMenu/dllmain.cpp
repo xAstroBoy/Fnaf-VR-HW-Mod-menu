@@ -19,8 +19,8 @@ using namespace std;
 
 // GAME OFFSETS
 
-const size_t gObjectsOffset = 0x320BB70;
-const size_t gNamesOffset = 0x30C9A78;
+const size_t gObjectsOffset = 0x1599007FB80;
+const size_t gNamesOffset = 0x7FF656B92128;
 
 string version = "3.1.1";
 

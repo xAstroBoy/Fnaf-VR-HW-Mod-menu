@@ -1460,6 +1460,38 @@ struct UPawnAction_BlueprintBase_ActionFinished_Params
 	TEnumAsByte<EPawnActionResult>                     WithResult;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function AIModule.PawnActionsComponent.K2_PushAction
+struct UPawnActionsComponent_K2_PushAction_Params
+{
+	class UPawnAction*                                 NewAction;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EAIRequestPriority>                    Priority;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	class UObject*                                     Instigator;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function AIModule.PawnActionsComponent.K2_PerformAction
+struct UPawnActionsComponent_K2_PerformAction_Params
+{
+	class APawn*                                       Pawn;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	class UPawnAction*                                 Action;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EAIRequestPriority>                    Priority;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function AIModule.PawnActionsComponent.K2_ForceAbortAction
+struct UPawnActionsComponent_K2_ForceAbortAction_Params
+{
+	class UPawnAction*                                 ActionToAbort;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EPawnActionAbortState>                 ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function AIModule.PawnActionsComponent.K2_AbortAction
+struct UPawnActionsComponent_K2_AbortAction_Params
+{
+	class UPawnAction*                                 ActionToAbort;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EPawnActionAbortState>                 ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function AIModule.PawnSensingComponent.SetSensingUpdatesEnabled
 struct UPawnSensingComponent_SetSensingUpdatesEnabled_Params
 {
@@ -1502,38 +1534,6 @@ struct UPawnSensingComponent_GetPeripheralVisionCosine_Params
 struct UPawnSensingComponent_GetPeripheralVisionAngle_Params
 {
 	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function AIModule.PawnActionsComponent.K2_PushAction
-struct UPawnActionsComponent_K2_PushAction_Params
-{
-	class UPawnAction*                                 NewAction;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EAIRequestPriority>                    Priority;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
-	class UObject*                                     Instigator;                                               // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function AIModule.PawnActionsComponent.K2_PerformAction
-struct UPawnActionsComponent_K2_PerformAction_Params
-{
-	class APawn*                                       Pawn;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
-	class UPawnAction*                                 Action;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EAIRequestPriority>                    Priority;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function AIModule.PawnActionsComponent.K2_ForceAbortAction
-struct UPawnActionsComponent_K2_ForceAbortAction_Params
-{
-	class UPawnAction*                                 ActionToAbort;                                            // (Parm, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EPawnActionAbortState>                 ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function AIModule.PawnActionsComponent.K2_AbortAction
-struct UPawnActionsComponent_K2_AbortAction_Params
-{
-	class UPawnAction*                                 ActionToAbort;                                            // (Parm, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EPawnActionAbortState>                 ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 }

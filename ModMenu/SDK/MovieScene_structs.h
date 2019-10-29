@@ -12,6 +12,18 @@ namespace SDK
 // Enums
 //---------------------------------------------------------------------------
 
+// Enum MovieScene.EMovieSceneKeyInterpolation
+enum class EMovieSceneKeyInterpolation : uint8_t
+{
+	EMovieSceneKeyInterpolation__Auto = 0,
+	EMovieSceneKeyInterpolation__User = 1,
+	EMovieSceneKeyInterpolation__Break = 2,
+	EMovieSceneKeyInterpolation__Linear = 3,
+	EMovieSceneKeyInterpolation__Constant = 4,
+	EMovieSceneKeyInterpolation__EMovieSceneKeyInterpolation_MAX = 5
+};
+
+
 // Enum MovieScene.EMovieSceneBlendType
 enum class EMovieSceneBlendType : uint8_t
 {
@@ -51,15 +63,12 @@ enum class EMovieSceneBuiltInEasing : uint8_t
 };
 
 
-// Enum MovieScene.EMovieSceneKeyInterpolation
-enum class EMovieSceneKeyInterpolation : uint8_t
+// Enum MovieScene.EEvaluationMethod
+enum class EEvaluationMethod : uint8_t
 {
-	EMovieSceneKeyInterpolation__Auto = 0,
-	EMovieSceneKeyInterpolation__User = 1,
-	EMovieSceneKeyInterpolation__Break = 2,
-	EMovieSceneKeyInterpolation__Linear = 3,
-	EMovieSceneKeyInterpolation__Constant = 4,
-	EMovieSceneKeyInterpolation__EMovieSceneKeyInterpolation_MAX = 5
+	EEvaluationMethod__Static      = 0,
+	EEvaluationMethod__Swept       = 1,
+	EEvaluationMethod__EEvaluationMethod_MAX = 2
 };
 
 
@@ -79,20 +88,6 @@ enum class EMovieSceneEvaluationType : uint8_t
 	EMovieSceneEvaluationType__FrameLocked = 0,
 	EMovieSceneEvaluationType__WithSubFrames = 1,
 	EMovieSceneEvaluationType__EMovieSceneEvaluationType_MAX = 2
-};
-
-
-// Enum MovieScene.EMovieScenePlayerStatus
-enum class EMovieScenePlayerStatus : uint8_t
-{
-	EMovieScenePlayerStatus__Stopped = 0,
-	EMovieScenePlayerStatus__Playing = 1,
-	EMovieScenePlayerStatus__Recording = 2,
-	EMovieScenePlayerStatus__Scrubbing = 3,
-	EMovieScenePlayerStatus__Jumping = 4,
-	EMovieScenePlayerStatus__Stepping = 5,
-	EMovieScenePlayerStatus__Paused = 6,
-	EMovieScenePlayerStatus__MAX   = 7
 };
 
 
@@ -135,12 +130,17 @@ enum class ESpawnOwnership : uint8_t
 };
 
 
-// Enum MovieScene.EEvaluationMethod
-enum class EEvaluationMethod : uint8_t
+// Enum MovieScene.EMovieScenePlayerStatus
+enum class EMovieScenePlayerStatus : uint8_t
 {
-	EEvaluationMethod__Static      = 0,
-	EEvaluationMethod__Swept       = 1,
-	EEvaluationMethod__EEvaluationMethod_MAX = 2
+	EMovieScenePlayerStatus__Stopped = 0,
+	EMovieScenePlayerStatus__Playing = 1,
+	EMovieScenePlayerStatus__Recording = 2,
+	EMovieScenePlayerStatus__Scrubbing = 3,
+	EMovieScenePlayerStatus__Jumping = 4,
+	EMovieScenePlayerStatus__Stepping = 5,
+	EMovieScenePlayerStatus__Paused = 6,
+	EMovieScenePlayerStatus__MAX   = 7
 };
 
 
@@ -576,6 +576,13 @@ struct FMovieSceneBoolChannel : public FMovieSceneChannel
 	unsigned char                                      UnknownData01[0x60];                                      // 0x0030(0x0060) MISSED OFFSET
 };
 
+// ScriptStruct MovieScene.MovieSceneKeyHandleMap
+// 0x0000 (0x0060 - 0x0060)
+struct FMovieSceneKeyHandleMap : public FKeyHandleLookupTable
+{
+
+};
+
 // ScriptStruct MovieScene.MovieSceneTangentData
 // 0x0014
 struct FMovieSceneTangentData
@@ -597,13 +604,6 @@ struct FMovieSceneFloatValue
 	TEnumAsByte<ERichCurveTangentMode>                 TangentMode;                                              // 0x0005(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x2];                                       // 0x0006(0x0002) MISSED OFFSET
 	struct FMovieSceneTangentData                      Tangent;                                                  // 0x0008(0x0014) (Edit)
-};
-
-// ScriptStruct MovieScene.MovieSceneKeyHandleMap
-// 0x0000 (0x0060 - 0x0060)
-struct FMovieSceneKeyHandleMap : public FKeyHandleLookupTable
-{
-
 };
 
 // ScriptStruct MovieScene.MovieSceneFloatChannel
@@ -641,13 +641,6 @@ struct FMovieSceneTrackImplementation : public FMovieSceneEvalTemplateBase
 
 };
 
-// ScriptStruct MovieScene.MovieSceneTrackLabels
-// 0x0010
-struct FMovieSceneTrackLabels
-{
-	TArray<struct FString>                             Strings;                                                  // 0x0000(0x0010) (ZeroConstructor)
-};
-
 // ScriptStruct MovieScene.MovieSceneExpansionState
 // 0x0001
 struct FMovieSceneExpansionState
@@ -669,17 +662,11 @@ struct FMovieSceneEditorData
 	struct FFloatRange                                 ViewRange;                                                // 0x00D0(0x0010) (ZeroConstructor, Deprecated, IsPlainOldData)
 };
 
-// ScriptStruct MovieScene.MovieSceneByteChannel
-// 0x0090 (0x0098 - 0x0008)
-struct FMovieSceneByteChannel : public FMovieSceneChannel
+// ScriptStruct MovieScene.MovieSceneTrackLabels
+// 0x0010
+struct FMovieSceneTrackLabels
 {
-	TArray<struct FFrameNumber>                        Times;                                                    // 0x0008(0x0010) (ZeroConstructor)
-	unsigned char                                      DefaultValue;                                             // 0x0018(0x0001) (ZeroConstructor, IsPlainOldData)
-	bool                                               bHasDefaultValue;                                         // 0x0019(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x6];                                       // 0x001A(0x0006) MISSED OFFSET
-	TArray<unsigned char>                              Values;                                                   // 0x0020(0x0010) (ZeroConstructor)
-	class UEnum*                                       Enum;                                                     // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x60];                                      // 0x0038(0x0060) MISSED OFFSET
+	TArray<struct FString>                             Strings;                                                  // 0x0000(0x0010) (ZeroConstructor)
 };
 
 // ScriptStruct MovieScene.MovieSceneTimecodeSource
@@ -695,6 +682,19 @@ struct FMovieSceneTimecodeSource
 struct FMovieSceneEmptyStruct
 {
 	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
+};
+
+// ScriptStruct MovieScene.MovieSceneByteChannel
+// 0x0090 (0x0098 - 0x0008)
+struct FMovieSceneByteChannel : public FMovieSceneChannel
+{
+	TArray<struct FFrameNumber>                        Times;                                                    // 0x0008(0x0010) (ZeroConstructor)
+	unsigned char                                      DefaultValue;                                             // 0x0018(0x0001) (ZeroConstructor, IsPlainOldData)
+	bool                                               bHasDefaultValue;                                         // 0x0019(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x6];                                       // 0x001A(0x0006) MISSED OFFSET
+	TArray<unsigned char>                              Values;                                                   // 0x0020(0x0010) (ZeroConstructor)
+	class UEnum*                                       Enum;                                                     // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x60];                                      // 0x0038(0x0060) MISSED OFFSET
 };
 
 // ScriptStruct MovieScene.MovieSceneEvaluationOperand

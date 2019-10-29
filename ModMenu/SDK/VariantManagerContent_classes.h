@@ -12,26 +12,6 @@ namespace SDK
 // Classes
 //---------------------------------------------------------------------------
 
-// Class VariantManagerContent.LevelVariantSets
-// 0x0060 (0x0088 - 0x0028)
-class ULevelVariantSets : public UObject
-{
-public:
-	TArray<class UVariantSet*>                         VariantSets;                                              // 0x0028(0x0010) (ZeroConstructor)
-	TMap<class UVariantSet*, bool>                     DisplayNodeExpansionStates;                               // 0x0038(0x0050) (ZeroConstructor)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class VariantManagerContent.LevelVariantSets");
-		return ptr;
-	}
-
-
-	class UVariantSet* GetVariantSet(int VariantSetIndex);
-	int GetNumVariantSets();
-};
-
-
 // Class VariantManagerContent.LevelVariantSetsActor
 // 0x0018 (0x0340 - 0x0328)
 class ALevelVariantSetsActor : public AActor
@@ -185,6 +165,26 @@ public:
 	class UVariant* GetVariant(int VariantIndex);
 	int GetNumVariants();
 	struct FText GetDisplayText();
+};
+
+
+// Class VariantManagerContent.LevelVariantSets
+// 0x0060 (0x0088 - 0x0028)
+class ULevelVariantSets : public UObject
+{
+public:
+	TArray<class UVariantSet*>                         VariantSets;                                              // 0x0028(0x0010) (ZeroConstructor)
+	TMap<class UVariantSet*, bool>                     DisplayNodeExpansionStates;                               // 0x0038(0x0050) (ZeroConstructor)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class VariantManagerContent.LevelVariantSets");
+		return ptr;
+	}
+
+
+	class UVariantSet* GetVariantSet(int VariantSetIndex);
+	int GetNumVariantSets();
 };
 
 

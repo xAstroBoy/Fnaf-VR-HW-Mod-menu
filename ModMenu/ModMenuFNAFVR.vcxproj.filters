@@ -77,22 +77,7 @@
     <ClCompile Include="SDK\Office02_GameManager_functions.cpp">
       <Filter>SDK_CPP</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\Office02_WitheredChica_functions.cpp">
-      <Filter>SDK_CPP</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\Office02_WitheredBonnie_functions.cpp">
-      <Filter>SDK_CPP</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\Office02_WitheredFreddy_functions.cpp">
-      <Filter>SDK_CPP</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\Office02_WitheredFoxy_functions.cpp">
-      <Filter>SDK_CPP</Filter>
-    </ClCompile>
     <ClCompile Include="SDK\FNAFGM_FlashlightGame_functions.cpp">
-      <Filter>SDK_CPP</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\LightBlockerDoubleFaced_functions.cpp">
       <Filter>SDK_CPP</Filter>
     </ClCompile>
     <ClCompile Include="SDK\OfficeAiBase-Bp_functions.cpp">
@@ -126,6 +111,18 @@
       <Filter>SDK_CPP</Filter>
     </ClCompile>
     <ClCompile Include="SDK\CoreUObject_functions.cpp">
+      <Filter>SDK_CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\Office02_WitheredBonnie_functions.cpp">
+      <Filter>SDK_CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\Office02_WitheredFreddy_functions.cpp">
+      <Filter>SDK_CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\Office02_WitheredFoxy_functions.cpp">
+      <Filter>SDK_CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\Office02_WitheredChica_functions.cpp">
       <Filter>SDK_CPP</Filter>
     </ClCompile>
   </ItemGroup>

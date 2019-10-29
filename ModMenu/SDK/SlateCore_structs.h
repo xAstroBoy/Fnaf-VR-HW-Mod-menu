@@ -12,6 +12,18 @@ namespace SDK
 // Enums
 //---------------------------------------------------------------------------
 
+// Enum SlateCore.EWidgetClipping
+enum class EWidgetClipping : uint8_t
+{
+	EWidgetClipping__Inherit       = 0,
+	EWidgetClipping__ClipToBounds  = 1,
+	EWidgetClipping__ClipToBoundsWithoutIntersecting = 2,
+	EWidgetClipping__ClipToBoundsAlways = 3,
+	EWidgetClipping__OnDemand      = 4,
+	EWidgetClipping__EWidgetClipping_MAX = 5
+};
+
+
 // Enum SlateCore.EFontLayoutMethod
 enum class EFontLayoutMethod : uint8_t
 {
@@ -145,17 +157,6 @@ enum class ESlateColorStylingMode : uint8_t
 };
 
 
-// Enum SlateCore.ESelectInfo
-enum class ESelectInfo : uint8_t
-{
-	ESelectInfo__OnKeyPress        = 0,
-	ESelectInfo__OnNavigation      = 1,
-	ESelectInfo__OnMouseClick      = 2,
-	ESelectInfo__Direct            = 3,
-	ESelectInfo__ESelectInfo_MAX   = 4
-};
-
-
 // Enum SlateCore.ETextCommit
 enum class ETextCommit : uint8_t
 {
@@ -173,6 +174,17 @@ enum class EScrollDirection : uint8_t
 	Scroll_Down                    = 0,
 	Scroll_Up                      = 1,
 	Scroll_MAX                     = 2
+};
+
+
+// Enum SlateCore.ESelectInfo
+enum class ESelectInfo : uint8_t
+{
+	ESelectInfo__OnKeyPress        = 0,
+	ESelectInfo__OnNavigation      = 1,
+	ESelectInfo__OnMouseClick      = 2,
+	ESelectInfo__Direct            = 3,
+	ESelectInfo__ESelectInfo_MAX   = 4
 };
 
 
@@ -216,17 +228,6 @@ enum class EVerticalAlignment : uint8_t
 };
 
 
-// Enum SlateCore.EHorizontalAlignment
-enum class EHorizontalAlignment : uint8_t
-{
-	HAlign_Fill                    = 0,
-	HAlign_Left                    = 1,
-	HAlign_Center                  = 2,
-	HAlign_Right                   = 3,
-	HAlign_MAX                     = 4
-};
-
-
 // Enum SlateCore.ENavigationGenesis
 enum class ENavigationGenesis : uint8_t
 {
@@ -237,12 +238,14 @@ enum class ENavigationGenesis : uint8_t
 };
 
 
-// Enum SlateCore.ENavigationSource
-enum class ENavigationSource : uint8_t
+// Enum SlateCore.EHorizontalAlignment
+enum class EHorizontalAlignment : uint8_t
 {
-	ENavigationSource__FocusedWidget = 0,
-	ENavigationSource__WidgetUnderCursor = 1,
-	ENavigationSource__ENavigationSource_MAX = 2
+	HAlign_Fill                    = 0,
+	HAlign_Left                    = 1,
+	HAlign_Center                  = 2,
+	HAlign_Right                   = 3,
+	HAlign_MAX                     = 4
 };
 
 
@@ -311,21 +314,21 @@ enum class ECheckBoxState : uint8_t
 };
 
 
-// Enum SlateCore.ESlateCheckBoxType
-enum class ESlateCheckBoxType : uint8_t
-{
-	ESlateCheckBoxType__CheckBox   = 0,
-	ESlateCheckBoxType__ToggleButton = 1,
-	ESlateCheckBoxType__ESlateCheckBoxType_MAX = 2
-};
-
-
 // Enum SlateCore.ESlateParentWindowSearchMethod
 enum class ESlateParentWindowSearchMethod : uint8_t
 {
 	ESlateParentWindowSearchMethod__ActiveWindow = 0,
 	ESlateParentWindowSearchMethod__MainWindow = 1,
 	ESlateParentWindowSearchMethod__ESlateParentWindowSearchMethod_MAX = 2
+};
+
+
+// Enum SlateCore.ESlateCheckBoxType
+enum class ESlateCheckBoxType : uint8_t
+{
+	ESlateCheckBoxType__CheckBox   = 0,
+	ESlateCheckBoxType__ToggleButton = 1,
+	ESlateCheckBoxType__ESlateCheckBoxType_MAX = 2
 };
 
 
@@ -339,15 +342,12 @@ enum class EConsumeMouseWheel : uint8_t
 };
 
 
-// Enum SlateCore.EWidgetClipping
-enum class EWidgetClipping : uint8_t
+// Enum SlateCore.ENavigationSource
+enum class ENavigationSource : uint8_t
 {
-	EWidgetClipping__Inherit       = 0,
-	EWidgetClipping__ClipToBounds  = 1,
-	EWidgetClipping__ClipToBoundsWithoutIntersecting = 2,
-	EWidgetClipping__ClipToBoundsAlways = 3,
-	EWidgetClipping__OnDemand      = 4,
-	EWidgetClipping__EWidgetClipping_MAX = 5
+	ENavigationSource__FocusedWidget = 0,
+	ENavigationSource__WidgetUnderCursor = 1,
+	ENavigationSource__ENavigationSource_MAX = 2
 };
 
 
@@ -677,13 +677,6 @@ struct FCaptureLostEvent
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0000(0x0008) MISSED OFFSET
 };
 
-// ScriptStruct SlateCore.FocusEvent
-// 0x0008
-struct FFocusEvent
-{
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0000(0x0008) MISSED OFFSET
-};
-
 // ScriptStruct SlateCore.WindowStyle
 // 0x0FD0 (0x0FD8 - 0x0008)
 struct FWindowStyle : public FSlateWidgetStyle
@@ -702,6 +695,13 @@ struct FWindowStyle : public FSlateWidgetStyle
 	struct FSlateBrush                                 BorderBrush;                                              // 0x0E40(0x0088) (Edit, BlueprintVisible)
 	struct FSlateBrush                                 BackgroundBrush;                                          // 0x0EC8(0x0088) (Edit, BlueprintVisible)
 	struct FSlateBrush                                 ChildBackgroundBrush;                                     // 0x0F50(0x0088) (Edit, BlueprintVisible)
+};
+
+// ScriptStruct SlateCore.FocusEvent
+// 0x0008
+struct FFocusEvent
+{
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0000(0x0008) MISSED OFFSET
 };
 
 // ScriptStruct SlateCore.ScrollBorderStyle

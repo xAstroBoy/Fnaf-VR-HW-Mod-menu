@@ -237,22 +237,6 @@ public:
 };
 
 
-// Class DatasmithContent.DatasmithAssetUserData
-// 0x0050 (0x0078 - 0x0028)
-class UDatasmithAssetUserData : public UAssetUserData
-{
-public:
-	TMap<struct FName, struct FString>                 MetaData;                                                 // 0x0028(0x0050) (Edit, BlueprintVisible, ZeroConstructor, EditConst)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class DatasmithContent.DatasmithAssetUserData");
-		return ptr;
-	}
-
-};
-
-
 // Class DatasmithContent.DatasmithCineCameraComponentTemplate
 // 0x0068 (0x0090 - 0x0028)
 class UDatasmithCineCameraComponentTemplate : public UDatasmithObjectTemplate
@@ -316,6 +300,22 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class DatasmithContent.DatasmithImportOptions");
+		return ptr;
+	}
+
+};
+
+
+// Class DatasmithContent.DatasmithAssetUserData
+// 0x0050 (0x0078 - 0x0028)
+class UDatasmithAssetUserData : public UAssetUserData
+{
+public:
+	TMap<struct FName, struct FString>                 MetaData;                                                 // 0x0028(0x0050) (Edit, BlueprintVisible, ZeroConstructor, EditConst)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class DatasmithContent.DatasmithAssetUserData");
 		return ptr;
 	}
 
@@ -460,23 +460,6 @@ public:
 };
 
 
-// Class DatasmithContent.DatasmithSpotLightComponentTemplate
-// 0x0008 (0x0030 - 0x0028)
-class UDatasmithSpotLightComponentTemplate : public UDatasmithObjectTemplate
-{
-public:
-	float                                              InnerConeAngle;                                           // 0x0028(0x0004) (ZeroConstructor, IsPlainOldData)
-	float                                              OuterConeAngle;                                           // 0x002C(0x0004) (ZeroConstructor, IsPlainOldData)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class DatasmithContent.DatasmithSpotLightComponentTemplate");
-		return ptr;
-	}
-
-};
-
-
 // Class DatasmithContent.DatasmithStaticMeshComponentTemplate
 // 0x0020 (0x0100 - 0x00E0)
 class UDatasmithStaticMeshComponentTemplate : public UDatasmithSceneComponentTemplate
@@ -509,6 +492,23 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class DatasmithContent.DatasmithStaticMeshTemplate");
+		return ptr;
+	}
+
+};
+
+
+// Class DatasmithContent.DatasmithSpotLightComponentTemplate
+// 0x0008 (0x0030 - 0x0028)
+class UDatasmithSpotLightComponentTemplate : public UDatasmithObjectTemplate
+{
+public:
+	float                                              InnerConeAngle;                                           // 0x0028(0x0004) (ZeroConstructor, IsPlainOldData)
+	float                                              OuterConeAngle;                                           // 0x002C(0x0004) (ZeroConstructor, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class DatasmithContent.DatasmithSpotLightComponentTemplate");
 		return ptr;
 	}
 

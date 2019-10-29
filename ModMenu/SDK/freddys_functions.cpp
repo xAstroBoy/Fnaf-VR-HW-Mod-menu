@@ -108,6 +108,205 @@ bool UAICommonFunctionalities::STATIC_isHorizontalAxis(EAIScareDirection Directi
 }
 
 
+// Function freddys.FlowGraphConnector.OnDisconnected
+// (Event, Protected, BlueprintEvent)
+
+void UFlowGraphConnector::OnDisconnected()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function freddys.FlowGraphConnector.OnDisconnected");
+
+	UFlowGraphConnector_OnDisconnected_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function freddys.FlowGraphConnector.OnConnectorRegistered
+// (Event, Protected, BlueprintEvent)
+
+void UFlowGraphConnector::OnConnectorRegistered()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function freddys.FlowGraphConnector.OnConnectorRegistered");
+
+	UFlowGraphConnector_OnConnectorRegistered_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function freddys.FlowGraphConnector.OnConnected
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class UFlowGraphConnector*     OtherConnector                 (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+
+void UFlowGraphConnector::OnConnected(class UFlowGraphConnector* OtherConnector)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function freddys.FlowGraphConnector.OnConnected");
+
+	UFlowGraphConnector_OnConnected_Params params;
+	params.OtherConnector = OtherConnector;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function freddys.FlowGraphConnector.HasFlow
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UFlowGraphConnector::HasFlow()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function freddys.FlowGraphConnector.HasFlow");
+
+	UFlowGraphConnector_HasFlow_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function freddys.FlowGraphConnector.GetNodeOwner
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class AFlowGraphNode*          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class AFlowGraphNode* UFlowGraphConnector::GetNodeOwner()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function freddys.FlowGraphConnector.GetNodeOwner");
+
+	UFlowGraphConnector_GetNodeOwner_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function freddys.FlowGraphConnector.GetConnectedNode
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class AFlowGraphNode*          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class AFlowGraphNode* UFlowGraphConnector::GetConnectedNode()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function freddys.FlowGraphConnector.GetConnectedNode");
+
+	UFlowGraphConnector_GetConnectedNode_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function freddys.FlowGraphConnector.GetConnectedConnector
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UFlowGraphConnector*     ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+
+class UFlowGraphConnector* UFlowGraphConnector::GetConnectedConnector()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function freddys.FlowGraphConnector.GetConnectedConnector");
+
+	UFlowGraphConnector_GetConnectedConnector_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function freddys.FlowGraphConnector.Disconnect
+// (Final, Native, Public, BlueprintCallable)
+
+void UFlowGraphConnector::Disconnect()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function freddys.FlowGraphConnector.Disconnect");
+
+	UFlowGraphConnector_Disconnect_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function freddys.FlowGraphConnector.Connect
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UFlowGraphConnector*     OtherConnector                 (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+
+void UFlowGraphConnector::Connect(class UFlowGraphConnector* OtherConnector)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function freddys.FlowGraphConnector.Connect");
+
+	UFlowGraphConnector_Connect_Params params;
+	params.OtherConnector = OtherConnector;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function freddys.FlowGraphConnector.CheckConnection
+// (Final, Native, Public, BlueprintCallable)
+
+void UFlowGraphConnector::CheckConnection()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function freddys.FlowGraphConnector.CheckConnection");
+
+	UFlowGraphConnector_CheckConnection_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function freddys.FlowGraphNode.UnregisterConnector
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -1855,205 +2054,6 @@ int USWS_GroupComponent::GetTotalAmplitude()
 	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
-}
-
-
-// Function freddys.FlowGraphConnector.OnDisconnected
-// (Event, Protected, BlueprintEvent)
-
-void UFlowGraphConnector::OnDisconnected()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function freddys.FlowGraphConnector.OnDisconnected");
-
-	UFlowGraphConnector_OnDisconnected_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function freddys.FlowGraphConnector.OnConnectorRegistered
-// (Event, Protected, BlueprintEvent)
-
-void UFlowGraphConnector::OnConnectorRegistered()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function freddys.FlowGraphConnector.OnConnectorRegistered");
-
-	UFlowGraphConnector_OnConnectorRegistered_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function freddys.FlowGraphConnector.OnConnected
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// class UFlowGraphConnector*     OtherConnector                 (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-
-void UFlowGraphConnector::OnConnected(class UFlowGraphConnector* OtherConnector)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function freddys.FlowGraphConnector.OnConnected");
-
-	UFlowGraphConnector_OnConnected_Params params;
-	params.OtherConnector = OtherConnector;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function freddys.FlowGraphConnector.HasFlow
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UFlowGraphConnector::HasFlow()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function freddys.FlowGraphConnector.HasFlow");
-
-	UFlowGraphConnector_HasFlow_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function freddys.FlowGraphConnector.GetNodeOwner
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class AFlowGraphNode*          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class AFlowGraphNode* UFlowGraphConnector::GetNodeOwner()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function freddys.FlowGraphConnector.GetNodeOwner");
-
-	UFlowGraphConnector_GetNodeOwner_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function freddys.FlowGraphConnector.GetConnectedNode
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class AFlowGraphNode*          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class AFlowGraphNode* UFlowGraphConnector::GetConnectedNode()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function freddys.FlowGraphConnector.GetConnectedNode");
-
-	UFlowGraphConnector_GetConnectedNode_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function freddys.FlowGraphConnector.GetConnectedConnector
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class UFlowGraphConnector*     ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
-
-class UFlowGraphConnector* UFlowGraphConnector::GetConnectedConnector()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function freddys.FlowGraphConnector.GetConnectedConnector");
-
-	UFlowGraphConnector_GetConnectedConnector_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function freddys.FlowGraphConnector.Disconnect
-// (Final, Native, Public, BlueprintCallable)
-
-void UFlowGraphConnector::Disconnect()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function freddys.FlowGraphConnector.Disconnect");
-
-	UFlowGraphConnector_Disconnect_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function freddys.FlowGraphConnector.Connect
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UFlowGraphConnector*     OtherConnector                 (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-
-void UFlowGraphConnector::Connect(class UFlowGraphConnector* OtherConnector)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function freddys.FlowGraphConnector.Connect");
-
-	UFlowGraphConnector_Connect_Params params;
-	params.OtherConnector = OtherConnector;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function freddys.FlowGraphConnector.CheckConnection
-// (Final, Native, Public, BlueprintCallable)
-
-void UFlowGraphConnector::CheckConnection()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function freddys.FlowGraphConnector.CheckConnection");
-
-	UFlowGraphConnector_CheckConnection_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

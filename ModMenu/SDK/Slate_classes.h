@@ -140,22 +140,6 @@ public:
 };
 
 
-// Class Slate.ScrollBoxWidgetStyle
-// 0x0228 (0x0258 - 0x0030)
-class UScrollBoxWidgetStyle : public USlateWidgetStyleContainerBase
-{
-public:
-	struct FScrollBoxStyle                             ScrollBoxStyle;                                           // 0x0030(0x0228) (Edit)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Slate.ScrollBoxWidgetStyle");
-		return ptr;
-	}
-
-};
-
-
 // Class Slate.SlateSettings
 // 0x0008 (0x0030 - 0x0028)
 class USlateSettings : public UObject
@@ -199,6 +183,22 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class Slate.TextBlockWidgetStyle");
+		return ptr;
+	}
+
+};
+
+
+// Class Slate.ScrollBoxWidgetStyle
+// 0x0228 (0x0258 - 0x0030)
+class UScrollBoxWidgetStyle : public USlateWidgetStyleContainerBase
+{
+public:
+	struct FScrollBoxStyle                             ScrollBoxStyle;                                           // 0x0030(0x0228) (Edit)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Slate.ScrollBoxWidgetStyle");
 		return ptr;
 	}
 

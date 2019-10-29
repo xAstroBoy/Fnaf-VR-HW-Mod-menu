@@ -23,6 +23,17 @@ enum class EMediaWebcamCaptureDeviceFilter : uint8_t
 };
 
 
+// Enum MediaAssets.EMediaVideoCaptureDeviceFilter
+enum class EMediaVideoCaptureDeviceFilter : uint8_t
+{
+	EMediaVideoCaptureDeviceFilter__Card = 0,
+	EMediaVideoCaptureDeviceFilter__Software = 1,
+	EMediaVideoCaptureDeviceFilter__Unknown = 2,
+	EMediaVideoCaptureDeviceFilter__Webcam = 3,
+	EMediaVideoCaptureDeviceFilter__EMediaVideoCaptureDeviceFilter_MAX = 4
+};
+
+
 // Enum MediaAssets.EMediaAudioCaptureDeviceFilter
 enum class EMediaAudioCaptureDeviceFilter : uint8_t
 {
@@ -55,17 +66,6 @@ enum class EMediaSoundChannels : uint8_t
 	EMediaSoundChannels__Stereo    = 1,
 	EMediaSoundChannels__Surround  = 2,
 	EMediaSoundChannels__EMediaSoundChannels_MAX = 3
-};
-
-
-// Enum MediaAssets.EMediaVideoCaptureDeviceFilter
-enum class EMediaVideoCaptureDeviceFilter : uint8_t
-{
-	EMediaVideoCaptureDeviceFilter__Card = 0,
-	EMediaVideoCaptureDeviceFilter__Software = 1,
-	EMediaVideoCaptureDeviceFilter__Unknown = 2,
-	EMediaVideoCaptureDeviceFilter__Webcam = 3,
-	EMediaVideoCaptureDeviceFilter__EMediaVideoCaptureDeviceFilter_MAX = 4
 };
 
 

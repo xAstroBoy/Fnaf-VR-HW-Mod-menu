@@ -12,21 +12,6 @@ namespace SDK
 // Classes
 //---------------------------------------------------------------------------
 
-// Class ClothingSystemRuntime.ClothingAssetCustomData
-// 0x0000 (0x0028 - 0x0028)
-class UClothingAssetCustomData : public UObject
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class ClothingSystemRuntime.ClothingAssetCustomData");
-		return ptr;
-	}
-
-};
-
-
 // Class ClothingSystemRuntime.ClothingAsset
 // 0x0130 (0x0178 - 0x0048)
 class UClothingAsset : public UClothingAssetBase
@@ -61,6 +46,21 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class ClothingSystemRuntime.ClothingSimulationFactoryNv");
+		return ptr;
+	}
+
+};
+
+
+// Class ClothingSystemRuntime.ClothingAssetCustomData
+// 0x0000 (0x0028 - 0x0028)
+class UClothingAssetCustomData : public UObject
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class ClothingSystemRuntime.ClothingAssetCustomData");
 		return ptr;
 	}
 

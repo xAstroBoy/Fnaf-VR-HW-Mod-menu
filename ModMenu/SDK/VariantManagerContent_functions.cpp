@@ -13,52 +13,6 @@ namespace SDK
 // Functions
 //---------------------------------------------------------------------------
 
-// Function VariantManagerContent.LevelVariantSets.GetVariantSet
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// int                            VariantSetIndex                (Parm, ZeroConstructor, IsPlainOldData)
-// class UVariantSet*             ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class UVariantSet* ULevelVariantSets::GetVariantSet(int VariantSetIndex)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function VariantManagerContent.LevelVariantSets.GetVariantSet");
-
-	ULevelVariantSets_GetVariantSet_Params params;
-	params.VariantSetIndex = VariantSetIndex;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function VariantManagerContent.LevelVariantSets.GetNumVariantSets
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-int ULevelVariantSets::GetNumVariantSets()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function VariantManagerContent.LevelVariantSets.GetNumVariantSets");
-
-	ULevelVariantSets_GetNumVariantSets_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
 // Function VariantManagerContent.LevelVariantSetsActor.SwitchOnVariantByName
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -340,6 +294,52 @@ struct FText UVariantSet::GetDisplayText()
 	static auto fn = UObject::FindObject<UFunction>("Function VariantManagerContent.VariantSet.GetDisplayText");
 
 	UVariantSet_GetDisplayText_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function VariantManagerContent.LevelVariantSets.GetVariantSet
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// int                            VariantSetIndex                (Parm, ZeroConstructor, IsPlainOldData)
+// class UVariantSet*             ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UVariantSet* ULevelVariantSets::GetVariantSet(int VariantSetIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function VariantManagerContent.LevelVariantSets.GetVariantSet");
+
+	ULevelVariantSets_GetVariantSet_Params params;
+	params.VariantSetIndex = VariantSetIndex;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function VariantManagerContent.LevelVariantSets.GetNumVariantSets
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int ULevelVariantSets::GetNumVariantSets()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function VariantManagerContent.LevelVariantSets.GetNumVariantSets");
+
+	ULevelVariantSets_GetNumVariantSets_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;

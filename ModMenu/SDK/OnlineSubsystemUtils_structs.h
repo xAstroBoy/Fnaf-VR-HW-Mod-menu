@@ -12,17 +12,6 @@ namespace SDK
 // Enums
 //---------------------------------------------------------------------------
 
-// Enum OnlineSubsystemUtils.EBeaconConnectionState
-enum class EBeaconConnectionState : uint8_t
-{
-	EBeaconConnectionState__Invalid = 0,
-	EBeaconConnectionState__Closed = 1,
-	EBeaconConnectionState__Pending = 2,
-	EBeaconConnectionState__Open   = 3,
-	EBeaconConnectionState__EBeaconConnectionState_MAX = 4
-};
-
-
 // Enum OnlineSubsystemUtils.EClientRequestType
 enum class EClientRequestType : uint8_t
 {
@@ -56,6 +45,17 @@ enum class EPartyReservationResult : uint8_t
 	EPartyReservationResult__BadSessionId = 14,
 	EPartyReservationResult__ReservationDenied_ContainsExistingPlayers = 15,
 	EPartyReservationResult__EPartyReservationResult_MAX = 16
+};
+
+
+// Enum OnlineSubsystemUtils.EBeaconConnectionState
+enum class EBeaconConnectionState : uint8_t
+{
+	EBeaconConnectionState__Invalid = 0,
+	EBeaconConnectionState__Closed = 1,
+	EBeaconConnectionState__Pending = 2,
+	EBeaconConnectionState__Open   = 3,
+	EBeaconConnectionState__EBeaconConnectionState_MAX = 4
 };
 
 

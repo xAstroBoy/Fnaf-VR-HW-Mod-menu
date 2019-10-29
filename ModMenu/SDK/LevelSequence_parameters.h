@@ -74,6 +74,11 @@ struct ALevelSequenceActor_AddBinding_Params
 	bool                                               bAllowBindingsFromAsset;                                  // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function LevelSequence.LevelSequenceDirector.OnCreated
+struct ULevelSequenceDirector_OnCreated_Params
+{
+};
+
 // Function LevelSequence.LevelSequenceBurnIn.SetSettings
 struct ULevelSequenceBurnIn_SetSettings_Params
 {
@@ -84,11 +89,6 @@ struct ULevelSequenceBurnIn_SetSettings_Params
 struct ULevelSequenceBurnIn_GetSettingsClass_Params
 {
 	class UClass*                                      ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function LevelSequence.LevelSequenceDirector.OnCreated
-struct ULevelSequenceDirector_OnCreated_Params
-{
 };
 
 // Function LevelSequence.LevelSequencePlayer.CreateLevelSequencePlayer

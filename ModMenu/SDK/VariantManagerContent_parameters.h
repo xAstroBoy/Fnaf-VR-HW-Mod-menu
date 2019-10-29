@@ -14,19 +14,6 @@ namespace SDK
 // Parameters
 //---------------------------------------------------------------------------
 
-// Function VariantManagerContent.LevelVariantSets.GetVariantSet
-struct ULevelVariantSets_GetVariantSet_Params
-{
-	int                                                VariantSetIndex;                                          // (Parm, ZeroConstructor, IsPlainOldData)
-	class UVariantSet*                                 ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function VariantManagerContent.LevelVariantSets.GetNumVariantSets
-struct ULevelVariantSets_GetNumVariantSets_Params
-{
-	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
 // Function VariantManagerContent.LevelVariantSetsActor.SwitchOnVariantByName
 struct ALevelVariantSetsActor_SwitchOnVariantByName_Params
 {
@@ -109,6 +96,19 @@ struct UVariantSet_GetNumVariants_Params
 struct UVariantSet_GetDisplayText_Params
 {
 	struct FText                                       ReturnValue;                                              // (Parm, OutParm, ReturnParm)
+};
+
+// Function VariantManagerContent.LevelVariantSets.GetVariantSet
+struct ULevelVariantSets_GetVariantSet_Params
+{
+	int                                                VariantSetIndex;                                          // (Parm, ZeroConstructor, IsPlainOldData)
+	class UVariantSet*                                 ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function VariantManagerContent.LevelVariantSets.GetNumVariantSets
+struct ULevelVariantSets_GetNumVariantSets_Params
+{
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 }

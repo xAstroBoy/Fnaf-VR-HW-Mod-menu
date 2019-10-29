@@ -21,6 +21,16 @@ enum class EFlowGraphFlowType : uint8_t
 };
 
 
+// Enum freddys.GLVictoryState
+enum class EGLVictoryState : uint8_t
+{
+	GLVictoryState__InProgress     = 0,
+	GLVictoryState__Victory        = 1,
+	GLVictoryState__Defeat         = 2,
+	GLVictoryState__GLVictoryState_MAX = 3
+};
+
+
 // Enum freddys.GLGameState
 enum class EGLGameState : uint8_t
 {
@@ -42,22 +52,21 @@ enum class EFNAFGameType : uint8_t
 };
 
 
+// Enum freddys.EFNAFDLCType
+enum class EFNAFDLCType : uint8_t
+{
+	EFNAFDLCType__BaseGame         = 0,
+	EFNAFDLCType__Halloween        = 1,
+	EFNAFDLCType__EFNAFDLCType_MAX = 2
+};
+
+
 // Enum freddys.ELevelType
 enum class ELevelType : uint8_t
 {
 	Playable                       = 0,
 	Visual                         = 1,
 	ELevelType_MAX                 = 2
-};
-
-
-// Enum freddys.GLVictoryState
-enum class EGLVictoryState : uint8_t
-{
-	GLVictoryState__InProgress     = 0,
-	GLVictoryState__Victory        = 1,
-	GLVictoryState__Defeat         = 2,
-	GLVictoryState__GLVictoryState_MAX = 3
 };
 
 
@@ -106,15 +115,6 @@ enum class EAudioCategory : uint8_t
 	EAudioCategory__FX             = 1,
 	EAudioCategory__DEATH          = 2,
 	EAudioCategory__EAudioCategory_MAX = 3
-};
-
-
-// Enum freddys.EFNAFDLCType
-enum class EFNAFDLCType : uint8_t
-{
-	EFNAFDLCType__BaseGame         = 0,
-	EFNAFDLCType__Halloween        = 1,
-	EFNAFDLCType__EFNAFDLCType_MAX = 2
 };
 
 

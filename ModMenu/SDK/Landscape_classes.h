@@ -115,21 +115,6 @@ public:
 };
 
 
-// Class Landscape.Landscape
-// 0x0000 (0x0640 - 0x0640)
-class ALandscape : public ALandscapeProxy
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Landscape.Landscape");
-		return ptr;
-	}
-
-};
-
-
 // Class Landscape.LandscapeComponent
 // 0x01E0 (0x0740 - 0x0560)
 class ULandscapeComponent : public UPrimitiveComponent
@@ -349,6 +334,21 @@ public:
 };
 
 
+// Class Landscape.Landscape
+// 0x0000 (0x0640 - 0x0640)
+class ALandscape : public ALandscapeProxy
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Landscape.Landscape");
+		return ptr;
+	}
+
+};
+
+
 // Class Landscape.LandscapeMaterialInstanceConstant
 // 0x0008 (0x01F0 - 0x01E8)
 class ULandscapeMaterialInstanceConstant : public UMaterialInstanceConstant
@@ -363,22 +363,6 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class Landscape.LandscapeMaterialInstanceConstant");
-		return ptr;
-	}
-
-};
-
-
-// Class Landscape.LandscapeMeshCollisionComponent
-// 0x0010 (0x0650 - 0x0640)
-class ULandscapeMeshCollisionComponent : public ULandscapeHeightfieldCollisionComponent
-{
-public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0640(0x0010) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Landscape.LandscapeMeshCollisionComponent");
 		return ptr;
 	}
 
@@ -420,24 +404,19 @@ public:
 };
 
 
-// Class Landscape.LandscapeSplinesComponent
-// 0x0030 (0x0590 - 0x0560)
-class ULandscapeSplinesComponent : public UPrimitiveComponent
+// Class Landscape.LandscapeMeshCollisionComponent
+// 0x0010 (0x0650 - 0x0640)
+class ULandscapeMeshCollisionComponent : public ULandscapeHeightfieldCollisionComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0560(0x0008) MISSED OFFSET
-	TArray<class ULandscapeSplineSegment*>             Segments;                                                 // 0x0568(0x0010) (ZeroConstructor)
-	TArray<class UMeshComponent*>                      CookedForeignMeshComponents;                              // 0x0578(0x0010) (ExportObject, ZeroConstructor)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x0588(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0640(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Landscape.LandscapeSplinesComponent");
+		static auto ptr = UObject::FindClass("Class Landscape.LandscapeMeshCollisionComponent");
 		return ptr;
 	}
 
-
-	TArray<class USplineMeshComponent*> GetSplineMeshComponents();
 };
 
 
@@ -535,6 +514,27 @@ public:
 		return ptr;
 	}
 
+};
+
+
+// Class Landscape.LandscapeSplinesComponent
+// 0x0030 (0x0590 - 0x0560)
+class ULandscapeSplinesComponent : public UPrimitiveComponent
+{
+public:
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0560(0x0008) MISSED OFFSET
+	TArray<class ULandscapeSplineSegment*>             Segments;                                                 // 0x0568(0x0010) (ZeroConstructor)
+	TArray<class UMeshComponent*>                      CookedForeignMeshComponents;                              // 0x0578(0x0010) (ExportObject, ZeroConstructor)
+	unsigned char                                      UnknownData01[0x8];                                       // 0x0588(0x0008) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Landscape.LandscapeSplinesComponent");
+		return ptr;
+	}
+
+
+	TArray<class USplineMeshComponent*> GetSplineMeshComponents();
 };
 
 

@@ -82,12 +82,15 @@ enum class ELandscapeImportAlphamapType : uint8_t
 };
 
 
-// Enum Landscape.LandscapeSplineMeshOrientation
-enum class ELandscapeSplineMeshOrientation : uint8_t
+// Enum Landscape.ELandscapeCustomizedCoordType
+enum class ELandscapeCustomizedCoordType : uint8_t
 {
-	LSMO_XUp                       = 0,
-	LSMO_YUp                       = 1,
-	LSMO_MAX                       = 2
+	LCCT_None                      = 0,
+	LCCT_CustomUV0                 = 1,
+	LCCT_CustomUV1                 = 2,
+	LCCT_CustomUV2                 = 3,
+	LCCT_WeightMapUV               = 4,
+	LCCT_MAX                       = 5
 };
 
 
@@ -101,15 +104,12 @@ enum class ELandscapeLayerBlendType : uint8_t
 };
 
 
-// Enum Landscape.ELandscapeCustomizedCoordType
-enum class ELandscapeCustomizedCoordType : uint8_t
+// Enum Landscape.LandscapeSplineMeshOrientation
+enum class ELandscapeSplineMeshOrientation : uint8_t
 {
-	LCCT_None                      = 0,
-	LCCT_CustomUV0                 = 1,
-	LCCT_CustomUV1                 = 2,
-	LCCT_CustomUV2                 = 3,
-	LCCT_WeightMapUV               = 4,
-	LCCT_MAX                       = 5
+	LSMO_XUp                       = 0,
+	LSMO_YUp                       = 1,
+	LSMO_MAX                       = 2
 };
 
 
@@ -277,13 +277,6 @@ struct FLandscapeImportLayerInfo
 	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
 };
 
-// ScriptStruct Landscape.LandscapeLayerStruct
-// 0x0008
-struct FLandscapeLayerStruct
-{
-	class ULandscapeLayerInfoObject*                   LayerInfoObj;                                             // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-};
-
 // ScriptStruct Landscape.LandscapeEditorLayerSettings
 // 0x0001
 struct FLandscapeEditorLayerSettings
@@ -296,6 +289,13 @@ struct FLandscapeEditorLayerSettings
 struct FLandscapeWeightmapUsage
 {
 	class ULandscapeComponent*                         ChannelUsage[0x4];                                        // 0x0000(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+};
+
+// ScriptStruct Landscape.LandscapeLayerStruct
+// 0x0008
+struct FLandscapeLayerStruct
+{
+	class ULandscapeLayerInfoObject*                   LayerInfoObj;                                             // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Landscape.ForeignWorldSplineData

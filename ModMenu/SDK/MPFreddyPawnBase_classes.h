@@ -33,7 +33,7 @@ public:
 	}
 
 
-	void IsInPlayerVis(bool* IsInVis);
+	void IsInPlayerVis(bool* IsInvis);
 	void ChangePlayerVisStatus(bool IsInVision);
 	void IsInFlashLight(bool* InFlashLight);
 	void ChangeFlashStatus(bool IsInFlashLight);
