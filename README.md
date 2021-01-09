@@ -5,4 +5,4 @@ No Updates until new GNames and GObjects are found.
  This offers a mod menu for FNAF HW. 
 
 # FOR FULLBRIGHT :
-https://github.com/marcocorriero/Fullbright-for-FNAF-VR
+https://github.com/xAstroBoy/Fullbright-for-FNAF-VR
