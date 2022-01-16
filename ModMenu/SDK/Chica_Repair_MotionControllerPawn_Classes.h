@@ -21,7 +21,7 @@ namespace CG
 	class AChica_Repair_MotionControllerPawn_C : public ASaul_MotionControllerPawn_C
 	{
 	public:
-		unsigned char                                              UnknownData_4SI7[0x4];                                   // 0x0FBC(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_UCQQ[0x4];                                   // 0x0FBC(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		struct FPointerToUberGraphFrame                            UberGraphFrame;                                          // 0x0FC0(0x0008) ZeroConstructor, Transient, DuplicateTransient
 		class USpotLightComponent*                                 SpotLight2;                                              // 0x0FC8(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
 		class UStaticMeshComponent*                                PlayerVisionCone;                                        // 0x0FD0(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash

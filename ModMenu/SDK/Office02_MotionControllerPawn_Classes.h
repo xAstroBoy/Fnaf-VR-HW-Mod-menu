@@ -21,7 +21,7 @@ namespace CG
 	class AOffice02_MotionControllerPawn_C : public AOffice_MotionControllerPawn_C
 	{
 	public:
-		unsigned char                                              UnknownData_3U7C[0x6];                                   // 0x1042(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_OM29[0x6];                                   // 0x1042(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		struct FPointerToUberGraphFrame                            UberGraphFrame;                                          // 0x1048(0x0008) ZeroConstructor, Transient, DuplicateTransient
 		class AFreddieMask_BP_C*                                   Ref_FreddieMask;                                         // 0x1050(0x0008) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash
 		class ADeskButton_Light_C*                                 Ref_DeskLight_Left;                                      // 0x1058(0x0008) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash
@@ -34,15 +34,15 @@ namespace CG
 		class AOffice02_MonitorBoard_BP_C*                         Ref_MonitorBoard;                                        // 0x10A0(0x0008) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
 		Office_NonVr_CameratetheredLook_EOffice_NonVr_CameratetheredLook Office02_DirectionEnum;                                  // 0x10A8(0x0001) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
 		Office_NonVr_CameratetheredLook_EOffice_NonVr_CameratetheredLook LastStoredEnum;                                          // 0x10A9(0x0001) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
-		unsigned char                                              UnknownData_HW31[0x6];                                   // 0x10AA(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_0JN3[0x6];                                   // 0x10AA(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		class ANonVR_InSpaceUI_C*                                  MaskIcon;                                                // 0x10B0(0x0008) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
 		bool                                                       NonVR_AllowZoom;                                         // 0x10B8(0x0001) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor
-		unsigned char                                              UnknownData_9EX6[0x7];                                   // 0x10B9(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_CJQB[0x7];                                   // 0x10B9(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		class AOffice2NVRLoc_C*                                    REF_NVRLoc;                                              // 0x10C0(0x0008) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
 		struct FRotator                                            CurrentRotation;                                         // 0x10C8(0x000C) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor
 		bool                                                       NonVR_LerpCheck;                                         // 0x10D4(0x0001) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor
 		bool                                                       NonVR_RememberTethered;                                  // 0x10D5(0x0001) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor
-		unsigned char                                              UnknownData_HZDE[0x2];                                   // 0x10D6(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_5USZ[0x2];                                   // 0x10D6(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		class AOffice_MotionControllerPawn_C*                      NewVar_3;                                                // 0x10D8(0x0008) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
 		bool                                                       NonVR_PreventMaskMovement;                               // 0x10E0(0x0001) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor
 

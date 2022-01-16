@@ -60,7 +60,7 @@ namespace CG
 	struct FGameplayResourceSet
 	{
 	public:
-		unsigned char                                              UnknownData_3KAV[0x2];                                   // 0x0000(0x0002) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_O330[0x2];                                   // 0x0000(0x0002) MISSED OFFSET (PADDING)
 
 	};
 

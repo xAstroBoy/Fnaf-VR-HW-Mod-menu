@@ -32,7 +32,7 @@ namespace CG
 	{
 	public:
 		bool                                                       bIsPassthrough;                                          // 0x1A00(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_2HMC[0x7];                                   // 0x1A01(0x0007) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_JKMO[0x7];                                   // 0x1A01(0x0007) MISSED OFFSET (PADDING)
 
 	public:
 		static UClass* StaticClass();
@@ -45,7 +45,7 @@ namespace CG
 	class USteamNetDriver : public UIpNetDriver
 	{
 	public:
-		unsigned char                                              UnknownData_LGDC[0x8];                                   // 0x0790(0x0008) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_N1EK[0x8];                                   // 0x0790(0x0008) MISSED OFFSET (PADDING)
 
 	public:
 		static UClass* StaticClass();

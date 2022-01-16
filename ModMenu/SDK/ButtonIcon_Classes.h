@@ -25,7 +25,7 @@ namespace CG
 		class UImage*                                              ButtonImage;                                             // 0x0238(0x0008) BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash
 		class UImage*                                              HaloImage;                                               // 0x0240(0x0008) BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash
 		ControllerButtonsEnum_EControllerButtonsEnum               Button;                                                  // 0x0248(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash
-		unsigned char                                              UnknownData_XJNZ[0x7];                                   // 0x0249(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_NVFD[0x7];                                   // 0x0249(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		TMap<ControllerButtonsEnum_EControllerButtonsEnum, class UTexture2D*> HaloMaps;                                                // 0x0250(0x0050) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance
 		TMap<ControllerButtonsEnum_EControllerButtonsEnum, struct FControllerButton_Struct> MapToUse;                                                // 0x02A0(0x0050) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance
 		TMap<ControllerButtonsEnum_EControllerButtonsEnum, struct FControllerButton_Struct> SteamVRButtonsMap;                                       // 0x02F0(0x0050) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance
@@ -39,7 +39,7 @@ namespace CG
 		bool                                                       IsInInstruction;                                         // 0x0570(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor
 		bool                                                       Pressed;                                                 // 0x0571(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor
 		bool                                                       ShowWithMouse;                                           // 0x0572(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn
-		unsigned char                                              UnknownData_FYOG[0x1];                                   // 0x0573(0x0001) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_0P8B[0x1];                                   // 0x0573(0x0001) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		float                                                      HaloOpacity;                                             // 0x0574(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash
 		TMap<SWGVR_ESWGVRControllerType, ControllerButtonsEnum_EControllerButtonsEnum> ControllerTypeOverrides;                                 // 0x0578(0x0050) Edit, BlueprintVisible, ZeroConstructor
 

@@ -45,7 +45,7 @@ namespace CG
 	class UClothingSimulationInteractor : public UObject
 	{
 	public:
-		unsigned char                                              UnknownData_CE0R[0x8];                                   // 0x0028(0x0008) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_PCAI[0x8];                                   // 0x0028(0x0008) MISSED OFFSET (PADDING)
 
 	public:
 		void PhysicsAssetUpdated();

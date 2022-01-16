@@ -9026,6 +9026,414 @@ namespace CG
 	};
 
 	/**
+	 * Function Engine.ParticleSystem.ContainsEmitterType
+	 */
+	struct UParticleSystem_ContainsEmitterType_Params
+	{
+	public:
+		class UClass*                                              TypeData;                                                // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.ParticleSystemComponent.SetTrailSourceData
+	 */
+	struct UParticleSystemComponent_SetTrailSourceData_Params
+	{
+	public:
+		class FName                                                InFirstSocketName;                                       // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class FName                                                InSecondSocketName;                                      // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		Engine_ETrailWidthMode                                     InWidthMode;                                             // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      InWidth;                                                 // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.ParticleSystemComponent.SetTemplate
+	 */
+	struct UParticleSystemComponent_SetTemplate_Params
+	{
+	public:
+		class UParticleSystem*                                     NewTemplate;                                             // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.ParticleSystemComponent.SetMaterialParameter
+	 */
+	struct UParticleSystemComponent_SetMaterialParameter_Params
+	{
+	public:
+		class FName                                                ParameterName;                                           // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UMaterialInterface*                                  Param;                                                   // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.ParticleSystemComponent.SetEmitterEnable
+	 */
+	struct UParticleSystemComponent_SetEmitterEnable_Params
+	{
+	public:
+		class FName                                                EmitterName;                                             // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bNewEnableState;                                         // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.ParticleSystemComponent.SetBeamTargetTangent
+	 */
+	struct UParticleSystemComponent_SetBeamTargetTangent_Params
+	{
+	public:
+		int                                                        EmitterIndex;                                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             NewTangentPoint;                                         // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		int                                                        TargetIndex;                                             // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.ParticleSystemComponent.SetBeamTargetStrength
+	 */
+	struct UParticleSystemComponent_SetBeamTargetStrength_Params
+	{
+	public:
+		int                                                        EmitterIndex;                                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      NewTargetStrength;                                       // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		int                                                        TargetIndex;                                             // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.ParticleSystemComponent.SetBeamTargetPoint
+	 */
+	struct UParticleSystemComponent_SetBeamTargetPoint_Params
+	{
+	public:
+		int                                                        EmitterIndex;                                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             NewTargetPoint;                                          // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		int                                                        TargetIndex;                                             // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.ParticleSystemComponent.SetBeamSourceTangent
+	 */
+	struct UParticleSystemComponent_SetBeamSourceTangent_Params
+	{
+	public:
+		int                                                        EmitterIndex;                                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             NewTangentPoint;                                         // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		int                                                        SourceIndex;                                             // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.ParticleSystemComponent.SetBeamSourceStrength
+	 */
+	struct UParticleSystemComponent_SetBeamSourceStrength_Params
+	{
+	public:
+		int                                                        EmitterIndex;                                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      NewSourceStrength;                                       // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		int                                                        SourceIndex;                                             // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.ParticleSystemComponent.SetBeamSourcePoint
+	 */
+	struct UParticleSystemComponent_SetBeamSourcePoint_Params
+	{
+	public:
+		int                                                        EmitterIndex;                                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             NewSourcePoint;                                          // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		int                                                        SourceIndex;                                             // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.ParticleSystemComponent.SetBeamEndPoint
+	 */
+	struct UParticleSystemComponent_SetBeamEndPoint_Params
+	{
+	public:
+		int                                                        EmitterIndex;                                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             NewEndPoint;                                             // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.ParticleSystemComponent.SetAutoAttachParams
+	 */
+	struct UParticleSystemComponent_SetAutoAttachParams_Params
+	{
+	public:
+		class USceneComponent*                                     Parent;                                                  // 0x0000(0x0008)  (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class FName                                                SocketName;                                              // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		Engine_EAttachLocation                                     LocationType;                                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.ParticleSystemComponent.SetAutoAttachmentParameters
+	 */
+	struct UParticleSystemComponent_SetAutoAttachmentParameters_Params
+	{
+	public:
+		class USceneComponent*                                     Parent;                                                  // 0x0000(0x0008)  (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class FName                                                SocketName;                                              // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		Engine_EAttachmentRule                                     LocationRule;                                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		Engine_EAttachmentRule                                     RotationRule;                                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		Engine_EAttachmentRule                                     ScaleRule;                                               // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.ParticleSystemComponent.ReleaseToPool
+	 */
+	struct UParticleSystemComponent_ReleaseToPool_Params
+	{
+	};
+
+	/**
+	 * Function Engine.ParticleSystemComponent.GetNumActiveParticles
+	 */
+	struct UParticleSystemComponent_GetNumActiveParticles_Params
+	{
+	public:
+		int                                                        ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.ParticleSystemComponent.GetNamedMaterial
+	 */
+	struct UParticleSystemComponent_GetNamedMaterial_Params
+	{
+	public:
+		class FName                                                InName;                                                  // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UMaterialInterface*                                  ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.ParticleSystemComponent.GetBeamTargetTangent
+	 */
+	struct UParticleSystemComponent_GetBeamTargetTangent_Params
+	{
+	public:
+		int                                                        EmitterIndex;                                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		int                                                        TargetIndex;                                             // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             OutTangentPoint;                                         // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.ParticleSystemComponent.GetBeamTargetStrength
+	 */
+	struct UParticleSystemComponent_GetBeamTargetStrength_Params
+	{
+	public:
+		int                                                        EmitterIndex;                                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		int                                                        TargetIndex;                                             // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      OutTargetStrength;                                       // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.ParticleSystemComponent.GetBeamTargetPoint
+	 */
+	struct UParticleSystemComponent_GetBeamTargetPoint_Params
+	{
+	public:
+		int                                                        EmitterIndex;                                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		int                                                        TargetIndex;                                             // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             OutTargetPoint;                                          // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.ParticleSystemComponent.GetBeamSourceTangent
+	 */
+	struct UParticleSystemComponent_GetBeamSourceTangent_Params
+	{
+	public:
+		int                                                        EmitterIndex;                                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		int                                                        SourceIndex;                                             // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             OutTangentPoint;                                         // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.ParticleSystemComponent.GetBeamSourceStrength
+	 */
+	struct UParticleSystemComponent_GetBeamSourceStrength_Params
+	{
+	public:
+		int                                                        EmitterIndex;                                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		int                                                        SourceIndex;                                             // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      OutSourceStrength;                                       // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.ParticleSystemComponent.GetBeamSourcePoint
+	 */
+	struct UParticleSystemComponent_GetBeamSourcePoint_Params
+	{
+	public:
+		int                                                        EmitterIndex;                                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		int                                                        SourceIndex;                                             // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             OutSourcePoint;                                          // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.ParticleSystemComponent.GetBeamEndPoint
+	 */
+	struct UParticleSystemComponent_GetBeamEndPoint_Params
+	{
+	public:
+		int                                                        EmitterIndex;                                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             OutEndPoint;                                             // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.ParticleSystemComponent.GenerateParticleEvent
+	 */
+	struct UParticleSystemComponent_GenerateParticleEvent_Params
+	{
+	public:
+		class FName                                                InEventName;                                             // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      InEmitterTime;                                           // 0x0000(0x0004)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             InLocation;                                              // 0x0000(0x000C)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             InDirection;                                             // 0x0000(0x000C)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             InVelocity;                                              // 0x0000(0x000C)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.ParticleSystemComponent.EndTrails
+	 */
+	struct UParticleSystemComponent_EndTrails_Params
+	{
+	};
+
+	/**
+	 * Function Engine.ParticleSystemComponent.CreateNamedDynamicMaterialInstance
+	 */
+	struct UParticleSystemComponent_CreateNamedDynamicMaterialInstance_Params
+	{
+	public:
+		class FName                                                InName;                                                  // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UMaterialInterface*                                  SourceMaterial;                                          // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UMaterialInstanceDynamic*                            ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.ParticleSystemComponent.BeginTrails
+	 */
+	struct UParticleSystemComponent_BeginTrails_Params
+	{
+	public:
+		class FName                                                InFirstSocketName;                                       // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class FName                                                InSecondSocketName;                                      // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		Engine_ETrailWidthMode                                     InWidthMode;                                             // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      InWidth;                                                 // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PawnNoiseEmitterComponent.MakeNoise
+	 */
+	struct UPawnNoiseEmitterComponent_MakeNoise_Params
+	{
+	public:
+		class AActor*                                              NoiseMaker;                                              // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      Loudness;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             NoiseLocation;                                           // 0x0000(0x000C)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PhysicalAnimationComponent.SetStrengthMultiplyer
+	 */
+	struct UPhysicalAnimationComponent_SetStrengthMultiplyer_Params
+	{
+	public:
+		float                                                      InStrengthMultiplyer;                                    // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PhysicalAnimationComponent.SetSkeletalMeshComponent
+	 */
+	struct UPhysicalAnimationComponent_SetSkeletalMeshComponent_Params
+	{
+	public:
+		class USkeletalMeshComponent*                              InSkeletalMeshComponent;                                 // 0x0000(0x0008)  (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PhysicalAnimationComponent.GetBodyTargetTransform
+	 */
+	struct UPhysicalAnimationComponent_GetBodyTargetTransform_Params
+	{
+	public:
+		class FName                                                BodyName;                                                // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FTransform                                          ReturnValue;                                             // 0x0000(0x0030)  (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PhysicalAnimationComponent.ApplyPhysicalAnimationSettingsBelow
+	 */
+	struct UPhysicalAnimationComponent_ApplyPhysicalAnimationSettingsBelow_Params
+	{
+	public:
+		class FName                                                BodyName;                                                // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FPhysicalAnimationData                              PhysicalAnimationData;                                   // 0x0000(0x0024)  (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+		bool                                                       bIncludeSelf;                                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PhysicalAnimationComponent.ApplyPhysicalAnimationSettings
+	 */
+	struct UPhysicalAnimationComponent_ApplyPhysicalAnimationSettings_Params
+	{
+	public:
+		class FName                                                BodyName;                                                // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FPhysicalAnimationData                              PhysicalAnimationData;                                   // 0x0000(0x0024)  (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PhysicalAnimationComponent.ApplyPhysicalAnimationProfileBelow
+	 */
+	struct UPhysicalAnimationComponent_ApplyPhysicalAnimationProfileBelow_Params
+	{
+	public:
+		class FName                                                BodyName;                                                // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class FName                                                ProfileName;                                             // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bIncludeSelf;                                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bClearNotFound;                                          // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
 	 * Function Engine.AudioComponent.StopDelayed
 	 */
 	struct UAudioComponent_StopDelayed_Params
@@ -10875,6 +11283,174 @@ namespace CG
 	};
 
 	/**
+	 * Function Engine.InterpToMovementComponent.StopSimulating
+	 */
+	struct UInterpToMovementComponent_StopSimulating_Params
+	{
+	public:
+		struct FHitResult                                          HitResult;                                               // 0x0000(0x0088)  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.InterpToMovementComponent.RestartMovement
+	 */
+	struct UInterpToMovementComponent_RestartMovement_Params
+	{
+	public:
+		float                                                      InitialDirection;                                        // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * DelegateFunction Engine.InterpToMovementComponent.OnInterpToWaitEndDelegate__DelegateSignature
+	 */
+	struct UInterpToMovementComponent_OnInterpToWaitEndDelegate__DelegateSignature_Params
+	{
+	public:
+		struct FHitResult                                          ImpactResult;                                            // 0x0000(0x0088)  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+		float                                                      Time;                                                    // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * DelegateFunction Engine.InterpToMovementComponent.OnInterpToWaitBeginDelegate__DelegateSignature
+	 */
+	struct UInterpToMovementComponent_OnInterpToWaitBeginDelegate__DelegateSignature_Params
+	{
+	public:
+		struct FHitResult                                          ImpactResult;                                            // 0x0000(0x0088)  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+		float                                                      Time;                                                    // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * DelegateFunction Engine.InterpToMovementComponent.OnInterpToStopDelegate__DelegateSignature
+	 */
+	struct UInterpToMovementComponent_OnInterpToStopDelegate__DelegateSignature_Params
+	{
+	public:
+		struct FHitResult                                          ImpactResult;                                            // 0x0000(0x0088)  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+		float                                                      Time;                                                    // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * DelegateFunction Engine.InterpToMovementComponent.OnInterpToReverseDelegate__DelegateSignature
+	 */
+	struct UInterpToMovementComponent_OnInterpToReverseDelegate__DelegateSignature_Params
+	{
+	public:
+		struct FHitResult                                          ImpactResult;                                            // 0x0000(0x0088)  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+		float                                                      Time;                                                    // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * DelegateFunction Engine.InterpToMovementComponent.OnInterpToResetDelegate__DelegateSignature
+	 */
+	struct UInterpToMovementComponent_OnInterpToResetDelegate__DelegateSignature_Params
+	{
+	public:
+		struct FHitResult                                          ImpactResult;                                            // 0x0000(0x0088)  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+		float                                                      Time;                                                    // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.InterpToMovementComponent.FinaliseControlPoints
+	 */
+	struct UInterpToMovementComponent_FinaliseControlPoints_Params
+	{
+	};
+
+	/**
+	 * Function Engine.MaterialInterface.SetForceMipLevelsToBeResident
+	 */
+	struct UMaterialInterface_SetForceMipLevelsToBeResident_Params
+	{
+	public:
+		bool                                                       OverrideForceMiplevelsToBeResident;                      // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bForceMiplevelsToBeResidentValue;                        // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      ForceDuration;                                           // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		int                                                        CinematicTextureGroups;                                  // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.MaterialInterface.GetPhysicalMaterial
+	 */
+	struct UMaterialInterface_GetPhysicalMaterial_Params
+	{
+	public:
+		class UPhysicalMaterial*                                   ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.MaterialInterface.GetBaseMaterial
+	 */
+	struct UMaterialInterface_GetBaseMaterial_Params
+	{
+	public:
+		class UMaterial*                                           ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PostProcessComponent.AddOrUpdateBlendable
+	 */
+	struct UPostProcessComponent_AddOrUpdateBlendable_Params
+	{
+	public:
+		float                                                      InWeight;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PostProcessVolume.AddOrUpdateBlendable
+	 */
+	struct APostProcessVolume_AddOrUpdateBlendable_Params
+	{
+	public:
+		float                                                      InWeight;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.MaterialInstanceConstant.K2_GetVectorParameterValue
+	 */
+	struct UMaterialInstanceConstant_K2_GetVectorParameterValue_Params
+	{
+	public:
+		class FName                                                ParameterName;                                           // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FLinearColor                                        ReturnValue;                                             // 0x0000(0x0010)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.MaterialInstanceConstant.K2_GetTextureParameterValue
+	 */
+	struct UMaterialInstanceConstant_K2_GetTextureParameterValue_Params
+	{
+	public:
+		class FName                                                ParameterName;                                           // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UTexture*                                            ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.MaterialInstanceConstant.K2_GetScalarParameterValue
+	 */
+	struct UMaterialInstanceConstant_K2_GetScalarParameterValue_Params
+	{
+	public:
+		class FName                                                ParameterName;                                           // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
 	 * Function Engine.SkeletalMeshSocket.InitializeSocketFromLocation
 	 */
 	struct USkeletalMeshSocket_InitializeSocketFromLocation_Params
@@ -11087,92 +11663,6 @@ namespace CG
 	};
 
 	/**
-	 * Function Engine.MaterialInterface.SetForceMipLevelsToBeResident
-	 */
-	struct UMaterialInterface_SetForceMipLevelsToBeResident_Params
-	{
-	public:
-		bool                                                       OverrideForceMiplevelsToBeResident;                      // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bForceMiplevelsToBeResidentValue;                        // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      ForceDuration;                                           // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		int                                                        CinematicTextureGroups;                                  // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.MaterialInterface.GetPhysicalMaterial
-	 */
-	struct UMaterialInterface_GetPhysicalMaterial_Params
-	{
-	public:
-		class UPhysicalMaterial*                                   ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.MaterialInterface.GetBaseMaterial
-	 */
-	struct UMaterialInterface_GetBaseMaterial_Params
-	{
-	public:
-		class UMaterial*                                           ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.MaterialInstanceConstant.K2_GetVectorParameterValue
-	 */
-	struct UMaterialInstanceConstant_K2_GetVectorParameterValue_Params
-	{
-	public:
-		class FName                                                ParameterName;                                           // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FLinearColor                                        ReturnValue;                                             // 0x0000(0x0010)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.MaterialInstanceConstant.K2_GetTextureParameterValue
-	 */
-	struct UMaterialInstanceConstant_K2_GetTextureParameterValue_Params
-	{
-	public:
-		class FName                                                ParameterName;                                           // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class UTexture*                                            ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.MaterialInstanceConstant.K2_GetScalarParameterValue
-	 */
-	struct UMaterialInstanceConstant_K2_GetScalarParameterValue_Params
-	{
-	public:
-		class FName                                                ParameterName;                                           // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PostProcessComponent.AddOrUpdateBlendable
-	 */
-	struct UPostProcessComponent_AddOrUpdateBlendable_Params
-	{
-	public:
-		float                                                      InWeight;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PostProcessVolume.AddOrUpdateBlendable
-	 */
-	struct APostProcessVolume_AddOrUpdateBlendable_Params
-	{
-	public:
-		float                                                      InWeight;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
 	 * Function Engine.CameraActor.GetAutoActivatePlayerIndex
 	 */
 	struct ACameraActor_GetAutoActivatePlayerIndex_Params
@@ -11301,6 +11791,599 @@ namespace CG
 	};
 
 	/**
+	 * Function Engine.ProjectileMovementComponent.StopSimulating
+	 */
+	struct UProjectileMovementComponent_StopSimulating_Params
+	{
+	public:
+		struct FHitResult                                          HitResult;                                               // 0x0000(0x0088)  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.ProjectileMovementComponent.SetVelocityInLocalSpace
+	 */
+	struct UProjectileMovementComponent_SetVelocityInLocalSpace_Params
+	{
+	public:
+		struct FVector                                             NewVelocity;                                             // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.ProjectileMovementComponent.SetInterpolatedComponent
+	 */
+	struct UProjectileMovementComponent_SetInterpolatedComponent_Params
+	{
+	public:
+		class USceneComponent*                                     Component;                                               // 0x0000(0x0008)  (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.ProjectileMovementComponent.ResetInterpolation
+	 */
+	struct UProjectileMovementComponent_ResetInterpolation_Params
+	{
+	};
+
+	/**
+	 * DelegateFunction Engine.ProjectileMovementComponent.OnProjectileStopDelegate__DelegateSignature
+	 */
+	struct UProjectileMovementComponent_OnProjectileStopDelegate__DelegateSignature_Params
+	{
+	public:
+		struct FHitResult                                          ImpactResult;                                            // 0x0000(0x0088)  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * DelegateFunction Engine.ProjectileMovementComponent.OnProjectileBounceDelegate__DelegateSignature
+	 */
+	struct UProjectileMovementComponent_OnProjectileBounceDelegate__DelegateSignature_Params
+	{
+	public:
+		struct FHitResult                                          ImpactResult;                                            // 0x0000(0x0088)  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+		struct FVector                                             ImpactVelocity;                                          // 0x0000(0x000C)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.ProjectileMovementComponent.MoveInterpolationTarget
+	 */
+	struct UProjectileMovementComponent_MoveInterpolationTarget_Params
+	{
+	public:
+		struct FVector                                             NewLocation;                                             // 0x0000(0x000C)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FRotator                                            NewRotation;                                             // 0x0000(0x000C)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.ProjectileMovementComponent.LimitVelocity
+	 */
+	struct UProjectileMovementComponent_LimitVelocity_Params
+	{
+	public:
+		struct FVector                                             NewVelocity;                                             // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             ReturnValue;                                             // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.ProjectileMovementComponent.IsVelocityUnderSimulationThreshold
+	 */
+	struct UProjectileMovementComponent_IsVelocityUnderSimulationThreshold_Params
+	{
+	public:
+		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.ProjectileMovementComponent.IsInterpolationComplete
+	 */
+	struct UProjectileMovementComponent_IsInterpolationComplete_Params
+	{
+	public:
+		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.RadialForceActor.ToggleForce
+	 */
+	struct ARadialForceActor_ToggleForce_Params
+	{
+	};
+
+	/**
+	 * Function Engine.RadialForceActor.FireImpulse
+	 */
+	struct ARadialForceActor_FireImpulse_Params
+	{
+	};
+
+	/**
+	 * Function Engine.RadialForceActor.EnableForce
+	 */
+	struct ARadialForceActor_EnableForce_Params
+	{
+	};
+
+	/**
+	 * Function Engine.RadialForceActor.DisableForce
+	 */
+	struct ARadialForceActor_DisableForce_Params
+	{
+	};
+
+	/**
+	 * Function Engine.RadialForceComponent.RemoveObjectTypeToAffect
+	 */
+	struct URadialForceComponent_RemoveObjectTypeToAffect_Params
+	{
+	public:
+		Engine_EObjectTypeQuery                                    ObjectType;                                              // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.RadialForceComponent.FireImpulse
+	 */
+	struct URadialForceComponent_FireImpulse_Params
+	{
+	};
+
+	/**
+	 * Function Engine.RadialForceComponent.AddObjectTypeToAffect
+	 */
+	struct URadialForceComponent_AddObjectTypeToAffect_Params
+	{
+	public:
+		Engine_EObjectTypeQuery                                    ObjectType;                                              // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.Light.ToggleEnabled
+	 */
+	struct ALight_ToggleEnabled_Params
+	{
+	};
+
+	/**
+	 * Function Engine.Light.SetLightFunctionScale
+	 */
+	struct ALight_SetLightFunctionScale_Params
+	{
+	public:
+		struct FVector                                             NewLightFunctionScale;                                   // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.Light.SetLightFunctionMaterial
+	 */
+	struct ALight_SetLightFunctionMaterial_Params
+	{
+	public:
+		class UMaterialInterface*                                  NewLightFunctionMaterial;                                // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.Light.SetLightFunctionFadeDistance
+	 */
+	struct ALight_SetLightFunctionFadeDistance_Params
+	{
+	public:
+		float                                                      NewLightFunctionFadeDistance;                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.Light.SetLightColor
+	 */
+	struct ALight_SetLightColor_Params
+	{
+	public:
+		struct FLinearColor                                        NewLightColor;                                           // 0x0000(0x0010)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.Light.SetEnabled
+	 */
+	struct ALight_SetEnabled_Params
+	{
+	public:
+		bool                                                       bSetEnabled;                                             // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.Light.SetCastShadows
+	 */
+	struct ALight_SetCastShadows_Params
+	{
+	public:
+		bool                                                       bNewValue;                                               // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.Light.SetBrightness
+	 */
+	struct ALight_SetBrightness_Params
+	{
+	public:
+		float                                                      NewBrightness;                                           // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.Light.SetAffectTranslucentLighting
+	 */
+	struct ALight_SetAffectTranslucentLighting_Params
+	{
+	public:
+		bool                                                       bNewValue;                                               // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.Light.OnRep_bEnabled
+	 */
+	struct ALight_OnRep_bEnabled_Params
+	{
+	};
+
+	/**
+	 * Function Engine.Light.IsEnabled
+	 */
+	struct ALight_IsEnabled_Params
+	{
+	public:
+		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.Light.GetLightColor
+	 */
+	struct ALight_GetLightColor_Params
+	{
+	public:
+		struct FLinearColor                                        ReturnValue;                                             // 0x0000(0x0010)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.Light.GetBrightness
+	 */
+	struct ALight_GetBrightness_Params
+	{
+	public:
+		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.LightComponent.SetVolumetricScatteringIntensity
+	 */
+	struct ULightComponent_SetVolumetricScatteringIntensity_Params
+	{
+	public:
+		float                                                      NewIntensity;                                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.LightComponent.SetUseIESBrightness
+	 */
+	struct ULightComponent_SetUseIESBrightness_Params
+	{
+	public:
+		bool                                                       bNewValue;                                               // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.LightComponent.SetTransmission
+	 */
+	struct ULightComponent_SetTransmission_Params
+	{
+	public:
+		bool                                                       bNewValue;                                               // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.LightComponent.SetTemperature
+	 */
+	struct ULightComponent_SetTemperature_Params
+	{
+	public:
+		float                                                      NewTemperature;                                          // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.LightComponent.SetSpecularScale
+	 */
+	struct ULightComponent_SetSpecularScale_Params
+	{
+	public:
+		float                                                      NewValue;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.LightComponent.SetShadowSlopeBias
+	 */
+	struct ULightComponent_SetShadowSlopeBias_Params
+	{
+	public:
+		float                                                      NewValue;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.LightComponent.SetShadowBias
+	 */
+	struct ULightComponent_SetShadowBias_Params
+	{
+	public:
+		float                                                      NewValue;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.LightComponent.SetLightFunctionScale
+	 */
+	struct ULightComponent_SetLightFunctionScale_Params
+	{
+	public:
+		struct FVector                                             NewLightFunctionScale;                                   // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.LightComponent.SetLightFunctionMaterial
+	 */
+	struct ULightComponent_SetLightFunctionMaterial_Params
+	{
+	public:
+		class UMaterialInterface*                                  NewLightFunctionMaterial;                                // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.LightComponent.SetLightFunctionFadeDistance
+	 */
+	struct ULightComponent_SetLightFunctionFadeDistance_Params
+	{
+	public:
+		float                                                      NewLightFunctionFadeDistance;                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.LightComponent.SetLightFunctionDisabledBrightness
+	 */
+	struct ULightComponent_SetLightFunctionDisabledBrightness_Params
+	{
+	public:
+		float                                                      NewValue;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.LightComponent.SetLightColor
+	 */
+	struct ULightComponent_SetLightColor_Params
+	{
+	public:
+		struct FLinearColor                                        NewLightColor;                                           // 0x0000(0x0010)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bSRGB;                                                   // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.LightComponent.SetIntensity
+	 */
+	struct ULightComponent_SetIntensity_Params
+	{
+	public:
+		float                                                      NewIntensity;                                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.LightComponent.SetIndirectLightingIntensity
+	 */
+	struct ULightComponent_SetIndirectLightingIntensity_Params
+	{
+	public:
+		float                                                      NewIntensity;                                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.LightComponent.SetIESTexture
+	 */
+	struct ULightComponent_SetIESTexture_Params
+	{
+	public:
+		class UTextureLightProfile*                                NewValue;                                                // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.LightComponent.SetIESBrightnessScale
+	 */
+	struct ULightComponent_SetIESBrightnessScale_Params
+	{
+	public:
+		float                                                      NewValue;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.LightComponent.SetForceCachedShadowsForMovablePrimitives
+	 */
+	struct ULightComponent_SetForceCachedShadowsForMovablePrimitives_Params
+	{
+	public:
+		bool                                                       bNewValue;                                               // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.LightComponent.SetEnableLightShaftBloom
+	 */
+	struct ULightComponent_SetEnableLightShaftBloom_Params
+	{
+	public:
+		bool                                                       bNewValue;                                               // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.LightComponent.SetBloomTint
+	 */
+	struct ULightComponent_SetBloomTint_Params
+	{
+	public:
+		struct FColor                                              NewValue;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.LightComponent.SetBloomThreshold
+	 */
+	struct ULightComponent_SetBloomThreshold_Params
+	{
+	public:
+		float                                                      NewValue;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.LightComponent.SetBloomScale
+	 */
+	struct ULightComponent_SetBloomScale_Params
+	{
+	public:
+		float                                                      NewValue;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.LightComponent.SetAffectTranslucentLighting
+	 */
+	struct ULightComponent_SetAffectTranslucentLighting_Params
+	{
+	public:
+		bool                                                       bNewValue;                                               // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.LightComponent.SetAffectDynamicIndirectLighting
+	 */
+	struct ULightComponent_SetAffectDynamicIndirectLighting_Params
+	{
+	public:
+		bool                                                       bNewValue;                                               // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.LocalLightComponent.SetIntensityUnits
+	 */
+	struct ULocalLightComponent_SetIntensityUnits_Params
+	{
+	public:
+		Engine_ELightUnits                                         NewIntensityUnits;                                       // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.LocalLightComponent.SetAttenuationRadius
+	 */
+	struct ULocalLightComponent_SetAttenuationRadius_Params
+	{
+	public:
+		float                                                      NewRadius;                                               // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.LocalLightComponent.GetUnitsConversionFactor
+	 */
+	struct ULocalLightComponent_GetUnitsConversionFactor_Params
+	{
+	public:
+		Engine_ELightUnits                                         SrcUnits;                                                // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		Engine_ELightUnits                                         TargetUnits;                                             // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      CosHalfConeAngle;                                        // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.RectLightComponent.SetSourceWidth
+	 */
+	struct URectLightComponent_SetSourceWidth_Params
+	{
+	public:
+		float                                                      bNewValue;                                               // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.RectLightComponent.SetSourceTexture
+	 */
+	struct URectLightComponent_SetSourceTexture_Params
+	{
+	public:
+		class UTexture*                                            bNewValue;                                               // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.RectLightComponent.SetSourceHeight
+	 */
+	struct URectLightComponent_SetSourceHeight_Params
+	{
+	public:
+		float                                                      NewValue;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.RectLightComponent.SetBarnDoorLength
+	 */
+	struct URectLightComponent_SetBarnDoorLength_Params
+	{
+	public:
+		float                                                      NewValue;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.RectLightComponent.SetBarnDoorAngle
+	 */
+	struct URectLightComponent_SetBarnDoorAngle_Params
+	{
+	public:
+		float                                                      NewValue;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
 	 * Function Engine.AmbientSound.Stop
 	 */
 	struct AAmbientSound_Stop_Params
@@ -11351,442 +12434,104 @@ namespace CG
 	};
 
 	/**
-	 * Function Engine.ParticleSystem.ContainsEmitterType
+	 * Function Engine.InputComponent.WasControllerKeyJustReleased
 	 */
-	struct UParticleSystem_ContainsEmitterType_Params
+	struct UInputComponent_WasControllerKeyJustReleased_Params
 	{
 	public:
-		class UClass*                                              TypeData;                                                // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FKey                                                Key;                                                     // 0x0000(0x0018)  (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 	};
 
 	/**
-	 * Function Engine.ParticleSystemComponent.SetTrailSourceData
+	 * Function Engine.InputComponent.WasControllerKeyJustPressed
 	 */
-	struct UParticleSystemComponent_SetTrailSourceData_Params
+	struct UInputComponent_WasControllerKeyJustPressed_Params
 	{
 	public:
-		class FName                                                InFirstSocketName;                                       // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class FName                                                InSecondSocketName;                                      // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		Engine_ETrailWidthMode                                     InWidthMode;                                             // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      InWidth;                                                 // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.ParticleSystemComponent.SetTemplate
-	 */
-	struct UParticleSystemComponent_SetTemplate_Params
-	{
-	public:
-		class UParticleSystem*                                     NewTemplate;                                             // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.ParticleSystemComponent.SetMaterialParameter
-	 */
-	struct UParticleSystemComponent_SetMaterialParameter_Params
-	{
-	public:
-		class FName                                                ParameterName;                                           // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class UMaterialInterface*                                  Param;                                                   // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.ParticleSystemComponent.SetEmitterEnable
-	 */
-	struct UParticleSystemComponent_SetEmitterEnable_Params
-	{
-	public:
-		class FName                                                EmitterName;                                             // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bNewEnableState;                                         // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.ParticleSystemComponent.SetBeamTargetTangent
-	 */
-	struct UParticleSystemComponent_SetBeamTargetTangent_Params
-	{
-	public:
-		int                                                        EmitterIndex;                                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             NewTangentPoint;                                         // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		int                                                        TargetIndex;                                             // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.ParticleSystemComponent.SetBeamTargetStrength
-	 */
-	struct UParticleSystemComponent_SetBeamTargetStrength_Params
-	{
-	public:
-		int                                                        EmitterIndex;                                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      NewTargetStrength;                                       // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		int                                                        TargetIndex;                                             // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.ParticleSystemComponent.SetBeamTargetPoint
-	 */
-	struct UParticleSystemComponent_SetBeamTargetPoint_Params
-	{
-	public:
-		int                                                        EmitterIndex;                                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             NewTargetPoint;                                          // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		int                                                        TargetIndex;                                             // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.ParticleSystemComponent.SetBeamSourceTangent
-	 */
-	struct UParticleSystemComponent_SetBeamSourceTangent_Params
-	{
-	public:
-		int                                                        EmitterIndex;                                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             NewTangentPoint;                                         // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		int                                                        SourceIndex;                                             // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.ParticleSystemComponent.SetBeamSourceStrength
-	 */
-	struct UParticleSystemComponent_SetBeamSourceStrength_Params
-	{
-	public:
-		int                                                        EmitterIndex;                                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      NewSourceStrength;                                       // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		int                                                        SourceIndex;                                             // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.ParticleSystemComponent.SetBeamSourcePoint
-	 */
-	struct UParticleSystemComponent_SetBeamSourcePoint_Params
-	{
-	public:
-		int                                                        EmitterIndex;                                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             NewSourcePoint;                                          // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		int                                                        SourceIndex;                                             // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.ParticleSystemComponent.SetBeamEndPoint
-	 */
-	struct UParticleSystemComponent_SetBeamEndPoint_Params
-	{
-	public:
-		int                                                        EmitterIndex;                                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             NewEndPoint;                                             // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.ParticleSystemComponent.SetAutoAttachParams
-	 */
-	struct UParticleSystemComponent_SetAutoAttachParams_Params
-	{
-	public:
-		class USceneComponent*                                     Parent;                                                  // 0x0000(0x0008)  (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class FName                                                SocketName;                                              // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		Engine_EAttachLocation                                     LocationType;                                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.ParticleSystemComponent.SetAutoAttachmentParameters
-	 */
-	struct UParticleSystemComponent_SetAutoAttachmentParameters_Params
-	{
-	public:
-		class USceneComponent*                                     Parent;                                                  // 0x0000(0x0008)  (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class FName                                                SocketName;                                              // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		Engine_EAttachmentRule                                     LocationRule;                                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		Engine_EAttachmentRule                                     RotationRule;                                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		Engine_EAttachmentRule                                     ScaleRule;                                               // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.ParticleSystemComponent.ReleaseToPool
-	 */
-	struct UParticleSystemComponent_ReleaseToPool_Params
-	{
-	};
-
-	/**
-	 * Function Engine.ParticleSystemComponent.GetNumActiveParticles
-	 */
-	struct UParticleSystemComponent_GetNumActiveParticles_Params
-	{
-	public:
-		int                                                        ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.ParticleSystemComponent.GetNamedMaterial
-	 */
-	struct UParticleSystemComponent_GetNamedMaterial_Params
-	{
-	public:
-		class FName                                                InName;                                                  // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class UMaterialInterface*                                  ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.ParticleSystemComponent.GetBeamTargetTangent
-	 */
-	struct UParticleSystemComponent_GetBeamTargetTangent_Params
-	{
-	public:
-		int                                                        EmitterIndex;                                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		int                                                        TargetIndex;                                             // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             OutTangentPoint;                                         // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FKey                                                Key;                                                     // 0x0000(0x0018)  (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 	};
 
 	/**
-	 * Function Engine.ParticleSystemComponent.GetBeamTargetStrength
+	 * Function Engine.InputComponent.IsControllerKeyDown
 	 */
-	struct UParticleSystemComponent_GetBeamTargetStrength_Params
+	struct UInputComponent_IsControllerKeyDown_Params
 	{
 	public:
-		int                                                        EmitterIndex;                                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		int                                                        TargetIndex;                                             // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      OutTargetStrength;                                       // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FKey                                                Key;                                                     // 0x0000(0x0018)  (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 	};
 
 	/**
-	 * Function Engine.ParticleSystemComponent.GetBeamTargetPoint
+	 * Function Engine.InputComponent.GetTouchState
 	 */
-	struct UParticleSystemComponent_GetBeamTargetPoint_Params
+	struct UInputComponent_GetTouchState_Params
 	{
 	public:
-		int                                                        EmitterIndex;                                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		int                                                        TargetIndex;                                             // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             OutTargetPoint;                                          // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		int                                                        FingerIndex;                                             // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      LocationX;                                               // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      LocationY;                                               // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bIsCurrentlyPressed;                                     // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 	};
 
 	/**
-	 * Function Engine.ParticleSystemComponent.GetBeamSourceTangent
+	 * Function Engine.InputComponent.GetControllerVectorKeyState
 	 */
-	struct UParticleSystemComponent_GetBeamSourceTangent_Params
+	struct UInputComponent_GetControllerVectorKeyState_Params
 	{
 	public:
-		int                                                        EmitterIndex;                                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		int                                                        SourceIndex;                                             // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             OutTangentPoint;                                         // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FKey                                                Key;                                                     // 0x0000(0x0018)  (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             ReturnValue;                                             // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 	};
 
 	/**
-	 * Function Engine.ParticleSystemComponent.GetBeamSourceStrength
+	 * Function Engine.InputComponent.GetControllerMouseDelta
 	 */
-	struct UParticleSystemComponent_GetBeamSourceStrength_Params
+	struct UInputComponent_GetControllerMouseDelta_Params
 	{
 	public:
-		int                                                        EmitterIndex;                                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		int                                                        SourceIndex;                                             // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      OutSourceStrength;                                       // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      DeltaX;                                                  // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      DeltaY;                                                  // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 	};
 
 	/**
-	 * Function Engine.ParticleSystemComponent.GetBeamSourcePoint
+	 * Function Engine.InputComponent.GetControllerKeyTimeDown
 	 */
-	struct UParticleSystemComponent_GetBeamSourcePoint_Params
+	struct UInputComponent_GetControllerKeyTimeDown_Params
 	{
 	public:
-		int                                                        EmitterIndex;                                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		int                                                        SourceIndex;                                             // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             OutSourcePoint;                                          // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.ParticleSystemComponent.GetBeamEndPoint
-	 */
-	struct UParticleSystemComponent_GetBeamEndPoint_Params
-	{
-	public:
-		int                                                        EmitterIndex;                                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             OutEndPoint;                                             // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.ParticleSystemComponent.GenerateParticleEvent
-	 */
-	struct UParticleSystemComponent_GenerateParticleEvent_Params
-	{
-	public:
-		class FName                                                InEventName;                                             // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      InEmitterTime;                                           // 0x0000(0x0004)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             InLocation;                                              // 0x0000(0x000C)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             InDirection;                                             // 0x0000(0x000C)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             InVelocity;                                              // 0x0000(0x000C)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.ParticleSystemComponent.EndTrails
-	 */
-	struct UParticleSystemComponent_EndTrails_Params
-	{
-	};
-
-	/**
-	 * Function Engine.ParticleSystemComponent.CreateNamedDynamicMaterialInstance
-	 */
-	struct UParticleSystemComponent_CreateNamedDynamicMaterialInstance_Params
-	{
-	public:
-		class FName                                                InName;                                                  // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class UMaterialInterface*                                  SourceMaterial;                                          // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class UMaterialInstanceDynamic*                            ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.ParticleSystemComponent.BeginTrails
-	 */
-	struct UParticleSystemComponent_BeginTrails_Params
-	{
-	public:
-		class FName                                                InFirstSocketName;                                       // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class FName                                                InSecondSocketName;                                      // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		Engine_ETrailWidthMode                                     InWidthMode;                                             // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      InWidth;                                                 // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PawnNoiseEmitterComponent.MakeNoise
-	 */
-	struct UPawnNoiseEmitterComponent_MakeNoise_Params
-	{
-	public:
-		class AActor*                                              NoiseMaker;                                              // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      Loudness;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             NoiseLocation;                                           // 0x0000(0x000C)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PhysicalAnimationComponent.SetStrengthMultiplyer
-	 */
-	struct UPhysicalAnimationComponent_SetStrengthMultiplyer_Params
-	{
-	public:
-		float                                                      InStrengthMultiplyer;                                    // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PhysicalAnimationComponent.SetSkeletalMeshComponent
-	 */
-	struct UPhysicalAnimationComponent_SetSkeletalMeshComponent_Params
-	{
-	public:
-		class USkeletalMeshComponent*                              InSkeletalMeshComponent;                                 // 0x0000(0x0008)  (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PhysicalAnimationComponent.GetBodyTargetTransform
-	 */
-	struct UPhysicalAnimationComponent_GetBodyTargetTransform_Params
-	{
-	public:
-		class FName                                                BodyName;                                                // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FTransform                                          ReturnValue;                                             // 0x0000(0x0030)  (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PhysicalAnimationComponent.ApplyPhysicalAnimationSettingsBelow
-	 */
-	struct UPhysicalAnimationComponent_ApplyPhysicalAnimationSettingsBelow_Params
-	{
-	public:
-		class FName                                                BodyName;                                                // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FPhysicalAnimationData                              PhysicalAnimationData;                                   // 0x0000(0x0024)  (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-		bool                                                       bIncludeSelf;                                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PhysicalAnimationComponent.ApplyPhysicalAnimationSettings
-	 */
-	struct UPhysicalAnimationComponent_ApplyPhysicalAnimationSettings_Params
-	{
-	public:
-		class FName                                                BodyName;                                                // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FPhysicalAnimationData                              PhysicalAnimationData;                                   // 0x0000(0x0024)  (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PhysicalAnimationComponent.ApplyPhysicalAnimationProfileBelow
-	 */
-	struct UPhysicalAnimationComponent_ApplyPhysicalAnimationProfileBelow_Params
-	{
-	public:
-		class FName                                                BodyName;                                                // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class FName                                                ProfileName;                                             // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bIncludeSelf;                                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bClearNotFound;                                          // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.AnimSequenceBase.GetPlayLength
-	 */
-	struct UAnimSequenceBase_GetPlayLength_Params
-	{
-	public:
+		struct FKey                                                Key;                                                     // 0x0000(0x0018)  (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 	};
 
 	/**
-	 * Function Engine.AnimMontage.GetDefaultBlendOutTime
+	 * Function Engine.InputComponent.GetControllerAnalogStickState
 	 */
-	struct UAnimMontage_GetDefaultBlendOutTime_Params
+	struct UInputComponent_GetControllerAnalogStickState_Params
 	{
 	public:
-		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		Engine_EControllerAnalogStick                              WhichStick;                                              // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      StickX;                                                  // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      StickY;                                                  // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 	};
 
 	/**
-	 * Function Engine.AnimNotifyState_Trail.OverridePSTemplate
+	 * Function Engine.InputComponent.GetControllerAnalogKeyState
 	 */
-	struct UAnimNotifyState_Trail_OverridePSTemplate_Params
+	struct UInputComponent_GetControllerAnalogKeyState_Params
 	{
 	public:
-		class USkeletalMeshComponent*                              MeshComp;                                                // 0x0000(0x0008)  (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class UAnimSequenceBase*                                   Animation;                                               // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class UParticleSystem*                                     ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FKey                                                Key;                                                     // 0x0000(0x0018)  (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 	};
 
@@ -12974,2420 +13719,12 @@ namespace CG
 	};
 
 	/**
-	 * Function Engine.InputComponent.WasControllerKeyJustReleased
+	 * Function Engine.AnimSequenceBase.GetPlayLength
 	 */
-	struct UInputComponent_WasControllerKeyJustReleased_Params
-	{
-	public:
-		struct FKey                                                Key;                                                     // 0x0000(0x0018)  (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.InputComponent.WasControllerKeyJustPressed
-	 */
-	struct UInputComponent_WasControllerKeyJustPressed_Params
-	{
-	public:
-		struct FKey                                                Key;                                                     // 0x0000(0x0018)  (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.InputComponent.IsControllerKeyDown
-	 */
-	struct UInputComponent_IsControllerKeyDown_Params
-	{
-	public:
-		struct FKey                                                Key;                                                     // 0x0000(0x0018)  (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.InputComponent.GetTouchState
-	 */
-	struct UInputComponent_GetTouchState_Params
-	{
-	public:
-		int                                                        FingerIndex;                                             // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      LocationX;                                               // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      LocationY;                                               // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bIsCurrentlyPressed;                                     // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.InputComponent.GetControllerVectorKeyState
-	 */
-	struct UInputComponent_GetControllerVectorKeyState_Params
-	{
-	public:
-		struct FKey                                                Key;                                                     // 0x0000(0x0018)  (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             ReturnValue;                                             // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.InputComponent.GetControllerMouseDelta
-	 */
-	struct UInputComponent_GetControllerMouseDelta_Params
-	{
-	public:
-		float                                                      DeltaX;                                                  // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      DeltaY;                                                  // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.InputComponent.GetControllerKeyTimeDown
-	 */
-	struct UInputComponent_GetControllerKeyTimeDown_Params
-	{
-	public:
-		struct FKey                                                Key;                                                     // 0x0000(0x0018)  (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.InputComponent.GetControllerAnalogStickState
-	 */
-	struct UInputComponent_GetControllerAnalogStickState_Params
-	{
-	public:
-		Engine_EControllerAnalogStick                              WhichStick;                                              // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      StickX;                                                  // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      StickY;                                                  // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.InputComponent.GetControllerAnalogKeyState
-	 */
-	struct UInputComponent_GetControllerAnalogKeyState_Params
-	{
-	public:
-		struct FKey                                                Key;                                                     // 0x0000(0x0018)  (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.InputSettings.SaveKeyMappings
-	 */
-	struct UInputSettings_SaveKeyMappings_Params
-	{
-	};
-
-	/**
-	 * Function Engine.InputSettings.RemoveAxisMapping
-	 */
-	struct UInputSettings_RemoveAxisMapping_Params
-	{
-	public:
-		struct FInputAxisKeyMapping                                KeyMapping;                                              // 0x0000(0x0028)  (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-		bool                                                       bForceRebuildKeymaps;                                    // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.InputSettings.RemoveActionMapping
-	 */
-	struct UInputSettings_RemoveActionMapping_Params
-	{
-	public:
-		struct FInputActionKeyMapping                              KeyMapping;                                              // 0x0000(0x0028)  (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-		bool                                                       bForceRebuildKeymaps;                                    // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.InputSettings.GetInputSettings
-	 */
-	struct UInputSettings_GetInputSettings_Params
-	{
-	public:
-		class UInputSettings*                                      ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.InputSettings.GetAxisNames
-	 */
-	struct UInputSettings_GetAxisNames_Params
-	{
-	public:
-		TArray<class FName>                                        AxisNames;                                               // 0x0000(0x0010)  (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.InputSettings.GetAxisMappingByName
-	 */
-	struct UInputSettings_GetAxisMappingByName_Params
-	{
-	public:
-		class FName                                                InAxisName;                                              // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		TArray<struct FInputAxisKeyMapping>                        OutMappings;                                             // 0x0000(0x0010)  (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.InputSettings.GetActionNames
-	 */
-	struct UInputSettings_GetActionNames_Params
-	{
-	public:
-		TArray<class FName>                                        ActionNames;                                             // 0x0000(0x0010)  (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.InputSettings.GetActionMappingByName
-	 */
-	struct UInputSettings_GetActionMappingByName_Params
-	{
-	public:
-		class FName                                                InActionName;                                            // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		TArray<struct FInputActionKeyMapping>                      OutMappings;                                             // 0x0000(0x0010)  (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.InputSettings.ForceRebuildKeymaps
-	 */
-	struct UInputSettings_ForceRebuildKeymaps_Params
-	{
-	};
-
-	/**
-	 * Function Engine.InputSettings.AddAxisMapping
-	 */
-	struct UInputSettings_AddAxisMapping_Params
-	{
-	public:
-		struct FInputAxisKeyMapping                                KeyMapping;                                              // 0x0000(0x0028)  (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-		bool                                                       bForceRebuildKeymaps;                                    // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.InputSettings.AddActionMapping
-	 */
-	struct UInputSettings_AddActionMapping_Params
-	{
-	public:
-		struct FInputActionKeyMapping                              KeyMapping;                                              // 0x0000(0x0028)  (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-		bool                                                       bForceRebuildKeymaps;                                    // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.AnimSingleNodeInstance.StopAnim
-	 */
-	struct UAnimSingleNodeInstance_StopAnim_Params
-	{
-	};
-
-	/**
-	 * Function Engine.AnimSingleNodeInstance.SetReverse
-	 */
-	struct UAnimSingleNodeInstance_SetReverse_Params
-	{
-	public:
-		bool                                                       bInReverse;                                              // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.AnimSingleNodeInstance.SetPreviewCurveOverride
-	 */
-	struct UAnimSingleNodeInstance_SetPreviewCurveOverride_Params
-	{
-	public:
-		class FName                                                PoseName;                                                // 0x0000(0x0008)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      Value;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bRemoveIfZero;                                           // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.AnimSingleNodeInstance.SetPositionWithPreviousTime
-	 */
-	struct UAnimSingleNodeInstance_SetPositionWithPreviousTime_Params
-	{
-	public:
-		float                                                      InPosition;                                              // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      InPreviousTime;                                          // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bFireNotifies;                                           // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.AnimSingleNodeInstance.SetPosition
-	 */
-	struct UAnimSingleNodeInstance_SetPosition_Params
-	{
-	public:
-		float                                                      InPosition;                                              // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bFireNotifies;                                           // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.AnimSingleNodeInstance.SetPlayRate
-	 */
-	struct UAnimSingleNodeInstance_SetPlayRate_Params
-	{
-	public:
-		float                                                      InPlayRate;                                              // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.AnimSingleNodeInstance.SetPlaying
-	 */
-	struct UAnimSingleNodeInstance_SetPlaying_Params
-	{
-	public:
-		bool                                                       bIsPlaying;                                              // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.AnimSingleNodeInstance.SetLooping
-	 */
-	struct UAnimSingleNodeInstance_SetLooping_Params
-	{
-	public:
-		bool                                                       bIsLooping;                                              // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.AnimSingleNodeInstance.SetBlendSpaceInput
-	 */
-	struct UAnimSingleNodeInstance_SetBlendSpaceInput_Params
-	{
-	public:
-		struct FVector                                             InBlendInput;                                            // 0x0000(0x000C)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.AnimSingleNodeInstance.SetAnimationAsset
-	 */
-	struct UAnimSingleNodeInstance_SetAnimationAsset_Params
-	{
-	public:
-		class UAnimationAsset*                                     NewAsset;                                                // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bIsLooping;                                              // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      InPlayRate;                                              // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.AnimSingleNodeInstance.PlayAnim
-	 */
-	struct UAnimSingleNodeInstance_PlayAnim_Params
-	{
-	public:
-		bool                                                       bIsLooping;                                              // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      InPlayRate;                                              // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      InStartPosition;                                         // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.AnimSingleNodeInstance.GetLength
-	 */
-	struct UAnimSingleNodeInstance_GetLength_Params
+	struct UAnimSequenceBase_GetPlayLength_Params
 	{
 	public:
 		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.AnimSingleNodeInstance.GetAnimationAsset
-	 */
-	struct UAnimSingleNodeInstance_GetAnimationAsset_Params
-	{
-	public:
-		class UAnimationAsset*                                     ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.ArrowComponent.SetArrowColor
-	 */
-	struct UArrowComponent_SetArrowColor_Params
-	{
-	public:
-		struct FLinearColor                                        NewColor;                                                // 0x0000(0x0010)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PhysicsConstraintComponent.SetOrientationDriveTwistAndSwing
-	 */
-	struct UPhysicsConstraintComponent_SetOrientationDriveTwistAndSwing_Params
-	{
-	public:
-		bool                                                       bEnableTwistDrive;                                       // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bEnableSwingDrive;                                       // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PhysicsConstraintComponent.SetOrientationDriveSLERP
-	 */
-	struct UPhysicsConstraintComponent_SetOrientationDriveSLERP_Params
-	{
-	public:
-		bool                                                       bEnableSLERP;                                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PhysicsConstraintComponent.SetLinearZLimit
-	 */
-	struct UPhysicsConstraintComponent_SetLinearZLimit_Params
-	{
-	public:
-		Engine_ELinearConstraintMotion                             ConstraintType;                                          // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      LimitSize;                                               // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PhysicsConstraintComponent.SetLinearYLimit
-	 */
-	struct UPhysicsConstraintComponent_SetLinearYLimit_Params
-	{
-	public:
-		Engine_ELinearConstraintMotion                             ConstraintType;                                          // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      LimitSize;                                               // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PhysicsConstraintComponent.SetLinearXLimit
-	 */
-	struct UPhysicsConstraintComponent_SetLinearXLimit_Params
-	{
-	public:
-		Engine_ELinearConstraintMotion                             ConstraintType;                                          // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      LimitSize;                                               // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PhysicsConstraintComponent.SetLinearVelocityTarget
-	 */
-	struct UPhysicsConstraintComponent_SetLinearVelocityTarget_Params
-	{
-	public:
-		struct FVector                                             InVelTarget;                                             // 0x0000(0x000C)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PhysicsConstraintComponent.SetLinearVelocityDrive
-	 */
-	struct UPhysicsConstraintComponent_SetLinearVelocityDrive_Params
-	{
-	public:
-		bool                                                       bEnableDriveX;                                           // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bEnableDriveY;                                           // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bEnableDriveZ;                                           // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PhysicsConstraintComponent.SetLinearPositionTarget
-	 */
-	struct UPhysicsConstraintComponent_SetLinearPositionTarget_Params
-	{
-	public:
-		struct FVector                                             InPosTarget;                                             // 0x0000(0x000C)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PhysicsConstraintComponent.SetLinearPositionDrive
-	 */
-	struct UPhysicsConstraintComponent_SetLinearPositionDrive_Params
-	{
-	public:
-		bool                                                       bEnableDriveX;                                           // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bEnableDriveY;                                           // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bEnableDriveZ;                                           // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PhysicsConstraintComponent.SetLinearDriveParams
-	 */
-	struct UPhysicsConstraintComponent_SetLinearDriveParams_Params
-	{
-	public:
-		float                                                      PositionStrength;                                        // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      VelocityStrength;                                        // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      InForceLimit;                                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PhysicsConstraintComponent.SetLinearBreakable
-	 */
-	struct UPhysicsConstraintComponent_SetLinearBreakable_Params
-	{
-	public:
-		bool                                                       bLinearBreakable;                                        // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      LinearBreakThreshold;                                    // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PhysicsConstraintComponent.SetDisableCollision
-	 */
-	struct UPhysicsConstraintComponent_SetDisableCollision_Params
-	{
-	public:
-		bool                                                       bDisableCollision;                                       // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PhysicsConstraintComponent.SetConstraintReferencePosition
-	 */
-	struct UPhysicsConstraintComponent_SetConstraintReferencePosition_Params
-	{
-	public:
-		Engine_EConstraintFrame                                    Frame;                                                   // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             RefPosition;                                             // 0x0000(0x000C)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PhysicsConstraintComponent.SetConstraintReferenceOrientation
-	 */
-	struct UPhysicsConstraintComponent_SetConstraintReferenceOrientation_Params
-	{
-	public:
-		Engine_EConstraintFrame                                    Frame;                                                   // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             PriAxis;                                                 // 0x0000(0x000C)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             SecAxis;                                                 // 0x0000(0x000C)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PhysicsConstraintComponent.SetConstraintReferenceFrame
-	 */
-	struct UPhysicsConstraintComponent_SetConstraintReferenceFrame_Params
-	{
-	public:
-		Engine_EConstraintFrame                                    Frame;                                                   // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FTransform                                          RefFrame;                                                // 0x0000(0x0030)  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PhysicsConstraintComponent.SetConstrainedComponents
-	 */
-	struct UPhysicsConstraintComponent_SetConstrainedComponents_Params
-	{
-	public:
-		class UPrimitiveComponent*                                 Component1;                                              // 0x0000(0x0008)  (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class FName                                                BoneName1;                                               // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class UPrimitiveComponent*                                 Component2;                                              // 0x0000(0x0008)  (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class FName                                                BoneName2;                                               // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PhysicsConstraintComponent.SetAngularVelocityTarget
-	 */
-	struct UPhysicsConstraintComponent_SetAngularVelocityTarget_Params
-	{
-	public:
-		struct FVector                                             InVelTarget;                                             // 0x0000(0x000C)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PhysicsConstraintComponent.SetAngularVelocityDriveTwistAndSwing
-	 */
-	struct UPhysicsConstraintComponent_SetAngularVelocityDriveTwistAndSwing_Params
-	{
-	public:
-		bool                                                       bEnableTwistDrive;                                       // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bEnableSwingDrive;                                       // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PhysicsConstraintComponent.SetAngularVelocityDriveSLERP
-	 */
-	struct UPhysicsConstraintComponent_SetAngularVelocityDriveSLERP_Params
-	{
-	public:
-		bool                                                       bEnableSLERP;                                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PhysicsConstraintComponent.SetAngularVelocityDrive
-	 */
-	struct UPhysicsConstraintComponent_SetAngularVelocityDrive_Params
-	{
-	public:
-		bool                                                       bEnableSwingDrive;                                       // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bEnableTwistDrive;                                       // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PhysicsConstraintComponent.SetAngularTwistLimit
-	 */
-	struct UPhysicsConstraintComponent_SetAngularTwistLimit_Params
-	{
-	public:
-		Engine_EAngularConstraintMotion                            ConstraintType;                                          // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      TwistLimitAngle;                                         // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PhysicsConstraintComponent.SetAngularSwing2Limit
-	 */
-	struct UPhysicsConstraintComponent_SetAngularSwing2Limit_Params
-	{
-	public:
-		Engine_EAngularConstraintMotion                            MotionType;                                              // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      Swing2LimitAngle;                                        // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PhysicsConstraintComponent.SetAngularSwing1Limit
-	 */
-	struct UPhysicsConstraintComponent_SetAngularSwing1Limit_Params
-	{
-	public:
-		Engine_EAngularConstraintMotion                            MotionType;                                              // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      Swing1LimitAngle;                                        // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PhysicsConstraintComponent.SetAngularOrientationTarget
-	 */
-	struct UPhysicsConstraintComponent_SetAngularOrientationTarget_Params
-	{
-	public:
-		struct FRotator                                            InPosTarget;                                             // 0x0000(0x000C)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PhysicsConstraintComponent.SetAngularOrientationDrive
-	 */
-	struct UPhysicsConstraintComponent_SetAngularOrientationDrive_Params
-	{
-	public:
-		bool                                                       bEnableSwingDrive;                                       // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bEnableTwistDrive;                                       // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PhysicsConstraintComponent.SetAngularDriveParams
-	 */
-	struct UPhysicsConstraintComponent_SetAngularDriveParams_Params
-	{
-	public:
-		float                                                      PositionStrength;                                        // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      VelocityStrength;                                        // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      InForceLimit;                                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PhysicsConstraintComponent.SetAngularDriveMode
-	 */
-	struct UPhysicsConstraintComponent_SetAngularDriveMode_Params
-	{
-	public:
-		Engine_EAngularDriveMode                                   DriveMode;                                               // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PhysicsConstraintComponent.SetAngularBreakable
-	 */
-	struct UPhysicsConstraintComponent_SetAngularBreakable_Params
-	{
-	public:
-		bool                                                       bAngularBreakable;                                       // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      AngularBreakThreshold;                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PhysicsConstraintComponent.IsBroken
-	 */
-	struct UPhysicsConstraintComponent_IsBroken_Params
-	{
-	public:
-		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PhysicsConstraintComponent.GetCurrentTwist
-	 */
-	struct UPhysicsConstraintComponent_GetCurrentTwist_Params
-	{
-	public:
-		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PhysicsConstraintComponent.GetCurrentSwing2
-	 */
-	struct UPhysicsConstraintComponent_GetCurrentSwing2_Params
-	{
-	public:
-		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PhysicsConstraintComponent.GetCurrentSwing1
-	 */
-	struct UPhysicsConstraintComponent_GetCurrentSwing1_Params
-	{
-	public:
-		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PhysicsConstraintComponent.GetConstraintForce
-	 */
-	struct UPhysicsConstraintComponent_GetConstraintForce_Params
-	{
-	public:
-		struct FVector                                             OutLinearForce;                                          // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             OutAngularForce;                                         // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PhysicsConstraintComponent.BreakConstraint
-	 */
-	struct UPhysicsConstraintComponent_BreakConstraint_Params
-	{
-	};
-
-	/**
-	 * Function Engine.PhysicsHandleComponent.SetTargetRotation
-	 */
-	struct UPhysicsHandleComponent_SetTargetRotation_Params
-	{
-	public:
-		struct FRotator                                            NewRotation;                                             // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PhysicsHandleComponent.SetTargetLocationAndRotation
-	 */
-	struct UPhysicsHandleComponent_SetTargetLocationAndRotation_Params
-	{
-	public:
-		struct FVector                                             NewLocation;                                             // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FRotator                                            NewRotation;                                             // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PhysicsHandleComponent.SetTargetLocation
-	 */
-	struct UPhysicsHandleComponent_SetTargetLocation_Params
-	{
-	public:
-		struct FVector                                             NewLocation;                                             // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PhysicsHandleComponent.SetLinearStiffness
-	 */
-	struct UPhysicsHandleComponent_SetLinearStiffness_Params
-	{
-	public:
-		float                                                      NewLinearStiffness;                                      // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PhysicsHandleComponent.SetLinearDamping
-	 */
-	struct UPhysicsHandleComponent_SetLinearDamping_Params
-	{
-	public:
-		float                                                      NewLinearDamping;                                        // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PhysicsHandleComponent.SetInterpolationSpeed
-	 */
-	struct UPhysicsHandleComponent_SetInterpolationSpeed_Params
-	{
-	public:
-		float                                                      NewInterpolationSpeed;                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PhysicsHandleComponent.SetAngularStiffness
-	 */
-	struct UPhysicsHandleComponent_SetAngularStiffness_Params
-	{
-	public:
-		float                                                      NewAngularStiffness;                                     // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PhysicsHandleComponent.SetAngularDamping
-	 */
-	struct UPhysicsHandleComponent_SetAngularDamping_Params
-	{
-	public:
-		float                                                      NewAngularDamping;                                       // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PhysicsHandleComponent.ReleaseComponent
-	 */
-	struct UPhysicsHandleComponent_ReleaseComponent_Params
-	{
-	};
-
-	/**
-	 * Function Engine.PhysicsHandleComponent.GrabComponentAtLocationWithRotation
-	 */
-	struct UPhysicsHandleComponent_GrabComponentAtLocationWithRotation_Params
-	{
-	public:
-		class UPrimitiveComponent*                                 Component;                                               // 0x0000(0x0008)  (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class FName                                                InBoneName;                                              // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             Location;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FRotator                                            Rotation;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PhysicsHandleComponent.GrabComponentAtLocation
-	 */
-	struct UPhysicsHandleComponent_GrabComponentAtLocation_Params
-	{
-	public:
-		class UPrimitiveComponent*                                 Component;                                               // 0x0000(0x0008)  (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class FName                                                InBoneName;                                              // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             GrabLocation;                                            // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PhysicsHandleComponent.GrabComponent
-	 */
-	struct UPhysicsHandleComponent_GrabComponent_Params
-	{
-	public:
-		class UPrimitiveComponent*                                 Component;                                               // 0x0000(0x0008)  (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class FName                                                InBoneName;                                              // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             GrabLocation;                                            // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bConstrainRotation;                                      // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PhysicsHandleComponent.GetTargetLocationAndRotation
-	 */
-	struct UPhysicsHandleComponent_GetTargetLocationAndRotation_Params
-	{
-	public:
-		struct FVector                                             TargetLocation;                                          // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FRotator                                            TargetRotation;                                          // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PhysicsHandleComponent.GetGrabbedComponent
-	 */
-	struct UPhysicsHandleComponent_GetGrabbedComponent_Params
-	{
-	public:
-		class UPrimitiveComponent*                                 ReturnValue;                                             // 0x0000(0x0008)  (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PhysicsSpringComponent.GetSpringRestingPoint
-	 */
-	struct UPhysicsSpringComponent_GetSpringRestingPoint_Params
-	{
-	public:
-		struct FVector                                             ReturnValue;                                             // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PhysicsSpringComponent.GetSpringDirection
-	 */
-	struct UPhysicsSpringComponent_GetSpringDirection_Params
-	{
-	public:
-		struct FVector                                             ReturnValue;                                             // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PhysicsSpringComponent.GetSpringCurrentEndPoint
-	 */
-	struct UPhysicsSpringComponent_GetSpringCurrentEndPoint_Params
-	{
-	public:
-		struct FVector                                             ReturnValue;                                             // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PhysicsSpringComponent.GetNormalizedCompressionScalar
-	 */
-	struct UPhysicsSpringComponent_GetNormalizedCompressionScalar_Params
-	{
-	public:
-		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PlanarReflection.OnInterpToggle
-	 */
-	struct APlanarReflection_OnInterpToggle_Params
-	{
-	public:
-		bool                                                       bEnable;                                                 // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.SceneCaptureComponent.ShowOnlyComponent
-	 */
-	struct USceneCaptureComponent_ShowOnlyComponent_Params
-	{
-	public:
-		class UPrimitiveComponent*                                 InComponent;                                             // 0x0000(0x0008)  (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.SceneCaptureComponent.ShowOnlyActorComponents
-	 */
-	struct USceneCaptureComponent_ShowOnlyActorComponents_Params
-	{
-	public:
-		class AActor*                                              InActor;                                                 // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.SceneCaptureComponent.SetCaptureSortPriority
-	 */
-	struct USceneCaptureComponent_SetCaptureSortPriority_Params
-	{
-	public:
-		int                                                        NewCaptureSortPriority;                                  // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.SceneCaptureComponent.RemoveShowOnlyComponent
-	 */
-	struct USceneCaptureComponent_RemoveShowOnlyComponent_Params
-	{
-	public:
-		class UPrimitiveComponent*                                 InComponent;                                             // 0x0000(0x0008)  (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.SceneCaptureComponent.RemoveShowOnlyActorComponents
-	 */
-	struct USceneCaptureComponent_RemoveShowOnlyActorComponents_Params
-	{
-	public:
-		class AActor*                                              InActor;                                                 // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.SceneCaptureComponent.HideComponent
-	 */
-	struct USceneCaptureComponent_HideComponent_Params
-	{
-	public:
-		class UPrimitiveComponent*                                 InComponent;                                             // 0x0000(0x0008)  (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.SceneCaptureComponent.HideActorComponents
-	 */
-	struct USceneCaptureComponent_HideActorComponents_Params
-	{
-	public:
-		class AActor*                                              InActor;                                                 // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.SceneCaptureComponent.ClearShowOnlyComponents
-	 */
-	struct USceneCaptureComponent_ClearShowOnlyComponents_Params
-	{
-	};
-
-	/**
-	 * Function Engine.SceneCaptureComponent.ClearHiddenComponents
-	 */
-	struct USceneCaptureComponent_ClearHiddenComponents_Params
-	{
-	};
-
-	/**
-	 * Function Engine.PlatformEventsComponent.SupportsConvertibleLaptops
-	 */
-	struct UPlatformEventsComponent_SupportsConvertibleLaptops_Params
-	{
-	public:
-		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * DelegateFunction Engine.PlatformEventsComponent.PlatformEventDelegate__DelegateSignature
-	 */
-	struct UPlatformEventsComponent_PlatformEventDelegate__DelegateSignature_Params
-	{
-	};
-
-	/**
-	 * Function Engine.PlatformEventsComponent.IsInTabletMode
-	 */
-	struct UPlatformEventsComponent_IsInTabletMode_Params
-	{
-	public:
-		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PlatformEventsComponent.IsInLaptopMode
-	 */
-	struct UPlatformEventsComponent_IsInLaptopMode_Params
-	{
-	public:
-		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PlatformInterfaceWebResponse.GetNumHeaders
-	 */
-	struct UPlatformInterfaceWebResponse_GetNumHeaders_Params
-	{
-	public:
-		int                                                        ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PlatformInterfaceWebResponse.GetHeaderValue
-	 */
-	struct UPlatformInterfaceWebResponse_GetHeaderValue_Params
-	{
-	public:
-		class FString                                              HeaderName;                                              // 0x0000(0x0010)  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class FString                                              ReturnValue;                                             // 0x0000(0x0010)  (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PlatformInterfaceWebResponse.GetHeader
-	 */
-	struct UPlatformInterfaceWebResponse_GetHeader_Params
-	{
-	public:
-		int                                                        HeaderIndex;                                             // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class FString                                              Header;                                                  // 0x0000(0x0010)  (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class FString                                              Value;                                                   // 0x0000(0x0010)  (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PlayerCameraManager.StopCameraShake
-	 */
-	struct APlayerCameraManager_StopCameraShake_Params
-	{
-	public:
-		class UCameraShake*                                        ShakeInstance;                                           // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bImmediately;                                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PlayerCameraManager.StopCameraFade
-	 */
-	struct APlayerCameraManager_StopCameraFade_Params
-	{
-	};
-
-	/**
-	 * Function Engine.PlayerCameraManager.StopCameraAnimInst
-	 */
-	struct APlayerCameraManager_StopCameraAnimInst_Params
-	{
-	public:
-		class UCameraAnimInst*                                     AnimInst;                                                // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bImmediate;                                              // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PlayerCameraManager.StopAllInstancesOfCameraShake
-	 */
-	struct APlayerCameraManager_StopAllInstancesOfCameraShake_Params
-	{
-	public:
-		class UClass*                                              Shake;                                                   // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bImmediately;                                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PlayerCameraManager.StopAllInstancesOfCameraAnim
-	 */
-	struct APlayerCameraManager_StopAllInstancesOfCameraAnim_Params
-	{
-	public:
-		class UCameraAnim*                                         Anim;                                                    // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bImmediate;                                              // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PlayerCameraManager.StopAllCameraShakes
-	 */
-	struct APlayerCameraManager_StopAllCameraShakes_Params
-	{
-	public:
-		bool                                                       bImmediately;                                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PlayerCameraManager.StopAllCameraAnims
-	 */
-	struct APlayerCameraManager_StopAllCameraAnims_Params
-	{
-	public:
-		bool                                                       bImmediate;                                              // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PlayerCameraManager.StartCameraFade
-	 */
-	struct APlayerCameraManager_StartCameraFade_Params
-	{
-	public:
-		float                                                      FromAlpha;                                               // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      ToAlpha;                                                 // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      Duration;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FLinearColor                                        Color;                                                   // 0x0000(0x0010)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bShouldFadeAudio;                                        // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bHoldWhenFinished;                                       // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PlayerCameraManager.SetManualCameraFade
-	 */
-	struct APlayerCameraManager_SetManualCameraFade_Params
-	{
-	public:
-		float                                                      InFadeAmount;                                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FLinearColor                                        Color;                                                   // 0x0000(0x0010)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bInFadeAudio;                                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PlayerCameraManager.SetGameCameraCutThisFrame
-	 */
-	struct APlayerCameraManager_SetGameCameraCutThisFrame_Params
-	{
-	};
-
-	/**
-	 * Function Engine.PlayerCameraManager.RemoveCameraModifier
-	 */
-	struct APlayerCameraManager_RemoveCameraModifier_Params
-	{
-	public:
-		class UCameraModifier*                                     ModifierToRemove;                                        // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PlayerCameraManager.RemoveCameraLensEffect
-	 */
-	struct APlayerCameraManager_RemoveCameraLensEffect_Params
-	{
-	public:
-		class AEmitterCameraLensEffectBase*                        Emitter;                                                 // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PlayerCameraManager.PlayCameraShake
-	 */
-	struct APlayerCameraManager_PlayCameraShake_Params
-	{
-	public:
-		class UClass*                                              ShakeClass;                                              // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      Scale;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		Engine_ECameraAnimPlaySpace                                PlaySpace;                                               // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FRotator                                            UserPlaySpaceRot;                                        // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-		class UCameraShake*                                        ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PlayerCameraManager.PlayCameraAnim
-	 */
-	struct APlayerCameraManager_PlayCameraAnim_Params
-	{
-	public:
-		class UCameraAnim*                                         Anim;                                                    // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      Rate;                                                    // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      Scale;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      BlendInTime;                                             // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      BlendOutTime;                                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bLoop;                                                   // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bRandomStartTime;                                        // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      Duration;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		Engine_ECameraAnimPlaySpace                                PlaySpace;                                               // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FRotator                                            UserPlaySpaceRot;                                        // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-		class UCameraAnimInst*                                     ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PlayerCameraManager.PhotographyCameraModify
-	 */
-	struct APlayerCameraManager_PhotographyCameraModify_Params
-	{
-	public:
-		struct FVector                                             NewCameraLocation;                                       // 0x0000(0x000C)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             PreviousCameraLocation;                                  // 0x0000(0x000C)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             OriginalCameraLocation;                                  // 0x0000(0x000C)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             ResultCameraLocation;                                    // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PlayerCameraManager.OnPhotographySessionStart
-	 */
-	struct APlayerCameraManager_OnPhotographySessionStart_Params
-	{
-	};
-
-	/**
-	 * Function Engine.PlayerCameraManager.OnPhotographySessionEnd
-	 */
-	struct APlayerCameraManager_OnPhotographySessionEnd_Params
-	{
-	};
-
-	/**
-	 * Function Engine.PlayerCameraManager.OnPhotographyMultiPartCaptureStart
-	 */
-	struct APlayerCameraManager_OnPhotographyMultiPartCaptureStart_Params
-	{
-	};
-
-	/**
-	 * Function Engine.PlayerCameraManager.OnPhotographyMultiPartCaptureEnd
-	 */
-	struct APlayerCameraManager_OnPhotographyMultiPartCaptureEnd_Params
-	{
-	};
-
-	/**
-	 * Function Engine.PlayerCameraManager.GetOwningPlayerController
-	 */
-	struct APlayerCameraManager_GetOwningPlayerController_Params
-	{
-	public:
-		class APlayerController*                                   ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PlayerCameraManager.GetFOVAngle
-	 */
-	struct APlayerCameraManager_GetFOVAngle_Params
-	{
-	public:
-		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PlayerCameraManager.GetCameraRotation
-	 */
-	struct APlayerCameraManager_GetCameraRotation_Params
-	{
-	public:
-		struct FRotator                                            ReturnValue;                                             // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PlayerCameraManager.GetCameraLocation
-	 */
-	struct APlayerCameraManager_GetCameraLocation_Params
-	{
-	public:
-		struct FVector                                             ReturnValue;                                             // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PlayerCameraManager.FindCameraModifierByClass
-	 */
-	struct APlayerCameraManager_FindCameraModifierByClass_Params
-	{
-	public:
-		class UClass*                                              ModifierClass;                                           // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class UCameraModifier*                                     ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PlayerCameraManager.ClearCameraLensEffects
-	 */
-	struct APlayerCameraManager_ClearCameraLensEffects_Params
-	{
-	};
-
-	/**
-	 * Function Engine.PlayerCameraManager.BlueprintUpdateCamera
-	 */
-	struct APlayerCameraManager_BlueprintUpdateCamera_Params
-	{
-	public:
-		class AActor*                                              CameraTarget;                                            // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             NewCameraLocation;                                       // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FRotator                                            NewCameraRotation;                                       // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-		float                                                      NewCameraFOV;                                            // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PlayerCameraManager.AddNewCameraModifier
-	 */
-	struct APlayerCameraManager_AddNewCameraModifier_Params
-	{
-	public:
-		class UClass*                                              ModifierClass;                                           // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class UCameraModifier*                                     ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PlayerCameraManager.AddCameraLensEffect
-	 */
-	struct APlayerCameraManager_AddCameraLensEffect_Params
-	{
-	public:
-		class UClass*                                              LensEffectEmitterClass;                                  // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class AEmitterCameraLensEffectBase*                        ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PlayerInput.SetMouseSensitivity
-	 */
-	struct UPlayerInput_SetMouseSensitivity_Params
-	{
-	public:
-		float                                                      Sensitivity;                                             // 0x0000(0x0004)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PlayerInput.SetBind
-	 */
-	struct UPlayerInput_SetBind_Params
-	{
-	public:
-		class FName                                                BindName;                                                // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class FString                                              Command;                                                 // 0x0000(0x0010)  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PlayerInput.InvertAxisKey
-	 */
-	struct UPlayerInput_InvertAxisKey_Params
-	{
-	public:
-		struct FKey                                                AxisKey;                                                 // 0x0000(0x0018)  (ConstParm, Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PlayerInput.InvertAxis
-	 */
-	struct UPlayerInput_InvertAxis_Params
-	{
-	public:
-		class FName                                                AxisName;                                                // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PlayerInput.ClearSmoothing
-	 */
-	struct UPlayerInput_ClearSmoothing_Params
-	{
-	};
-
-	/**
-	 * Function Engine.PlayerState.ReceiveOverrideWith
-	 */
-	struct APlayerState_ReceiveOverrideWith_Params
-	{
-	public:
-		class APlayerState*                                        OldPlayerState;                                          // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PlayerState.ReceiveCopyProperties
-	 */
-	struct APlayerState_ReceiveCopyProperties_Params
-	{
-	public:
-		class APlayerState*                                        NewPlayerState;                                          // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PlayerState.OnRep_UniqueId
-	 */
-	struct APlayerState_OnRep_UniqueId_Params
-	{
-	};
-
-	/**
-	 * Function Engine.PlayerState.OnRep_Score
-	 */
-	struct APlayerState_OnRep_Score_Params
-	{
-	};
-
-	/**
-	 * Function Engine.PlayerState.OnRep_PlayerName
-	 */
-	struct APlayerState_OnRep_PlayerName_Params
-	{
-	};
-
-	/**
-	 * Function Engine.PlayerState.OnRep_PlayerId
-	 */
-	struct APlayerState_OnRep_PlayerId_Params
-	{
-	};
-
-	/**
-	 * Function Engine.PlayerState.OnRep_bIsInactive
-	 */
-	struct APlayerState_OnRep_bIsInactive_Params
-	{
-	};
-
-	/**
-	 * Function Engine.PlayerState.GetPlayerName
-	 */
-	struct APlayerState_GetPlayerName_Params
-	{
-	public:
-		class FString                                              ReturnValue;                                             // 0x0000(0x0010)  (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.Light.ToggleEnabled
-	 */
-	struct ALight_ToggleEnabled_Params
-	{
-	};
-
-	/**
-	 * Function Engine.Light.SetLightFunctionScale
-	 */
-	struct ALight_SetLightFunctionScale_Params
-	{
-	public:
-		struct FVector                                             NewLightFunctionScale;                                   // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.Light.SetLightFunctionMaterial
-	 */
-	struct ALight_SetLightFunctionMaterial_Params
-	{
-	public:
-		class UMaterialInterface*                                  NewLightFunctionMaterial;                                // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.Light.SetLightFunctionFadeDistance
-	 */
-	struct ALight_SetLightFunctionFadeDistance_Params
-	{
-	public:
-		float                                                      NewLightFunctionFadeDistance;                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.Light.SetLightColor
-	 */
-	struct ALight_SetLightColor_Params
-	{
-	public:
-		struct FLinearColor                                        NewLightColor;                                           // 0x0000(0x0010)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.Light.SetEnabled
-	 */
-	struct ALight_SetEnabled_Params
-	{
-	public:
-		bool                                                       bSetEnabled;                                             // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.Light.SetCastShadows
-	 */
-	struct ALight_SetCastShadows_Params
-	{
-	public:
-		bool                                                       bNewValue;                                               // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.Light.SetBrightness
-	 */
-	struct ALight_SetBrightness_Params
-	{
-	public:
-		float                                                      NewBrightness;                                           // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.Light.SetAffectTranslucentLighting
-	 */
-	struct ALight_SetAffectTranslucentLighting_Params
-	{
-	public:
-		bool                                                       bNewValue;                                               // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.Light.OnRep_bEnabled
-	 */
-	struct ALight_OnRep_bEnabled_Params
-	{
-	};
-
-	/**
-	 * Function Engine.Light.IsEnabled
-	 */
-	struct ALight_IsEnabled_Params
-	{
-	public:
-		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.Light.GetLightColor
-	 */
-	struct ALight_GetLightColor_Params
-	{
-	public:
-		struct FLinearColor                                        ReturnValue;                                             // 0x0000(0x0010)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.Light.GetBrightness
-	 */
-	struct ALight_GetBrightness_Params
-	{
-	public:
-		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PointLight.SetRadius
-	 */
-	struct APointLight_SetRadius_Params
-	{
-	public:
-		float                                                      NewRadius;                                               // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PointLight.SetLightFalloffExponent
-	 */
-	struct APointLight_SetLightFalloffExponent_Params
-	{
-	public:
-		float                                                      NewLightFalloffExponent;                                 // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.LightComponent.SetVolumetricScatteringIntensity
-	 */
-	struct ULightComponent_SetVolumetricScatteringIntensity_Params
-	{
-	public:
-		float                                                      NewIntensity;                                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.LightComponent.SetUseIESBrightness
-	 */
-	struct ULightComponent_SetUseIESBrightness_Params
-	{
-	public:
-		bool                                                       bNewValue;                                               // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.LightComponent.SetTransmission
-	 */
-	struct ULightComponent_SetTransmission_Params
-	{
-	public:
-		bool                                                       bNewValue;                                               // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.LightComponent.SetTemperature
-	 */
-	struct ULightComponent_SetTemperature_Params
-	{
-	public:
-		float                                                      NewTemperature;                                          // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.LightComponent.SetSpecularScale
-	 */
-	struct ULightComponent_SetSpecularScale_Params
-	{
-	public:
-		float                                                      NewValue;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.LightComponent.SetShadowSlopeBias
-	 */
-	struct ULightComponent_SetShadowSlopeBias_Params
-	{
-	public:
-		float                                                      NewValue;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.LightComponent.SetShadowBias
-	 */
-	struct ULightComponent_SetShadowBias_Params
-	{
-	public:
-		float                                                      NewValue;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.LightComponent.SetLightFunctionScale
-	 */
-	struct ULightComponent_SetLightFunctionScale_Params
-	{
-	public:
-		struct FVector                                             NewLightFunctionScale;                                   // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.LightComponent.SetLightFunctionMaterial
-	 */
-	struct ULightComponent_SetLightFunctionMaterial_Params
-	{
-	public:
-		class UMaterialInterface*                                  NewLightFunctionMaterial;                                // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.LightComponent.SetLightFunctionFadeDistance
-	 */
-	struct ULightComponent_SetLightFunctionFadeDistance_Params
-	{
-	public:
-		float                                                      NewLightFunctionFadeDistance;                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.LightComponent.SetLightFunctionDisabledBrightness
-	 */
-	struct ULightComponent_SetLightFunctionDisabledBrightness_Params
-	{
-	public:
-		float                                                      NewValue;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.LightComponent.SetLightColor
-	 */
-	struct ULightComponent_SetLightColor_Params
-	{
-	public:
-		struct FLinearColor                                        NewLightColor;                                           // 0x0000(0x0010)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bSRGB;                                                   // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.LightComponent.SetIntensity
-	 */
-	struct ULightComponent_SetIntensity_Params
-	{
-	public:
-		float                                                      NewIntensity;                                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.LightComponent.SetIndirectLightingIntensity
-	 */
-	struct ULightComponent_SetIndirectLightingIntensity_Params
-	{
-	public:
-		float                                                      NewIntensity;                                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.LightComponent.SetIESTexture
-	 */
-	struct ULightComponent_SetIESTexture_Params
-	{
-	public:
-		class UTextureLightProfile*                                NewValue;                                                // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.LightComponent.SetIESBrightnessScale
-	 */
-	struct ULightComponent_SetIESBrightnessScale_Params
-	{
-	public:
-		float                                                      NewValue;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.LightComponent.SetForceCachedShadowsForMovablePrimitives
-	 */
-	struct ULightComponent_SetForceCachedShadowsForMovablePrimitives_Params
-	{
-	public:
-		bool                                                       bNewValue;                                               // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.LightComponent.SetEnableLightShaftBloom
-	 */
-	struct ULightComponent_SetEnableLightShaftBloom_Params
-	{
-	public:
-		bool                                                       bNewValue;                                               // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.LightComponent.SetBloomTint
-	 */
-	struct ULightComponent_SetBloomTint_Params
-	{
-	public:
-		struct FColor                                              NewValue;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.LightComponent.SetBloomThreshold
-	 */
-	struct ULightComponent_SetBloomThreshold_Params
-	{
-	public:
-		float                                                      NewValue;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.LightComponent.SetBloomScale
-	 */
-	struct ULightComponent_SetBloomScale_Params
-	{
-	public:
-		float                                                      NewValue;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.LightComponent.SetAffectTranslucentLighting
-	 */
-	struct ULightComponent_SetAffectTranslucentLighting_Params
-	{
-	public:
-		bool                                                       bNewValue;                                               // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.LightComponent.SetAffectDynamicIndirectLighting
-	 */
-	struct ULightComponent_SetAffectDynamicIndirectLighting_Params
-	{
-	public:
-		bool                                                       bNewValue;                                               // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.LocalLightComponent.SetIntensityUnits
-	 */
-	struct ULocalLightComponent_SetIntensityUnits_Params
-	{
-	public:
-		Engine_ELightUnits                                         NewIntensityUnits;                                       // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.LocalLightComponent.SetAttenuationRadius
-	 */
-	struct ULocalLightComponent_SetAttenuationRadius_Params
-	{
-	public:
-		float                                                      NewRadius;                                               // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.LocalLightComponent.GetUnitsConversionFactor
-	 */
-	struct ULocalLightComponent_GetUnitsConversionFactor_Params
-	{
-	public:
-		Engine_ELightUnits                                         SrcUnits;                                                // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		Engine_ELightUnits                                         TargetUnits;                                             // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      CosHalfConeAngle;                                        // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PointLightComponent.SetSourceRadius
-	 */
-	struct UPointLightComponent_SetSourceRadius_Params
-	{
-	public:
-		float                                                      bNewValue;                                               // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PointLightComponent.SetSourceLength
-	 */
-	struct UPointLightComponent_SetSourceLength_Params
-	{
-	public:
-		float                                                      NewValue;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PointLightComponent.SetSoftSourceRadius
-	 */
-	struct UPointLightComponent_SetSoftSourceRadius_Params
-	{
-	public:
-		float                                                      bNewValue;                                               // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PointLightComponent.SetLightFalloffExponent
-	 */
-	struct UPointLightComponent_SetLightFalloffExponent_Params
-	{
-	public:
-		float                                                      NewLightFalloffExponent;                                 // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PoseableMeshComponent.SetBoneTransformByName
-	 */
-	struct UPoseableMeshComponent_SetBoneTransformByName_Params
-	{
-	public:
-		class FName                                                BoneName;                                                // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FTransform                                          InTransform;                                             // 0x0000(0x0030)  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-		Engine_EBoneSpaces                                         BoneSpace;                                               // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PoseableMeshComponent.SetBoneScaleByName
-	 */
-	struct UPoseableMeshComponent_SetBoneScaleByName_Params
-	{
-	public:
-		class FName                                                BoneName;                                                // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             InScale3D;                                               // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		Engine_EBoneSpaces                                         BoneSpace;                                               // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PoseableMeshComponent.SetBoneRotationByName
-	 */
-	struct UPoseableMeshComponent_SetBoneRotationByName_Params
-	{
-	public:
-		class FName                                                BoneName;                                                // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FRotator                                            InRotation;                                              // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-		Engine_EBoneSpaces                                         BoneSpace;                                               // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PoseableMeshComponent.SetBoneLocationByName
-	 */
-	struct UPoseableMeshComponent_SetBoneLocationByName_Params
-	{
-	public:
-		class FName                                                BoneName;                                                // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             InLocation;                                              // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		Engine_EBoneSpaces                                         BoneSpace;                                               // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PoseableMeshComponent.ResetBoneTransformByName
-	 */
-	struct UPoseableMeshComponent_ResetBoneTransformByName_Params
-	{
-	public:
-		class FName                                                BoneName;                                                // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PoseableMeshComponent.GetBoneTransformByName
-	 */
-	struct UPoseableMeshComponent_GetBoneTransformByName_Params
-	{
-	public:
-		class FName                                                BoneName;                                                // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		Engine_EBoneSpaces                                         BoneSpace;                                               // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FTransform                                          ReturnValue;                                             // 0x0000(0x0030)  (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PoseableMeshComponent.GetBoneScaleByName
-	 */
-	struct UPoseableMeshComponent_GetBoneScaleByName_Params
-	{
-	public:
-		class FName                                                BoneName;                                                // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		Engine_EBoneSpaces                                         BoneSpace;                                               // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             ReturnValue;                                             // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PoseableMeshComponent.GetBoneRotationByName
-	 */
-	struct UPoseableMeshComponent_GetBoneRotationByName_Params
-	{
-	public:
-		class FName                                                BoneName;                                                // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		Engine_EBoneSpaces                                         BoneSpace;                                               // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FRotator                                            ReturnValue;                                             // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PoseableMeshComponent.GetBoneLocationByName
-	 */
-	struct UPoseableMeshComponent_GetBoneLocationByName_Params
-	{
-	public:
-		class FName                                                BoneName;                                                // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		Engine_EBoneSpaces                                         BoneSpace;                                               // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             ReturnValue;                                             // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.PoseableMeshComponent.CopyPoseFromSkeletalComponent
-	 */
-	struct UPoseableMeshComponent_CopyPoseFromSkeletalComponent_Params
-	{
-	public:
-		class USkeletalMeshComponent*                              InComponentToCopy;                                       // 0x0000(0x0008)  (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.AsyncActionHandleSaveGame.AsyncSaveGameToSlot
-	 */
-	struct UAsyncActionHandleSaveGame_AsyncSaveGameToSlot_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class USaveGame*                                           SaveGameObject;                                          // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class FString                                              SlotName;                                                // 0x0000(0x0010)  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		int                                                        UserIndex;                                               // 0x0000(0x0004)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class UAsyncActionHandleSaveGame*                          ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.AsyncActionHandleSaveGame.AsyncLoadGameFromSlot
-	 */
-	struct UAsyncActionHandleSaveGame_AsyncLoadGameFromSlot_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class FString                                              SlotName;                                                // 0x0000(0x0010)  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		int                                                        UserIndex;                                               // 0x0000(0x0004)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class UAsyncActionHandleSaveGame*                          ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.AsyncActionLoadPrimaryAsset.AsyncLoadPrimaryAsset
-	 */
-	struct UAsyncActionLoadPrimaryAsset_AsyncLoadPrimaryAsset_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FPrimaryAssetId                                     PrimaryAsset;                                            // 0x0000(0x0010)  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		TArray<class FName>                                        LoadBundles;                                             // 0x0000(0x0010)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-		class UAsyncActionLoadPrimaryAsset*                        ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.AsyncActionLoadPrimaryAssetClass.AsyncLoadPrimaryAssetClass
-	 */
-	struct UAsyncActionLoadPrimaryAssetClass_AsyncLoadPrimaryAssetClass_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FPrimaryAssetId                                     PrimaryAsset;                                            // 0x0000(0x0010)  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		TArray<class FName>                                        LoadBundles;                                             // 0x0000(0x0010)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-		class UAsyncActionLoadPrimaryAssetClass*                   ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.AsyncActionLoadPrimaryAssetList.AsyncLoadPrimaryAssetList
-	 */
-	struct UAsyncActionLoadPrimaryAssetList_AsyncLoadPrimaryAssetList_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		TArray<struct FPrimaryAssetId>                             PrimaryAssetList;                                        // 0x0000(0x0010)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-		TArray<class FName>                                        LoadBundles;                                             // 0x0000(0x0010)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-		class UAsyncActionLoadPrimaryAssetList*                    ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.AsyncActionLoadPrimaryAssetClassList.AsyncLoadPrimaryAssetClassList
-	 */
-	struct UAsyncActionLoadPrimaryAssetClassList_AsyncLoadPrimaryAssetClassList_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		TArray<struct FPrimaryAssetId>                             PrimaryAssetList;                                        // 0x0000(0x0010)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-		TArray<class FName>                                        LoadBundles;                                             // 0x0000(0x0010)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-		class UAsyncActionLoadPrimaryAssetClassList*               ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.AsyncActionChangePrimaryAssetBundles.AsyncChangeBundleStateForPrimaryAssetList
-	 */
-	struct UAsyncActionChangePrimaryAssetBundles_AsyncChangeBundleStateForPrimaryAssetList_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		TArray<struct FPrimaryAssetId>                             PrimaryAssetList;                                        // 0x0000(0x0010)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-		TArray<class FName>                                        AddBundles;                                              // 0x0000(0x0010)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-		TArray<class FName>                                        RemoveBundles;                                           // 0x0000(0x0010)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-		class UAsyncActionChangePrimaryAssetBundles*               ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.AsyncActionChangePrimaryAssetBundles.AsyncChangeBundleStateForMatchingPrimaryAssets
-	 */
-	struct UAsyncActionChangePrimaryAssetBundles_AsyncChangeBundleStateForMatchingPrimaryAssets_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		TArray<class FName>                                        NewBundles;                                              // 0x0000(0x0010)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-		TArray<class FName>                                        OldBundles;                                              // 0x0000(0x0010)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-		class UAsyncActionChangePrimaryAssetBundles*               ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.AtmosphericFogComponent.StartPrecompute
-	 */
-	struct UAtmosphericFogComponent_StartPrecompute_Params
-	{
-	};
-
-	/**
-	 * Function Engine.AtmosphericFogComponent.SetSunMultiplier
-	 */
-	struct UAtmosphericFogComponent_SetSunMultiplier_Params
-	{
-	public:
-		float                                                      NewSunMultiplier;                                        // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.AtmosphericFogComponent.SetStartDistance
-	 */
-	struct UAtmosphericFogComponent_SetStartDistance_Params
-	{
-	public:
-		float                                                      NewStartDistance;                                        // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.AtmosphericFogComponent.SetPrecomputeParams
-	 */
-	struct UAtmosphericFogComponent_SetPrecomputeParams_Params
-	{
-	public:
-		float                                                      DensityHeight;                                           // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		int                                                        MaxScatteringOrder;                                      // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		int                                                        InscatterAltitudeSampleNum;                              // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.AtmosphericFogComponent.SetFogMultiplier
-	 */
-	struct UAtmosphericFogComponent_SetFogMultiplier_Params
-	{
-	public:
-		float                                                      NewFogMultiplier;                                        // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.AtmosphericFogComponent.SetDistanceScale
-	 */
-	struct UAtmosphericFogComponent_SetDistanceScale_Params
-	{
-	public:
-		float                                                      NewDistanceScale;                                        // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.AtmosphericFogComponent.SetDistanceOffset
-	 */
-	struct UAtmosphericFogComponent_SetDistanceOffset_Params
-	{
-	public:
-		float                                                      NewDistanceOffset;                                       // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.AtmosphericFogComponent.SetDensityOffset
-	 */
-	struct UAtmosphericFogComponent_SetDensityOffset_Params
-	{
-	public:
-		float                                                      NewDensityOffset;                                        // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.AtmosphericFogComponent.SetDensityMultiplier
-	 */
-	struct UAtmosphericFogComponent_SetDensityMultiplier_Params
-	{
-	public:
-		float                                                      NewDensityMultiplier;                                    // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.AtmosphericFogComponent.SetDefaultLightColor
-	 */
-	struct UAtmosphericFogComponent_SetDefaultLightColor_Params
-	{
-	public:
-		struct FLinearColor                                        NewLightColor;                                           // 0x0000(0x0010)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.AtmosphericFogComponent.SetDefaultBrightness
-	 */
-	struct UAtmosphericFogComponent_SetDefaultBrightness_Params
-	{
-	public:
-		float                                                      NewBrightness;                                           // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.AtmosphericFogComponent.SetAltitudeScale
-	 */
-	struct UAtmosphericFogComponent_SetAltitudeScale_Params
-	{
-	public:
-		float                                                      NewAltitudeScale;                                        // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.AtmosphericFogComponent.DisableSunDisk
-	 */
-	struct UAtmosphericFogComponent_DisableSunDisk_Params
-	{
-	public:
-		bool                                                       NewSunDisk;                                              // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.AtmosphericFogComponent.DisableGroundScattering
-	 */
-	struct UAtmosphericFogComponent_DisableGroundScattering_Params
-	{
-	public:
-		bool                                                       NewGroundScattering;                                     // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.AudioVolume.SetReverbSettings
-	 */
-	struct AAudioVolume_SetReverbSettings_Params
-	{
-	public:
-		struct FReverbSettings                                     NewReverbSettings;                                       // 0x0000(0x0020)  (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.AudioVolume.SetPriority
-	 */
-	struct AAudioVolume_SetPriority_Params
-	{
-	public:
-		float                                                      NewPriority;                                             // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.AudioVolume.SetInteriorSettings
-	 */
-	struct AAudioVolume_SetInteriorSettings_Params
-	{
-	public:
-		struct FInteriorSettings                                   NewInteriorSettings;                                     // 0x0000(0x0024)  (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.AudioVolume.SetEnabled
-	 */
-	struct AAudioVolume_SetEnabled_Params
-	{
-	public:
-		bool                                                       bNewEnabled;                                             // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.AudioVolume.OnRep_bEnabled
-	 */
-	struct AAudioVolume_OnRep_bEnabled_Params
-	{
-	};
-
-	/**
-	 * Function Engine.AvoidanceManager.RegisterMovementComponent
-	 */
-	struct UAvoidanceManager_RegisterMovementComponent_Params
-	{
-	public:
-		class UMovementComponent*                                  MovementComp;                                            // 0x0000(0x0008)  (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      AvoidanceWeight;                                         // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.AvoidanceManager.GetObjectCount
-	 */
-	struct UAvoidanceManager_GetObjectCount_Params
-	{
-	public:
-		int                                                        ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.AvoidanceManager.GetNewAvoidanceUID
-	 */
-	struct UAvoidanceManager_GetNewAvoidanceUID_Params
-	{
-	public:
-		int                                                        ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.AvoidanceManager.GetAvoidanceVelocityForComponent
-	 */
-	struct UAvoidanceManager_GetAvoidanceVelocityForComponent_Params
-	{
-	public:
-		class UMovementComponent*                                  MovementComp;                                            // 0x0000(0x0008)  (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             ReturnValue;                                             // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.BillboardComponent.SetUV
-	 */
-	struct UBillboardComponent_SetUV_Params
-	{
-	public:
-		int                                                        NewU;                                                    // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		int                                                        NewUL;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		int                                                        NewV;                                                    // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		int                                                        NewVL;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.BillboardComponent.SetSpriteAndUV
-	 */
-	struct UBillboardComponent_SetSpriteAndUV_Params
-	{
-	public:
-		class UTexture2D*                                          NewSprite;                                               // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		int                                                        NewU;                                                    // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		int                                                        NewUL;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		int                                                        NewV;                                                    // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		int                                                        NewVL;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.BillboardComponent.SetSprite
-	 */
-	struct UBillboardComponent_SetSprite_Params
-	{
-	public:
-		class UTexture2D*                                          NewSprite;                                               // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 	};
 
@@ -16407,6 +14744,48 @@ namespace CG
 	};
 
 	/**
+	 * Function Engine.Texture2D.Blueprint_GetSizeY
+	 */
+	struct UTexture2D_Blueprint_GetSizeY_Params
+	{
+	public:
+		int                                                        ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.Texture2D.Blueprint_GetSizeX
+	 */
+	struct UTexture2D_Blueprint_GetSizeX_Params
+	{
+	public:
+		int                                                        ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.AnimMontage.GetDefaultBlendOutTime
+	 */
+	struct UAnimMontage_GetDefaultBlendOutTime_Params
+	{
+	public:
+		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.AnimNotifyState_Trail.OverridePSTemplate
+	 */
+	struct UAnimNotifyState_Trail_OverridePSTemplate_Params
+	{
+	public:
+		class USkeletalMeshComponent*                              MeshComp;                                                // 0x0000(0x0008)  (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UAnimSequenceBase*                                   Animation;                                               // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UParticleSystem*                                     ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
 	 * Function Engine.GameViewportClient.SSSwapControllers
 	 */
 	struct UGameViewportClient_SSSwapControllers_Params
@@ -16482,26 +14861,6 @@ namespace CG
 	public:
 		float                                                      InTime;                                                  // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 		struct FLinearColor                                        ReturnValue;                                             // 0x0000(0x0010)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.Texture2D.Blueprint_GetSizeY
-	 */
-	struct UTexture2D_Blueprint_GetSizeY_Params
-	{
-	public:
-		int                                                        ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.Texture2D.Blueprint_GetSizeX
-	 */
-	struct UTexture2D_Blueprint_GetSizeX_Params
-	{
-	public:
-		int                                                        ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 	};
 
@@ -17251,110 +15610,125 @@ namespace CG
 	};
 
 	/**
-	 * Function Engine.DirectionalLightComponent.SetShadowDistanceFadeoutFraction
+	 * Function Engine.AnimSingleNodeInstance.StopAnim
 	 */
-	struct UDirectionalLightComponent_SetShadowDistanceFadeoutFraction_Params
+	struct UAnimSingleNodeInstance_StopAnim_Params
+	{
+	};
+
+	/**
+	 * Function Engine.AnimSingleNodeInstance.SetReverse
+	 */
+	struct UAnimSingleNodeInstance_SetReverse_Params
 	{
 	public:
-		float                                                      NewValue;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bInReverse;                                              // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 	};
 
 	/**
-	 * Function Engine.DirectionalLightComponent.SetOcclusionMaskDarkness
+	 * Function Engine.AnimSingleNodeInstance.SetPreviewCurveOverride
 	 */
-	struct UDirectionalLightComponent_SetOcclusionMaskDarkness_Params
+	struct UAnimSingleNodeInstance_SetPreviewCurveOverride_Params
 	{
 	public:
-		float                                                      NewValue;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class FName                                                PoseName;                                                // 0x0000(0x0008)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      Value;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bRemoveIfZero;                                           // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 	};
 
 	/**
-	 * Function Engine.DirectionalLightComponent.SetLightShaftOverrideDirection
+	 * Function Engine.AnimSingleNodeInstance.SetPositionWithPreviousTime
 	 */
-	struct UDirectionalLightComponent_SetLightShaftOverrideDirection_Params
+	struct UAnimSingleNodeInstance_SetPositionWithPreviousTime_Params
 	{
 	public:
-		struct FVector                                             NewValue;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      InPosition;                                              // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      InPreviousTime;                                          // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bFireNotifies;                                           // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 	};
 
 	/**
-	 * Function Engine.DirectionalLightComponent.SetEnableLightShaftOcclusion
+	 * Function Engine.AnimSingleNodeInstance.SetPosition
 	 */
-	struct UDirectionalLightComponent_SetEnableLightShaftOcclusion_Params
+	struct UAnimSingleNodeInstance_SetPosition_Params
 	{
 	public:
-		bool                                                       bNewValue;                                               // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      InPosition;                                              // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bFireNotifies;                                           // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 	};
 
 	/**
-	 * Function Engine.DirectionalLightComponent.SetDynamicShadowDistanceStationaryLight
+	 * Function Engine.AnimSingleNodeInstance.SetPlayRate
 	 */
-	struct UDirectionalLightComponent_SetDynamicShadowDistanceStationaryLight_Params
+	struct UAnimSingleNodeInstance_SetPlayRate_Params
 	{
 	public:
-		float                                                      NewValue;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      InPlayRate;                                              // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 	};
 
 	/**
-	 * Function Engine.DirectionalLightComponent.SetDynamicShadowDistanceMovableLight
+	 * Function Engine.AnimSingleNodeInstance.SetPlaying
 	 */
-	struct UDirectionalLightComponent_SetDynamicShadowDistanceMovableLight_Params
+	struct UAnimSingleNodeInstance_SetPlaying_Params
 	{
 	public:
-		float                                                      NewValue;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bIsPlaying;                                              // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 	};
 
 	/**
-	 * Function Engine.DirectionalLightComponent.SetDynamicShadowCascades
+	 * Function Engine.AnimSingleNodeInstance.SetLooping
 	 */
-	struct UDirectionalLightComponent_SetDynamicShadowCascades_Params
+	struct UAnimSingleNodeInstance_SetLooping_Params
 	{
 	public:
-		int                                                        NewValue;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bIsLooping;                                              // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 	};
 
 	/**
-	 * Function Engine.DirectionalLightComponent.SetCascadeTransitionFraction
+	 * Function Engine.AnimSingleNodeInstance.SetBlendSpaceInput
 	 */
-	struct UDirectionalLightComponent_SetCascadeTransitionFraction_Params
+	struct UAnimSingleNodeInstance_SetBlendSpaceInput_Params
 	{
 	public:
-		float                                                      NewValue;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             InBlendInput;                                            // 0x0000(0x000C)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 	};
 
 	/**
-	 * Function Engine.DirectionalLightComponent.SetCascadeDistributionExponent
+	 * Function Engine.AnimSingleNodeInstance.SetAnimationAsset
 	 */
-	struct UDirectionalLightComponent_SetCascadeDistributionExponent_Params
+	struct UAnimSingleNodeInstance_SetAnimationAsset_Params
 	{
 	public:
-		float                                                      NewValue;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UAnimationAsset*                                     NewAsset;                                                // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bIsLooping;                                              // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      InPlayRate;                                              // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 	};
 
 	/**
-	 * Function Engine.SphereComponent.SetSphereRadius
+	 * Function Engine.AnimSingleNodeInstance.PlayAnim
 	 */
-	struct USphereComponent_SetSphereRadius_Params
+	struct UAnimSingleNodeInstance_PlayAnim_Params
 	{
 	public:
-		float                                                      InSphereRadius;                                          // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bUpdateOverlaps;                                         // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bIsLooping;                                              // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      InPlayRate;                                              // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      InStartPosition;                                         // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 	};
 
 	/**
-	 * Function Engine.SphereComponent.GetUnscaledSphereRadius
+	 * Function Engine.AnimSingleNodeInstance.GetLength
 	 */
-	struct USphereComponent_GetUnscaledSphereRadius_Params
+	struct UAnimSingleNodeInstance_GetLength_Params
 	{
 	public:
 		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -17362,4081 +15736,395 @@ namespace CG
 	};
 
 	/**
-	 * Function Engine.SphereComponent.GetShapeScale
+	 * Function Engine.AnimSingleNodeInstance.GetAnimationAsset
 	 */
-	struct USphereComponent_GetShapeScale_Params
+	struct UAnimSingleNodeInstance_GetAnimationAsset_Params
 	{
 	public:
-		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UAnimationAsset*                                     ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 	};
 
 	/**
-	 * Function Engine.SphereComponent.GetScaledSphereRadius
+	 * Function Engine.ArrowComponent.SetArrowColor
 	 */
-	struct USphereComponent_GetScaledSphereRadius_Params
+	struct UArrowComponent_SetArrowColor_Params
 	{
 	public:
-		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FLinearColor                                        NewColor;                                                // 0x0000(0x0010)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 	};
 
 	/**
-	 * Function Engine.Emitter.ToggleActive
+	 * Function Engine.AsyncActionHandleSaveGame.AsyncSaveGameToSlot
 	 */
-	struct AEmitter_ToggleActive_Params
+	struct UAsyncActionHandleSaveGame_AsyncSaveGameToSlot_Params
 	{
-	};
-
-	/**
-	 * Function Engine.Emitter.SetVectorParameter
-	 */
-	struct AEmitter_SetVectorParameter_Params
-	{
-	public:
-		class FName                                                ParameterName;                                           // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             Param;                                                   // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.Emitter.SetTemplate
-	 */
-	struct AEmitter_SetTemplate_Params
-	{
-	public:
-		class UParticleSystem*                                     NewTemplate;                                             // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.Emitter.SetMaterialParameter
-	 */
-	struct AEmitter_SetMaterialParameter_Params
-	{
-	public:
-		class FName                                                ParameterName;                                           // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class UMaterialInterface*                                  Param;                                                   // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.Emitter.SetFloatParameter
-	 */
-	struct AEmitter_SetFloatParameter_Params
-	{
-	public:
-		class FName                                                ParameterName;                                           // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      Param;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.Emitter.SetColorParameter
-	 */
-	struct AEmitter_SetColorParameter_Params
-	{
-	public:
-		class FName                                                ParameterName;                                           // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FLinearColor                                        Param;                                                   // 0x0000(0x0010)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.Emitter.SetActorParameter
-	 */
-	struct AEmitter_SetActorParameter_Params
-	{
-	public:
-		class FName                                                ParameterName;                                           // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class AActor*                                              Param;                                                   // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.Emitter.OnRep_bCurrentlyActive
-	 */
-	struct AEmitter_OnRep_bCurrentlyActive_Params
-	{
-	};
-
-	/**
-	 * Function Engine.Emitter.OnParticleSystemFinished
-	 */
-	struct AEmitter_OnParticleSystemFinished_Params
-	{
-	public:
-		class UParticleSystemComponent*                            FinishedComponent;                                       // 0x0000(0x0008)  (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.Emitter.IsActive
-	 */
-	struct AEmitter_IsActive_Params
-	{
-	public:
-		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.Emitter.Deactivate
-	 */
-	struct AEmitter_Deactivate_Params
-	{
-	};
-
-	/**
-	 * Function Engine.Emitter.Activate
-	 */
-	struct AEmitter_Activate_Params
-	{
-	};
-
-	/**
-	 * Function Engine.ExponentialHeightFog.OnRep_bEnabled
-	 */
-	struct AExponentialHeightFog_OnRep_bEnabled_Params
-	{
-	};
-
-	/**
-	 * Function Engine.ExponentialHeightFogComponent.SetVolumetricFogScatteringDistribution
-	 */
-	struct UExponentialHeightFogComponent_SetVolumetricFogScatteringDistribution_Params
-	{
-	public:
-		float                                                      NewValue;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.ExponentialHeightFogComponent.SetVolumetricFogExtinctionScale
-	 */
-	struct UExponentialHeightFogComponent_SetVolumetricFogExtinctionScale_Params
-	{
-	public:
-		float                                                      NewValue;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.ExponentialHeightFogComponent.SetVolumetricFogEmissive
-	 */
-	struct UExponentialHeightFogComponent_SetVolumetricFogEmissive_Params
-	{
-	public:
-		struct FLinearColor                                        NewValue;                                                // 0x0000(0x0010)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.ExponentialHeightFogComponent.SetVolumetricFogDistance
-	 */
-	struct UExponentialHeightFogComponent_SetVolumetricFogDistance_Params
-	{
-	public:
-		float                                                      NewValue;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.ExponentialHeightFogComponent.SetVolumetricFogAlbedo
-	 */
-	struct UExponentialHeightFogComponent_SetVolumetricFogAlbedo_Params
-	{
-	public:
-		struct FColor                                              NewValue;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.ExponentialHeightFogComponent.SetVolumetricFog
-	 */
-	struct UExponentialHeightFogComponent_SetVolumetricFog_Params
-	{
-	public:
-		bool                                                       bNewValue;                                               // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.ExponentialHeightFogComponent.SetStartDistance
-	 */
-	struct UExponentialHeightFogComponent_SetStartDistance_Params
-	{
-	public:
-		float                                                      Value;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.ExponentialHeightFogComponent.SetNonDirectionalInscatteringColorDistance
-	 */
-	struct UExponentialHeightFogComponent_SetNonDirectionalInscatteringColorDistance_Params
-	{
-	public:
-		float                                                      Value;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.ExponentialHeightFogComponent.SetInscatteringTextureTint
-	 */
-	struct UExponentialHeightFogComponent_SetInscatteringTextureTint_Params
-	{
-	public:
-		struct FLinearColor                                        Value;                                                   // 0x0000(0x0010)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.ExponentialHeightFogComponent.SetInscatteringColorCubemapAngle
-	 */
-	struct UExponentialHeightFogComponent_SetInscatteringColorCubemapAngle_Params
-	{
-	public:
-		float                                                      Value;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.ExponentialHeightFogComponent.SetInscatteringColorCubemap
-	 */
-	struct UExponentialHeightFogComponent_SetInscatteringColorCubemap_Params
-	{
-	public:
-		class UTextureCube*                                        Value;                                                   // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.ExponentialHeightFogComponent.SetFullyDirectionalInscatteringColorDistance
-	 */
-	struct UExponentialHeightFogComponent_SetFullyDirectionalInscatteringColorDistance_Params
-	{
-	public:
-		float                                                      Value;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.ExponentialHeightFogComponent.SetFogMaxOpacity
-	 */
-	struct UExponentialHeightFogComponent_SetFogMaxOpacity_Params
-	{
-	public:
-		float                                                      Value;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.ExponentialHeightFogComponent.SetFogInscatteringColor
-	 */
-	struct UExponentialHeightFogComponent_SetFogInscatteringColor_Params
-	{
-	public:
-		struct FLinearColor                                        Value;                                                   // 0x0000(0x0010)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.ExponentialHeightFogComponent.SetFogHeightFalloff
-	 */
-	struct UExponentialHeightFogComponent_SetFogHeightFalloff_Params
-	{
-	public:
-		float                                                      Value;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.ExponentialHeightFogComponent.SetFogDensity
-	 */
-	struct UExponentialHeightFogComponent_SetFogDensity_Params
-	{
-	public:
-		float                                                      Value;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.ExponentialHeightFogComponent.SetFogCutoffDistance
-	 */
-	struct UExponentialHeightFogComponent_SetFogCutoffDistance_Params
-	{
-	public:
-		float                                                      Value;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.ExponentialHeightFogComponent.SetDirectionalInscatteringStartDistance
-	 */
-	struct UExponentialHeightFogComponent_SetDirectionalInscatteringStartDistance_Params
-	{
-	public:
-		float                                                      Value;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.ExponentialHeightFogComponent.SetDirectionalInscatteringExponent
-	 */
-	struct UExponentialHeightFogComponent_SetDirectionalInscatteringExponent_Params
-	{
-	public:
-		float                                                      Value;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.ExponentialHeightFogComponent.SetDirectionalInscatteringColor
-	 */
-	struct UExponentialHeightFogComponent_SetDirectionalInscatteringColor_Params
-	{
-	public:
-		struct FLinearColor                                        Value;                                                   // 0x0000(0x0010)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.Exporter.ScriptRunAssetExportTask
-	 */
-	struct UExporter_ScriptRunAssetExportTask_Params
-	{
-	public:
-		class UAssetExportTask*                                    Task;                                                    // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.Exporter.RunAssetExportTasks
-	 */
-	struct UExporter_RunAssetExportTasks_Params
-	{
-	public:
-		TArray<class UAssetExportTask*>                            ExportTasks;                                             // 0x0000(0x0010)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.Exporter.RunAssetExportTask
-	 */
-	struct UExporter_RunAssetExportTask_Params
-	{
-	public:
-		class UAssetExportTask*                                    Task;                                                    // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.ForceFeedbackComponent.Stop
-	 */
-	struct UForceFeedbackComponent_Stop_Params
-	{
-	};
-
-	/**
-	 * Function Engine.ForceFeedbackComponent.SetIntensityMultiplier
-	 */
-	struct UForceFeedbackComponent_SetIntensityMultiplier_Params
-	{
-	public:
-		float                                                      NewIntensityMultiplier;                                  // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.ForceFeedbackComponent.SetForceFeedbackEffect
-	 */
-	struct UForceFeedbackComponent_SetForceFeedbackEffect_Params
-	{
-	public:
-		class UForceFeedbackEffect*                                NewForceFeedbackEffect;                                  // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.ForceFeedbackComponent.Play
-	 */
-	struct UForceFeedbackComponent_Play_Params
-	{
-	public:
-		float                                                      StartTime;                                               // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.ForceFeedbackComponent.BP_GetAttenuationSettingsToApply
-	 */
-	struct UForceFeedbackComponent_BP_GetAttenuationSettingsToApply_Params
-	{
-	public:
-		struct FForceFeedbackAttenuationSettings                   OutAttenuationSettings;                                  // 0x0000(0x00B0)  (Parm, OutParm, NativeAccessSpecifierPublic)
-		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.ForceFeedbackComponent.AdjustAttenuation
-	 */
-	struct UForceFeedbackComponent_AdjustAttenuation_Params
-	{
-	public:
-		struct FForceFeedbackAttenuationSettings                   InAttenuationSettings;                                   // 0x0000(0x00B0)  (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.UnloadStreamLevel
-	 */
-	struct UGameplayStatics_UnloadStreamLevel_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class FName                                                LevelName;                                               // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FLatentActionInfo                                   LatentInfo;                                              // 0x0000(0x0018)  (Parm, NoDestructor, NativeAccessSpecifierPublic)
-		bool                                                       bShouldBlockOnUnload;                                    // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.SuggestProjectileVelocity_CustomArc
-	 */
-	struct UGameplayStatics_SuggestProjectileVelocity_CustomArc_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             OutLaunchVelocity;                                       // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             StartPos;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             EndPos;                                                  // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      OverrideGravityZ;                                        // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      ArcParam;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.SpawnSoundAttached
-	 */
-	struct UGameplayStatics_SpawnSoundAttached_Params
-	{
-	public:
-		class USoundBase*                                          Sound;                                                   // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class USceneComponent*                                     AttachToComponent;                                       // 0x0000(0x0008)  (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class FName                                                AttachPointName;                                         // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             Location;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FRotator                                            Rotation;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
-		Engine_EAttachLocation                                     LocationType;                                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bStopWhenAttachedToDestroyed;                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      VolumeMultiplier;                                        // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      PitchMultiplier;                                         // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      StartTime;                                               // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class USoundAttenuation*                                   AttenuationSettings;                                     // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class USoundConcurrency*                                   ConcurrencySettings;                                     // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bAutoDestroy;                                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class UAudioComponent*                                     ReturnValue;                                             // 0x0000(0x0008)  (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.SpawnSoundAtLocation
-	 */
-	struct UGameplayStatics_SpawnSoundAtLocation_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class USoundBase*                                          Sound;                                                   // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             Location;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FRotator                                            Rotation;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
-		float                                                      VolumeMultiplier;                                        // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      PitchMultiplier;                                         // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      StartTime;                                               // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class USoundAttenuation*                                   AttenuationSettings;                                     // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class USoundConcurrency*                                   ConcurrencySettings;                                     // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bAutoDestroy;                                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class UAudioComponent*                                     ReturnValue;                                             // 0x0000(0x0008)  (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.SpawnSound2D
-	 */
-	struct UGameplayStatics_SpawnSound2D_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class USoundBase*                                          Sound;                                                   // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      VolumeMultiplier;                                        // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      PitchMultiplier;                                         // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      StartTime;                                               // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class USoundConcurrency*                                   ConcurrencySettings;                                     // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bPersistAcrossLevelTransition;                           // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bAutoDestroy;                                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class UAudioComponent*                                     ReturnValue;                                             // 0x0000(0x0008)  (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.SpawnObject
-	 */
-	struct UGameplayStatics_SpawnObject_Params
-	{
-	public:
-		class UClass*                                              ObjectClass;                                             // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class UObject*                                             Outer;                                                   // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class UObject*                                             ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.SpawnForceFeedbackAttached
-	 */
-	struct UGameplayStatics_SpawnForceFeedbackAttached_Params
-	{
-	public:
-		class UForceFeedbackEffect*                                ForceFeedbackEffect;                                     // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class USceneComponent*                                     AttachToComponent;                                       // 0x0000(0x0008)  (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class FName                                                AttachPointName;                                         // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             Location;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FRotator                                            Rotation;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
-		Engine_EAttachLocation                                     LocationType;                                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bStopWhenAttachedToDestroyed;                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bLooping;                                                // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      IntensityMultiplier;                                     // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      StartTime;                                               // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class UForceFeedbackAttenuation*                           AttenuationSettings;                                     // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bAutoDestroy;                                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class UForceFeedbackComponent*                             ReturnValue;                                             // 0x0000(0x0008)  (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.SpawnForceFeedbackAtLocation
-	 */
-	struct UGameplayStatics_SpawnForceFeedbackAtLocation_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class UForceFeedbackEffect*                                ForceFeedbackEffect;                                     // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             Location;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FRotator                                            Rotation;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
-		bool                                                       bLooping;                                                // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      IntensityMultiplier;                                     // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      StartTime;                                               // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class UForceFeedbackAttenuation*                           AttenuationSettings;                                     // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bAutoDestroy;                                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class UForceFeedbackComponent*                             ReturnValue;                                             // 0x0000(0x0008)  (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.SpawnEmitterAttached
-	 */
-	struct UGameplayStatics_SpawnEmitterAttached_Params
-	{
-	public:
-		class UParticleSystem*                                     EmitterTemplate;                                         // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class USceneComponent*                                     AttachToComponent;                                       // 0x0000(0x0008)  (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class FName                                                AttachPointName;                                         // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             Location;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FRotator                                            Rotation;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-		struct FVector                                             Scale;                                                   // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		Engine_EAttachLocation                                     LocationType;                                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bAutoDestroy;                                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		Engine_EPSCPoolMethod                                      PoolingMethod;                                           // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class UParticleSystemComponent*                            ReturnValue;                                             // 0x0000(0x0008)  (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.SpawnEmitterAtLocation
-	 */
-	struct UGameplayStatics_SpawnEmitterAtLocation_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class UParticleSystem*                                     EmitterTemplate;                                         // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             Location;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FRotator                                            Rotation;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-		struct FVector                                             Scale;                                                   // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bAutoDestroy;                                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		Engine_EPSCPoolMethod                                      PoolingMethod;                                           // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class UParticleSystemComponent*                            ReturnValue;                                             // 0x0000(0x0008)  (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.SpawnDialogueAttached
-	 */
-	struct UGameplayStatics_SpawnDialogueAttached_Params
-	{
-	public:
-		class UDialogueWave*                                       Dialogue;                                                // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FDialogueContext                                    Context;                                                 // 0x0000(0x0018)  (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-		class USceneComponent*                                     AttachToComponent;                                       // 0x0000(0x0008)  (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class FName                                                AttachPointName;                                         // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             Location;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FRotator                                            Rotation;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
-		Engine_EAttachLocation                                     LocationType;                                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bStopWhenAttachedToDestroyed;                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      VolumeMultiplier;                                        // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      PitchMultiplier;                                         // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      StartTime;                                               // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class USoundAttenuation*                                   AttenuationSettings;                                     // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bAutoDestroy;                                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class UAudioComponent*                                     ReturnValue;                                             // 0x0000(0x0008)  (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.SpawnDialogueAtLocation
-	 */
-	struct UGameplayStatics_SpawnDialogueAtLocation_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class UDialogueWave*                                       Dialogue;                                                // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FDialogueContext                                    Context;                                                 // 0x0000(0x0018)  (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-		struct FVector                                             Location;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FRotator                                            Rotation;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
-		float                                                      VolumeMultiplier;                                        // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      PitchMultiplier;                                         // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      StartTime;                                               // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class USoundAttenuation*                                   AttenuationSettings;                                     // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bAutoDestroy;                                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class UAudioComponent*                                     ReturnValue;                                             // 0x0000(0x0008)  (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.SpawnDialogue2D
-	 */
-	struct UGameplayStatics_SpawnDialogue2D_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class UDialogueWave*                                       Dialogue;                                                // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FDialogueContext                                    Context;                                                 // 0x0000(0x0018)  (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-		float                                                      VolumeMultiplier;                                        // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      PitchMultiplier;                                         // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      StartTime;                                               // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bAutoDestroy;                                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class UAudioComponent*                                     ReturnValue;                                             // 0x0000(0x0008)  (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.SpawnDecalAttached
-	 */
-	struct UGameplayStatics_SpawnDecalAttached_Params
-	{
-	public:
-		class UMaterialInterface*                                  DecalMaterial;                                           // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             DecalSize;                                               // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class USceneComponent*                                     AttachToComponent;                                       // 0x0000(0x0008)  (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class FName                                                AttachPointName;                                         // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             Location;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FRotator                                            Rotation;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-		Engine_EAttachLocation                                     LocationType;                                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      LifeSpan;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class UDecalComponent*                                     ReturnValue;                                             // 0x0000(0x0008)  (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.SpawnDecalAtLocation
-	 */
-	struct UGameplayStatics_SpawnDecalAtLocation_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class UMaterialInterface*                                  DecalMaterial;                                           // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             DecalSize;                                               // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             Location;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FRotator                                            Rotation;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-		float                                                      LifeSpan;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class UDecalComponent*                                     ReturnValue;                                             // 0x0000(0x0008)  (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.SetWorldOriginLocation
-	 */
-	struct UGameplayStatics_SetWorldOriginLocation_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FIntVector                                          NewLocation;                                             // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.SetViewportMouseCaptureMode
-	 */
-	struct UGameplayStatics_SetViewportMouseCaptureMode_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		Engine_EMouseCaptureMode                                   MouseCaptureMode;                                        // 0x0000(0x0001)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.SetSubtitlesEnabled
-	 */
-	struct UGameplayStatics_SetSubtitlesEnabled_Params
-	{
-	public:
-		bool                                                       bEnabled;                                                // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.SetSoundMixClassOverride
-	 */
-	struct UGameplayStatics_SetSoundMixClassOverride_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class USoundMix*                                           InSoundMixModifier;                                      // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class USoundClass*                                         InSoundClass;                                            // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      Volume;                                                  // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      Pitch;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      FadeInTime;                                              // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bApplyToChildren;                                        // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.SetPlayerControllerID
-	 */
-	struct UGameplayStatics_SetPlayerControllerID_Params
-	{
-	public:
-		class APlayerController*                                   Player;                                                  // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		int                                                        ControllerId;                                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.SetMaxAudioChannelsScaled
-	 */
-	struct UGameplayStatics_SetMaxAudioChannelsScaled_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      MaxChannelCountScale;                                    // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.SetGlobalTimeDilation
-	 */
-	struct UGameplayStatics_SetGlobalTimeDilation_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      TimeDilation;                                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.SetGlobalPitchModulation
-	 */
-	struct UGameplayStatics_SetGlobalPitchModulation_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      PitchModulation;                                         // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      TimeSec;                                                 // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.SetGlobalListenerFocusParameters
-	 */
-	struct UGameplayStatics_SetGlobalListenerFocusParameters_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      FocusAzimuthScale;                                       // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      NonFocusAzimuthScale;                                    // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      FocusDistanceScale;                                      // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      NonFocusDistanceScale;                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      FocusVolumeScale;                                        // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      NonFocusVolumeScale;                                     // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      FocusPriorityScale;                                      // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      NonFocusPriorityScale;                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.SetGamePaused
-	 */
-	struct UGameplayStatics_SetGamePaused_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bPaused;                                                 // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.SetEnableWorldRendering
-	 */
-	struct UGameplayStatics_SetEnableWorldRendering_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bEnable;                                                 // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.SetBaseSoundMix
-	 */
-	struct UGameplayStatics_SetBaseSoundMix_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class USoundMix*                                           InSoundMix;                                              // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.SaveGameToSlot
-	 */
-	struct UGameplayStatics_SaveGameToSlot_Params
-	{
 	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 		class USaveGame*                                           SaveGameObject;                                          // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 		class FString                                              SlotName;                                                // 0x0000(0x0010)  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 		int                                                        UserIndex;                                               // 0x0000(0x0004)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UAsyncActionHandleSaveGame*                          ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 	};
 
 	/**
-	 * Function Engine.GameplayStatics.RemovePlayer
+	 * Function Engine.AsyncActionHandleSaveGame.AsyncLoadGameFromSlot
 	 */
-	struct UGameplayStatics_RemovePlayer_Params
-	{
-	public:
-		class APlayerController*                                   Player;                                                  // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bDestroyPawn;                                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.RebaseZeroOriginOntoLocal
-	 */
-	struct UGameplayStatics_RebaseZeroOriginOntoLocal_Params
+	struct UAsyncActionHandleSaveGame_AsyncLoadGameFromSlot_Params
 	{
 	public:
 		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             WorldLocation;                                           // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             ReturnValue;                                             // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class FString                                              SlotName;                                                // 0x0000(0x0010)  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		int                                                        UserIndex;                                               // 0x0000(0x0004)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UAsyncActionHandleSaveGame*                          ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 	};
 
 	/**
-	 * Function Engine.GameplayStatics.RebaseLocalOriginOntoZero
+	 * Function Engine.AsyncActionLoadPrimaryAsset.AsyncLoadPrimaryAsset
 	 */
-	struct UGameplayStatics_RebaseLocalOriginOntoZero_Params
+	struct UAsyncActionLoadPrimaryAsset_AsyncLoadPrimaryAsset_Params
 	{
 	public:
 		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             WorldLocation;                                           // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FPrimaryAssetId                                     PrimaryAsset;                                            // 0x0000(0x0010)  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		TArray<class FName>                                        LoadBundles;                                             // 0x0000(0x0010)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+		class UAsyncActionLoadPrimaryAsset*                        ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.AsyncActionLoadPrimaryAssetClass.AsyncLoadPrimaryAssetClass
+	 */
+	struct UAsyncActionLoadPrimaryAssetClass_AsyncLoadPrimaryAssetClass_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FPrimaryAssetId                                     PrimaryAsset;                                            // 0x0000(0x0010)  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		TArray<class FName>                                        LoadBundles;                                             // 0x0000(0x0010)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+		class UAsyncActionLoadPrimaryAssetClass*                   ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.AsyncActionLoadPrimaryAssetList.AsyncLoadPrimaryAssetList
+	 */
+	struct UAsyncActionLoadPrimaryAssetList_AsyncLoadPrimaryAssetList_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		TArray<struct FPrimaryAssetId>                             PrimaryAssetList;                                        // 0x0000(0x0010)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+		TArray<class FName>                                        LoadBundles;                                             // 0x0000(0x0010)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+		class UAsyncActionLoadPrimaryAssetList*                    ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.AsyncActionLoadPrimaryAssetClassList.AsyncLoadPrimaryAssetClassList
+	 */
+	struct UAsyncActionLoadPrimaryAssetClassList_AsyncLoadPrimaryAssetClassList_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		TArray<struct FPrimaryAssetId>                             PrimaryAssetList;                                        // 0x0000(0x0010)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+		TArray<class FName>                                        LoadBundles;                                             // 0x0000(0x0010)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+		class UAsyncActionLoadPrimaryAssetClassList*               ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.AsyncActionChangePrimaryAssetBundles.AsyncChangeBundleStateForPrimaryAssetList
+	 */
+	struct UAsyncActionChangePrimaryAssetBundles_AsyncChangeBundleStateForPrimaryAssetList_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		TArray<struct FPrimaryAssetId>                             PrimaryAssetList;                                        // 0x0000(0x0010)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+		TArray<class FName>                                        AddBundles;                                              // 0x0000(0x0010)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+		TArray<class FName>                                        RemoveBundles;                                           // 0x0000(0x0010)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+		class UAsyncActionChangePrimaryAssetBundles*               ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.AsyncActionChangePrimaryAssetBundles.AsyncChangeBundleStateForMatchingPrimaryAssets
+	 */
+	struct UAsyncActionChangePrimaryAssetBundles_AsyncChangeBundleStateForMatchingPrimaryAssets_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		TArray<class FName>                                        NewBundles;                                              // 0x0000(0x0010)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+		TArray<class FName>                                        OldBundles;                                              // 0x0000(0x0010)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+		class UAsyncActionChangePrimaryAssetBundles*               ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.AtmosphericFogComponent.StartPrecompute
+	 */
+	struct UAtmosphericFogComponent_StartPrecompute_Params
+	{
+	};
+
+	/**
+	 * Function Engine.AtmosphericFogComponent.SetSunMultiplier
+	 */
+	struct UAtmosphericFogComponent_SetSunMultiplier_Params
+	{
+	public:
+		float                                                      NewSunMultiplier;                                        // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.AtmosphericFogComponent.SetStartDistance
+	 */
+	struct UAtmosphericFogComponent_SetStartDistance_Params
+	{
+	public:
+		float                                                      NewStartDistance;                                        // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.AtmosphericFogComponent.SetPrecomputeParams
+	 */
+	struct UAtmosphericFogComponent_SetPrecomputeParams_Params
+	{
+	public:
+		float                                                      DensityHeight;                                           // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		int                                                        MaxScatteringOrder;                                      // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		int                                                        InscatterAltitudeSampleNum;                              // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.AtmosphericFogComponent.SetFogMultiplier
+	 */
+	struct UAtmosphericFogComponent_SetFogMultiplier_Params
+	{
+	public:
+		float                                                      NewFogMultiplier;                                        // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.AtmosphericFogComponent.SetDistanceScale
+	 */
+	struct UAtmosphericFogComponent_SetDistanceScale_Params
+	{
+	public:
+		float                                                      NewDistanceScale;                                        // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.AtmosphericFogComponent.SetDistanceOffset
+	 */
+	struct UAtmosphericFogComponent_SetDistanceOffset_Params
+	{
+	public:
+		float                                                      NewDistanceOffset;                                       // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.AtmosphericFogComponent.SetDensityOffset
+	 */
+	struct UAtmosphericFogComponent_SetDensityOffset_Params
+	{
+	public:
+		float                                                      NewDensityOffset;                                        // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.AtmosphericFogComponent.SetDensityMultiplier
+	 */
+	struct UAtmosphericFogComponent_SetDensityMultiplier_Params
+	{
+	public:
+		float                                                      NewDensityMultiplier;                                    // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.AtmosphericFogComponent.SetDefaultLightColor
+	 */
+	struct UAtmosphericFogComponent_SetDefaultLightColor_Params
+	{
+	public:
+		struct FLinearColor                                        NewLightColor;                                           // 0x0000(0x0010)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.AtmosphericFogComponent.SetDefaultBrightness
+	 */
+	struct UAtmosphericFogComponent_SetDefaultBrightness_Params
+	{
+	public:
+		float                                                      NewBrightness;                                           // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.AtmosphericFogComponent.SetAltitudeScale
+	 */
+	struct UAtmosphericFogComponent_SetAltitudeScale_Params
+	{
+	public:
+		float                                                      NewAltitudeScale;                                        // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.AtmosphericFogComponent.DisableSunDisk
+	 */
+	struct UAtmosphericFogComponent_DisableSunDisk_Params
+	{
+	public:
+		bool                                                       NewSunDisk;                                              // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.AtmosphericFogComponent.DisableGroundScattering
+	 */
+	struct UAtmosphericFogComponent_DisableGroundScattering_Params
+	{
+	public:
+		bool                                                       NewGroundScattering;                                     // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.AudioVolume.SetReverbSettings
+	 */
+	struct AAudioVolume_SetReverbSettings_Params
+	{
+	public:
+		struct FReverbSettings                                     NewReverbSettings;                                       // 0x0000(0x0020)  (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.AudioVolume.SetPriority
+	 */
+	struct AAudioVolume_SetPriority_Params
+	{
+	public:
+		float                                                      NewPriority;                                             // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.AudioVolume.SetInteriorSettings
+	 */
+	struct AAudioVolume_SetInteriorSettings_Params
+	{
+	public:
+		struct FInteriorSettings                                   NewInteriorSettings;                                     // 0x0000(0x0024)  (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.AudioVolume.SetEnabled
+	 */
+	struct AAudioVolume_SetEnabled_Params
+	{
+	public:
+		bool                                                       bNewEnabled;                                             // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.AudioVolume.OnRep_bEnabled
+	 */
+	struct AAudioVolume_OnRep_bEnabled_Params
+	{
+	};
+
+	/**
+	 * Function Engine.AvoidanceManager.RegisterMovementComponent
+	 */
+	struct UAvoidanceManager_RegisterMovementComponent_Params
+	{
+	public:
+		class UMovementComponent*                                  MovementComp;                                            // 0x0000(0x0008)  (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      AvoidanceWeight;                                         // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.AvoidanceManager.GetObjectCount
+	 */
+	struct UAvoidanceManager_GetObjectCount_Params
+	{
+	public:
+		int                                                        ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.AvoidanceManager.GetNewAvoidanceUID
+	 */
+	struct UAvoidanceManager_GetNewAvoidanceUID_Params
+	{
+	public:
+		int                                                        ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.AvoidanceManager.GetAvoidanceVelocityForComponent
+	 */
+	struct UAvoidanceManager_GetAvoidanceVelocityForComponent_Params
+	{
+	public:
+		class UMovementComponent*                                  MovementComp;                                            // 0x0000(0x0008)  (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 		struct FVector                                             ReturnValue;                                             // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 	};
 
 	/**
-	 * Function Engine.GameplayStatics.PushSoundMixModifier
+	 * Function Engine.BillboardComponent.SetUV
 	 */
-	struct UGameplayStatics_PushSoundMixModifier_Params
+	struct UBillboardComponent_SetUV_Params
 	{
 	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class USoundMix*                                           InSoundMixModifier;                                      // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		int                                                        NewU;                                                    // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		int                                                        NewUL;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		int                                                        NewV;                                                    // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		int                                                        NewVL;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 	};
 
 	/**
-	 * Function Engine.GameplayStatics.ProjectWorldToScreen
+	 * Function Engine.BillboardComponent.SetSpriteAndUV
 	 */
-	struct UGameplayStatics_ProjectWorldToScreen_Params
+	struct UBillboardComponent_SetSpriteAndUV_Params
 	{
 	public:
-		class APlayerController*                                   Player;                                                  // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             WorldPosition;                                           // 0x0000(0x000C)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector2D                                           ScreenPosition;                                          // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bPlayerViewportRelative;                                 // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UTexture2D*                                          NewSprite;                                               // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		int                                                        NewU;                                                    // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		int                                                        NewUL;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		int                                                        NewV;                                                    // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		int                                                        NewVL;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 	};
 
 	/**
-	 * Function Engine.GameplayStatics.PopSoundMixModifier
+	 * Function Engine.BillboardComponent.SetSprite
 	 */
-	struct UGameplayStatics_PopSoundMixModifier_Params
+	struct UBillboardComponent_SetSprite_Params
 	{
 	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class USoundMix*                                           InSoundMixModifier;                                      // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UTexture2D*                                          NewSprite;                                               // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.PlayWorldCameraShake
-	 */
-	struct UGameplayStatics_PlayWorldCameraShake_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class UClass*                                              Shake;                                                   // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             Epicenter;                                               // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      InnerRadius;                                             // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      OuterRadius;                                             // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      Falloff;                                                 // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bOrientShakeTowardsEpicenter;                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.PlaySoundAtLocation
-	 */
-	struct UGameplayStatics_PlaySoundAtLocation_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class USoundBase*                                          Sound;                                                   // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             Location;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FRotator                                            Rotation;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
-		float                                                      VolumeMultiplier;                                        // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      PitchMultiplier;                                         // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      StartTime;                                               // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class USoundAttenuation*                                   AttenuationSettings;                                     // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class USoundConcurrency*                                   ConcurrencySettings;                                     // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class AActor*                                              OwningActor;                                             // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.PlaySound2D
-	 */
-	struct UGameplayStatics_PlaySound2D_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class USoundBase*                                          Sound;                                                   // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      VolumeMultiplier;                                        // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      PitchMultiplier;                                         // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      StartTime;                                               // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class USoundConcurrency*                                   ConcurrencySettings;                                     // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class AActor*                                              OwningActor;                                             // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.PlayDialogueAtLocation
-	 */
-	struct UGameplayStatics_PlayDialogueAtLocation_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class UDialogueWave*                                       Dialogue;                                                // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FDialogueContext                                    Context;                                                 // 0x0000(0x0018)  (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-		struct FVector                                             Location;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FRotator                                            Rotation;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
-		float                                                      VolumeMultiplier;                                        // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      PitchMultiplier;                                         // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      StartTime;                                               // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class USoundAttenuation*                                   AttenuationSettings;                                     // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.PlayDialogue2D
-	 */
-	struct UGameplayStatics_PlayDialogue2D_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class UDialogueWave*                                       Dialogue;                                                // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FDialogueContext                                    Context;                                                 // 0x0000(0x0018)  (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-		float                                                      VolumeMultiplier;                                        // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      PitchMultiplier;                                         // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      StartTime;                                               // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.ParseOption
-	 */
-	struct UGameplayStatics_ParseOption_Params
-	{
-	public:
-		class FString                                              Options;                                                 // 0x0000(0x0010)  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class FString                                              Key;                                                     // 0x0000(0x0010)  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class FString                                              ReturnValue;                                             // 0x0000(0x0010)  (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.OpenLevel
-	 */
-	struct UGameplayStatics_OpenLevel_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class FName                                                LevelName;                                               // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bAbsolute;                                               // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class FString                                              Options;                                                 // 0x0000(0x0010)  (Parm, ZeroConstructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.MakeHitResult
-	 */
-	struct UGameplayStatics_MakeHitResult_Params
-	{
-	public:
-		bool                                                       bBlockingHit;                                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bInitialOverlap;                                         // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      Time;                                                    // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      Distance;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             Location;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             ImpactPoint;                                             // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             Normal;                                                  // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             ImpactNormal;                                            // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class UPhysicalMaterial*                                   PhysMat;                                                 // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class AActor*                                              HitActor;                                                // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class UPrimitiveComponent*                                 HitComponent;                                            // 0x0000(0x0008)  (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class FName                                                HitBoneName;                                             // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		int                                                        HitItem;                                                 // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		int                                                        FaceIndex;                                               // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             TraceStart;                                              // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             TraceEnd;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FHitResult                                          ReturnValue;                                             // 0x0000(0x0088)  (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.LoadStreamLevel
-	 */
-	struct UGameplayStatics_LoadStreamLevel_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class FName                                                LevelName;                                               // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bMakeVisibleAfterLoad;                                   // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bShouldBlockOnLoad;                                      // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FLatentActionInfo                                   LatentInfo;                                              // 0x0000(0x0018)  (Parm, NoDestructor, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.LoadGameFromSlot
-	 */
-	struct UGameplayStatics_LoadGameFromSlot_Params
-	{
-	public:
-		class FString                                              SlotName;                                                // 0x0000(0x0010)  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		int                                                        UserIndex;                                               // 0x0000(0x0004)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class USaveGame*                                           ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.IsGamePaused
-	 */
-	struct UGameplayStatics_IsGamePaused_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.HasOption
-	 */
-	struct UGameplayStatics_HasOption_Params
-	{
-	public:
-		class FString                                              Options;                                                 // 0x0000(0x0010)  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class FString                                              InKey;                                                   // 0x0000(0x0010)  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.HasLaunchOption
-	 */
-	struct UGameplayStatics_HasLaunchOption_Params
-	{
-	public:
-		class FString                                              OptionToCheck;                                           // 0x0000(0x0010)  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.GrassOverlappingSphereCount
-	 */
-	struct UGameplayStatics_GrassOverlappingSphereCount_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class UStaticMesh*                                         StaticMesh;                                              // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             CenterPosition;                                          // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      Radius;                                                  // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		int                                                        ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.GetWorldOriginLocation
-	 */
-	struct UGameplayStatics_GetWorldOriginLocation_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FIntVector                                          ReturnValue;                                             // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.GetWorldDeltaSeconds
-	 */
-	struct UGameplayStatics_GetWorldDeltaSeconds_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.GetViewportMouseCaptureMode
-	 */
-	struct UGameplayStatics_GetViewportMouseCaptureMode_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		Engine_EMouseCaptureMode                                   ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.GetUnpausedTimeSeconds
-	 */
-	struct UGameplayStatics_GetUnpausedTimeSeconds_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.GetTimeSeconds
-	 */
-	struct UGameplayStatics_GetTimeSeconds_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.GetSurfaceType
-	 */
-	struct UGameplayStatics_GetSurfaceType_Params
-	{
-	public:
-		struct FHitResult                                          Hit;                                                     // 0x0000(0x0088)  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-		Engine_EPhysicalSurface                                    ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.GetStreamingLevel
-	 */
-	struct UGameplayStatics_GetStreamingLevel_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class FName                                                PackageName;                                             // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class ULevelStreaming*                                     ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.GetRealTimeSeconds
-	 */
-	struct UGameplayStatics_GetRealTimeSeconds_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.GetPlayerPawn
-	 */
-	struct UGameplayStatics_GetPlayerPawn_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		int                                                        PlayerIndex;                                             // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class APawn*                                               ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.GetPlayerControllerID
-	 */
-	struct UGameplayStatics_GetPlayerControllerID_Params
-	{
-	public:
-		class APlayerController*                                   Player;                                                  // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		int                                                        ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.GetPlayerControllerFromID
-	 */
-	struct UGameplayStatics_GetPlayerControllerFromID_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		int                                                        ControllerId;                                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class APlayerController*                                   ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.GetPlayerController
-	 */
-	struct UGameplayStatics_GetPlayerController_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		int                                                        PlayerIndex;                                             // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class APlayerController*                                   ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.GetPlayerCharacter
-	 */
-	struct UGameplayStatics_GetPlayerCharacter_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		int                                                        PlayerIndex;                                             // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class ACharacter*                                          ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.GetPlayerCameraManager
-	 */
-	struct UGameplayStatics_GetPlayerCameraManager_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		int                                                        PlayerIndex;                                             // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class APlayerCameraManager*                                ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.GetPlatformName
-	 */
-	struct UGameplayStatics_GetPlatformName_Params
-	{
-	public:
-		class FString                                              ReturnValue;                                             // 0x0000(0x0010)  (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.GetObjectClass
-	 */
-	struct UGameplayStatics_GetObjectClass_Params
-	{
-	public:
-		class UObject*                                             Object;                                                  // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class UClass*                                              ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.GetMaxAudioChannelCount
-	 */
-	struct UGameplayStatics_GetMaxAudioChannelCount_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		int                                                        ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.GetKeyValue
-	 */
-	struct UGameplayStatics_GetKeyValue_Params
-	{
-	public:
-		class FString                                              Pair;                                                    // 0x0000(0x0010)  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class FString                                              Key;                                                     // 0x0000(0x0010)  (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class FString                                              Value;                                                   // 0x0000(0x0010)  (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.GetIntOption
-	 */
-	struct UGameplayStatics_GetIntOption_Params
-	{
-	public:
-		class FString                                              Options;                                                 // 0x0000(0x0010)  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class FString                                              Key;                                                     // 0x0000(0x0010)  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		int                                                        DefaultValue;                                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		int                                                        ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.GetGlobalTimeDilation
-	 */
-	struct UGameplayStatics_GetGlobalTimeDilation_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.GetGameState
-	 */
-	struct UGameplayStatics_GetGameState_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class AGameStateBase*                                      ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.GetGameMode
-	 */
-	struct UGameplayStatics_GetGameMode_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class AGameModeBase*                                       ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.GetGameInstance
-	 */
-	struct UGameplayStatics_GetGameInstance_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class UGameInstance*                                       ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.GetEnableWorldRendering
-	 */
-	struct UGameplayStatics_GetEnableWorldRendering_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.GetCurrentReverbEffect
-	 */
-	struct UGameplayStatics_GetCurrentReverbEffect_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class UReverbEffect*                                       ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.GetCurrentLevelName
-	 */
-	struct UGameplayStatics_GetCurrentLevelName_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bRemovePrefixString;                                     // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class FString                                              ReturnValue;                                             // 0x0000(0x0010)  (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.GetAudioTimeSeconds
-	 */
-	struct UGameplayStatics_GetAudioTimeSeconds_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.GetAllActorsWithTag
-	 */
-	struct UGameplayStatics_GetAllActorsWithTag_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class FName                                                Tag;                                                     // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		TArray<class AActor*>                                      OutActors;                                               // 0x0000(0x0010)  (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.GetAllActorsWithInterface
-	 */
-	struct UGameplayStatics_GetAllActorsWithInterface_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class UClass*                                              Interface;                                               // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		TArray<class AActor*>                                      OutActors;                                               // 0x0000(0x0010)  (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.GetAllActorsOfClassWithTag
-	 */
-	struct UGameplayStatics_GetAllActorsOfClassWithTag_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class UClass*                                              ActorClass;                                              // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class FName                                                Tag;                                                     // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		TArray<class AActor*>                                      OutActors;                                               // 0x0000(0x0010)  (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.GetAllActorsOfClass
-	 */
-	struct UGameplayStatics_GetAllActorsOfClass_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class UClass*                                              ActorClass;                                              // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		TArray<class AActor*>                                      OutActors;                                               // 0x0000(0x0010)  (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.GetActorOfClass
-	 */
-	struct UGameplayStatics_GetActorOfClass_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class UClass*                                              ActorClass;                                              // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class AActor*                                              ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.GetActorArrayBounds
-	 */
-	struct UGameplayStatics_GetActorArrayBounds_Params
-	{
-	public:
-		TArray<class AActor*>                                      Actors;                                                  // 0x0000(0x0010)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-		bool                                                       bOnlyCollidingComponents;                                // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             Center;                                                  // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             BoxExtent;                                               // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.GetActorArrayAverageLocation
-	 */
-	struct UGameplayStatics_GetActorArrayAverageLocation_Params
-	{
-	public:
-		TArray<class AActor*>                                      Actors;                                                  // 0x0000(0x0010)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-		struct FVector                                             ReturnValue;                                             // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.GetAccurateRealTime
-	 */
-	struct UGameplayStatics_GetAccurateRealTime_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		int                                                        Seconds;                                                 // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      PartialSeconds;                                          // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.FlushLevelStreaming
-	 */
-	struct UGameplayStatics_FlushLevelStreaming_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.FinishSpawningActor
-	 */
-	struct UGameplayStatics_FinishSpawningActor_Params
-	{
-	public:
-		class AActor*                                              Actor;                                                   // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FTransform                                          SpawnTransform;                                          // 0x0000(0x0030)  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-		class AActor*                                              ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.FindCollisionUV
-	 */
-	struct UGameplayStatics_FindCollisionUV_Params
-	{
-	public:
-		struct FHitResult                                          Hit;                                                     // 0x0000(0x0088)  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-		int                                                        UVChannel;                                               // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector2D                                           UV;                                                      // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.EnableLiveStreaming
-	 */
-	struct UGameplayStatics_EnableLiveStreaming_Params
-	{
-	public:
-		bool                                                       enable;                                                  // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.DoesSaveGameExist
-	 */
-	struct UGameplayStatics_DoesSaveGameExist_Params
-	{
-	public:
-		class FString                                              SlotName;                                                // 0x0000(0x0010)  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		int                                                        UserIndex;                                               // 0x0000(0x0004)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.DeprojectScreenToWorld
-	 */
-	struct UGameplayStatics_DeprojectScreenToWorld_Params
-	{
-	public:
-		class APlayerController*                                   Player;                                                  // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector2D                                           ScreenPosition;                                          // 0x0000(0x0008)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             WorldPosition;                                           // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             WorldDirection;                                          // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.DeleteGameInSlot
-	 */
-	struct UGameplayStatics_DeleteGameInSlot_Params
-	{
-	public:
-		class FString                                              SlotName;                                                // 0x0000(0x0010)  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		int                                                        UserIndex;                                               // 0x0000(0x0004)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.DeactivateReverbEffect
-	 */
-	struct UGameplayStatics_DeactivateReverbEffect_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class FName                                                TagName;                                                 // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.CreateSound2D
-	 */
-	struct UGameplayStatics_CreateSound2D_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class USoundBase*                                          Sound;                                                   // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      VolumeMultiplier;                                        // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      PitchMultiplier;                                         // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      StartTime;                                               // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class USoundConcurrency*                                   ConcurrencySettings;                                     // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bPersistAcrossLevelTransition;                           // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bAutoDestroy;                                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class UAudioComponent*                                     ReturnValue;                                             // 0x0000(0x0008)  (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.CreateSaveGameObject
-	 */
-	struct UGameplayStatics_CreateSaveGameObject_Params
-	{
-	public:
-		class UClass*                                              SaveGameClass;                                           // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class USaveGame*                                           ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.CreatePlayer
-	 */
-	struct UGameplayStatics_CreatePlayer_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		int                                                        ControllerId;                                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bSpawnPlayerController;                                  // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class APlayerController*                                   ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.ClearSoundMixModifiers
-	 */
-	struct UGameplayStatics_ClearSoundMixModifiers_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.ClearSoundMixClassOverride
-	 */
-	struct UGameplayStatics_ClearSoundMixClassOverride_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class USoundMix*                                           InSoundMixModifier;                                      // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class USoundClass*                                         InSoundClass;                                            // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      FadeOutTime;                                             // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.CancelAsyncLoading
-	 */
-	struct UGameplayStatics_CancelAsyncLoading_Params
-	{
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.BreakHitResult
-	 */
-	struct UGameplayStatics_BreakHitResult_Params
-	{
-	public:
-		struct FHitResult                                          Hit;                                                     // 0x0000(0x0088)  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-		bool                                                       bBlockingHit;                                            // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bInitialOverlap;                                         // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      Time;                                                    // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      Distance;                                                // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             Location;                                                // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             ImpactPoint;                                             // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             Normal;                                                  // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             ImpactNormal;                                            // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class UPhysicalMaterial*                                   PhysMat;                                                 // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class AActor*                                              HitActor;                                                // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class UPrimitiveComponent*                                 HitComponent;                                            // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class FName                                                HitBoneName;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		int                                                        HitItem;                                                 // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		int                                                        FaceIndex;                                               // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             TraceStart;                                              // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             TraceEnd;                                                // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.BlueprintSuggestProjectileVelocity
-	 */
-	struct UGameplayStatics_BlueprintSuggestProjectileVelocity_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             TossVelocity;                                            // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             StartLocation;                                           // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             EndLocation;                                             // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      LaunchSpeed;                                             // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      OverrideGravityZ;                                        // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		Engine_ESuggestProjVelocityTraceOption                     TraceOption;                                             // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      CollisionRadius;                                         // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bFavorHighArc;                                           // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bDrawDebug;                                              // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.Blueprint_PredictProjectilePath_ByTraceChannel
-	 */
-	struct UGameplayStatics_Blueprint_PredictProjectilePath_ByTraceChannel_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FHitResult                                          OutHit;                                                  // 0x0000(0x0088)  (Parm, OutParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-		TArray<struct FVector>                                     OutPathPositions;                                        // 0x0000(0x0010)  (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-		struct FVector                                             OutLastTraceDestination;                                 // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             StartPos;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             LaunchVelocity;                                          // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bTracePath;                                              // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      ProjectileRadius;                                        // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		Engine_ECollisionChannel                                   TraceChannel;                                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bTraceComplex;                                           // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		TArray<class AActor*>                                      ActorsToIgnore;                                          // 0x0000(0x0010)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-		Engine_EDrawDebugTrace                                     DrawDebugType;                                           // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      DrawDebugTime;                                           // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      SimFrequency;                                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      MaxSimTime;                                              // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      OverrideGravityZ;                                        // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.Blueprint_PredictProjectilePath_ByObjectType
-	 */
-	struct UGameplayStatics_Blueprint_PredictProjectilePath_ByObjectType_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FHitResult                                          OutHit;                                                  // 0x0000(0x0088)  (Parm, OutParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-		TArray<struct FVector>                                     OutPathPositions;                                        // 0x0000(0x0010)  (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-		struct FVector                                             OutLastTraceDestination;                                 // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             StartPos;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             LaunchVelocity;                                          // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bTracePath;                                              // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      ProjectileRadius;                                        // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		TArray<Engine_EObjectTypeQuery>                            ObjectTypes;                                             // 0x0000(0x0010)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-		bool                                                       bTraceComplex;                                           // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		TArray<class AActor*>                                      ActorsToIgnore;                                          // 0x0000(0x0010)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-		Engine_EDrawDebugTrace                                     DrawDebugType;                                           // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      DrawDebugTime;                                           // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      SimFrequency;                                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      MaxSimTime;                                              // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      OverrideGravityZ;                                        // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.Blueprint_PredictProjectilePath_Advanced
-	 */
-	struct UGameplayStatics_Blueprint_PredictProjectilePath_Advanced_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FPredictProjectilePathParams                        PredictParams;                                           // 0x0000(0x0060)  (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-		struct FPredictProjectilePathResult                        PredictResult;                                           // 0x0000(0x00B8)  (Parm, OutParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.BeginSpawningActorFromClass
-	 */
-	struct UGameplayStatics_BeginSpawningActorFromClass_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class UClass*                                              ActorClass;                                              // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FTransform                                          SpawnTransform;                                          // 0x0000(0x0030)  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-		bool                                                       bNoCollisionFail;                                        // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class AActor*                                              Owner;                                                   // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class AActor*                                              ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.BeginSpawningActorFromBlueprint
-	 */
-	struct UGameplayStatics_BeginSpawningActorFromBlueprint_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class UBlueprint*                                          Blueprint;                                               // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FTransform                                          SpawnTransform;                                          // 0x0000(0x0030)  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-		bool                                                       bNoCollisionFail;                                        // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class AActor*                                              ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.BeginDeferredActorSpawnFromClass
-	 */
-	struct UGameplayStatics_BeginDeferredActorSpawnFromClass_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class UClass*                                              ActorClass;                                              // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FTransform                                          SpawnTransform;                                          // 0x0000(0x0030)  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-		Engine_ESpawnActorCollisionHandlingMethod                  CollisionHandlingOverride;                               // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class AActor*                                              Owner;                                                   // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class AActor*                                              ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.AreSubtitlesEnabled
-	 */
-	struct UGameplayStatics_AreSubtitlesEnabled_Params
-	{
-	public:
-		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.AreAnyListenersWithinRange
-	 */
-	struct UGameplayStatics_AreAnyListenersWithinRange_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             Location;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      MaximumRange;                                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.ApplyRadialDamageWithFalloff
-	 */
-	struct UGameplayStatics_ApplyRadialDamageWithFalloff_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      BaseDamage;                                              // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      MinimumDamage;                                           // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             Origin;                                                  // 0x0000(0x000C)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      DamageInnerRadius;                                       // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      DamageOuterRadius;                                       // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      DamageFalloff;                                           // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class UClass*                                              DamageTypeClass;                                         // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		TArray<class AActor*>                                      IgnoreActors;                                            // 0x0000(0x0010)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-		class AActor*                                              DamageCauser;                                            // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class AController*                                         InstigatedByController;                                  // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		Engine_ECollisionChannel                                   DamagePreventionChannel;                                 // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.ApplyRadialDamage
-	 */
-	struct UGameplayStatics_ApplyRadialDamage_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      BaseDamage;                                              // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             Origin;                                                  // 0x0000(0x000C)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      DamageRadius;                                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class UClass*                                              DamageTypeClass;                                         // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		TArray<class AActor*>                                      IgnoreActors;                                            // 0x0000(0x0010)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-		class AActor*                                              DamageCauser;                                            // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class AController*                                         InstigatedByController;                                  // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bDoFullDamage;                                           // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		Engine_ECollisionChannel                                   DamagePreventionChannel;                                 // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.ApplyPointDamage
-	 */
-	struct UGameplayStatics_ApplyPointDamage_Params
-	{
-	public:
-		class AActor*                                              DamagedActor;                                            // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      BaseDamage;                                              // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             HitFromDirection;                                        // 0x0000(0x000C)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FHitResult                                          HitInfo;                                                 // 0x0000(0x0088)  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-		class AController*                                         EventInstigator;                                         // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class AActor*                                              DamageCauser;                                            // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class UClass*                                              DamageTypeClass;                                         // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.ApplyDamage
-	 */
-	struct UGameplayStatics_ApplyDamage_Params
-	{
-	public:
-		class AActor*                                              DamagedActor;                                            // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      BaseDamage;                                              // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class AController*                                         EventInstigator;                                         // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class AActor*                                              DamageCauser;                                            // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class UClass*                                              DamageTypeClass;                                         // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameplayStatics.ActivateReverbEffect
-	 */
-	struct UGameplayStatics_ActivateReverbEffect_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class UReverbEffect*                                       ReverbEffect;                                            // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class FName                                                TagName;                                                 // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      Priority;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      Volume;                                                  // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      FadeTime;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameUserSettings.ValidateSettings
-	 */
-	struct UGameUserSettings_ValidateSettings_Params
-	{
-	};
-
-	/**
-	 * Function Engine.GameUserSettings.SupportsHDRDisplayOutput
-	 */
-	struct UGameUserSettings_SupportsHDRDisplayOutput_Params
-	{
-	public:
-		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameUserSettings.SetVSyncEnabled
-	 */
-	struct UGameUserSettings_SetVSyncEnabled_Params
-	{
-	public:
-		bool                                                       bEnable;                                                 // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameUserSettings.SetVisualEffectQuality
-	 */
-	struct UGameUserSettings_SetVisualEffectQuality_Params
-	{
-	public:
-		int                                                        Value;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameUserSettings.SetViewDistanceQuality
-	 */
-	struct UGameUserSettings_SetViewDistanceQuality_Params
-	{
-	public:
-		int                                                        Value;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameUserSettings.SetToDefaults
-	 */
-	struct UGameUserSettings_SetToDefaults_Params
-	{
-	};
-
-	/**
-	 * Function Engine.GameUserSettings.SetTextureQuality
-	 */
-	struct UGameUserSettings_SetTextureQuality_Params
-	{
-	public:
-		int                                                        Value;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameUserSettings.SetShadowQuality
-	 */
-	struct UGameUserSettings_SetShadowQuality_Params
-	{
-	public:
-		int                                                        Value;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameUserSettings.SetScreenResolution
-	 */
-	struct UGameUserSettings_SetScreenResolution_Params
-	{
-	public:
-		struct FIntPoint                                           Resolution;                                              // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameUserSettings.SetResolutionScaleValueEx
-	 */
-	struct UGameUserSettings_SetResolutionScaleValueEx_Params
-	{
-	public:
-		float                                                      NewScaleValue;                                           // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameUserSettings.SetResolutionScaleValue
-	 */
-	struct UGameUserSettings_SetResolutionScaleValue_Params
-	{
-	public:
-		int                                                        NewScaleValue;                                           // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameUserSettings.SetResolutionScaleNormalized
-	 */
-	struct UGameUserSettings_SetResolutionScaleNormalized_Params
-	{
-	public:
-		float                                                      NewScaleNormalized;                                      // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameUserSettings.SetPostProcessingQuality
-	 */
-	struct UGameUserSettings_SetPostProcessingQuality_Params
-	{
-	public:
-		int                                                        Value;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameUserSettings.SetOverallScalabilityLevel
-	 */
-	struct UGameUserSettings_SetOverallScalabilityLevel_Params
-	{
-	public:
-		int                                                        Value;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameUserSettings.SetFullscreenMode
-	 */
-	struct UGameUserSettings_SetFullscreenMode_Params
-	{
-	public:
-		Engine_EWindowMode                                         InFullscreenMode;                                        // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameUserSettings.SetFrameRateLimit
-	 */
-	struct UGameUserSettings_SetFrameRateLimit_Params
-	{
-	public:
-		float                                                      NewLimit;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameUserSettings.SetFoliageQuality
-	 */
-	struct UGameUserSettings_SetFoliageQuality_Params
-	{
-	public:
-		int                                                        Value;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameUserSettings.SetDynamicResolutionEnabled
-	 */
-	struct UGameUserSettings_SetDynamicResolutionEnabled_Params
-	{
-	public:
-		bool                                                       bEnable;                                                 // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameUserSettings.SetBenchmarkFallbackValues
-	 */
-	struct UGameUserSettings_SetBenchmarkFallbackValues_Params
-	{
-	};
-
-	/**
-	 * Function Engine.GameUserSettings.SetAudioQualityLevel
-	 */
-	struct UGameUserSettings_SetAudioQualityLevel_Params
-	{
-	public:
-		int                                                        QualityLevel;                                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameUserSettings.SetAntiAliasingQuality
-	 */
-	struct UGameUserSettings_SetAntiAliasingQuality_Params
-	{
-	public:
-		int                                                        Value;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameUserSettings.SaveSettings
-	 */
-	struct UGameUserSettings_SaveSettings_Params
-	{
-	};
-
-	/**
-	 * Function Engine.GameUserSettings.RunHardwareBenchmark
-	 */
-	struct UGameUserSettings_RunHardwareBenchmark_Params
-	{
-	public:
-		int                                                        WorkScale;                                               // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      CPUMultiplier;                                           // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      GPUMultiplier;                                           // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameUserSettings.RevertVideoMode
-	 */
-	struct UGameUserSettings_RevertVideoMode_Params
-	{
-	};
-
-	/**
-	 * Function Engine.GameUserSettings.ResetToCurrentSettings
-	 */
-	struct UGameUserSettings_ResetToCurrentSettings_Params
-	{
-	};
-
-	/**
-	 * Function Engine.GameUserSettings.LoadSettings
-	 */
-	struct UGameUserSettings_LoadSettings_Params
-	{
-	public:
-		bool                                                       bForceReload;                                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameUserSettings.IsVSyncEnabled
-	 */
-	struct UGameUserSettings_IsVSyncEnabled_Params
-	{
-	public:
-		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameUserSettings.IsVSyncDirty
-	 */
-	struct UGameUserSettings_IsVSyncDirty_Params
-	{
-	public:
-		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameUserSettings.IsScreenResolutionDirty
-	 */
-	struct UGameUserSettings_IsScreenResolutionDirty_Params
-	{
-	public:
-		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameUserSettings.IsHDREnabled
-	 */
-	struct UGameUserSettings_IsHDREnabled_Params
-	{
-	public:
-		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameUserSettings.IsFullscreenModeDirty
-	 */
-	struct UGameUserSettings_IsFullscreenModeDirty_Params
-	{
-	public:
-		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameUserSettings.IsDynamicResolutionEnabled
-	 */
-	struct UGameUserSettings_IsDynamicResolutionEnabled_Params
-	{
-	public:
-		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameUserSettings.IsDynamicResolutionDirty
-	 */
-	struct UGameUserSettings_IsDynamicResolutionDirty_Params
-	{
-	public:
-		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameUserSettings.IsDirty
-	 */
-	struct UGameUserSettings_IsDirty_Params
-	{
-	public:
-		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameUserSettings.GetVisualEffectQuality
-	 */
-	struct UGameUserSettings_GetVisualEffectQuality_Params
-	{
-	public:
-		int                                                        ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameUserSettings.GetViewDistanceQuality
-	 */
-	struct UGameUserSettings_GetViewDistanceQuality_Params
-	{
-	public:
-		int                                                        ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameUserSettings.GetTextureQuality
-	 */
-	struct UGameUserSettings_GetTextureQuality_Params
-	{
-	public:
-		int                                                        ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameUserSettings.GetSyncInterval
-	 */
-	struct UGameUserSettings_GetSyncInterval_Params
-	{
-	public:
-		int                                                        ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameUserSettings.GetShadowQuality
-	 */
-	struct UGameUserSettings_GetShadowQuality_Params
-	{
-	public:
-		int                                                        ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameUserSettings.GetScreenResolution
-	 */
-	struct UGameUserSettings_GetScreenResolution_Params
-	{
-	public:
-		struct FIntPoint                                           ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameUserSettings.GetResolutionScaleNormalized
-	 */
-	struct UGameUserSettings_GetResolutionScaleNormalized_Params
-	{
-	public:
-		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameUserSettings.GetResolutionScaleInformationEx
-	 */
-	struct UGameUserSettings_GetResolutionScaleInformationEx_Params
-	{
-	public:
-		float                                                      CurrentScaleNormalized;                                  // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      CurrentScaleValue;                                       // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      MinScaleValue;                                           // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      MaxScaleValue;                                           // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameUserSettings.GetResolutionScaleInformation
-	 */
-	struct UGameUserSettings_GetResolutionScaleInformation_Params
-	{
-	public:
-		float                                                      CurrentScaleNormalized;                                  // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		int                                                        CurrentScaleValue;                                       // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		int                                                        MinScaleValue;                                           // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		int                                                        MaxScaleValue;                                           // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameUserSettings.GetRecommendedResolutionScale
-	 */
-	struct UGameUserSettings_GetRecommendedResolutionScale_Params
-	{
-	public:
-		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameUserSettings.GetPreferredFullscreenMode
-	 */
-	struct UGameUserSettings_GetPreferredFullscreenMode_Params
-	{
-	public:
-		Engine_EWindowMode                                         ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameUserSettings.GetPostProcessingQuality
-	 */
-	struct UGameUserSettings_GetPostProcessingQuality_Params
-	{
-	public:
-		int                                                        ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameUserSettings.GetOverallScalabilityLevel
-	 */
-	struct UGameUserSettings_GetOverallScalabilityLevel_Params
-	{
-	public:
-		int                                                        ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameUserSettings.GetLastConfirmedScreenResolution
-	 */
-	struct UGameUserSettings_GetLastConfirmedScreenResolution_Params
-	{
-	public:
-		struct FIntPoint                                           ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameUserSettings.GetLastConfirmedFullscreenMode
-	 */
-	struct UGameUserSettings_GetLastConfirmedFullscreenMode_Params
-	{
-	public:
-		Engine_EWindowMode                                         ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameUserSettings.GetGameUserSettings
-	 */
-	struct UGameUserSettings_GetGameUserSettings_Params
-	{
-	public:
-		class UGameUserSettings*                                   ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameUserSettings.GetFullscreenMode
-	 */
-	struct UGameUserSettings_GetFullscreenMode_Params
-	{
-	public:
-		Engine_EWindowMode                                         ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameUserSettings.GetFrameRateLimit
-	 */
-	struct UGameUserSettings_GetFrameRateLimit_Params
-	{
-	public:
-		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameUserSettings.GetFoliageQuality
-	 */
-	struct UGameUserSettings_GetFoliageQuality_Params
-	{
-	public:
-		int                                                        ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameUserSettings.GetDesktopResolution
-	 */
-	struct UGameUserSettings_GetDesktopResolution_Params
-	{
-	public:
-		struct FIntPoint                                           ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameUserSettings.GetDefaultWindowPosition
-	 */
-	struct UGameUserSettings_GetDefaultWindowPosition_Params
-	{
-	public:
-		struct FIntPoint                                           ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameUserSettings.GetDefaultWindowMode
-	 */
-	struct UGameUserSettings_GetDefaultWindowMode_Params
-	{
-	public:
-		Engine_EWindowMode                                         ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameUserSettings.GetDefaultResolutionScale
-	 */
-	struct UGameUserSettings_GetDefaultResolutionScale_Params
-	{
-	public:
-		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameUserSettings.GetDefaultResolution
-	 */
-	struct UGameUserSettings_GetDefaultResolution_Params
-	{
-	public:
-		struct FIntPoint                                           ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameUserSettings.GetCurrentHDRDisplayNits
-	 */
-	struct UGameUserSettings_GetCurrentHDRDisplayNits_Params
-	{
-	public:
-		int                                                        ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameUserSettings.GetAudioQualityLevel
-	 */
-	struct UGameUserSettings_GetAudioQualityLevel_Params
-	{
-	public:
-		int                                                        ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameUserSettings.GetAntiAliasingQuality
-	 */
-	struct UGameUserSettings_GetAntiAliasingQuality_Params
-	{
-	public:
-		int                                                        ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameUserSettings.EnableHDRDisplayOutput
-	 */
-	struct UGameUserSettings_EnableHDRDisplayOutput_Params
-	{
-	public:
-		bool                                                       bEnable;                                                 // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		int                                                        DisplayNits;                                             // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameUserSettings.ConfirmVideoMode
-	 */
-	struct UGameUserSettings_ConfirmVideoMode_Params
-	{
-	};
-
-	/**
-	 * Function Engine.GameUserSettings.ApplySettings
-	 */
-	struct UGameUserSettings_ApplySettings_Params
-	{
-	public:
-		bool                                                       bCheckForCommandLineOverrides;                           // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameUserSettings.ApplyResolutionSettings
-	 */
-	struct UGameUserSettings_ApplyResolutionSettings_Params
-	{
-	public:
-		bool                                                       bCheckForCommandLineOverrides;                           // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.GameUserSettings.ApplyNonResolutionSettings
-	 */
-	struct UGameUserSettings_ApplyNonResolutionSettings_Params
-	{
-	};
-
-	/**
-	 * Function Engine.GameUserSettings.ApplyHardwareBenchmarkResults
-	 */
-	struct UGameUserSettings_ApplyHardwareBenchmarkResults_Params
-	{
-	};
-
-	/**
-	 * Function Engine.SpotLight.SetOuterConeAngle
-	 */
-	struct ASpotLight_SetOuterConeAngle_Params
-	{
-	public:
-		float                                                      NewOuterConeAngle;                                       // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.SpotLight.SetInnerConeAngle
-	 */
-	struct ASpotLight_SetInnerConeAngle_Params
-	{
-	public:
-		float                                                      NewInnerConeAngle;                                       // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.HealthSnapshotBlueprintLibrary.StopPerformanceSnapshots
-	 */
-	struct UHealthSnapshotBlueprintLibrary_StopPerformanceSnapshots_Params
-	{
-	};
-
-	/**
-	 * Function Engine.HealthSnapshotBlueprintLibrary.StartPerformanceSnapshots
-	 */
-	struct UHealthSnapshotBlueprintLibrary_StartPerformanceSnapshots_Params
-	{
-	};
-
-	/**
-	 * Function Engine.HealthSnapshotBlueprintLibrary.LogPerformanceSnapshot
-	 */
-	struct UHealthSnapshotBlueprintLibrary_LogPerformanceSnapshot_Params
-	{
-	public:
-		class FString                                              SnapshotTitle;                                           // 0x0000(0x0010)  (ConstParm, Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bResetStats;                                             // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.ImportanceSamplingLibrary.RandomSobolFloat
-	 */
-	struct UImportanceSamplingLibrary_RandomSobolFloat_Params
-	{
-	public:
-		int                                                        Index;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		int                                                        Dimension;                                               // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      Seed;                                                    // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.ImportanceSamplingLibrary.RandomSobolCell3D
-	 */
-	struct UImportanceSamplingLibrary_RandomSobolCell3D_Params
-	{
-	public:
-		int                                                        Index;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		int                                                        NumCells;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             Cell;                                                    // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             Seed;                                                    // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             ReturnValue;                                             // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.ImportanceSamplingLibrary.RandomSobolCell2D
-	 */
-	struct UImportanceSamplingLibrary_RandomSobolCell2D_Params
-	{
-	public:
-		int                                                        Index;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		int                                                        NumCells;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector2D                                           Cell;                                                    // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector2D                                           Seed;                                                    // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector2D                                           ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.ImportanceSamplingLibrary.NextSobolFloat
-	 */
-	struct UImportanceSamplingLibrary_NextSobolFloat_Params
-	{
-	public:
-		int                                                        Index;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		int                                                        Dimension;                                               // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      PreviousValue;                                           // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.ImportanceSamplingLibrary.NextSobolCell3D
-	 */
-	struct UImportanceSamplingLibrary_NextSobolCell3D_Params
-	{
-	public:
-		int                                                        Index;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		int                                                        NumCells;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             PreviousValue;                                           // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             ReturnValue;                                             // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.ImportanceSamplingLibrary.NextSobolCell2D
-	 */
-	struct UImportanceSamplingLibrary_NextSobolCell2D_Params
-	{
-	public:
-		int                                                        Index;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		int                                                        NumCells;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector2D                                           PreviousValue;                                           // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector2D                                           ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.ImportanceSamplingLibrary.MakeImportanceTexture
-	 */
-	struct UImportanceSamplingLibrary_MakeImportanceTexture_Params
-	{
-	public:
-		class UTexture2D*                                          Texture;                                                 // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		Engine_EImportanceWeight                                   WeightingFunc;                                           // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FImportanceTexture                                  ReturnValue;                                             // 0x0000(0x0050)  (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.ImportanceSamplingLibrary.ImportanceSample
-	 */
-	struct UImportanceSamplingLibrary_ImportanceSample_Params
-	{
-	public:
-		struct FImportanceTexture                                  Texture;                                                 // 0x0000(0x0050)  (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-		struct FVector2D                                           Rand;                                                    // 0x0000(0x0008)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		int                                                        Samples;                                                 // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      Intensity;                                               // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector2D                                           SamplePosition;                                          // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FLinearColor                                        SampleColor;                                             // 0x0000(0x0010)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      SampleIntensity;                                         // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      SampleSize;                                              // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.ImportanceSamplingLibrary.BreakImportanceTexture
-	 */
-	struct UImportanceSamplingLibrary_BreakImportanceTexture_Params
-	{
-	public:
-		struct FImportanceTexture                                  ImportanceTexture;                                       // 0x0000(0x0050)  (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-		class UTexture2D*                                          Texture;                                                 // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		Engine_EImportanceWeight                                   WeightingFunc;                                           // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.SoundSubmix.StopRecordingOutput
-	 */
-	struct USoundSubmix_StopRecordingOutput_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		Engine_EAudioRecordingExportType                           ExportType;                                              // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class FString                                              Name;                                                    // 0x0000(0x0010)  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class FString                                              Path;                                                    // 0x0000(0x0010)  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class USoundWave*                                          ExistingSoundWaveToOverwrite;                            // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.SoundSubmix.StopEnvelopeFollowing
-	 */
-	struct USoundSubmix_StopEnvelopeFollowing_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.SoundSubmix.StartRecordingOutput
-	 */
-	struct USoundSubmix_StartRecordingOutput_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      ExpectedDuration;                                        // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.SoundSubmix.StartEnvelopeFollowing
-	 */
-	struct USoundSubmix_StartEnvelopeFollowing_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.SoundSubmix.SetSubmixOutputVolume
-	 */
-	struct USoundSubmix_SetSubmixOutputVolume_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		float                                                      InOutputVolume;                                          // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.SoundSubmix.AddEnvelopeFollowerDelegate
-	 */
-	struct USoundSubmix_AddEnvelopeFollowerDelegate_Params
-	{
-	public:
-		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class FScriptDelegate                                      OnSubmixEnvelopeBP;                                      // 0x0000(0x0010)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.SplineMeshComponent.UpdateMesh
-	 */
-	struct USplineMeshComponent_UpdateMesh_Params
-	{
-	};
-
-	/**
-	 * Function Engine.SplineMeshComponent.SetStartTangent
-	 */
-	struct USplineMeshComponent_SetStartTangent_Params
-	{
-	public:
-		struct FVector                                             StartTangent;                                            // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bUpdateMesh;                                             // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.SplineMeshComponent.SetStartScale
-	 */
-	struct USplineMeshComponent_SetStartScale_Params
-	{
-	public:
-		struct FVector2D                                           StartScale;                                              // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bUpdateMesh;                                             // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.SplineMeshComponent.SetStartRoll
-	 */
-	struct USplineMeshComponent_SetStartRoll_Params
-	{
-	public:
-		float                                                      StartRoll;                                               // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bUpdateMesh;                                             // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.SplineMeshComponent.SetStartPosition
-	 */
-	struct USplineMeshComponent_SetStartPosition_Params
-	{
-	public:
-		struct FVector                                             StartPos;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bUpdateMesh;                                             // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.SplineMeshComponent.SetStartOffset
-	 */
-	struct USplineMeshComponent_SetStartOffset_Params
-	{
-	public:
-		struct FVector2D                                           StartOffset;                                             // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bUpdateMesh;                                             // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.SplineMeshComponent.SetStartAndEnd
-	 */
-	struct USplineMeshComponent_SetStartAndEnd_Params
-	{
-	public:
-		struct FVector                                             StartPos;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             StartTangent;                                            // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             EndPos;                                                  // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             EndTangent;                                              // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bUpdateMesh;                                             // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.SplineMeshComponent.SetSplineUpDir
-	 */
-	struct USplineMeshComponent_SetSplineUpDir_Params
-	{
-	public:
-		struct FVector                                             InSplineUpDir;                                           // 0x0000(0x000C)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bUpdateMesh;                                             // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.SplineMeshComponent.SetForwardAxis
-	 */
-	struct USplineMeshComponent_SetForwardAxis_Params
-	{
-	public:
-		Engine_ESplineMeshAxis                                     InForwardAxis;                                           // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bUpdateMesh;                                             // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.SplineMeshComponent.SetEndTangent
-	 */
-	struct USplineMeshComponent_SetEndTangent_Params
-	{
-	public:
-		struct FVector                                             EndTangent;                                              // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bUpdateMesh;                                             // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.SplineMeshComponent.SetEndScale
-	 */
-	struct USplineMeshComponent_SetEndScale_Params
-	{
-	public:
-		struct FVector2D                                           EndScale;                                                // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bUpdateMesh;                                             // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.SplineMeshComponent.SetEndRoll
-	 */
-	struct USplineMeshComponent_SetEndRoll_Params
-	{
-	public:
-		float                                                      EndRoll;                                                 // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bUpdateMesh;                                             // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.SplineMeshComponent.SetEndPosition
-	 */
-	struct USplineMeshComponent_SetEndPosition_Params
-	{
-	public:
-		struct FVector                                             EndPos;                                                  // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bUpdateMesh;                                             // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.SplineMeshComponent.SetEndOffset
-	 */
-	struct USplineMeshComponent_SetEndOffset_Params
-	{
-	public:
-		struct FVector2D                                           EndOffset;                                               // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bUpdateMesh;                                             // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.SplineMeshComponent.SetBoundaryMin
-	 */
-	struct USplineMeshComponent_SetBoundaryMin_Params
-	{
-	public:
-		float                                                      InBoundaryMin;                                           // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bUpdateMesh;                                             // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.SplineMeshComponent.SetBoundaryMax
-	 */
-	struct USplineMeshComponent_SetBoundaryMax_Params
-	{
-	public:
-		float                                                      InBoundaryMax;                                           // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bUpdateMesh;                                             // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.SplineMeshComponent.GetStartTangent
-	 */
-	struct USplineMeshComponent_GetStartTangent_Params
-	{
-	public:
-		struct FVector                                             ReturnValue;                                             // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.SplineMeshComponent.GetStartScale
-	 */
-	struct USplineMeshComponent_GetStartScale_Params
-	{
-	public:
-		struct FVector2D                                           ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.SplineMeshComponent.GetStartRoll
-	 */
-	struct USplineMeshComponent_GetStartRoll_Params
-	{
-	public:
-		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.SplineMeshComponent.GetStartPosition
-	 */
-	struct USplineMeshComponent_GetStartPosition_Params
-	{
-	public:
-		struct FVector                                             ReturnValue;                                             // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.SplineMeshComponent.GetStartOffset
-	 */
-	struct USplineMeshComponent_GetStartOffset_Params
-	{
-	public:
-		struct FVector2D                                           ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.SplineMeshComponent.GetSplineUpDir
-	 */
-	struct USplineMeshComponent_GetSplineUpDir_Params
-	{
-	public:
-		struct FVector                                             ReturnValue;                                             // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.SplineMeshComponent.GetForwardAxis
-	 */
-	struct USplineMeshComponent_GetForwardAxis_Params
-	{
-	public:
-		Engine_ESplineMeshAxis                                     ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.SplineMeshComponent.GetEndTangent
-	 */
-	struct USplineMeshComponent_GetEndTangent_Params
-	{
-	public:
-		struct FVector                                             ReturnValue;                                             // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.SplineMeshComponent.GetEndScale
-	 */
-	struct USplineMeshComponent_GetEndScale_Params
-	{
-	public:
-		struct FVector2D                                           ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.SplineMeshComponent.GetEndRoll
-	 */
-	struct USplineMeshComponent_GetEndRoll_Params
-	{
-	public:
-		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.SplineMeshComponent.GetEndPosition
-	 */
-	struct USplineMeshComponent_GetEndPosition_Params
-	{
-	public:
-		struct FVector                                             ReturnValue;                                             // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.SplineMeshComponent.GetEndOffset
-	 */
-	struct USplineMeshComponent_GetEndOffset_Params
-	{
-	public:
-		struct FVector2D                                           ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.SplineMeshComponent.GetBoundaryMin
-	 */
-	struct USplineMeshComponent_GetBoundaryMin_Params
-	{
-	public:
-		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.SplineMeshComponent.GetBoundaryMax
-	 */
-	struct USplineMeshComponent_GetBoundaryMax_Params
-	{
-	public:
-		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.SpotLightComponent.SetOuterConeAngle
-	 */
-	struct USpotLightComponent_SetOuterConeAngle_Params
-	{
-	public:
-		float                                                      NewOuterConeAngle;                                       // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.SpotLightComponent.SetInnerConeAngle
-	 */
-	struct USpotLightComponent_SetInnerConeAngle_Params
-	{
-	public:
-		float                                                      NewInnerConeAngle;                                       // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.SpringArmComponent.IsCollisionFixApplied
-	 */
-	struct USpringArmComponent_IsCollisionFixApplied_Params
-	{
-	public:
-		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.SpringArmComponent.GetUnfixedCameraPosition
-	 */
-	struct USpringArmComponent_GetUnfixedCameraPosition_Params
-	{
-	public:
-		struct FVector                                             ReturnValue;                                             // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.SpringArmComponent.GetTargetRotation
-	 */
-	struct USpringArmComponent_GetTargetRotation_Params
-	{
-	public:
-		struct FRotator                                            ReturnValue;                                             // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.StaticMesh.RemoveSocket
-	 */
-	struct UStaticMesh_RemoveSocket_Params
-	{
-	public:
-		class UStaticMeshSocket*                                   Socket;                                                  // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.StaticMesh.GetNumSections
-	 */
-	struct UStaticMesh_GetNumSections_Params
-	{
-	public:
-		int                                                        InLOD;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		int                                                        ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.StaticMesh.GetNumLODs
-	 */
-	struct UStaticMesh_GetNumLODs_Params
-	{
-	public:
-		int                                                        ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.StaticMesh.GetMaterialIndex
-	 */
-	struct UStaticMesh_GetMaterialIndex_Params
-	{
-	public:
-		class FName                                                MaterialSlotName;                                        // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		int                                                        ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.StaticMesh.GetMaterial
-	 */
-	struct UStaticMesh_GetMaterial_Params
-	{
-	public:
-		int                                                        MaterialIndex;                                           // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class UMaterialInterface*                                  ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.StaticMesh.GetBounds
-	 */
-	struct UStaticMesh_GetBounds_Params
-	{
-	public:
-		struct FBoxSphereBounds                                    ReturnValue;                                             // 0x0000(0x001C)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.StaticMesh.GetBoundingBox
-	 */
-	struct UStaticMesh_GetBoundingBox_Params
-	{
-	public:
-		struct FBox                                                ReturnValue;                                             // 0x0000(0x001C)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.StaticMesh.FindSocket
-	 */
-	struct UStaticMesh_FindSocket_Params
-	{
-	public:
-		class FName                                                InSocketName;                                            // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class UStaticMeshSocket*                                   ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.StaticMesh.AddSocket
-	 */
-	struct UStaticMesh_AddSocket_Params
-	{
-	public:
-		class UStaticMeshSocket*                                   Socket;                                                  // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.StereoLayerComponent.SetUVRect
-	 */
-	struct UStereoLayerComponent_SetUVRect_Params
-	{
-	public:
-		struct FBox2D                                              InUVRect;                                                // 0x0000(0x0014)  (Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.StereoLayerComponent.SetTexture
-	 */
-	struct UStereoLayerComponent_SetTexture_Params
-	{
-	public:
-		class UTexture*                                            InTexture;                                               // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.StereoLayerComponent.SetQuadSize
-	 */
-	struct UStereoLayerComponent_SetQuadSize_Params
-	{
-	public:
-		struct FVector2D                                           InQuadSize;                                              // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.StereoLayerComponent.SetPriority
-	 */
-	struct UStereoLayerComponent_SetPriority_Params
-	{
-	public:
-		int                                                        InPriority;                                              // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.StereoLayerComponent.SetLeftTexture
-	 */
-	struct UStereoLayerComponent_SetLeftTexture_Params
-	{
-	public:
-		class UTexture*                                            InTexture;                                               // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.StereoLayerComponent.MarkTextureForUpdate
-	 */
-	struct UStereoLayerComponent_MarkTextureForUpdate_Params
-	{
-	};
-
-	/**
-	 * Function Engine.StereoLayerComponent.GetUVRect
-	 */
-	struct UStereoLayerComponent_GetUVRect_Params
-	{
-	public:
-		struct FBox2D                                              ReturnValue;                                             // 0x0000(0x0014)  (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.StereoLayerComponent.GetTexture
-	 */
-	struct UStereoLayerComponent_GetTexture_Params
-	{
-	public:
-		class UTexture*                                            ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.StereoLayerComponent.GetQuadSize
-	 */
-	struct UStereoLayerComponent_GetQuadSize_Params
-	{
-	public:
-		struct FVector2D                                           ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.StereoLayerComponent.GetPriority
-	 */
-	struct UStereoLayerComponent_GetPriority_Params
-	{
-	public:
-		int                                                        ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.StereoLayerComponent.GetLeftTexture
-	 */
-	struct UStereoLayerComponent_GetLeftTexture_Params
-	{
-	public:
-		class UTexture*                                            ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.StereoLayerFunctionLibrary.ShowSplashScreen
-	 */
-	struct UStereoLayerFunctionLibrary_ShowSplashScreen_Params
-	{
-	};
-
-	/**
-	 * Function Engine.StereoLayerFunctionLibrary.SetSplashScreen
-	 */
-	struct UStereoLayerFunctionLibrary_SetSplashScreen_Params
-	{
-	public:
-		class UTexture*                                            Texture;                                                 // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector2D                                           Scale;                                                   // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FVector                                             Offset;                                                  // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bShowLoadingMovie;                                       // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bShowOnSet;                                              // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.StereoLayerFunctionLibrary.HideSplashScreen
-	 */
-	struct UStereoLayerFunctionLibrary_HideSplashScreen_Params
-	{
-	};
-
-	/**
-	 * Function Engine.StereoLayerFunctionLibrary.EnableAutoLoadingSplashScreen
-	 */
-	struct UStereoLayerFunctionLibrary_EnableAutoLoadingSplashScreen_Params
-	{
-	public:
-		bool                                                       InAutoShowEnabled;                                       // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.SubsystemBlueprintLibrary.GetLocalPlayerSubSystemFromPlayerController
-	 */
-	struct USubsystemBlueprintLibrary_GetLocalPlayerSubSystemFromPlayerController_Params
-	{
-	public:
-		class APlayerController*                                   PlayerController;                                        // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class UClass*                                              Class;                                                   // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class ULocalPlayerSubsystem*                               ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.SubsystemBlueprintLibrary.GetLocalPlayerSubsystem
-	 */
-	struct USubsystemBlueprintLibrary_GetLocalPlayerSubsystem_Params
-	{
-	public:
-		class UObject*                                             ContextObject;                                           // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class UClass*                                              Class;                                                   // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class ULocalPlayerSubsystem*                               ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.SubsystemBlueprintLibrary.GetGameInstanceSubsystem
-	 */
-	struct USubsystemBlueprintLibrary_GetGameInstanceSubsystem_Params
-	{
-	public:
-		class UObject*                                             ContextObject;                                           // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class UClass*                                              Class;                                                   // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class UGameInstanceSubsystem*                              ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.SubsystemBlueprintLibrary.GetEngineSubsystem
-	 */
-	struct USubsystemBlueprintLibrary_GetEngineSubsystem_Params
-	{
-	public:
-		class UClass*                                              Class;                                                   // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class UEngineSubsystem*                                    ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.TimecodeProvider.GetTimecode
-	 */
-	struct UTimecodeProvider_GetTimecode_Params
-	{
-	public:
-		struct FTimecode                                           ReturnValue;                                             // 0x0000(0x0014)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.TimecodeProvider.GetSynchronizationState
-	 */
-	struct UTimecodeProvider_GetSynchronizationState_Params
-	{
-	public:
-		Engine_ETimecodeProviderSynchronizationState               ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.TimecodeProvider.GetFrameRate
-	 */
-	struct UTimecodeProvider_GetFrameRate_Params
-	{
-	public:
-		struct FFrameRate                                          ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.SystemTimeTimecodeProvider.SetFrameRate
-	 */
-	struct USystemTimeTimecodeProvider_SetFrameRate_Params
-	{
-	public:
-		struct FFrameRate                                          InFrameRate;                                             // 0x0000(0x0008)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.TextRenderComponent.SetYScale
-	 */
-	struct UTextRenderComponent_SetYScale_Params
-	{
-	public:
-		float                                                      Value;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.TextRenderComponent.SetXScale
-	 */
-	struct UTextRenderComponent_SetXScale_Params
-	{
-	public:
-		float                                                      Value;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.TextRenderComponent.SetWorldSize
-	 */
-	struct UTextRenderComponent_SetWorldSize_Params
-	{
-	public:
-		float                                                      Value;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.TextRenderComponent.SetVertSpacingAdjust
-	 */
-	struct UTextRenderComponent_SetVertSpacingAdjust_Params
-	{
-	public:
-		float                                                      Value;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.TextRenderComponent.SetVerticalAlignment
-	 */
-	struct UTextRenderComponent_SetVerticalAlignment_Params
-	{
-	public:
-		Engine_EVerticalTextAligment                               Value;                                                   // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.TextRenderComponent.SetTextRenderColor
-	 */
-	struct UTextRenderComponent_SetTextRenderColor_Params
-	{
-	public:
-		struct FColor                                              Value;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.TextRenderComponent.SetTextMaterial
-	 */
-	struct UTextRenderComponent_SetTextMaterial_Params
-	{
-	public:
-		class UMaterialInterface*                                  Material;                                                // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.TextRenderComponent.SetText
-	 */
-	struct UTextRenderComponent_SetText_Params
-	{
-	public:
-		class FString                                              Value;                                                   // 0x0000(0x0010)  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.TextRenderComponent.SetHorizSpacingAdjust
-	 */
-	struct UTextRenderComponent_SetHorizSpacingAdjust_Params
-	{
-	public:
-		float                                                      Value;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.TextRenderComponent.SetHorizontalAlignment
-	 */
-	struct UTextRenderComponent_SetHorizontalAlignment_Params
-	{
-	public:
-		Engine_EHorizTextAligment                                  Value;                                                   // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.TextRenderComponent.SetFont
-	 */
-	struct UTextRenderComponent_SetFont_Params
-	{
-	public:
-		class UFont*                                               Value;                                                   // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.TextRenderComponent.K2_SetText
-	 */
-	struct UTextRenderComponent_K2_SetText_Params
-	{
-	public:
-		class FText                                                Value;                                                   // 0x0000(0x0018)  (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.TextRenderComponent.GetTextWorldSize
-	 */
-	struct UTextRenderComponent_GetTextWorldSize_Params
-	{
-	public:
-		struct FVector                                             ReturnValue;                                             // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.TextRenderComponent.GetTextLocalSize
-	 */
-	struct UTextRenderComponent_GetTextLocalSize_Params
-	{
-	public:
-		struct FVector                                             ReturnValue;                                             // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.TimelineComponent.Stop
-	 */
-	struct UTimelineComponent_Stop_Params
-	{
-	};
-
-	/**
-	 * Function Engine.TimelineComponent.SetVectorCurve
-	 */
-	struct UTimelineComponent_SetVectorCurve_Params
-	{
-	public:
-		class UCurveVector*                                        NewVectorCurve;                                          // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class FName                                                VectorTrackName;                                         // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.TimelineComponent.SetTimelineLengthMode
-	 */
-	struct UTimelineComponent_SetTimelineLengthMode_Params
-	{
-	public:
-		Engine_ETimelineLengthMode                                 NewLengthMode;                                           // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.TimelineComponent.SetTimelineLength
-	 */
-	struct UTimelineComponent_SetTimelineLength_Params
-	{
-	public:
-		float                                                      NewLength;                                               // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.TimelineComponent.SetPlayRate
-	 */
-	struct UTimelineComponent_SetPlayRate_Params
-	{
-	public:
-		float                                                      NewRate;                                                 // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.TimelineComponent.SetPlaybackPosition
-	 */
-	struct UTimelineComponent_SetPlaybackPosition_Params
-	{
-	public:
-		float                                                      NewPosition;                                             // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bFireEvents;                                             // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       bFireUpdate;                                             // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.TimelineComponent.SetNewTime
-	 */
-	struct UTimelineComponent_SetNewTime_Params
-	{
-	public:
-		float                                                      NewTime;                                                 // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.TimelineComponent.SetLooping
-	 */
-	struct UTimelineComponent_SetLooping_Params
-	{
-	public:
-		bool                                                       bNewLooping;                                             // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.TimelineComponent.SetLinearColorCurve
-	 */
-	struct UTimelineComponent_SetLinearColorCurve_Params
-	{
-	public:
-		class UCurveLinearColor*                                   NewLinearColorCurve;                                     // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class FName                                                LinearColorTrackName;                                    // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.TimelineComponent.SetIgnoreTimeDilation
-	 */
-	struct UTimelineComponent_SetIgnoreTimeDilation_Params
-	{
-	public:
-		bool                                                       bNewIgnoreTimeDilation;                                  // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.TimelineComponent.SetFloatCurve
-	 */
-	struct UTimelineComponent_SetFloatCurve_Params
-	{
-	public:
-		class UCurveFloat*                                         NewFloatCurve;                                           // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class FName                                                FloatTrackName;                                          // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.TimelineComponent.ReverseFromEnd
-	 */
-	struct UTimelineComponent_ReverseFromEnd_Params
-	{
-	};
-
-	/**
-	 * Function Engine.TimelineComponent.Reverse
-	 */
-	struct UTimelineComponent_Reverse_Params
-	{
-	};
-
-	/**
-	 * Function Engine.TimelineComponent.PlayFromStart
-	 */
-	struct UTimelineComponent_PlayFromStart_Params
-	{
-	};
-
-	/**
-	 * Function Engine.TimelineComponent.Play
-	 */
-	struct UTimelineComponent_Play_Params
-	{
-	};
-
-	/**
-	 * Function Engine.TimelineComponent.OnRep_Timeline
-	 */
-	struct UTimelineComponent_OnRep_Timeline_Params
-	{
-	};
-
-	/**
-	 * Function Engine.TimelineComponent.IsReversing
-	 */
-	struct UTimelineComponent_IsReversing_Params
-	{
-	public:
-		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.TimelineComponent.IsPlaying
-	 */
-	struct UTimelineComponent_IsPlaying_Params
-	{
-	public:
-		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.TimelineComponent.IsLooping
-	 */
-	struct UTimelineComponent_IsLooping_Params
-	{
-	public:
-		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.TimelineComponent.GetTimelineLength
-	 */
-	struct UTimelineComponent_GetTimelineLength_Params
-	{
-	public:
-		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.TimelineComponent.GetPlayRate
-	 */
-	struct UTimelineComponent_GetPlayRate_Params
-	{
-	public:
-		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.TimelineComponent.GetPlaybackPosition
-	 */
-	struct UTimelineComponent_GetPlaybackPosition_Params
-	{
-	public:
-		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.TimelineComponent.GetIgnoreTimeDilation
-	 */
-	struct UTimelineComponent_GetIgnoreTimeDilation_Params
-	{
-	public:
-		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.TwitterIntegrationBase.TwitterRequest
-	 */
-	struct UTwitterIntegrationBase_TwitterRequest_Params
-	{
-	public:
-		class FString                                              URL;                                                     // 0x0000(0x0010)  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		TArray<class FString>                                      ParamKeysAndValues;                                      // 0x0000(0x0010)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-		Engine_ETwitterRequestMethod                               RequestMethod;                                           // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		int                                                        AccountIndex;                                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.TwitterIntegrationBase.ShowTweetUI
-	 */
-	struct UTwitterIntegrationBase_ShowTweetUI_Params
-	{
-	public:
-		class FString                                              InitialMessage;                                          // 0x0000(0x0010)  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class FString                                              URL;                                                     // 0x0000(0x0010)  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class FString                                              Picture;                                                 // 0x0000(0x0010)  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.TwitterIntegrationBase.Init
-	 */
-	struct UTwitterIntegrationBase_Init_Params
-	{
-	};
-
-	/**
-	 * Function Engine.TwitterIntegrationBase.GetNumAccounts
-	 */
-	struct UTwitterIntegrationBase_GetNumAccounts_Params
-	{
-	public:
-		int                                                        ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.TwitterIntegrationBase.GetAccountName
-	 */
-	struct UTwitterIntegrationBase_GetAccountName_Params
-	{
-	public:
-		int                                                        AccountIndex;                                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		class FString                                              ReturnValue;                                             // 0x0000(0x0010)  (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.TwitterIntegrationBase.CanShowTweetUI
-	 */
-	struct UTwitterIntegrationBase_CanShowTweetUI_Params
-	{
-	public:
-		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.TwitterIntegrationBase.AuthorizeAccounts
-	 */
-	struct UTwitterIntegrationBase_AuthorizeAccounts_Params
-	{
-	public:
-		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.VectorFieldComponent.SetIntensity
-	 */
-	struct UVectorFieldComponent_SetIntensity_Params
-	{
-	public:
-		float                                                      NewIntensity;                                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.InterpToMovementComponent.StopSimulating
-	 */
-	struct UInterpToMovementComponent_StopSimulating_Params
-	{
-	public:
-		struct FHitResult                                          HitResult;                                               // 0x0000(0x0088)  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.InterpToMovementComponent.RestartMovement
-	 */
-	struct UInterpToMovementComponent_RestartMovement_Params
-	{
-	public:
-		float                                                      InitialDirection;                                        // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * DelegateFunction Engine.InterpToMovementComponent.OnInterpToWaitEndDelegate__DelegateSignature
-	 */
-	struct UInterpToMovementComponent_OnInterpToWaitEndDelegate__DelegateSignature_Params
-	{
-	public:
-		struct FHitResult                                          ImpactResult;                                            // 0x0000(0x0088)  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-		float                                                      Time;                                                    // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * DelegateFunction Engine.InterpToMovementComponent.OnInterpToWaitBeginDelegate__DelegateSignature
-	 */
-	struct UInterpToMovementComponent_OnInterpToWaitBeginDelegate__DelegateSignature_Params
-	{
-	public:
-		struct FHitResult                                          ImpactResult;                                            // 0x0000(0x0088)  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-		float                                                      Time;                                                    // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * DelegateFunction Engine.InterpToMovementComponent.OnInterpToStopDelegate__DelegateSignature
-	 */
-	struct UInterpToMovementComponent_OnInterpToStopDelegate__DelegateSignature_Params
-	{
-	public:
-		struct FHitResult                                          ImpactResult;                                            // 0x0000(0x0088)  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-		float                                                      Time;                                                    // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * DelegateFunction Engine.InterpToMovementComponent.OnInterpToReverseDelegate__DelegateSignature
-	 */
-	struct UInterpToMovementComponent_OnInterpToReverseDelegate__DelegateSignature_Params
-	{
-	public:
-		struct FHitResult                                          ImpactResult;                                            // 0x0000(0x0088)  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-		float                                                      Time;                                                    // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * DelegateFunction Engine.InterpToMovementComponent.OnInterpToResetDelegate__DelegateSignature
-	 */
-	struct UInterpToMovementComponent_OnInterpToResetDelegate__DelegateSignature_Params
-	{
-	public:
-		struct FHitResult                                          ImpactResult;                                            // 0x0000(0x0088)  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-		float                                                      Time;                                                    // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-	};
-
-	/**
-	 * Function Engine.InterpToMovementComponent.FinaliseControlPoints
-	 */
-	struct UInterpToMovementComponent_FinaliseControlPoints_Params
-	{
 	};
 
 	/**
@@ -34469,6 +29157,4263 @@ namespace CG
 	};
 
 	/**
+	 * Function Engine.DirectionalLightComponent.SetShadowDistanceFadeoutFraction
+	 */
+	struct UDirectionalLightComponent_SetShadowDistanceFadeoutFraction_Params
+	{
+	public:
+		float                                                      NewValue;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.DirectionalLightComponent.SetOcclusionMaskDarkness
+	 */
+	struct UDirectionalLightComponent_SetOcclusionMaskDarkness_Params
+	{
+	public:
+		float                                                      NewValue;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.DirectionalLightComponent.SetLightShaftOverrideDirection
+	 */
+	struct UDirectionalLightComponent_SetLightShaftOverrideDirection_Params
+	{
+	public:
+		struct FVector                                             NewValue;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.DirectionalLightComponent.SetEnableLightShaftOcclusion
+	 */
+	struct UDirectionalLightComponent_SetEnableLightShaftOcclusion_Params
+	{
+	public:
+		bool                                                       bNewValue;                                               // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.DirectionalLightComponent.SetDynamicShadowDistanceStationaryLight
+	 */
+	struct UDirectionalLightComponent_SetDynamicShadowDistanceStationaryLight_Params
+	{
+	public:
+		float                                                      NewValue;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.DirectionalLightComponent.SetDynamicShadowDistanceMovableLight
+	 */
+	struct UDirectionalLightComponent_SetDynamicShadowDistanceMovableLight_Params
+	{
+	public:
+		float                                                      NewValue;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.DirectionalLightComponent.SetDynamicShadowCascades
+	 */
+	struct UDirectionalLightComponent_SetDynamicShadowCascades_Params
+	{
+	public:
+		int                                                        NewValue;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.DirectionalLightComponent.SetCascadeTransitionFraction
+	 */
+	struct UDirectionalLightComponent_SetCascadeTransitionFraction_Params
+	{
+	public:
+		float                                                      NewValue;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.DirectionalLightComponent.SetCascadeDistributionExponent
+	 */
+	struct UDirectionalLightComponent_SetCascadeDistributionExponent_Params
+	{
+	public:
+		float                                                      NewValue;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.SphereComponent.SetSphereRadius
+	 */
+	struct USphereComponent_SetSphereRadius_Params
+	{
+	public:
+		float                                                      InSphereRadius;                                          // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bUpdateOverlaps;                                         // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.SphereComponent.GetUnscaledSphereRadius
+	 */
+	struct USphereComponent_GetUnscaledSphereRadius_Params
+	{
+	public:
+		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.SphereComponent.GetShapeScale
+	 */
+	struct USphereComponent_GetShapeScale_Params
+	{
+	public:
+		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.SphereComponent.GetScaledSphereRadius
+	 */
+	struct USphereComponent_GetScaledSphereRadius_Params
+	{
+	public:
+		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.Emitter.ToggleActive
+	 */
+	struct AEmitter_ToggleActive_Params
+	{
+	};
+
+	/**
+	 * Function Engine.Emitter.SetVectorParameter
+	 */
+	struct AEmitter_SetVectorParameter_Params
+	{
+	public:
+		class FName                                                ParameterName;                                           // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             Param;                                                   // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.Emitter.SetTemplate
+	 */
+	struct AEmitter_SetTemplate_Params
+	{
+	public:
+		class UParticleSystem*                                     NewTemplate;                                             // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.Emitter.SetMaterialParameter
+	 */
+	struct AEmitter_SetMaterialParameter_Params
+	{
+	public:
+		class FName                                                ParameterName;                                           // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UMaterialInterface*                                  Param;                                                   // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.Emitter.SetFloatParameter
+	 */
+	struct AEmitter_SetFloatParameter_Params
+	{
+	public:
+		class FName                                                ParameterName;                                           // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      Param;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.Emitter.SetColorParameter
+	 */
+	struct AEmitter_SetColorParameter_Params
+	{
+	public:
+		class FName                                                ParameterName;                                           // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FLinearColor                                        Param;                                                   // 0x0000(0x0010)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.Emitter.SetActorParameter
+	 */
+	struct AEmitter_SetActorParameter_Params
+	{
+	public:
+		class FName                                                ParameterName;                                           // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class AActor*                                              Param;                                                   // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.Emitter.OnRep_bCurrentlyActive
+	 */
+	struct AEmitter_OnRep_bCurrentlyActive_Params
+	{
+	};
+
+	/**
+	 * Function Engine.Emitter.OnParticleSystemFinished
+	 */
+	struct AEmitter_OnParticleSystemFinished_Params
+	{
+	public:
+		class UParticleSystemComponent*                            FinishedComponent;                                       // 0x0000(0x0008)  (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.Emitter.IsActive
+	 */
+	struct AEmitter_IsActive_Params
+	{
+	public:
+		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.Emitter.Deactivate
+	 */
+	struct AEmitter_Deactivate_Params
+	{
+	};
+
+	/**
+	 * Function Engine.Emitter.Activate
+	 */
+	struct AEmitter_Activate_Params
+	{
+	};
+
+	/**
+	 * Function Engine.ExponentialHeightFog.OnRep_bEnabled
+	 */
+	struct AExponentialHeightFog_OnRep_bEnabled_Params
+	{
+	};
+
+	/**
+	 * Function Engine.ExponentialHeightFogComponent.SetVolumetricFogScatteringDistribution
+	 */
+	struct UExponentialHeightFogComponent_SetVolumetricFogScatteringDistribution_Params
+	{
+	public:
+		float                                                      NewValue;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.ExponentialHeightFogComponent.SetVolumetricFogExtinctionScale
+	 */
+	struct UExponentialHeightFogComponent_SetVolumetricFogExtinctionScale_Params
+	{
+	public:
+		float                                                      NewValue;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.ExponentialHeightFogComponent.SetVolumetricFogEmissive
+	 */
+	struct UExponentialHeightFogComponent_SetVolumetricFogEmissive_Params
+	{
+	public:
+		struct FLinearColor                                        NewValue;                                                // 0x0000(0x0010)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.ExponentialHeightFogComponent.SetVolumetricFogDistance
+	 */
+	struct UExponentialHeightFogComponent_SetVolumetricFogDistance_Params
+	{
+	public:
+		float                                                      NewValue;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.ExponentialHeightFogComponent.SetVolumetricFogAlbedo
+	 */
+	struct UExponentialHeightFogComponent_SetVolumetricFogAlbedo_Params
+	{
+	public:
+		struct FColor                                              NewValue;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.ExponentialHeightFogComponent.SetVolumetricFog
+	 */
+	struct UExponentialHeightFogComponent_SetVolumetricFog_Params
+	{
+	public:
+		bool                                                       bNewValue;                                               // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.ExponentialHeightFogComponent.SetStartDistance
+	 */
+	struct UExponentialHeightFogComponent_SetStartDistance_Params
+	{
+	public:
+		float                                                      Value;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.ExponentialHeightFogComponent.SetNonDirectionalInscatteringColorDistance
+	 */
+	struct UExponentialHeightFogComponent_SetNonDirectionalInscatteringColorDistance_Params
+	{
+	public:
+		float                                                      Value;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.ExponentialHeightFogComponent.SetInscatteringTextureTint
+	 */
+	struct UExponentialHeightFogComponent_SetInscatteringTextureTint_Params
+	{
+	public:
+		struct FLinearColor                                        Value;                                                   // 0x0000(0x0010)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.ExponentialHeightFogComponent.SetInscatteringColorCubemapAngle
+	 */
+	struct UExponentialHeightFogComponent_SetInscatteringColorCubemapAngle_Params
+	{
+	public:
+		float                                                      Value;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.ExponentialHeightFogComponent.SetInscatteringColorCubemap
+	 */
+	struct UExponentialHeightFogComponent_SetInscatteringColorCubemap_Params
+	{
+	public:
+		class UTextureCube*                                        Value;                                                   // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.ExponentialHeightFogComponent.SetFullyDirectionalInscatteringColorDistance
+	 */
+	struct UExponentialHeightFogComponent_SetFullyDirectionalInscatteringColorDistance_Params
+	{
+	public:
+		float                                                      Value;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.ExponentialHeightFogComponent.SetFogMaxOpacity
+	 */
+	struct UExponentialHeightFogComponent_SetFogMaxOpacity_Params
+	{
+	public:
+		float                                                      Value;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.ExponentialHeightFogComponent.SetFogInscatteringColor
+	 */
+	struct UExponentialHeightFogComponent_SetFogInscatteringColor_Params
+	{
+	public:
+		struct FLinearColor                                        Value;                                                   // 0x0000(0x0010)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.ExponentialHeightFogComponent.SetFogHeightFalloff
+	 */
+	struct UExponentialHeightFogComponent_SetFogHeightFalloff_Params
+	{
+	public:
+		float                                                      Value;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.ExponentialHeightFogComponent.SetFogDensity
+	 */
+	struct UExponentialHeightFogComponent_SetFogDensity_Params
+	{
+	public:
+		float                                                      Value;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.ExponentialHeightFogComponent.SetFogCutoffDistance
+	 */
+	struct UExponentialHeightFogComponent_SetFogCutoffDistance_Params
+	{
+	public:
+		float                                                      Value;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.ExponentialHeightFogComponent.SetDirectionalInscatteringStartDistance
+	 */
+	struct UExponentialHeightFogComponent_SetDirectionalInscatteringStartDistance_Params
+	{
+	public:
+		float                                                      Value;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.ExponentialHeightFogComponent.SetDirectionalInscatteringExponent
+	 */
+	struct UExponentialHeightFogComponent_SetDirectionalInscatteringExponent_Params
+	{
+	public:
+		float                                                      Value;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.ExponentialHeightFogComponent.SetDirectionalInscatteringColor
+	 */
+	struct UExponentialHeightFogComponent_SetDirectionalInscatteringColor_Params
+	{
+	public:
+		struct FLinearColor                                        Value;                                                   // 0x0000(0x0010)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.Exporter.ScriptRunAssetExportTask
+	 */
+	struct UExporter_ScriptRunAssetExportTask_Params
+	{
+	public:
+		class UAssetExportTask*                                    Task;                                                    // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.Exporter.RunAssetExportTasks
+	 */
+	struct UExporter_RunAssetExportTasks_Params
+	{
+	public:
+		TArray<class UAssetExportTask*>                            ExportTasks;                                             // 0x0000(0x0010)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.Exporter.RunAssetExportTask
+	 */
+	struct UExporter_RunAssetExportTask_Params
+	{
+	public:
+		class UAssetExportTask*                                    Task;                                                    // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.ForceFeedbackComponent.Stop
+	 */
+	struct UForceFeedbackComponent_Stop_Params
+	{
+	};
+
+	/**
+	 * Function Engine.ForceFeedbackComponent.SetIntensityMultiplier
+	 */
+	struct UForceFeedbackComponent_SetIntensityMultiplier_Params
+	{
+	public:
+		float                                                      NewIntensityMultiplier;                                  // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.ForceFeedbackComponent.SetForceFeedbackEffect
+	 */
+	struct UForceFeedbackComponent_SetForceFeedbackEffect_Params
+	{
+	public:
+		class UForceFeedbackEffect*                                NewForceFeedbackEffect;                                  // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.ForceFeedbackComponent.Play
+	 */
+	struct UForceFeedbackComponent_Play_Params
+	{
+	public:
+		float                                                      StartTime;                                               // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.ForceFeedbackComponent.BP_GetAttenuationSettingsToApply
+	 */
+	struct UForceFeedbackComponent_BP_GetAttenuationSettingsToApply_Params
+	{
+	public:
+		struct FForceFeedbackAttenuationSettings                   OutAttenuationSettings;                                  // 0x0000(0x00B0)  (Parm, OutParm, NativeAccessSpecifierPublic)
+		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.ForceFeedbackComponent.AdjustAttenuation
+	 */
+	struct UForceFeedbackComponent_AdjustAttenuation_Params
+	{
+	public:
+		struct FForceFeedbackAttenuationSettings                   InAttenuationSettings;                                   // 0x0000(0x00B0)  (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.UnloadStreamLevel
+	 */
+	struct UGameplayStatics_UnloadStreamLevel_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class FName                                                LevelName;                                               // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FLatentActionInfo                                   LatentInfo;                                              // 0x0000(0x0018)  (Parm, NoDestructor, NativeAccessSpecifierPublic)
+		bool                                                       bShouldBlockOnUnload;                                    // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.SuggestProjectileVelocity_CustomArc
+	 */
+	struct UGameplayStatics_SuggestProjectileVelocity_CustomArc_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             OutLaunchVelocity;                                       // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             StartPos;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             EndPos;                                                  // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      OverrideGravityZ;                                        // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      ArcParam;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.SpawnSoundAttached
+	 */
+	struct UGameplayStatics_SpawnSoundAttached_Params
+	{
+	public:
+		class USoundBase*                                          Sound;                                                   // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class USceneComponent*                                     AttachToComponent;                                       // 0x0000(0x0008)  (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class FName                                                AttachPointName;                                         // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             Location;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FRotator                                            Rotation;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
+		Engine_EAttachLocation                                     LocationType;                                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bStopWhenAttachedToDestroyed;                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      VolumeMultiplier;                                        // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      PitchMultiplier;                                         // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      StartTime;                                               // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class USoundAttenuation*                                   AttenuationSettings;                                     // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class USoundConcurrency*                                   ConcurrencySettings;                                     // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bAutoDestroy;                                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UAudioComponent*                                     ReturnValue;                                             // 0x0000(0x0008)  (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.SpawnSoundAtLocation
+	 */
+	struct UGameplayStatics_SpawnSoundAtLocation_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class USoundBase*                                          Sound;                                                   // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             Location;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FRotator                                            Rotation;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
+		float                                                      VolumeMultiplier;                                        // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      PitchMultiplier;                                         // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      StartTime;                                               // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class USoundAttenuation*                                   AttenuationSettings;                                     // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class USoundConcurrency*                                   ConcurrencySettings;                                     // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bAutoDestroy;                                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UAudioComponent*                                     ReturnValue;                                             // 0x0000(0x0008)  (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.SpawnSound2D
+	 */
+	struct UGameplayStatics_SpawnSound2D_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class USoundBase*                                          Sound;                                                   // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      VolumeMultiplier;                                        // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      PitchMultiplier;                                         // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      StartTime;                                               // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class USoundConcurrency*                                   ConcurrencySettings;                                     // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bPersistAcrossLevelTransition;                           // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bAutoDestroy;                                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UAudioComponent*                                     ReturnValue;                                             // 0x0000(0x0008)  (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.SpawnObject
+	 */
+	struct UGameplayStatics_SpawnObject_Params
+	{
+	public:
+		class UClass*                                              ObjectClass;                                             // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UObject*                                             Outer;                                                   // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UObject*                                             ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.SpawnForceFeedbackAttached
+	 */
+	struct UGameplayStatics_SpawnForceFeedbackAttached_Params
+	{
+	public:
+		class UForceFeedbackEffect*                                ForceFeedbackEffect;                                     // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class USceneComponent*                                     AttachToComponent;                                       // 0x0000(0x0008)  (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class FName                                                AttachPointName;                                         // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             Location;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FRotator                                            Rotation;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
+		Engine_EAttachLocation                                     LocationType;                                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bStopWhenAttachedToDestroyed;                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bLooping;                                                // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      IntensityMultiplier;                                     // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      StartTime;                                               // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UForceFeedbackAttenuation*                           AttenuationSettings;                                     // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bAutoDestroy;                                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UForceFeedbackComponent*                             ReturnValue;                                             // 0x0000(0x0008)  (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.SpawnForceFeedbackAtLocation
+	 */
+	struct UGameplayStatics_SpawnForceFeedbackAtLocation_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UForceFeedbackEffect*                                ForceFeedbackEffect;                                     // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             Location;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FRotator                                            Rotation;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
+		bool                                                       bLooping;                                                // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      IntensityMultiplier;                                     // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      StartTime;                                               // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UForceFeedbackAttenuation*                           AttenuationSettings;                                     // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bAutoDestroy;                                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UForceFeedbackComponent*                             ReturnValue;                                             // 0x0000(0x0008)  (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.SpawnEmitterAttached
+	 */
+	struct UGameplayStatics_SpawnEmitterAttached_Params
+	{
+	public:
+		class UParticleSystem*                                     EmitterTemplate;                                         // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class USceneComponent*                                     AttachToComponent;                                       // 0x0000(0x0008)  (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class FName                                                AttachPointName;                                         // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             Location;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FRotator                                            Rotation;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+		struct FVector                                             Scale;                                                   // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		Engine_EAttachLocation                                     LocationType;                                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bAutoDestroy;                                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		Engine_EPSCPoolMethod                                      PoolingMethod;                                           // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UParticleSystemComponent*                            ReturnValue;                                             // 0x0000(0x0008)  (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.SpawnEmitterAtLocation
+	 */
+	struct UGameplayStatics_SpawnEmitterAtLocation_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UParticleSystem*                                     EmitterTemplate;                                         // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             Location;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FRotator                                            Rotation;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+		struct FVector                                             Scale;                                                   // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bAutoDestroy;                                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		Engine_EPSCPoolMethod                                      PoolingMethod;                                           // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UParticleSystemComponent*                            ReturnValue;                                             // 0x0000(0x0008)  (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.SpawnDialogueAttached
+	 */
+	struct UGameplayStatics_SpawnDialogueAttached_Params
+	{
+	public:
+		class UDialogueWave*                                       Dialogue;                                                // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FDialogueContext                                    Context;                                                 // 0x0000(0x0018)  (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+		class USceneComponent*                                     AttachToComponent;                                       // 0x0000(0x0008)  (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class FName                                                AttachPointName;                                         // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             Location;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FRotator                                            Rotation;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
+		Engine_EAttachLocation                                     LocationType;                                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bStopWhenAttachedToDestroyed;                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      VolumeMultiplier;                                        // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      PitchMultiplier;                                         // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      StartTime;                                               // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class USoundAttenuation*                                   AttenuationSettings;                                     // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bAutoDestroy;                                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UAudioComponent*                                     ReturnValue;                                             // 0x0000(0x0008)  (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.SpawnDialogueAtLocation
+	 */
+	struct UGameplayStatics_SpawnDialogueAtLocation_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UDialogueWave*                                       Dialogue;                                                // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FDialogueContext                                    Context;                                                 // 0x0000(0x0018)  (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+		struct FVector                                             Location;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FRotator                                            Rotation;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
+		float                                                      VolumeMultiplier;                                        // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      PitchMultiplier;                                         // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      StartTime;                                               // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class USoundAttenuation*                                   AttenuationSettings;                                     // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bAutoDestroy;                                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UAudioComponent*                                     ReturnValue;                                             // 0x0000(0x0008)  (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.SpawnDialogue2D
+	 */
+	struct UGameplayStatics_SpawnDialogue2D_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UDialogueWave*                                       Dialogue;                                                // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FDialogueContext                                    Context;                                                 // 0x0000(0x0018)  (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+		float                                                      VolumeMultiplier;                                        // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      PitchMultiplier;                                         // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      StartTime;                                               // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bAutoDestroy;                                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UAudioComponent*                                     ReturnValue;                                             // 0x0000(0x0008)  (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.SpawnDecalAttached
+	 */
+	struct UGameplayStatics_SpawnDecalAttached_Params
+	{
+	public:
+		class UMaterialInterface*                                  DecalMaterial;                                           // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             DecalSize;                                               // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class USceneComponent*                                     AttachToComponent;                                       // 0x0000(0x0008)  (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class FName                                                AttachPointName;                                         // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             Location;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FRotator                                            Rotation;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+		Engine_EAttachLocation                                     LocationType;                                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      LifeSpan;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UDecalComponent*                                     ReturnValue;                                             // 0x0000(0x0008)  (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.SpawnDecalAtLocation
+	 */
+	struct UGameplayStatics_SpawnDecalAtLocation_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UMaterialInterface*                                  DecalMaterial;                                           // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             DecalSize;                                               // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             Location;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FRotator                                            Rotation;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+		float                                                      LifeSpan;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UDecalComponent*                                     ReturnValue;                                             // 0x0000(0x0008)  (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.SetWorldOriginLocation
+	 */
+	struct UGameplayStatics_SetWorldOriginLocation_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FIntVector                                          NewLocation;                                             // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.SetViewportMouseCaptureMode
+	 */
+	struct UGameplayStatics_SetViewportMouseCaptureMode_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		Engine_EMouseCaptureMode                                   MouseCaptureMode;                                        // 0x0000(0x0001)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.SetSubtitlesEnabled
+	 */
+	struct UGameplayStatics_SetSubtitlesEnabled_Params
+	{
+	public:
+		bool                                                       bEnabled;                                                // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.SetSoundMixClassOverride
+	 */
+	struct UGameplayStatics_SetSoundMixClassOverride_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class USoundMix*                                           InSoundMixModifier;                                      // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class USoundClass*                                         InSoundClass;                                            // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      Volume;                                                  // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      Pitch;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      FadeInTime;                                              // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bApplyToChildren;                                        // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.SetPlayerControllerID
+	 */
+	struct UGameplayStatics_SetPlayerControllerID_Params
+	{
+	public:
+		class APlayerController*                                   Player;                                                  // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		int                                                        ControllerId;                                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.SetMaxAudioChannelsScaled
+	 */
+	struct UGameplayStatics_SetMaxAudioChannelsScaled_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      MaxChannelCountScale;                                    // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.SetGlobalTimeDilation
+	 */
+	struct UGameplayStatics_SetGlobalTimeDilation_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      TimeDilation;                                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.SetGlobalPitchModulation
+	 */
+	struct UGameplayStatics_SetGlobalPitchModulation_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      PitchModulation;                                         // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      TimeSec;                                                 // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.SetGlobalListenerFocusParameters
+	 */
+	struct UGameplayStatics_SetGlobalListenerFocusParameters_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      FocusAzimuthScale;                                       // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      NonFocusAzimuthScale;                                    // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      FocusDistanceScale;                                      // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      NonFocusDistanceScale;                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      FocusVolumeScale;                                        // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      NonFocusVolumeScale;                                     // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      FocusPriorityScale;                                      // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      NonFocusPriorityScale;                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.SetGamePaused
+	 */
+	struct UGameplayStatics_SetGamePaused_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bPaused;                                                 // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.SetEnableWorldRendering
+	 */
+	struct UGameplayStatics_SetEnableWorldRendering_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bEnable;                                                 // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.SetBaseSoundMix
+	 */
+	struct UGameplayStatics_SetBaseSoundMix_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class USoundMix*                                           InSoundMix;                                              // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.SaveGameToSlot
+	 */
+	struct UGameplayStatics_SaveGameToSlot_Params
+	{
+	public:
+		class USaveGame*                                           SaveGameObject;                                          // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class FString                                              SlotName;                                                // 0x0000(0x0010)  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		int                                                        UserIndex;                                               // 0x0000(0x0004)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.RemovePlayer
+	 */
+	struct UGameplayStatics_RemovePlayer_Params
+	{
+	public:
+		class APlayerController*                                   Player;                                                  // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bDestroyPawn;                                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.RebaseZeroOriginOntoLocal
+	 */
+	struct UGameplayStatics_RebaseZeroOriginOntoLocal_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             WorldLocation;                                           // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             ReturnValue;                                             // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.RebaseLocalOriginOntoZero
+	 */
+	struct UGameplayStatics_RebaseLocalOriginOntoZero_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             WorldLocation;                                           // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             ReturnValue;                                             // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.PushSoundMixModifier
+	 */
+	struct UGameplayStatics_PushSoundMixModifier_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class USoundMix*                                           InSoundMixModifier;                                      // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.ProjectWorldToScreen
+	 */
+	struct UGameplayStatics_ProjectWorldToScreen_Params
+	{
+	public:
+		class APlayerController*                                   Player;                                                  // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             WorldPosition;                                           // 0x0000(0x000C)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector2D                                           ScreenPosition;                                          // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bPlayerViewportRelative;                                 // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.PopSoundMixModifier
+	 */
+	struct UGameplayStatics_PopSoundMixModifier_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class USoundMix*                                           InSoundMixModifier;                                      // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.PlayWorldCameraShake
+	 */
+	struct UGameplayStatics_PlayWorldCameraShake_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UClass*                                              Shake;                                                   // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             Epicenter;                                               // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      InnerRadius;                                             // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      OuterRadius;                                             // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      Falloff;                                                 // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bOrientShakeTowardsEpicenter;                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.PlaySoundAtLocation
+	 */
+	struct UGameplayStatics_PlaySoundAtLocation_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class USoundBase*                                          Sound;                                                   // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             Location;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FRotator                                            Rotation;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
+		float                                                      VolumeMultiplier;                                        // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      PitchMultiplier;                                         // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      StartTime;                                               // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class USoundAttenuation*                                   AttenuationSettings;                                     // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class USoundConcurrency*                                   ConcurrencySettings;                                     // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class AActor*                                              OwningActor;                                             // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.PlaySound2D
+	 */
+	struct UGameplayStatics_PlaySound2D_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class USoundBase*                                          Sound;                                                   // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      VolumeMultiplier;                                        // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      PitchMultiplier;                                         // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      StartTime;                                               // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class USoundConcurrency*                                   ConcurrencySettings;                                     // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class AActor*                                              OwningActor;                                             // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.PlayDialogueAtLocation
+	 */
+	struct UGameplayStatics_PlayDialogueAtLocation_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UDialogueWave*                                       Dialogue;                                                // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FDialogueContext                                    Context;                                                 // 0x0000(0x0018)  (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+		struct FVector                                             Location;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FRotator                                            Rotation;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
+		float                                                      VolumeMultiplier;                                        // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      PitchMultiplier;                                         // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      StartTime;                                               // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class USoundAttenuation*                                   AttenuationSettings;                                     // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.PlayDialogue2D
+	 */
+	struct UGameplayStatics_PlayDialogue2D_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UDialogueWave*                                       Dialogue;                                                // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FDialogueContext                                    Context;                                                 // 0x0000(0x0018)  (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+		float                                                      VolumeMultiplier;                                        // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      PitchMultiplier;                                         // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      StartTime;                                               // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.ParseOption
+	 */
+	struct UGameplayStatics_ParseOption_Params
+	{
+	public:
+		class FString                                              Options;                                                 // 0x0000(0x0010)  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class FString                                              Key;                                                     // 0x0000(0x0010)  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class FString                                              ReturnValue;                                             // 0x0000(0x0010)  (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.OpenLevel
+	 */
+	struct UGameplayStatics_OpenLevel_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class FName                                                LevelName;                                               // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bAbsolute;                                               // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class FString                                              Options;                                                 // 0x0000(0x0010)  (Parm, ZeroConstructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.MakeHitResult
+	 */
+	struct UGameplayStatics_MakeHitResult_Params
+	{
+	public:
+		bool                                                       bBlockingHit;                                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bInitialOverlap;                                         // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      Time;                                                    // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      Distance;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             Location;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             ImpactPoint;                                             // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             Normal;                                                  // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             ImpactNormal;                                            // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UPhysicalMaterial*                                   PhysMat;                                                 // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class AActor*                                              HitActor;                                                // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UPrimitiveComponent*                                 HitComponent;                                            // 0x0000(0x0008)  (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class FName                                                HitBoneName;                                             // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		int                                                        HitItem;                                                 // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		int                                                        FaceIndex;                                               // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             TraceStart;                                              // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             TraceEnd;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FHitResult                                          ReturnValue;                                             // 0x0000(0x0088)  (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.LoadStreamLevel
+	 */
+	struct UGameplayStatics_LoadStreamLevel_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class FName                                                LevelName;                                               // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bMakeVisibleAfterLoad;                                   // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bShouldBlockOnLoad;                                      // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FLatentActionInfo                                   LatentInfo;                                              // 0x0000(0x0018)  (Parm, NoDestructor, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.LoadGameFromSlot
+	 */
+	struct UGameplayStatics_LoadGameFromSlot_Params
+	{
+	public:
+		class FString                                              SlotName;                                                // 0x0000(0x0010)  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		int                                                        UserIndex;                                               // 0x0000(0x0004)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class USaveGame*                                           ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.IsGamePaused
+	 */
+	struct UGameplayStatics_IsGamePaused_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.HasOption
+	 */
+	struct UGameplayStatics_HasOption_Params
+	{
+	public:
+		class FString                                              Options;                                                 // 0x0000(0x0010)  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class FString                                              InKey;                                                   // 0x0000(0x0010)  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.HasLaunchOption
+	 */
+	struct UGameplayStatics_HasLaunchOption_Params
+	{
+	public:
+		class FString                                              OptionToCheck;                                           // 0x0000(0x0010)  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.GrassOverlappingSphereCount
+	 */
+	struct UGameplayStatics_GrassOverlappingSphereCount_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UStaticMesh*                                         StaticMesh;                                              // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             CenterPosition;                                          // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      Radius;                                                  // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		int                                                        ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.GetWorldOriginLocation
+	 */
+	struct UGameplayStatics_GetWorldOriginLocation_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FIntVector                                          ReturnValue;                                             // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.GetWorldDeltaSeconds
+	 */
+	struct UGameplayStatics_GetWorldDeltaSeconds_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.GetViewportMouseCaptureMode
+	 */
+	struct UGameplayStatics_GetViewportMouseCaptureMode_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		Engine_EMouseCaptureMode                                   ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.GetUnpausedTimeSeconds
+	 */
+	struct UGameplayStatics_GetUnpausedTimeSeconds_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.GetTimeSeconds
+	 */
+	struct UGameplayStatics_GetTimeSeconds_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.GetSurfaceType
+	 */
+	struct UGameplayStatics_GetSurfaceType_Params
+	{
+	public:
+		struct FHitResult                                          Hit;                                                     // 0x0000(0x0088)  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+		Engine_EPhysicalSurface                                    ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.GetStreamingLevel
+	 */
+	struct UGameplayStatics_GetStreamingLevel_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class FName                                                PackageName;                                             // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class ULevelStreaming*                                     ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.GetRealTimeSeconds
+	 */
+	struct UGameplayStatics_GetRealTimeSeconds_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.GetPlayerPawn
+	 */
+	struct UGameplayStatics_GetPlayerPawn_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		int                                                        PlayerIndex;                                             // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class APawn*                                               ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.GetPlayerControllerID
+	 */
+	struct UGameplayStatics_GetPlayerControllerID_Params
+	{
+	public:
+		class APlayerController*                                   Player;                                                  // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		int                                                        ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.GetPlayerControllerFromID
+	 */
+	struct UGameplayStatics_GetPlayerControllerFromID_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		int                                                        ControllerId;                                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class APlayerController*                                   ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.GetPlayerController
+	 */
+	struct UGameplayStatics_GetPlayerController_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		int                                                        PlayerIndex;                                             // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class APlayerController*                                   ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.GetPlayerCharacter
+	 */
+	struct UGameplayStatics_GetPlayerCharacter_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		int                                                        PlayerIndex;                                             // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class ACharacter*                                          ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.GetPlayerCameraManager
+	 */
+	struct UGameplayStatics_GetPlayerCameraManager_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		int                                                        PlayerIndex;                                             // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class APlayerCameraManager*                                ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.GetPlatformName
+	 */
+	struct UGameplayStatics_GetPlatformName_Params
+	{
+	public:
+		class FString                                              ReturnValue;                                             // 0x0000(0x0010)  (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.GetObjectClass
+	 */
+	struct UGameplayStatics_GetObjectClass_Params
+	{
+	public:
+		class UObject*                                             Object;                                                  // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UClass*                                              ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.GetMaxAudioChannelCount
+	 */
+	struct UGameplayStatics_GetMaxAudioChannelCount_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		int                                                        ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.GetKeyValue
+	 */
+	struct UGameplayStatics_GetKeyValue_Params
+	{
+	public:
+		class FString                                              Pair;                                                    // 0x0000(0x0010)  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class FString                                              Key;                                                     // 0x0000(0x0010)  (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class FString                                              Value;                                                   // 0x0000(0x0010)  (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.GetIntOption
+	 */
+	struct UGameplayStatics_GetIntOption_Params
+	{
+	public:
+		class FString                                              Options;                                                 // 0x0000(0x0010)  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class FString                                              Key;                                                     // 0x0000(0x0010)  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		int                                                        DefaultValue;                                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		int                                                        ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.GetGlobalTimeDilation
+	 */
+	struct UGameplayStatics_GetGlobalTimeDilation_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.GetGameState
+	 */
+	struct UGameplayStatics_GetGameState_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class AGameStateBase*                                      ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.GetGameMode
+	 */
+	struct UGameplayStatics_GetGameMode_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class AGameModeBase*                                       ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.GetGameInstance
+	 */
+	struct UGameplayStatics_GetGameInstance_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UGameInstance*                                       ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.GetEnableWorldRendering
+	 */
+	struct UGameplayStatics_GetEnableWorldRendering_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.GetCurrentReverbEffect
+	 */
+	struct UGameplayStatics_GetCurrentReverbEffect_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UReverbEffect*                                       ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.GetCurrentLevelName
+	 */
+	struct UGameplayStatics_GetCurrentLevelName_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bRemovePrefixString;                                     // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class FString                                              ReturnValue;                                             // 0x0000(0x0010)  (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.GetAudioTimeSeconds
+	 */
+	struct UGameplayStatics_GetAudioTimeSeconds_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.GetAllActorsWithTag
+	 */
+	struct UGameplayStatics_GetAllActorsWithTag_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class FName                                                Tag;                                                     // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		TArray<class AActor*>                                      OutActors;                                               // 0x0000(0x0010)  (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.GetAllActorsWithInterface
+	 */
+	struct UGameplayStatics_GetAllActorsWithInterface_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UClass*                                              Interface;                                               // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		TArray<class AActor*>                                      OutActors;                                               // 0x0000(0x0010)  (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.GetAllActorsOfClassWithTag
+	 */
+	struct UGameplayStatics_GetAllActorsOfClassWithTag_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UClass*                                              ActorClass;                                              // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class FName                                                Tag;                                                     // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		TArray<class AActor*>                                      OutActors;                                               // 0x0000(0x0010)  (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.GetAllActorsOfClass
+	 */
+	struct UGameplayStatics_GetAllActorsOfClass_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UClass*                                              ActorClass;                                              // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		TArray<class AActor*>                                      OutActors;                                               // 0x0000(0x0010)  (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.GetActorOfClass
+	 */
+	struct UGameplayStatics_GetActorOfClass_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UClass*                                              ActorClass;                                              // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class AActor*                                              ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.GetActorArrayBounds
+	 */
+	struct UGameplayStatics_GetActorArrayBounds_Params
+	{
+	public:
+		TArray<class AActor*>                                      Actors;                                                  // 0x0000(0x0010)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+		bool                                                       bOnlyCollidingComponents;                                // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             Center;                                                  // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             BoxExtent;                                               // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.GetActorArrayAverageLocation
+	 */
+	struct UGameplayStatics_GetActorArrayAverageLocation_Params
+	{
+	public:
+		TArray<class AActor*>                                      Actors;                                                  // 0x0000(0x0010)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+		struct FVector                                             ReturnValue;                                             // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.GetAccurateRealTime
+	 */
+	struct UGameplayStatics_GetAccurateRealTime_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		int                                                        Seconds;                                                 // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      PartialSeconds;                                          // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.FlushLevelStreaming
+	 */
+	struct UGameplayStatics_FlushLevelStreaming_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.FinishSpawningActor
+	 */
+	struct UGameplayStatics_FinishSpawningActor_Params
+	{
+	public:
+		class AActor*                                              Actor;                                                   // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FTransform                                          SpawnTransform;                                          // 0x0000(0x0030)  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+		class AActor*                                              ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.FindCollisionUV
+	 */
+	struct UGameplayStatics_FindCollisionUV_Params
+	{
+	public:
+		struct FHitResult                                          Hit;                                                     // 0x0000(0x0088)  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+		int                                                        UVChannel;                                               // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector2D                                           UV;                                                      // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.EnableLiveStreaming
+	 */
+	struct UGameplayStatics_EnableLiveStreaming_Params
+	{
+	public:
+		bool                                                       enable;                                                  // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.DoesSaveGameExist
+	 */
+	struct UGameplayStatics_DoesSaveGameExist_Params
+	{
+	public:
+		class FString                                              SlotName;                                                // 0x0000(0x0010)  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		int                                                        UserIndex;                                               // 0x0000(0x0004)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.DeprojectScreenToWorld
+	 */
+	struct UGameplayStatics_DeprojectScreenToWorld_Params
+	{
+	public:
+		class APlayerController*                                   Player;                                                  // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector2D                                           ScreenPosition;                                          // 0x0000(0x0008)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             WorldPosition;                                           // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             WorldDirection;                                          // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.DeleteGameInSlot
+	 */
+	struct UGameplayStatics_DeleteGameInSlot_Params
+	{
+	public:
+		class FString                                              SlotName;                                                // 0x0000(0x0010)  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		int                                                        UserIndex;                                               // 0x0000(0x0004)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.DeactivateReverbEffect
+	 */
+	struct UGameplayStatics_DeactivateReverbEffect_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class FName                                                TagName;                                                 // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.CreateSound2D
+	 */
+	struct UGameplayStatics_CreateSound2D_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class USoundBase*                                          Sound;                                                   // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      VolumeMultiplier;                                        // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      PitchMultiplier;                                         // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      StartTime;                                               // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class USoundConcurrency*                                   ConcurrencySettings;                                     // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bPersistAcrossLevelTransition;                           // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bAutoDestroy;                                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UAudioComponent*                                     ReturnValue;                                             // 0x0000(0x0008)  (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.CreateSaveGameObject
+	 */
+	struct UGameplayStatics_CreateSaveGameObject_Params
+	{
+	public:
+		class UClass*                                              SaveGameClass;                                           // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class USaveGame*                                           ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.CreatePlayer
+	 */
+	struct UGameplayStatics_CreatePlayer_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		int                                                        ControllerId;                                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bSpawnPlayerController;                                  // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class APlayerController*                                   ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.ClearSoundMixModifiers
+	 */
+	struct UGameplayStatics_ClearSoundMixModifiers_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.ClearSoundMixClassOverride
+	 */
+	struct UGameplayStatics_ClearSoundMixClassOverride_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class USoundMix*                                           InSoundMixModifier;                                      // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class USoundClass*                                         InSoundClass;                                            // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      FadeOutTime;                                             // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.CancelAsyncLoading
+	 */
+	struct UGameplayStatics_CancelAsyncLoading_Params
+	{
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.BreakHitResult
+	 */
+	struct UGameplayStatics_BreakHitResult_Params
+	{
+	public:
+		struct FHitResult                                          Hit;                                                     // 0x0000(0x0088)  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+		bool                                                       bBlockingHit;                                            // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bInitialOverlap;                                         // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      Time;                                                    // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      Distance;                                                // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             Location;                                                // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             ImpactPoint;                                             // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             Normal;                                                  // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             ImpactNormal;                                            // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UPhysicalMaterial*                                   PhysMat;                                                 // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class AActor*                                              HitActor;                                                // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UPrimitiveComponent*                                 HitComponent;                                            // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class FName                                                HitBoneName;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		int                                                        HitItem;                                                 // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		int                                                        FaceIndex;                                               // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             TraceStart;                                              // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             TraceEnd;                                                // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.BlueprintSuggestProjectileVelocity
+	 */
+	struct UGameplayStatics_BlueprintSuggestProjectileVelocity_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             TossVelocity;                                            // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             StartLocation;                                           // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             EndLocation;                                             // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      LaunchSpeed;                                             // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      OverrideGravityZ;                                        // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		Engine_ESuggestProjVelocityTraceOption                     TraceOption;                                             // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      CollisionRadius;                                         // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bFavorHighArc;                                           // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bDrawDebug;                                              // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.Blueprint_PredictProjectilePath_ByTraceChannel
+	 */
+	struct UGameplayStatics_Blueprint_PredictProjectilePath_ByTraceChannel_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FHitResult                                          OutHit;                                                  // 0x0000(0x0088)  (Parm, OutParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+		TArray<struct FVector>                                     OutPathPositions;                                        // 0x0000(0x0010)  (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+		struct FVector                                             OutLastTraceDestination;                                 // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             StartPos;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             LaunchVelocity;                                          // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bTracePath;                                              // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      ProjectileRadius;                                        // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		Engine_ECollisionChannel                                   TraceChannel;                                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bTraceComplex;                                           // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		TArray<class AActor*>                                      ActorsToIgnore;                                          // 0x0000(0x0010)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+		Engine_EDrawDebugTrace                                     DrawDebugType;                                           // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      DrawDebugTime;                                           // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      SimFrequency;                                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      MaxSimTime;                                              // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      OverrideGravityZ;                                        // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.Blueprint_PredictProjectilePath_ByObjectType
+	 */
+	struct UGameplayStatics_Blueprint_PredictProjectilePath_ByObjectType_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FHitResult                                          OutHit;                                                  // 0x0000(0x0088)  (Parm, OutParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+		TArray<struct FVector>                                     OutPathPositions;                                        // 0x0000(0x0010)  (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+		struct FVector                                             OutLastTraceDestination;                                 // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             StartPos;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             LaunchVelocity;                                          // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bTracePath;                                              // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      ProjectileRadius;                                        // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		TArray<Engine_EObjectTypeQuery>                            ObjectTypes;                                             // 0x0000(0x0010)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+		bool                                                       bTraceComplex;                                           // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		TArray<class AActor*>                                      ActorsToIgnore;                                          // 0x0000(0x0010)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+		Engine_EDrawDebugTrace                                     DrawDebugType;                                           // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      DrawDebugTime;                                           // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      SimFrequency;                                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      MaxSimTime;                                              // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      OverrideGravityZ;                                        // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.Blueprint_PredictProjectilePath_Advanced
+	 */
+	struct UGameplayStatics_Blueprint_PredictProjectilePath_Advanced_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FPredictProjectilePathParams                        PredictParams;                                           // 0x0000(0x0060)  (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+		struct FPredictProjectilePathResult                        PredictResult;                                           // 0x0000(0x00B8)  (Parm, OutParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.BeginSpawningActorFromClass
+	 */
+	struct UGameplayStatics_BeginSpawningActorFromClass_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UClass*                                              ActorClass;                                              // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FTransform                                          SpawnTransform;                                          // 0x0000(0x0030)  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+		bool                                                       bNoCollisionFail;                                        // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class AActor*                                              Owner;                                                   // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class AActor*                                              ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.BeginSpawningActorFromBlueprint
+	 */
+	struct UGameplayStatics_BeginSpawningActorFromBlueprint_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UBlueprint*                                          Blueprint;                                               // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FTransform                                          SpawnTransform;                                          // 0x0000(0x0030)  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+		bool                                                       bNoCollisionFail;                                        // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class AActor*                                              ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.BeginDeferredActorSpawnFromClass
+	 */
+	struct UGameplayStatics_BeginDeferredActorSpawnFromClass_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UClass*                                              ActorClass;                                              // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FTransform                                          SpawnTransform;                                          // 0x0000(0x0030)  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+		Engine_ESpawnActorCollisionHandlingMethod                  CollisionHandlingOverride;                               // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class AActor*                                              Owner;                                                   // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class AActor*                                              ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.AreSubtitlesEnabled
+	 */
+	struct UGameplayStatics_AreSubtitlesEnabled_Params
+	{
+	public:
+		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.AreAnyListenersWithinRange
+	 */
+	struct UGameplayStatics_AreAnyListenersWithinRange_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             Location;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      MaximumRange;                                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.ApplyRadialDamageWithFalloff
+	 */
+	struct UGameplayStatics_ApplyRadialDamageWithFalloff_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      BaseDamage;                                              // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      MinimumDamage;                                           // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             Origin;                                                  // 0x0000(0x000C)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      DamageInnerRadius;                                       // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      DamageOuterRadius;                                       // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      DamageFalloff;                                           // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UClass*                                              DamageTypeClass;                                         // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		TArray<class AActor*>                                      IgnoreActors;                                            // 0x0000(0x0010)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+		class AActor*                                              DamageCauser;                                            // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class AController*                                         InstigatedByController;                                  // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		Engine_ECollisionChannel                                   DamagePreventionChannel;                                 // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.ApplyRadialDamage
+	 */
+	struct UGameplayStatics_ApplyRadialDamage_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      BaseDamage;                                              // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             Origin;                                                  // 0x0000(0x000C)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      DamageRadius;                                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UClass*                                              DamageTypeClass;                                         // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		TArray<class AActor*>                                      IgnoreActors;                                            // 0x0000(0x0010)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+		class AActor*                                              DamageCauser;                                            // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class AController*                                         InstigatedByController;                                  // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bDoFullDamage;                                           // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		Engine_ECollisionChannel                                   DamagePreventionChannel;                                 // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.ApplyPointDamage
+	 */
+	struct UGameplayStatics_ApplyPointDamage_Params
+	{
+	public:
+		class AActor*                                              DamagedActor;                                            // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      BaseDamage;                                              // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             HitFromDirection;                                        // 0x0000(0x000C)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FHitResult                                          HitInfo;                                                 // 0x0000(0x0088)  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+		class AController*                                         EventInstigator;                                         // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class AActor*                                              DamageCauser;                                            // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UClass*                                              DamageTypeClass;                                         // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.ApplyDamage
+	 */
+	struct UGameplayStatics_ApplyDamage_Params
+	{
+	public:
+		class AActor*                                              DamagedActor;                                            // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      BaseDamage;                                              // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class AController*                                         EventInstigator;                                         // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class AActor*                                              DamageCauser;                                            // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UClass*                                              DamageTypeClass;                                         // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameplayStatics.ActivateReverbEffect
+	 */
+	struct UGameplayStatics_ActivateReverbEffect_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UReverbEffect*                                       ReverbEffect;                                            // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class FName                                                TagName;                                                 // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      Priority;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      Volume;                                                  // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      FadeTime;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameUserSettings.ValidateSettings
+	 */
+	struct UGameUserSettings_ValidateSettings_Params
+	{
+	};
+
+	/**
+	 * Function Engine.GameUserSettings.SupportsHDRDisplayOutput
+	 */
+	struct UGameUserSettings_SupportsHDRDisplayOutput_Params
+	{
+	public:
+		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameUserSettings.SetVSyncEnabled
+	 */
+	struct UGameUserSettings_SetVSyncEnabled_Params
+	{
+	public:
+		bool                                                       bEnable;                                                 // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameUserSettings.SetVisualEffectQuality
+	 */
+	struct UGameUserSettings_SetVisualEffectQuality_Params
+	{
+	public:
+		int                                                        Value;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameUserSettings.SetViewDistanceQuality
+	 */
+	struct UGameUserSettings_SetViewDistanceQuality_Params
+	{
+	public:
+		int                                                        Value;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameUserSettings.SetToDefaults
+	 */
+	struct UGameUserSettings_SetToDefaults_Params
+	{
+	};
+
+	/**
+	 * Function Engine.GameUserSettings.SetTextureQuality
+	 */
+	struct UGameUserSettings_SetTextureQuality_Params
+	{
+	public:
+		int                                                        Value;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameUserSettings.SetShadowQuality
+	 */
+	struct UGameUserSettings_SetShadowQuality_Params
+	{
+	public:
+		int                                                        Value;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameUserSettings.SetScreenResolution
+	 */
+	struct UGameUserSettings_SetScreenResolution_Params
+	{
+	public:
+		struct FIntPoint                                           Resolution;                                              // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameUserSettings.SetResolutionScaleValueEx
+	 */
+	struct UGameUserSettings_SetResolutionScaleValueEx_Params
+	{
+	public:
+		float                                                      NewScaleValue;                                           // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameUserSettings.SetResolutionScaleValue
+	 */
+	struct UGameUserSettings_SetResolutionScaleValue_Params
+	{
+	public:
+		int                                                        NewScaleValue;                                           // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameUserSettings.SetResolutionScaleNormalized
+	 */
+	struct UGameUserSettings_SetResolutionScaleNormalized_Params
+	{
+	public:
+		float                                                      NewScaleNormalized;                                      // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameUserSettings.SetPostProcessingQuality
+	 */
+	struct UGameUserSettings_SetPostProcessingQuality_Params
+	{
+	public:
+		int                                                        Value;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameUserSettings.SetOverallScalabilityLevel
+	 */
+	struct UGameUserSettings_SetOverallScalabilityLevel_Params
+	{
+	public:
+		int                                                        Value;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameUserSettings.SetFullscreenMode
+	 */
+	struct UGameUserSettings_SetFullscreenMode_Params
+	{
+	public:
+		Engine_EWindowMode                                         InFullscreenMode;                                        // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameUserSettings.SetFrameRateLimit
+	 */
+	struct UGameUserSettings_SetFrameRateLimit_Params
+	{
+	public:
+		float                                                      NewLimit;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameUserSettings.SetFoliageQuality
+	 */
+	struct UGameUserSettings_SetFoliageQuality_Params
+	{
+	public:
+		int                                                        Value;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameUserSettings.SetDynamicResolutionEnabled
+	 */
+	struct UGameUserSettings_SetDynamicResolutionEnabled_Params
+	{
+	public:
+		bool                                                       bEnable;                                                 // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameUserSettings.SetBenchmarkFallbackValues
+	 */
+	struct UGameUserSettings_SetBenchmarkFallbackValues_Params
+	{
+	};
+
+	/**
+	 * Function Engine.GameUserSettings.SetAudioQualityLevel
+	 */
+	struct UGameUserSettings_SetAudioQualityLevel_Params
+	{
+	public:
+		int                                                        QualityLevel;                                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameUserSettings.SetAntiAliasingQuality
+	 */
+	struct UGameUserSettings_SetAntiAliasingQuality_Params
+	{
+	public:
+		int                                                        Value;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameUserSettings.SaveSettings
+	 */
+	struct UGameUserSettings_SaveSettings_Params
+	{
+	};
+
+	/**
+	 * Function Engine.GameUserSettings.RunHardwareBenchmark
+	 */
+	struct UGameUserSettings_RunHardwareBenchmark_Params
+	{
+	public:
+		int                                                        WorkScale;                                               // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      CPUMultiplier;                                           // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      GPUMultiplier;                                           // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameUserSettings.RevertVideoMode
+	 */
+	struct UGameUserSettings_RevertVideoMode_Params
+	{
+	};
+
+	/**
+	 * Function Engine.GameUserSettings.ResetToCurrentSettings
+	 */
+	struct UGameUserSettings_ResetToCurrentSettings_Params
+	{
+	};
+
+	/**
+	 * Function Engine.GameUserSettings.LoadSettings
+	 */
+	struct UGameUserSettings_LoadSettings_Params
+	{
+	public:
+		bool                                                       bForceReload;                                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameUserSettings.IsVSyncEnabled
+	 */
+	struct UGameUserSettings_IsVSyncEnabled_Params
+	{
+	public:
+		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameUserSettings.IsVSyncDirty
+	 */
+	struct UGameUserSettings_IsVSyncDirty_Params
+	{
+	public:
+		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameUserSettings.IsScreenResolutionDirty
+	 */
+	struct UGameUserSettings_IsScreenResolutionDirty_Params
+	{
+	public:
+		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameUserSettings.IsHDREnabled
+	 */
+	struct UGameUserSettings_IsHDREnabled_Params
+	{
+	public:
+		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameUserSettings.IsFullscreenModeDirty
+	 */
+	struct UGameUserSettings_IsFullscreenModeDirty_Params
+	{
+	public:
+		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameUserSettings.IsDynamicResolutionEnabled
+	 */
+	struct UGameUserSettings_IsDynamicResolutionEnabled_Params
+	{
+	public:
+		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameUserSettings.IsDynamicResolutionDirty
+	 */
+	struct UGameUserSettings_IsDynamicResolutionDirty_Params
+	{
+	public:
+		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameUserSettings.IsDirty
+	 */
+	struct UGameUserSettings_IsDirty_Params
+	{
+	public:
+		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameUserSettings.GetVisualEffectQuality
+	 */
+	struct UGameUserSettings_GetVisualEffectQuality_Params
+	{
+	public:
+		int                                                        ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameUserSettings.GetViewDistanceQuality
+	 */
+	struct UGameUserSettings_GetViewDistanceQuality_Params
+	{
+	public:
+		int                                                        ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameUserSettings.GetTextureQuality
+	 */
+	struct UGameUserSettings_GetTextureQuality_Params
+	{
+	public:
+		int                                                        ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameUserSettings.GetSyncInterval
+	 */
+	struct UGameUserSettings_GetSyncInterval_Params
+	{
+	public:
+		int                                                        ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameUserSettings.GetShadowQuality
+	 */
+	struct UGameUserSettings_GetShadowQuality_Params
+	{
+	public:
+		int                                                        ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameUserSettings.GetScreenResolution
+	 */
+	struct UGameUserSettings_GetScreenResolution_Params
+	{
+	public:
+		struct FIntPoint                                           ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameUserSettings.GetResolutionScaleNormalized
+	 */
+	struct UGameUserSettings_GetResolutionScaleNormalized_Params
+	{
+	public:
+		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameUserSettings.GetResolutionScaleInformationEx
+	 */
+	struct UGameUserSettings_GetResolutionScaleInformationEx_Params
+	{
+	public:
+		float                                                      CurrentScaleNormalized;                                  // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      CurrentScaleValue;                                       // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      MinScaleValue;                                           // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      MaxScaleValue;                                           // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameUserSettings.GetResolutionScaleInformation
+	 */
+	struct UGameUserSettings_GetResolutionScaleInformation_Params
+	{
+	public:
+		float                                                      CurrentScaleNormalized;                                  // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		int                                                        CurrentScaleValue;                                       // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		int                                                        MinScaleValue;                                           // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		int                                                        MaxScaleValue;                                           // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameUserSettings.GetRecommendedResolutionScale
+	 */
+	struct UGameUserSettings_GetRecommendedResolutionScale_Params
+	{
+	public:
+		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameUserSettings.GetPreferredFullscreenMode
+	 */
+	struct UGameUserSettings_GetPreferredFullscreenMode_Params
+	{
+	public:
+		Engine_EWindowMode                                         ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameUserSettings.GetPostProcessingQuality
+	 */
+	struct UGameUserSettings_GetPostProcessingQuality_Params
+	{
+	public:
+		int                                                        ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameUserSettings.GetOverallScalabilityLevel
+	 */
+	struct UGameUserSettings_GetOverallScalabilityLevel_Params
+	{
+	public:
+		int                                                        ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameUserSettings.GetLastConfirmedScreenResolution
+	 */
+	struct UGameUserSettings_GetLastConfirmedScreenResolution_Params
+	{
+	public:
+		struct FIntPoint                                           ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameUserSettings.GetLastConfirmedFullscreenMode
+	 */
+	struct UGameUserSettings_GetLastConfirmedFullscreenMode_Params
+	{
+	public:
+		Engine_EWindowMode                                         ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameUserSettings.GetGameUserSettings
+	 */
+	struct UGameUserSettings_GetGameUserSettings_Params
+	{
+	public:
+		class UGameUserSettings*                                   ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameUserSettings.GetFullscreenMode
+	 */
+	struct UGameUserSettings_GetFullscreenMode_Params
+	{
+	public:
+		Engine_EWindowMode                                         ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameUserSettings.GetFrameRateLimit
+	 */
+	struct UGameUserSettings_GetFrameRateLimit_Params
+	{
+	public:
+		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameUserSettings.GetFoliageQuality
+	 */
+	struct UGameUserSettings_GetFoliageQuality_Params
+	{
+	public:
+		int                                                        ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameUserSettings.GetDesktopResolution
+	 */
+	struct UGameUserSettings_GetDesktopResolution_Params
+	{
+	public:
+		struct FIntPoint                                           ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameUserSettings.GetDefaultWindowPosition
+	 */
+	struct UGameUserSettings_GetDefaultWindowPosition_Params
+	{
+	public:
+		struct FIntPoint                                           ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameUserSettings.GetDefaultWindowMode
+	 */
+	struct UGameUserSettings_GetDefaultWindowMode_Params
+	{
+	public:
+		Engine_EWindowMode                                         ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameUserSettings.GetDefaultResolutionScale
+	 */
+	struct UGameUserSettings_GetDefaultResolutionScale_Params
+	{
+	public:
+		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameUserSettings.GetDefaultResolution
+	 */
+	struct UGameUserSettings_GetDefaultResolution_Params
+	{
+	public:
+		struct FIntPoint                                           ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameUserSettings.GetCurrentHDRDisplayNits
+	 */
+	struct UGameUserSettings_GetCurrentHDRDisplayNits_Params
+	{
+	public:
+		int                                                        ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameUserSettings.GetAudioQualityLevel
+	 */
+	struct UGameUserSettings_GetAudioQualityLevel_Params
+	{
+	public:
+		int                                                        ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameUserSettings.GetAntiAliasingQuality
+	 */
+	struct UGameUserSettings_GetAntiAliasingQuality_Params
+	{
+	public:
+		int                                                        ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameUserSettings.EnableHDRDisplayOutput
+	 */
+	struct UGameUserSettings_EnableHDRDisplayOutput_Params
+	{
+	public:
+		bool                                                       bEnable;                                                 // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		int                                                        DisplayNits;                                             // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameUserSettings.ConfirmVideoMode
+	 */
+	struct UGameUserSettings_ConfirmVideoMode_Params
+	{
+	};
+
+	/**
+	 * Function Engine.GameUserSettings.ApplySettings
+	 */
+	struct UGameUserSettings_ApplySettings_Params
+	{
+	public:
+		bool                                                       bCheckForCommandLineOverrides;                           // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameUserSettings.ApplyResolutionSettings
+	 */
+	struct UGameUserSettings_ApplyResolutionSettings_Params
+	{
+	public:
+		bool                                                       bCheckForCommandLineOverrides;                           // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.GameUserSettings.ApplyNonResolutionSettings
+	 */
+	struct UGameUserSettings_ApplyNonResolutionSettings_Params
+	{
+	};
+
+	/**
+	 * Function Engine.GameUserSettings.ApplyHardwareBenchmarkResults
+	 */
+	struct UGameUserSettings_ApplyHardwareBenchmarkResults_Params
+	{
+	};
+
+	/**
+	 * Function Engine.SpotLight.SetOuterConeAngle
+	 */
+	struct ASpotLight_SetOuterConeAngle_Params
+	{
+	public:
+		float                                                      NewOuterConeAngle;                                       // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.SpotLight.SetInnerConeAngle
+	 */
+	struct ASpotLight_SetInnerConeAngle_Params
+	{
+	public:
+		float                                                      NewInnerConeAngle;                                       // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.HealthSnapshotBlueprintLibrary.StopPerformanceSnapshots
+	 */
+	struct UHealthSnapshotBlueprintLibrary_StopPerformanceSnapshots_Params
+	{
+	};
+
+	/**
+	 * Function Engine.HealthSnapshotBlueprintLibrary.StartPerformanceSnapshots
+	 */
+	struct UHealthSnapshotBlueprintLibrary_StartPerformanceSnapshots_Params
+	{
+	};
+
+	/**
+	 * Function Engine.HealthSnapshotBlueprintLibrary.LogPerformanceSnapshot
+	 */
+	struct UHealthSnapshotBlueprintLibrary_LogPerformanceSnapshot_Params
+	{
+	public:
+		class FString                                              SnapshotTitle;                                           // 0x0000(0x0010)  (ConstParm, Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bResetStats;                                             // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.ImportanceSamplingLibrary.RandomSobolFloat
+	 */
+	struct UImportanceSamplingLibrary_RandomSobolFloat_Params
+	{
+	public:
+		int                                                        Index;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		int                                                        Dimension;                                               // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      Seed;                                                    // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.ImportanceSamplingLibrary.RandomSobolCell3D
+	 */
+	struct UImportanceSamplingLibrary_RandomSobolCell3D_Params
+	{
+	public:
+		int                                                        Index;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		int                                                        NumCells;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             Cell;                                                    // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             Seed;                                                    // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             ReturnValue;                                             // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.ImportanceSamplingLibrary.RandomSobolCell2D
+	 */
+	struct UImportanceSamplingLibrary_RandomSobolCell2D_Params
+	{
+	public:
+		int                                                        Index;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		int                                                        NumCells;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector2D                                           Cell;                                                    // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector2D                                           Seed;                                                    // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector2D                                           ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.ImportanceSamplingLibrary.NextSobolFloat
+	 */
+	struct UImportanceSamplingLibrary_NextSobolFloat_Params
+	{
+	public:
+		int                                                        Index;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		int                                                        Dimension;                                               // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      PreviousValue;                                           // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.ImportanceSamplingLibrary.NextSobolCell3D
+	 */
+	struct UImportanceSamplingLibrary_NextSobolCell3D_Params
+	{
+	public:
+		int                                                        Index;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		int                                                        NumCells;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             PreviousValue;                                           // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             ReturnValue;                                             // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.ImportanceSamplingLibrary.NextSobolCell2D
+	 */
+	struct UImportanceSamplingLibrary_NextSobolCell2D_Params
+	{
+	public:
+		int                                                        Index;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		int                                                        NumCells;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector2D                                           PreviousValue;                                           // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector2D                                           ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.ImportanceSamplingLibrary.MakeImportanceTexture
+	 */
+	struct UImportanceSamplingLibrary_MakeImportanceTexture_Params
+	{
+	public:
+		class UTexture2D*                                          Texture;                                                 // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		Engine_EImportanceWeight                                   WeightingFunc;                                           // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FImportanceTexture                                  ReturnValue;                                             // 0x0000(0x0050)  (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.ImportanceSamplingLibrary.ImportanceSample
+	 */
+	struct UImportanceSamplingLibrary_ImportanceSample_Params
+	{
+	public:
+		struct FImportanceTexture                                  Texture;                                                 // 0x0000(0x0050)  (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+		struct FVector2D                                           Rand;                                                    // 0x0000(0x0008)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		int                                                        Samples;                                                 // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      Intensity;                                               // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector2D                                           SamplePosition;                                          // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FLinearColor                                        SampleColor;                                             // 0x0000(0x0010)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      SampleIntensity;                                         // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      SampleSize;                                              // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.ImportanceSamplingLibrary.BreakImportanceTexture
+	 */
+	struct UImportanceSamplingLibrary_BreakImportanceTexture_Params
+	{
+	public:
+		struct FImportanceTexture                                  ImportanceTexture;                                       // 0x0000(0x0050)  (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+		class UTexture2D*                                          Texture;                                                 // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		Engine_EImportanceWeight                                   WeightingFunc;                                           // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.SoundSubmix.StopRecordingOutput
+	 */
+	struct USoundSubmix_StopRecordingOutput_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		Engine_EAudioRecordingExportType                           ExportType;                                              // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class FString                                              Name;                                                    // 0x0000(0x0010)  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class FString                                              Path;                                                    // 0x0000(0x0010)  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class USoundWave*                                          ExistingSoundWaveToOverwrite;                            // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.SoundSubmix.StopEnvelopeFollowing
+	 */
+	struct USoundSubmix_StopEnvelopeFollowing_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.SoundSubmix.StartRecordingOutput
+	 */
+	struct USoundSubmix_StartRecordingOutput_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      ExpectedDuration;                                        // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.SoundSubmix.StartEnvelopeFollowing
+	 */
+	struct USoundSubmix_StartEnvelopeFollowing_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.SoundSubmix.SetSubmixOutputVolume
+	 */
+	struct USoundSubmix_SetSubmixOutputVolume_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      InOutputVolume;                                          // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.SoundSubmix.AddEnvelopeFollowerDelegate
+	 */
+	struct USoundSubmix_AddEnvelopeFollowerDelegate_Params
+	{
+	public:
+		class UObject*                                             WorldContextObject;                                      // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class FScriptDelegate                                      OnSubmixEnvelopeBP;                                      // 0x0000(0x0010)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.SplineMeshComponent.UpdateMesh
+	 */
+	struct USplineMeshComponent_UpdateMesh_Params
+	{
+	};
+
+	/**
+	 * Function Engine.SplineMeshComponent.SetStartTangent
+	 */
+	struct USplineMeshComponent_SetStartTangent_Params
+	{
+	public:
+		struct FVector                                             StartTangent;                                            // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bUpdateMesh;                                             // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.SplineMeshComponent.SetStartScale
+	 */
+	struct USplineMeshComponent_SetStartScale_Params
+	{
+	public:
+		struct FVector2D                                           StartScale;                                              // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bUpdateMesh;                                             // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.SplineMeshComponent.SetStartRoll
+	 */
+	struct USplineMeshComponent_SetStartRoll_Params
+	{
+	public:
+		float                                                      StartRoll;                                               // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bUpdateMesh;                                             // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.SplineMeshComponent.SetStartPosition
+	 */
+	struct USplineMeshComponent_SetStartPosition_Params
+	{
+	public:
+		struct FVector                                             StartPos;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bUpdateMesh;                                             // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.SplineMeshComponent.SetStartOffset
+	 */
+	struct USplineMeshComponent_SetStartOffset_Params
+	{
+	public:
+		struct FVector2D                                           StartOffset;                                             // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bUpdateMesh;                                             // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.SplineMeshComponent.SetStartAndEnd
+	 */
+	struct USplineMeshComponent_SetStartAndEnd_Params
+	{
+	public:
+		struct FVector                                             StartPos;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             StartTangent;                                            // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             EndPos;                                                  // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             EndTangent;                                              // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bUpdateMesh;                                             // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.SplineMeshComponent.SetSplineUpDir
+	 */
+	struct USplineMeshComponent_SetSplineUpDir_Params
+	{
+	public:
+		struct FVector                                             InSplineUpDir;                                           // 0x0000(0x000C)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bUpdateMesh;                                             // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.SplineMeshComponent.SetForwardAxis
+	 */
+	struct USplineMeshComponent_SetForwardAxis_Params
+	{
+	public:
+		Engine_ESplineMeshAxis                                     InForwardAxis;                                           // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bUpdateMesh;                                             // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.SplineMeshComponent.SetEndTangent
+	 */
+	struct USplineMeshComponent_SetEndTangent_Params
+	{
+	public:
+		struct FVector                                             EndTangent;                                              // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bUpdateMesh;                                             // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.SplineMeshComponent.SetEndScale
+	 */
+	struct USplineMeshComponent_SetEndScale_Params
+	{
+	public:
+		struct FVector2D                                           EndScale;                                                // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bUpdateMesh;                                             // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.SplineMeshComponent.SetEndRoll
+	 */
+	struct USplineMeshComponent_SetEndRoll_Params
+	{
+	public:
+		float                                                      EndRoll;                                                 // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bUpdateMesh;                                             // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.SplineMeshComponent.SetEndPosition
+	 */
+	struct USplineMeshComponent_SetEndPosition_Params
+	{
+	public:
+		struct FVector                                             EndPos;                                                  // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bUpdateMesh;                                             // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.SplineMeshComponent.SetEndOffset
+	 */
+	struct USplineMeshComponent_SetEndOffset_Params
+	{
+	public:
+		struct FVector2D                                           EndOffset;                                               // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bUpdateMesh;                                             // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.SplineMeshComponent.SetBoundaryMin
+	 */
+	struct USplineMeshComponent_SetBoundaryMin_Params
+	{
+	public:
+		float                                                      InBoundaryMin;                                           // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bUpdateMesh;                                             // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.SplineMeshComponent.SetBoundaryMax
+	 */
+	struct USplineMeshComponent_SetBoundaryMax_Params
+	{
+	public:
+		float                                                      InBoundaryMax;                                           // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bUpdateMesh;                                             // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.SplineMeshComponent.GetStartTangent
+	 */
+	struct USplineMeshComponent_GetStartTangent_Params
+	{
+	public:
+		struct FVector                                             ReturnValue;                                             // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.SplineMeshComponent.GetStartScale
+	 */
+	struct USplineMeshComponent_GetStartScale_Params
+	{
+	public:
+		struct FVector2D                                           ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.SplineMeshComponent.GetStartRoll
+	 */
+	struct USplineMeshComponent_GetStartRoll_Params
+	{
+	public:
+		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.SplineMeshComponent.GetStartPosition
+	 */
+	struct USplineMeshComponent_GetStartPosition_Params
+	{
+	public:
+		struct FVector                                             ReturnValue;                                             // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.SplineMeshComponent.GetStartOffset
+	 */
+	struct USplineMeshComponent_GetStartOffset_Params
+	{
+	public:
+		struct FVector2D                                           ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.SplineMeshComponent.GetSplineUpDir
+	 */
+	struct USplineMeshComponent_GetSplineUpDir_Params
+	{
+	public:
+		struct FVector                                             ReturnValue;                                             // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.SplineMeshComponent.GetForwardAxis
+	 */
+	struct USplineMeshComponent_GetForwardAxis_Params
+	{
+	public:
+		Engine_ESplineMeshAxis                                     ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.SplineMeshComponent.GetEndTangent
+	 */
+	struct USplineMeshComponent_GetEndTangent_Params
+	{
+	public:
+		struct FVector                                             ReturnValue;                                             // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.SplineMeshComponent.GetEndScale
+	 */
+	struct USplineMeshComponent_GetEndScale_Params
+	{
+	public:
+		struct FVector2D                                           ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.SplineMeshComponent.GetEndRoll
+	 */
+	struct USplineMeshComponent_GetEndRoll_Params
+	{
+	public:
+		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.SplineMeshComponent.GetEndPosition
+	 */
+	struct USplineMeshComponent_GetEndPosition_Params
+	{
+	public:
+		struct FVector                                             ReturnValue;                                             // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.SplineMeshComponent.GetEndOffset
+	 */
+	struct USplineMeshComponent_GetEndOffset_Params
+	{
+	public:
+		struct FVector2D                                           ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.SplineMeshComponent.GetBoundaryMin
+	 */
+	struct USplineMeshComponent_GetBoundaryMin_Params
+	{
+	public:
+		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.SplineMeshComponent.GetBoundaryMax
+	 */
+	struct USplineMeshComponent_GetBoundaryMax_Params
+	{
+	public:
+		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PointLightComponent.SetSourceRadius
+	 */
+	struct UPointLightComponent_SetSourceRadius_Params
+	{
+	public:
+		float                                                      bNewValue;                                               // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PointLightComponent.SetSourceLength
+	 */
+	struct UPointLightComponent_SetSourceLength_Params
+	{
+	public:
+		float                                                      NewValue;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PointLightComponent.SetSoftSourceRadius
+	 */
+	struct UPointLightComponent_SetSoftSourceRadius_Params
+	{
+	public:
+		float                                                      bNewValue;                                               // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PointLightComponent.SetLightFalloffExponent
+	 */
+	struct UPointLightComponent_SetLightFalloffExponent_Params
+	{
+	public:
+		float                                                      NewLightFalloffExponent;                                 // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.SpotLightComponent.SetOuterConeAngle
+	 */
+	struct USpotLightComponent_SetOuterConeAngle_Params
+	{
+	public:
+		float                                                      NewOuterConeAngle;                                       // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.SpotLightComponent.SetInnerConeAngle
+	 */
+	struct USpotLightComponent_SetInnerConeAngle_Params
+	{
+	public:
+		float                                                      NewInnerConeAngle;                                       // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.SpringArmComponent.IsCollisionFixApplied
+	 */
+	struct USpringArmComponent_IsCollisionFixApplied_Params
+	{
+	public:
+		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.SpringArmComponent.GetUnfixedCameraPosition
+	 */
+	struct USpringArmComponent_GetUnfixedCameraPosition_Params
+	{
+	public:
+		struct FVector                                             ReturnValue;                                             // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.SpringArmComponent.GetTargetRotation
+	 */
+	struct USpringArmComponent_GetTargetRotation_Params
+	{
+	public:
+		struct FRotator                                            ReturnValue;                                             // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.StaticMesh.RemoveSocket
+	 */
+	struct UStaticMesh_RemoveSocket_Params
+	{
+	public:
+		class UStaticMeshSocket*                                   Socket;                                                  // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.StaticMesh.GetNumSections
+	 */
+	struct UStaticMesh_GetNumSections_Params
+	{
+	public:
+		int                                                        InLOD;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		int                                                        ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.StaticMesh.GetNumLODs
+	 */
+	struct UStaticMesh_GetNumLODs_Params
+	{
+	public:
+		int                                                        ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.StaticMesh.GetMaterialIndex
+	 */
+	struct UStaticMesh_GetMaterialIndex_Params
+	{
+	public:
+		class FName                                                MaterialSlotName;                                        // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		int                                                        ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.StaticMesh.GetMaterial
+	 */
+	struct UStaticMesh_GetMaterial_Params
+	{
+	public:
+		int                                                        MaterialIndex;                                           // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UMaterialInterface*                                  ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.StaticMesh.GetBounds
+	 */
+	struct UStaticMesh_GetBounds_Params
+	{
+	public:
+		struct FBoxSphereBounds                                    ReturnValue;                                             // 0x0000(0x001C)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.StaticMesh.GetBoundingBox
+	 */
+	struct UStaticMesh_GetBoundingBox_Params
+	{
+	public:
+		struct FBox                                                ReturnValue;                                             // 0x0000(0x001C)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.StaticMesh.FindSocket
+	 */
+	struct UStaticMesh_FindSocket_Params
+	{
+	public:
+		class FName                                                InSocketName;                                            // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UStaticMeshSocket*                                   ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.StaticMesh.AddSocket
+	 */
+	struct UStaticMesh_AddSocket_Params
+	{
+	public:
+		class UStaticMeshSocket*                                   Socket;                                                  // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.StereoLayerComponent.SetUVRect
+	 */
+	struct UStereoLayerComponent_SetUVRect_Params
+	{
+	public:
+		struct FBox2D                                              InUVRect;                                                // 0x0000(0x0014)  (Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.StereoLayerComponent.SetTexture
+	 */
+	struct UStereoLayerComponent_SetTexture_Params
+	{
+	public:
+		class UTexture*                                            InTexture;                                               // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.StereoLayerComponent.SetQuadSize
+	 */
+	struct UStereoLayerComponent_SetQuadSize_Params
+	{
+	public:
+		struct FVector2D                                           InQuadSize;                                              // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.StereoLayerComponent.SetPriority
+	 */
+	struct UStereoLayerComponent_SetPriority_Params
+	{
+	public:
+		int                                                        InPriority;                                              // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.StereoLayerComponent.SetLeftTexture
+	 */
+	struct UStereoLayerComponent_SetLeftTexture_Params
+	{
+	public:
+		class UTexture*                                            InTexture;                                               // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.StereoLayerComponent.MarkTextureForUpdate
+	 */
+	struct UStereoLayerComponent_MarkTextureForUpdate_Params
+	{
+	};
+
+	/**
+	 * Function Engine.StereoLayerComponent.GetUVRect
+	 */
+	struct UStereoLayerComponent_GetUVRect_Params
+	{
+	public:
+		struct FBox2D                                              ReturnValue;                                             // 0x0000(0x0014)  (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.StereoLayerComponent.GetTexture
+	 */
+	struct UStereoLayerComponent_GetTexture_Params
+	{
+	public:
+		class UTexture*                                            ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.StereoLayerComponent.GetQuadSize
+	 */
+	struct UStereoLayerComponent_GetQuadSize_Params
+	{
+	public:
+		struct FVector2D                                           ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.StereoLayerComponent.GetPriority
+	 */
+	struct UStereoLayerComponent_GetPriority_Params
+	{
+	public:
+		int                                                        ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.StereoLayerComponent.GetLeftTexture
+	 */
+	struct UStereoLayerComponent_GetLeftTexture_Params
+	{
+	public:
+		class UTexture*                                            ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.StereoLayerFunctionLibrary.ShowSplashScreen
+	 */
+	struct UStereoLayerFunctionLibrary_ShowSplashScreen_Params
+	{
+	};
+
+	/**
+	 * Function Engine.StereoLayerFunctionLibrary.SetSplashScreen
+	 */
+	struct UStereoLayerFunctionLibrary_SetSplashScreen_Params
+	{
+	public:
+		class UTexture*                                            Texture;                                                 // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector2D                                           Scale;                                                   // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             Offset;                                                  // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bShowLoadingMovie;                                       // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bShowOnSet;                                              // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.StereoLayerFunctionLibrary.HideSplashScreen
+	 */
+	struct UStereoLayerFunctionLibrary_HideSplashScreen_Params
+	{
+	};
+
+	/**
+	 * Function Engine.StereoLayerFunctionLibrary.EnableAutoLoadingSplashScreen
+	 */
+	struct UStereoLayerFunctionLibrary_EnableAutoLoadingSplashScreen_Params
+	{
+	public:
+		bool                                                       InAutoShowEnabled;                                       // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.SubsystemBlueprintLibrary.GetLocalPlayerSubSystemFromPlayerController
+	 */
+	struct USubsystemBlueprintLibrary_GetLocalPlayerSubSystemFromPlayerController_Params
+	{
+	public:
+		class APlayerController*                                   PlayerController;                                        // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UClass*                                              Class;                                                   // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class ULocalPlayerSubsystem*                               ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.SubsystemBlueprintLibrary.GetLocalPlayerSubsystem
+	 */
+	struct USubsystemBlueprintLibrary_GetLocalPlayerSubsystem_Params
+	{
+	public:
+		class UObject*                                             ContextObject;                                           // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UClass*                                              Class;                                                   // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class ULocalPlayerSubsystem*                               ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.SubsystemBlueprintLibrary.GetGameInstanceSubsystem
+	 */
+	struct USubsystemBlueprintLibrary_GetGameInstanceSubsystem_Params
+	{
+	public:
+		class UObject*                                             ContextObject;                                           // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UClass*                                              Class;                                                   // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UGameInstanceSubsystem*                              ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.SubsystemBlueprintLibrary.GetEngineSubsystem
+	 */
+	struct USubsystemBlueprintLibrary_GetEngineSubsystem_Params
+	{
+	public:
+		class UClass*                                              Class;                                                   // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UEngineSubsystem*                                    ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.TimecodeProvider.GetTimecode
+	 */
+	struct UTimecodeProvider_GetTimecode_Params
+	{
+	public:
+		struct FTimecode                                           ReturnValue;                                             // 0x0000(0x0014)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.TimecodeProvider.GetSynchronizationState
+	 */
+	struct UTimecodeProvider_GetSynchronizationState_Params
+	{
+	public:
+		Engine_ETimecodeProviderSynchronizationState               ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.TimecodeProvider.GetFrameRate
+	 */
+	struct UTimecodeProvider_GetFrameRate_Params
+	{
+	public:
+		struct FFrameRate                                          ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.SystemTimeTimecodeProvider.SetFrameRate
+	 */
+	struct USystemTimeTimecodeProvider_SetFrameRate_Params
+	{
+	public:
+		struct FFrameRate                                          InFrameRate;                                             // 0x0000(0x0008)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.TextRenderComponent.SetYScale
+	 */
+	struct UTextRenderComponent_SetYScale_Params
+	{
+	public:
+		float                                                      Value;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.TextRenderComponent.SetXScale
+	 */
+	struct UTextRenderComponent_SetXScale_Params
+	{
+	public:
+		float                                                      Value;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.TextRenderComponent.SetWorldSize
+	 */
+	struct UTextRenderComponent_SetWorldSize_Params
+	{
+	public:
+		float                                                      Value;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.TextRenderComponent.SetVertSpacingAdjust
+	 */
+	struct UTextRenderComponent_SetVertSpacingAdjust_Params
+	{
+	public:
+		float                                                      Value;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.TextRenderComponent.SetVerticalAlignment
+	 */
+	struct UTextRenderComponent_SetVerticalAlignment_Params
+	{
+	public:
+		Engine_EVerticalTextAligment                               Value;                                                   // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.TextRenderComponent.SetTextRenderColor
+	 */
+	struct UTextRenderComponent_SetTextRenderColor_Params
+	{
+	public:
+		struct FColor                                              Value;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.TextRenderComponent.SetTextMaterial
+	 */
+	struct UTextRenderComponent_SetTextMaterial_Params
+	{
+	public:
+		class UMaterialInterface*                                  Material;                                                // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.TextRenderComponent.SetText
+	 */
+	struct UTextRenderComponent_SetText_Params
+	{
+	public:
+		class FString                                              Value;                                                   // 0x0000(0x0010)  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.TextRenderComponent.SetHorizSpacingAdjust
+	 */
+	struct UTextRenderComponent_SetHorizSpacingAdjust_Params
+	{
+	public:
+		float                                                      Value;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.TextRenderComponent.SetHorizontalAlignment
+	 */
+	struct UTextRenderComponent_SetHorizontalAlignment_Params
+	{
+	public:
+		Engine_EHorizTextAligment                                  Value;                                                   // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.TextRenderComponent.SetFont
+	 */
+	struct UTextRenderComponent_SetFont_Params
+	{
+	public:
+		class UFont*                                               Value;                                                   // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.TextRenderComponent.K2_SetText
+	 */
+	struct UTextRenderComponent_K2_SetText_Params
+	{
+	public:
+		class FText                                                Value;                                                   // 0x0000(0x0018)  (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.TextRenderComponent.GetTextWorldSize
+	 */
+	struct UTextRenderComponent_GetTextWorldSize_Params
+	{
+	public:
+		struct FVector                                             ReturnValue;                                             // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.TextRenderComponent.GetTextLocalSize
+	 */
+	struct UTextRenderComponent_GetTextLocalSize_Params
+	{
+	public:
+		struct FVector                                             ReturnValue;                                             // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.TimelineComponent.Stop
+	 */
+	struct UTimelineComponent_Stop_Params
+	{
+	};
+
+	/**
+	 * Function Engine.TimelineComponent.SetVectorCurve
+	 */
+	struct UTimelineComponent_SetVectorCurve_Params
+	{
+	public:
+		class UCurveVector*                                        NewVectorCurve;                                          // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class FName                                                VectorTrackName;                                         // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.TimelineComponent.SetTimelineLengthMode
+	 */
+	struct UTimelineComponent_SetTimelineLengthMode_Params
+	{
+	public:
+		Engine_ETimelineLengthMode                                 NewLengthMode;                                           // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.TimelineComponent.SetTimelineLength
+	 */
+	struct UTimelineComponent_SetTimelineLength_Params
+	{
+	public:
+		float                                                      NewLength;                                               // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.TimelineComponent.SetPlayRate
+	 */
+	struct UTimelineComponent_SetPlayRate_Params
+	{
+	public:
+		float                                                      NewRate;                                                 // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.TimelineComponent.SetPlaybackPosition
+	 */
+	struct UTimelineComponent_SetPlaybackPosition_Params
+	{
+	public:
+		float                                                      NewPosition;                                             // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bFireEvents;                                             // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bFireUpdate;                                             // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.TimelineComponent.SetNewTime
+	 */
+	struct UTimelineComponent_SetNewTime_Params
+	{
+	public:
+		float                                                      NewTime;                                                 // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.TimelineComponent.SetLooping
+	 */
+	struct UTimelineComponent_SetLooping_Params
+	{
+	public:
+		bool                                                       bNewLooping;                                             // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.TimelineComponent.SetLinearColorCurve
+	 */
+	struct UTimelineComponent_SetLinearColorCurve_Params
+	{
+	public:
+		class UCurveLinearColor*                                   NewLinearColorCurve;                                     // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class FName                                                LinearColorTrackName;                                    // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.TimelineComponent.SetIgnoreTimeDilation
+	 */
+	struct UTimelineComponent_SetIgnoreTimeDilation_Params
+	{
+	public:
+		bool                                                       bNewIgnoreTimeDilation;                                  // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.TimelineComponent.SetFloatCurve
+	 */
+	struct UTimelineComponent_SetFloatCurve_Params
+	{
+	public:
+		class UCurveFloat*                                         NewFloatCurve;                                           // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class FName                                                FloatTrackName;                                          // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.TimelineComponent.ReverseFromEnd
+	 */
+	struct UTimelineComponent_ReverseFromEnd_Params
+	{
+	};
+
+	/**
+	 * Function Engine.TimelineComponent.Reverse
+	 */
+	struct UTimelineComponent_Reverse_Params
+	{
+	};
+
+	/**
+	 * Function Engine.TimelineComponent.PlayFromStart
+	 */
+	struct UTimelineComponent_PlayFromStart_Params
+	{
+	};
+
+	/**
+	 * Function Engine.TimelineComponent.Play
+	 */
+	struct UTimelineComponent_Play_Params
+	{
+	};
+
+	/**
+	 * Function Engine.TimelineComponent.OnRep_Timeline
+	 */
+	struct UTimelineComponent_OnRep_Timeline_Params
+	{
+	};
+
+	/**
+	 * Function Engine.TimelineComponent.IsReversing
+	 */
+	struct UTimelineComponent_IsReversing_Params
+	{
+	public:
+		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.TimelineComponent.IsPlaying
+	 */
+	struct UTimelineComponent_IsPlaying_Params
+	{
+	public:
+		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.TimelineComponent.IsLooping
+	 */
+	struct UTimelineComponent_IsLooping_Params
+	{
+	public:
+		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.TimelineComponent.GetTimelineLength
+	 */
+	struct UTimelineComponent_GetTimelineLength_Params
+	{
+	public:
+		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.TimelineComponent.GetPlayRate
+	 */
+	struct UTimelineComponent_GetPlayRate_Params
+	{
+	public:
+		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.TimelineComponent.GetPlaybackPosition
+	 */
+	struct UTimelineComponent_GetPlaybackPosition_Params
+	{
+	public:
+		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.TimelineComponent.GetIgnoreTimeDilation
+	 */
+	struct UTimelineComponent_GetIgnoreTimeDilation_Params
+	{
+	public:
+		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.TwitterIntegrationBase.TwitterRequest
+	 */
+	struct UTwitterIntegrationBase_TwitterRequest_Params
+	{
+	public:
+		class FString                                              URL;                                                     // 0x0000(0x0010)  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		TArray<class FString>                                      ParamKeysAndValues;                                      // 0x0000(0x0010)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+		Engine_ETwitterRequestMethod                               RequestMethod;                                           // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		int                                                        AccountIndex;                                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.TwitterIntegrationBase.ShowTweetUI
+	 */
+	struct UTwitterIntegrationBase_ShowTweetUI_Params
+	{
+	public:
+		class FString                                              InitialMessage;                                          // 0x0000(0x0010)  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class FString                                              URL;                                                     // 0x0000(0x0010)  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class FString                                              Picture;                                                 // 0x0000(0x0010)  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.TwitterIntegrationBase.Init
+	 */
+	struct UTwitterIntegrationBase_Init_Params
+	{
+	};
+
+	/**
+	 * Function Engine.TwitterIntegrationBase.GetNumAccounts
+	 */
+	struct UTwitterIntegrationBase_GetNumAccounts_Params
+	{
+	public:
+		int                                                        ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.TwitterIntegrationBase.GetAccountName
+	 */
+	struct UTwitterIntegrationBase_GetAccountName_Params
+	{
+	public:
+		int                                                        AccountIndex;                                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class FString                                              ReturnValue;                                             // 0x0000(0x0010)  (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.TwitterIntegrationBase.CanShowTweetUI
+	 */
+	struct UTwitterIntegrationBase_CanShowTweetUI_Params
+	{
+	public:
+		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.TwitterIntegrationBase.AuthorizeAccounts
+	 */
+	struct UTwitterIntegrationBase_AuthorizeAccounts_Params
+	{
+	public:
+		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.VectorFieldComponent.SetIntensity
+	 */
+	struct UVectorFieldComponent_SetIntensity_Params
+	{
+	public:
+		float                                                      NewIntensity;                                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.InputSettings.SaveKeyMappings
+	 */
+	struct UInputSettings_SaveKeyMappings_Params
+	{
+	};
+
+	/**
+	 * Function Engine.InputSettings.RemoveAxisMapping
+	 */
+	struct UInputSettings_RemoveAxisMapping_Params
+	{
+	public:
+		struct FInputAxisKeyMapping                                KeyMapping;                                              // 0x0000(0x0028)  (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+		bool                                                       bForceRebuildKeymaps;                                    // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.InputSettings.RemoveActionMapping
+	 */
+	struct UInputSettings_RemoveActionMapping_Params
+	{
+	public:
+		struct FInputActionKeyMapping                              KeyMapping;                                              // 0x0000(0x0028)  (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+		bool                                                       bForceRebuildKeymaps;                                    // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.InputSettings.GetInputSettings
+	 */
+	struct UInputSettings_GetInputSettings_Params
+	{
+	public:
+		class UInputSettings*                                      ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.InputSettings.GetAxisNames
+	 */
+	struct UInputSettings_GetAxisNames_Params
+	{
+	public:
+		TArray<class FName>                                        AxisNames;                                               // 0x0000(0x0010)  (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.InputSettings.GetAxisMappingByName
+	 */
+	struct UInputSettings_GetAxisMappingByName_Params
+	{
+	public:
+		class FName                                                InAxisName;                                              // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		TArray<struct FInputAxisKeyMapping>                        OutMappings;                                             // 0x0000(0x0010)  (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.InputSettings.GetActionNames
+	 */
+	struct UInputSettings_GetActionNames_Params
+	{
+	public:
+		TArray<class FName>                                        ActionNames;                                             // 0x0000(0x0010)  (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.InputSettings.GetActionMappingByName
+	 */
+	struct UInputSettings_GetActionMappingByName_Params
+	{
+	public:
+		class FName                                                InActionName;                                            // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		TArray<struct FInputActionKeyMapping>                      OutMappings;                                             // 0x0000(0x0010)  (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.InputSettings.ForceRebuildKeymaps
+	 */
+	struct UInputSettings_ForceRebuildKeymaps_Params
+	{
+	};
+
+	/**
+	 * Function Engine.InputSettings.AddAxisMapping
+	 */
+	struct UInputSettings_AddAxisMapping_Params
+	{
+	public:
+		struct FInputAxisKeyMapping                                KeyMapping;                                              // 0x0000(0x0028)  (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+		bool                                                       bForceRebuildKeymaps;                                    // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.InputSettings.AddActionMapping
+	 */
+	struct UInputSettings_AddActionMapping_Params
+	{
+	public:
+		struct FInputActionKeyMapping                              KeyMapping;                                              // 0x0000(0x0028)  (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+		bool                                                       bForceRebuildKeymaps;                                    // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
 	 * Function Engine.LevelScriptActor.WorldOriginLocationChanged
 	 */
 	struct ALevelScriptActor_WorldOriginLocationChanged_Params
@@ -34938,89 +33883,655 @@ namespace CG
 	};
 
 	/**
-	 * Function Engine.ProjectileMovementComponent.StopSimulating
+	 * Function Engine.PhysicsConstraintComponent.SetOrientationDriveTwistAndSwing
 	 */
-	struct UProjectileMovementComponent_StopSimulating_Params
+	struct UPhysicsConstraintComponent_SetOrientationDriveTwistAndSwing_Params
 	{
 	public:
-		struct FHitResult                                          HitResult;                                               // 0x0000(0x0088)  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+		bool                                                       bEnableTwistDrive;                                       // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bEnableSwingDrive;                                       // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 	};
 
 	/**
-	 * Function Engine.ProjectileMovementComponent.SetVelocityInLocalSpace
+	 * Function Engine.PhysicsConstraintComponent.SetOrientationDriveSLERP
 	 */
-	struct UProjectileMovementComponent_SetVelocityInLocalSpace_Params
+	struct UPhysicsConstraintComponent_SetOrientationDriveSLERP_Params
 	{
 	public:
-		struct FVector                                             NewVelocity;                                             // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bEnableSLERP;                                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 	};
 
 	/**
-	 * Function Engine.ProjectileMovementComponent.SetInterpolatedComponent
+	 * Function Engine.PhysicsConstraintComponent.SetLinearZLimit
 	 */
-	struct UProjectileMovementComponent_SetInterpolatedComponent_Params
+	struct UPhysicsConstraintComponent_SetLinearZLimit_Params
 	{
 	public:
-		class USceneComponent*                                     Component;                                               // 0x0000(0x0008)  (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		Engine_ELinearConstraintMotion                             ConstraintType;                                          // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      LimitSize;                                               // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 	};
 
 	/**
-	 * Function Engine.ProjectileMovementComponent.ResetInterpolation
+	 * Function Engine.PhysicsConstraintComponent.SetLinearYLimit
 	 */
-	struct UProjectileMovementComponent_ResetInterpolation_Params
-	{
-	};
-
-	/**
-	 * DelegateFunction Engine.ProjectileMovementComponent.OnProjectileStopDelegate__DelegateSignature
-	 */
-	struct UProjectileMovementComponent_OnProjectileStopDelegate__DelegateSignature_Params
+	struct UPhysicsConstraintComponent_SetLinearYLimit_Params
 	{
 	public:
-		struct FHitResult                                          ImpactResult;                                            // 0x0000(0x0088)  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+		Engine_ELinearConstraintMotion                             ConstraintType;                                          // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      LimitSize;                                               // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 	};
 
 	/**
-	 * DelegateFunction Engine.ProjectileMovementComponent.OnProjectileBounceDelegate__DelegateSignature
+	 * Function Engine.PhysicsConstraintComponent.SetLinearXLimit
 	 */
-	struct UProjectileMovementComponent_OnProjectileBounceDelegate__DelegateSignature_Params
+	struct UPhysicsConstraintComponent_SetLinearXLimit_Params
 	{
 	public:
-		struct FHitResult                                          ImpactResult;                                            // 0x0000(0x0088)  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-		struct FVector                                             ImpactVelocity;                                          // 0x0000(0x000C)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		Engine_ELinearConstraintMotion                             ConstraintType;                                          // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      LimitSize;                                               // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 	};
 
 	/**
-	 * Function Engine.ProjectileMovementComponent.MoveInterpolationTarget
+	 * Function Engine.PhysicsConstraintComponent.SetLinearVelocityTarget
 	 */
-	struct UProjectileMovementComponent_MoveInterpolationTarget_Params
+	struct UPhysicsConstraintComponent_SetLinearVelocityTarget_Params
 	{
 	public:
-		struct FVector                                             NewLocation;                                             // 0x0000(0x000C)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		struct FRotator                                            NewRotation;                                             // 0x0000(0x000C)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+		struct FVector                                             InVelTarget;                                             // 0x0000(0x000C)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 	};
 
 	/**
-	 * Function Engine.ProjectileMovementComponent.LimitVelocity
+	 * Function Engine.PhysicsConstraintComponent.SetLinearVelocityDrive
 	 */
-	struct UProjectileMovementComponent_LimitVelocity_Params
+	struct UPhysicsConstraintComponent_SetLinearVelocityDrive_Params
 	{
 	public:
-		struct FVector                                             NewVelocity;                                             // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bEnableDriveX;                                           // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bEnableDriveY;                                           // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bEnableDriveZ;                                           // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PhysicsConstraintComponent.SetLinearPositionTarget
+	 */
+	struct UPhysicsConstraintComponent_SetLinearPositionTarget_Params
+	{
+	public:
+		struct FVector                                             InPosTarget;                                             // 0x0000(0x000C)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PhysicsConstraintComponent.SetLinearPositionDrive
+	 */
+	struct UPhysicsConstraintComponent_SetLinearPositionDrive_Params
+	{
+	public:
+		bool                                                       bEnableDriveX;                                           // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bEnableDriveY;                                           // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bEnableDriveZ;                                           // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PhysicsConstraintComponent.SetLinearDriveParams
+	 */
+	struct UPhysicsConstraintComponent_SetLinearDriveParams_Params
+	{
+	public:
+		float                                                      PositionStrength;                                        // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      VelocityStrength;                                        // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      InForceLimit;                                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PhysicsConstraintComponent.SetLinearBreakable
+	 */
+	struct UPhysicsConstraintComponent_SetLinearBreakable_Params
+	{
+	public:
+		bool                                                       bLinearBreakable;                                        // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      LinearBreakThreshold;                                    // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PhysicsConstraintComponent.SetDisableCollision
+	 */
+	struct UPhysicsConstraintComponent_SetDisableCollision_Params
+	{
+	public:
+		bool                                                       bDisableCollision;                                       // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PhysicsConstraintComponent.SetConstraintReferencePosition
+	 */
+	struct UPhysicsConstraintComponent_SetConstraintReferencePosition_Params
+	{
+	public:
+		Engine_EConstraintFrame                                    Frame;                                                   // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             RefPosition;                                             // 0x0000(0x000C)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PhysicsConstraintComponent.SetConstraintReferenceOrientation
+	 */
+	struct UPhysicsConstraintComponent_SetConstraintReferenceOrientation_Params
+	{
+	public:
+		Engine_EConstraintFrame                                    Frame;                                                   // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             PriAxis;                                                 // 0x0000(0x000C)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             SecAxis;                                                 // 0x0000(0x000C)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PhysicsConstraintComponent.SetConstraintReferenceFrame
+	 */
+	struct UPhysicsConstraintComponent_SetConstraintReferenceFrame_Params
+	{
+	public:
+		Engine_EConstraintFrame                                    Frame;                                                   // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FTransform                                          RefFrame;                                                // 0x0000(0x0030)  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PhysicsConstraintComponent.SetConstrainedComponents
+	 */
+	struct UPhysicsConstraintComponent_SetConstrainedComponents_Params
+	{
+	public:
+		class UPrimitiveComponent*                                 Component1;                                              // 0x0000(0x0008)  (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class FName                                                BoneName1;                                               // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UPrimitiveComponent*                                 Component2;                                              // 0x0000(0x0008)  (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class FName                                                BoneName2;                                               // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PhysicsConstraintComponent.SetAngularVelocityTarget
+	 */
+	struct UPhysicsConstraintComponent_SetAngularVelocityTarget_Params
+	{
+	public:
+		struct FVector                                             InVelTarget;                                             // 0x0000(0x000C)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PhysicsConstraintComponent.SetAngularVelocityDriveTwistAndSwing
+	 */
+	struct UPhysicsConstraintComponent_SetAngularVelocityDriveTwistAndSwing_Params
+	{
+	public:
+		bool                                                       bEnableTwistDrive;                                       // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bEnableSwingDrive;                                       // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PhysicsConstraintComponent.SetAngularVelocityDriveSLERP
+	 */
+	struct UPhysicsConstraintComponent_SetAngularVelocityDriveSLERP_Params
+	{
+	public:
+		bool                                                       bEnableSLERP;                                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PhysicsConstraintComponent.SetAngularVelocityDrive
+	 */
+	struct UPhysicsConstraintComponent_SetAngularVelocityDrive_Params
+	{
+	public:
+		bool                                                       bEnableSwingDrive;                                       // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bEnableTwistDrive;                                       // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PhysicsConstraintComponent.SetAngularTwistLimit
+	 */
+	struct UPhysicsConstraintComponent_SetAngularTwistLimit_Params
+	{
+	public:
+		Engine_EAngularConstraintMotion                            ConstraintType;                                          // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      TwistLimitAngle;                                         // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PhysicsConstraintComponent.SetAngularSwing2Limit
+	 */
+	struct UPhysicsConstraintComponent_SetAngularSwing2Limit_Params
+	{
+	public:
+		Engine_EAngularConstraintMotion                            MotionType;                                              // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      Swing2LimitAngle;                                        // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PhysicsConstraintComponent.SetAngularSwing1Limit
+	 */
+	struct UPhysicsConstraintComponent_SetAngularSwing1Limit_Params
+	{
+	public:
+		Engine_EAngularConstraintMotion                            MotionType;                                              // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      Swing1LimitAngle;                                        // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PhysicsConstraintComponent.SetAngularOrientationTarget
+	 */
+	struct UPhysicsConstraintComponent_SetAngularOrientationTarget_Params
+	{
+	public:
+		struct FRotator                                            InPosTarget;                                             // 0x0000(0x000C)  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PhysicsConstraintComponent.SetAngularOrientationDrive
+	 */
+	struct UPhysicsConstraintComponent_SetAngularOrientationDrive_Params
+	{
+	public:
+		bool                                                       bEnableSwingDrive;                                       // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bEnableTwistDrive;                                       // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PhysicsConstraintComponent.SetAngularDriveParams
+	 */
+	struct UPhysicsConstraintComponent_SetAngularDriveParams_Params
+	{
+	public:
+		float                                                      PositionStrength;                                        // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      VelocityStrength;                                        // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      InForceLimit;                                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PhysicsConstraintComponent.SetAngularDriveMode
+	 */
+	struct UPhysicsConstraintComponent_SetAngularDriveMode_Params
+	{
+	public:
+		Engine_EAngularDriveMode                                   DriveMode;                                               // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PhysicsConstraintComponent.SetAngularBreakable
+	 */
+	struct UPhysicsConstraintComponent_SetAngularBreakable_Params
+	{
+	public:
+		bool                                                       bAngularBreakable;                                       // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      AngularBreakThreshold;                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PhysicsConstraintComponent.IsBroken
+	 */
+	struct UPhysicsConstraintComponent_IsBroken_Params
+	{
+	public:
+		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PhysicsConstraintComponent.GetCurrentTwist
+	 */
+	struct UPhysicsConstraintComponent_GetCurrentTwist_Params
+	{
+	public:
+		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PhysicsConstraintComponent.GetCurrentSwing2
+	 */
+	struct UPhysicsConstraintComponent_GetCurrentSwing2_Params
+	{
+	public:
+		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PhysicsConstraintComponent.GetCurrentSwing1
+	 */
+	struct UPhysicsConstraintComponent_GetCurrentSwing1_Params
+	{
+	public:
+		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PhysicsConstraintComponent.GetConstraintForce
+	 */
+	struct UPhysicsConstraintComponent_GetConstraintForce_Params
+	{
+	public:
+		struct FVector                                             OutLinearForce;                                          // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             OutAngularForce;                                         // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PhysicsConstraintComponent.BreakConstraint
+	 */
+	struct UPhysicsConstraintComponent_BreakConstraint_Params
+	{
+	};
+
+	/**
+	 * Function Engine.PhysicsHandleComponent.SetTargetRotation
+	 */
+	struct UPhysicsHandleComponent_SetTargetRotation_Params
+	{
+	public:
+		struct FRotator                                            NewRotation;                                             // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PhysicsHandleComponent.SetTargetLocationAndRotation
+	 */
+	struct UPhysicsHandleComponent_SetTargetLocationAndRotation_Params
+	{
+	public:
+		struct FVector                                             NewLocation;                                             // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FRotator                                            NewRotation;                                             // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PhysicsHandleComponent.SetTargetLocation
+	 */
+	struct UPhysicsHandleComponent_SetTargetLocation_Params
+	{
+	public:
+		struct FVector                                             NewLocation;                                             // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PhysicsHandleComponent.SetLinearStiffness
+	 */
+	struct UPhysicsHandleComponent_SetLinearStiffness_Params
+	{
+	public:
+		float                                                      NewLinearStiffness;                                      // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PhysicsHandleComponent.SetLinearDamping
+	 */
+	struct UPhysicsHandleComponent_SetLinearDamping_Params
+	{
+	public:
+		float                                                      NewLinearDamping;                                        // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PhysicsHandleComponent.SetInterpolationSpeed
+	 */
+	struct UPhysicsHandleComponent_SetInterpolationSpeed_Params
+	{
+	public:
+		float                                                      NewInterpolationSpeed;                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PhysicsHandleComponent.SetAngularStiffness
+	 */
+	struct UPhysicsHandleComponent_SetAngularStiffness_Params
+	{
+	public:
+		float                                                      NewAngularStiffness;                                     // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PhysicsHandleComponent.SetAngularDamping
+	 */
+	struct UPhysicsHandleComponent_SetAngularDamping_Params
+	{
+	public:
+		float                                                      NewAngularDamping;                                       // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PhysicsHandleComponent.ReleaseComponent
+	 */
+	struct UPhysicsHandleComponent_ReleaseComponent_Params
+	{
+	};
+
+	/**
+	 * Function Engine.PhysicsHandleComponent.GrabComponentAtLocationWithRotation
+	 */
+	struct UPhysicsHandleComponent_GrabComponentAtLocationWithRotation_Params
+	{
+	public:
+		class UPrimitiveComponent*                                 Component;                                               // 0x0000(0x0008)  (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class FName                                                InBoneName;                                              // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             Location;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FRotator                                            Rotation;                                                // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PhysicsHandleComponent.GrabComponentAtLocation
+	 */
+	struct UPhysicsHandleComponent_GrabComponentAtLocation_Params
+	{
+	public:
+		class UPrimitiveComponent*                                 Component;                                               // 0x0000(0x0008)  (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class FName                                                InBoneName;                                              // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             GrabLocation;                                            // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PhysicsHandleComponent.GrabComponent
+	 */
+	struct UPhysicsHandleComponent_GrabComponent_Params
+	{
+	public:
+		class UPrimitiveComponent*                                 Component;                                               // 0x0000(0x0008)  (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class FName                                                InBoneName;                                              // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             GrabLocation;                                            // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bConstrainRotation;                                      // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PhysicsHandleComponent.GetTargetLocationAndRotation
+	 */
+	struct UPhysicsHandleComponent_GetTargetLocationAndRotation_Params
+	{
+	public:
+		struct FVector                                             TargetLocation;                                          // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FRotator                                            TargetRotation;                                          // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PhysicsHandleComponent.GetGrabbedComponent
+	 */
+	struct UPhysicsHandleComponent_GetGrabbedComponent_Params
+	{
+	public:
+		class UPrimitiveComponent*                                 ReturnValue;                                             // 0x0000(0x0008)  (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PhysicsSpringComponent.GetSpringRestingPoint
+	 */
+	struct UPhysicsSpringComponent_GetSpringRestingPoint_Params
+	{
+	public:
 		struct FVector                                             ReturnValue;                                             // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 	};
 
 	/**
-	 * Function Engine.ProjectileMovementComponent.IsVelocityUnderSimulationThreshold
+	 * Function Engine.PhysicsSpringComponent.GetSpringDirection
 	 */
-	struct UProjectileMovementComponent_IsVelocityUnderSimulationThreshold_Params
+	struct UPhysicsSpringComponent_GetSpringDirection_Params
+	{
+	public:
+		struct FVector                                             ReturnValue;                                             // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PhysicsSpringComponent.GetSpringCurrentEndPoint
+	 */
+	struct UPhysicsSpringComponent_GetSpringCurrentEndPoint_Params
+	{
+	public:
+		struct FVector                                             ReturnValue;                                             // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PhysicsSpringComponent.GetNormalizedCompressionScalar
+	 */
+	struct UPhysicsSpringComponent_GetNormalizedCompressionScalar_Params
+	{
+	public:
+		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PlanarReflection.OnInterpToggle
+	 */
+	struct APlanarReflection_OnInterpToggle_Params
+	{
+	public:
+		bool                                                       bEnable;                                                 // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.SceneCaptureComponent.ShowOnlyComponent
+	 */
+	struct USceneCaptureComponent_ShowOnlyComponent_Params
+	{
+	public:
+		class UPrimitiveComponent*                                 InComponent;                                             // 0x0000(0x0008)  (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.SceneCaptureComponent.ShowOnlyActorComponents
+	 */
+	struct USceneCaptureComponent_ShowOnlyActorComponents_Params
+	{
+	public:
+		class AActor*                                              InActor;                                                 // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.SceneCaptureComponent.SetCaptureSortPriority
+	 */
+	struct USceneCaptureComponent_SetCaptureSortPriority_Params
+	{
+	public:
+		int                                                        NewCaptureSortPriority;                                  // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.SceneCaptureComponent.RemoveShowOnlyComponent
+	 */
+	struct USceneCaptureComponent_RemoveShowOnlyComponent_Params
+	{
+	public:
+		class UPrimitiveComponent*                                 InComponent;                                             // 0x0000(0x0008)  (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.SceneCaptureComponent.RemoveShowOnlyActorComponents
+	 */
+	struct USceneCaptureComponent_RemoveShowOnlyActorComponents_Params
+	{
+	public:
+		class AActor*                                              InActor;                                                 // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.SceneCaptureComponent.HideComponent
+	 */
+	struct USceneCaptureComponent_HideComponent_Params
+	{
+	public:
+		class UPrimitiveComponent*                                 InComponent;                                             // 0x0000(0x0008)  (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.SceneCaptureComponent.HideActorComponents
+	 */
+	struct USceneCaptureComponent_HideActorComponents_Params
+	{
+	public:
+		class AActor*                                              InActor;                                                 // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.SceneCaptureComponent.ClearShowOnlyComponents
+	 */
+	struct USceneCaptureComponent_ClearShowOnlyComponents_Params
+	{
+	};
+
+	/**
+	 * Function Engine.SceneCaptureComponent.ClearHiddenComponents
+	 */
+	struct USceneCaptureComponent_ClearHiddenComponents_Params
+	{
+	};
+
+	/**
+	 * Function Engine.PlatformEventsComponent.SupportsConvertibleLaptops
+	 */
+	struct UPlatformEventsComponent_SupportsConvertibleLaptops_Params
 	{
 	public:
 		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -35028,9 +34539,16 @@ namespace CG
 	};
 
 	/**
-	 * Function Engine.ProjectileMovementComponent.IsInterpolationComplete
+	 * DelegateFunction Engine.PlatformEventsComponent.PlatformEventDelegate__DelegateSignature
 	 */
-	struct UProjectileMovementComponent_IsInterpolationComplete_Params
+	struct UPlatformEventsComponent_PlatformEventDelegate__DelegateSignature_Params
+	{
+	};
+
+	/**
+	 * Function Engine.PlatformEventsComponent.IsInTabletMode
+	 */
+	struct UPlatformEventsComponent_IsInTabletMode_Params
 	{
 	public:
 		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -35038,107 +34556,589 @@ namespace CG
 	};
 
 	/**
-	 * Function Engine.RadialForceActor.ToggleForce
+	 * Function Engine.PlatformEventsComponent.IsInLaptopMode
 	 */
-	struct ARadialForceActor_ToggleForce_Params
-	{
-	};
-
-	/**
-	 * Function Engine.RadialForceActor.FireImpulse
-	 */
-	struct ARadialForceActor_FireImpulse_Params
-	{
-	};
-
-	/**
-	 * Function Engine.RadialForceActor.EnableForce
-	 */
-	struct ARadialForceActor_EnableForce_Params
-	{
-	};
-
-	/**
-	 * Function Engine.RadialForceActor.DisableForce
-	 */
-	struct ARadialForceActor_DisableForce_Params
-	{
-	};
-
-	/**
-	 * Function Engine.RadialForceComponent.RemoveObjectTypeToAffect
-	 */
-	struct URadialForceComponent_RemoveObjectTypeToAffect_Params
+	struct UPlatformEventsComponent_IsInLaptopMode_Params
 	{
 	public:
-		Engine_EObjectTypeQuery                                    ObjectType;                                              // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 	};
 
 	/**
-	 * Function Engine.RadialForceComponent.FireImpulse
+	 * Function Engine.PlatformInterfaceWebResponse.GetNumHeaders
 	 */
-	struct URadialForceComponent_FireImpulse_Params
-	{
-	};
-
-	/**
-	 * Function Engine.RadialForceComponent.AddObjectTypeToAffect
-	 */
-	struct URadialForceComponent_AddObjectTypeToAffect_Params
+	struct UPlatformInterfaceWebResponse_GetNumHeaders_Params
 	{
 	public:
-		Engine_EObjectTypeQuery                                    ObjectType;                                              // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		int                                                        ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 	};
 
 	/**
-	 * Function Engine.RectLightComponent.SetSourceWidth
+	 * Function Engine.PlatformInterfaceWebResponse.GetHeaderValue
 	 */
-	struct URectLightComponent_SetSourceWidth_Params
+	struct UPlatformInterfaceWebResponse_GetHeaderValue_Params
 	{
 	public:
-		float                                                      bNewValue;                                               // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class FString                                              HeaderName;                                              // 0x0000(0x0010)  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class FString                                              ReturnValue;                                             // 0x0000(0x0010)  (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 	};
 
 	/**
-	 * Function Engine.RectLightComponent.SetSourceTexture
+	 * Function Engine.PlatformInterfaceWebResponse.GetHeader
 	 */
-	struct URectLightComponent_SetSourceTexture_Params
+	struct UPlatformInterfaceWebResponse_GetHeader_Params
 	{
 	public:
-		class UTexture*                                            bNewValue;                                               // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		int                                                        HeaderIndex;                                             // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class FString                                              Header;                                                  // 0x0000(0x0010)  (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class FString                                              Value;                                                   // 0x0000(0x0010)  (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 	};
 
 	/**
-	 * Function Engine.RectLightComponent.SetSourceHeight
+	 * Function Engine.PlayerCameraManager.StopCameraShake
 	 */
-	struct URectLightComponent_SetSourceHeight_Params
+	struct APlayerCameraManager_StopCameraShake_Params
 	{
 	public:
-		float                                                      NewValue;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UCameraShake*                                        ShakeInstance;                                           // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bImmediately;                                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 	};
 
 	/**
-	 * Function Engine.RectLightComponent.SetBarnDoorLength
+	 * Function Engine.PlayerCameraManager.StopCameraFade
 	 */
-	struct URectLightComponent_SetBarnDoorLength_Params
+	struct APlayerCameraManager_StopCameraFade_Params
+	{
+	};
+
+	/**
+	 * Function Engine.PlayerCameraManager.StopCameraAnimInst
+	 */
+	struct APlayerCameraManager_StopCameraAnimInst_Params
 	{
 	public:
-		float                                                      NewValue;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UCameraAnimInst*                                     AnimInst;                                                // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bImmediate;                                              // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 	};
 
 	/**
-	 * Function Engine.RectLightComponent.SetBarnDoorAngle
+	 * Function Engine.PlayerCameraManager.StopAllInstancesOfCameraShake
 	 */
-	struct URectLightComponent_SetBarnDoorAngle_Params
+	struct APlayerCameraManager_StopAllInstancesOfCameraShake_Params
 	{
 	public:
-		float                                                      NewValue;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UClass*                                              Shake;                                                   // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bImmediately;                                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PlayerCameraManager.StopAllInstancesOfCameraAnim
+	 */
+	struct APlayerCameraManager_StopAllInstancesOfCameraAnim_Params
+	{
+	public:
+		class UCameraAnim*                                         Anim;                                                    // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bImmediate;                                              // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PlayerCameraManager.StopAllCameraShakes
+	 */
+	struct APlayerCameraManager_StopAllCameraShakes_Params
+	{
+	public:
+		bool                                                       bImmediately;                                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PlayerCameraManager.StopAllCameraAnims
+	 */
+	struct APlayerCameraManager_StopAllCameraAnims_Params
+	{
+	public:
+		bool                                                       bImmediate;                                              // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PlayerCameraManager.StartCameraFade
+	 */
+	struct APlayerCameraManager_StartCameraFade_Params
+	{
+	public:
+		float                                                      FromAlpha;                                               // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      ToAlpha;                                                 // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      Duration;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FLinearColor                                        Color;                                                   // 0x0000(0x0010)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bShouldFadeAudio;                                        // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bHoldWhenFinished;                                       // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PlayerCameraManager.SetManualCameraFade
+	 */
+	struct APlayerCameraManager_SetManualCameraFade_Params
+	{
+	public:
+		float                                                      InFadeAmount;                                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FLinearColor                                        Color;                                                   // 0x0000(0x0010)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bInFadeAudio;                                            // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PlayerCameraManager.SetGameCameraCutThisFrame
+	 */
+	struct APlayerCameraManager_SetGameCameraCutThisFrame_Params
+	{
+	};
+
+	/**
+	 * Function Engine.PlayerCameraManager.RemoveCameraModifier
+	 */
+	struct APlayerCameraManager_RemoveCameraModifier_Params
+	{
+	public:
+		class UCameraModifier*                                     ModifierToRemove;                                        // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PlayerCameraManager.RemoveCameraLensEffect
+	 */
+	struct APlayerCameraManager_RemoveCameraLensEffect_Params
+	{
+	public:
+		class AEmitterCameraLensEffectBase*                        Emitter;                                                 // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PlayerCameraManager.PlayCameraShake
+	 */
+	struct APlayerCameraManager_PlayCameraShake_Params
+	{
+	public:
+		class UClass*                                              ShakeClass;                                              // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      Scale;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		Engine_ECameraAnimPlaySpace                                PlaySpace;                                               // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FRotator                                            UserPlaySpaceRot;                                        // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+		class UCameraShake*                                        ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PlayerCameraManager.PlayCameraAnim
+	 */
+	struct APlayerCameraManager_PlayCameraAnim_Params
+	{
+	public:
+		class UCameraAnim*                                         Anim;                                                    // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      Rate;                                                    // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      Scale;                                                   // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      BlendInTime;                                             // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      BlendOutTime;                                            // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bLoop;                                                   // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       bRandomStartTime;                                        // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		float                                                      Duration;                                                // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		Engine_ECameraAnimPlaySpace                                PlaySpace;                                               // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FRotator                                            UserPlaySpaceRot;                                        // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+		class UCameraAnimInst*                                     ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PlayerCameraManager.PhotographyCameraModify
+	 */
+	struct APlayerCameraManager_PhotographyCameraModify_Params
+	{
+	public:
+		struct FVector                                             NewCameraLocation;                                       // 0x0000(0x000C)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             PreviousCameraLocation;                                  // 0x0000(0x000C)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             OriginalCameraLocation;                                  // 0x0000(0x000C)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             ResultCameraLocation;                                    // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PlayerCameraManager.OnPhotographySessionStart
+	 */
+	struct APlayerCameraManager_OnPhotographySessionStart_Params
+	{
+	};
+
+	/**
+	 * Function Engine.PlayerCameraManager.OnPhotographySessionEnd
+	 */
+	struct APlayerCameraManager_OnPhotographySessionEnd_Params
+	{
+	};
+
+	/**
+	 * Function Engine.PlayerCameraManager.OnPhotographyMultiPartCaptureStart
+	 */
+	struct APlayerCameraManager_OnPhotographyMultiPartCaptureStart_Params
+	{
+	};
+
+	/**
+	 * Function Engine.PlayerCameraManager.OnPhotographyMultiPartCaptureEnd
+	 */
+	struct APlayerCameraManager_OnPhotographyMultiPartCaptureEnd_Params
+	{
+	};
+
+	/**
+	 * Function Engine.PlayerCameraManager.GetOwningPlayerController
+	 */
+	struct APlayerCameraManager_GetOwningPlayerController_Params
+	{
+	public:
+		class APlayerController*                                   ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PlayerCameraManager.GetFOVAngle
+	 */
+	struct APlayerCameraManager_GetFOVAngle_Params
+	{
+	public:
+		float                                                      ReturnValue;                                             // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PlayerCameraManager.GetCameraRotation
+	 */
+	struct APlayerCameraManager_GetCameraRotation_Params
+	{
+	public:
+		struct FRotator                                            ReturnValue;                                             // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PlayerCameraManager.GetCameraLocation
+	 */
+	struct APlayerCameraManager_GetCameraLocation_Params
+	{
+	public:
+		struct FVector                                             ReturnValue;                                             // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PlayerCameraManager.FindCameraModifierByClass
+	 */
+	struct APlayerCameraManager_FindCameraModifierByClass_Params
+	{
+	public:
+		class UClass*                                              ModifierClass;                                           // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UCameraModifier*                                     ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PlayerCameraManager.ClearCameraLensEffects
+	 */
+	struct APlayerCameraManager_ClearCameraLensEffects_Params
+	{
+	};
+
+	/**
+	 * Function Engine.PlayerCameraManager.BlueprintUpdateCamera
+	 */
+	struct APlayerCameraManager_BlueprintUpdateCamera_Params
+	{
+	public:
+		class AActor*                                              CameraTarget;                                            // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             NewCameraLocation;                                       // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FRotator                                            NewCameraRotation;                                       // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+		float                                                      NewCameraFOV;                                            // 0x0000(0x0004)  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		bool                                                       ReturnValue;                                             // 0x0000(0x0001)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PlayerCameraManager.AddNewCameraModifier
+	 */
+	struct APlayerCameraManager_AddNewCameraModifier_Params
+	{
+	public:
+		class UClass*                                              ModifierClass;                                           // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class UCameraModifier*                                     ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PlayerCameraManager.AddCameraLensEffect
+	 */
+	struct APlayerCameraManager_AddCameraLensEffect_Params
+	{
+	public:
+		class UClass*                                              LensEffectEmitterClass;                                  // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class AEmitterCameraLensEffectBase*                        ReturnValue;                                             // 0x0000(0x0008)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PlayerInput.SetMouseSensitivity
+	 */
+	struct UPlayerInput_SetMouseSensitivity_Params
+	{
+	public:
+		float                                                      Sensitivity;                                             // 0x0000(0x0004)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PlayerInput.SetBind
+	 */
+	struct UPlayerInput_SetBind_Params
+	{
+	public:
+		class FName                                                BindName;                                                // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		class FString                                              Command;                                                 // 0x0000(0x0010)  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PlayerInput.InvertAxisKey
+	 */
+	struct UPlayerInput_InvertAxisKey_Params
+	{
+	public:
+		struct FKey                                                AxisKey;                                                 // 0x0000(0x0018)  (ConstParm, Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PlayerInput.InvertAxis
+	 */
+	struct UPlayerInput_InvertAxis_Params
+	{
+	public:
+		class FName                                                AxisName;                                                // 0x0000(0x0008)  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PlayerInput.ClearSmoothing
+	 */
+	struct UPlayerInput_ClearSmoothing_Params
+	{
+	};
+
+	/**
+	 * Function Engine.PlayerState.ReceiveOverrideWith
+	 */
+	struct APlayerState_ReceiveOverrideWith_Params
+	{
+	public:
+		class APlayerState*                                        OldPlayerState;                                          // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PlayerState.ReceiveCopyProperties
+	 */
+	struct APlayerState_ReceiveCopyProperties_Params
+	{
+	public:
+		class APlayerState*                                        NewPlayerState;                                          // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PlayerState.OnRep_UniqueId
+	 */
+	struct APlayerState_OnRep_UniqueId_Params
+	{
+	};
+
+	/**
+	 * Function Engine.PlayerState.OnRep_Score
+	 */
+	struct APlayerState_OnRep_Score_Params
+	{
+	};
+
+	/**
+	 * Function Engine.PlayerState.OnRep_PlayerName
+	 */
+	struct APlayerState_OnRep_PlayerName_Params
+	{
+	};
+
+	/**
+	 * Function Engine.PlayerState.OnRep_PlayerId
+	 */
+	struct APlayerState_OnRep_PlayerId_Params
+	{
+	};
+
+	/**
+	 * Function Engine.PlayerState.OnRep_bIsInactive
+	 */
+	struct APlayerState_OnRep_bIsInactive_Params
+	{
+	};
+
+	/**
+	 * Function Engine.PlayerState.GetPlayerName
+	 */
+	struct APlayerState_GetPlayerName_Params
+	{
+	public:
+		class FString                                              ReturnValue;                                             // 0x0000(0x0010)  (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PointLight.SetRadius
+	 */
+	struct APointLight_SetRadius_Params
+	{
+	public:
+		float                                                      NewRadius;                                               // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PointLight.SetLightFalloffExponent
+	 */
+	struct APointLight_SetLightFalloffExponent_Params
+	{
+	public:
+		float                                                      NewLightFalloffExponent;                                 // 0x0000(0x0004)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PoseableMeshComponent.SetBoneTransformByName
+	 */
+	struct UPoseableMeshComponent_SetBoneTransformByName_Params
+	{
+	public:
+		class FName                                                BoneName;                                                // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FTransform                                          InTransform;                                             // 0x0000(0x0030)  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+		Engine_EBoneSpaces                                         BoneSpace;                                               // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PoseableMeshComponent.SetBoneScaleByName
+	 */
+	struct UPoseableMeshComponent_SetBoneScaleByName_Params
+	{
+	public:
+		class FName                                                BoneName;                                                // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             InScale3D;                                               // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		Engine_EBoneSpaces                                         BoneSpace;                                               // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PoseableMeshComponent.SetBoneRotationByName
+	 */
+	struct UPoseableMeshComponent_SetBoneRotationByName_Params
+	{
+	public:
+		class FName                                                BoneName;                                                // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FRotator                                            InRotation;                                              // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+		Engine_EBoneSpaces                                         BoneSpace;                                               // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PoseableMeshComponent.SetBoneLocationByName
+	 */
+	struct UPoseableMeshComponent_SetBoneLocationByName_Params
+	{
+	public:
+		class FName                                                BoneName;                                                // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             InLocation;                                              // 0x0000(0x000C)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		Engine_EBoneSpaces                                         BoneSpace;                                               // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PoseableMeshComponent.ResetBoneTransformByName
+	 */
+	struct UPoseableMeshComponent_ResetBoneTransformByName_Params
+	{
+	public:
+		class FName                                                BoneName;                                                // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PoseableMeshComponent.GetBoneTransformByName
+	 */
+	struct UPoseableMeshComponent_GetBoneTransformByName_Params
+	{
+	public:
+		class FName                                                BoneName;                                                // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		Engine_EBoneSpaces                                         BoneSpace;                                               // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FTransform                                          ReturnValue;                                             // 0x0000(0x0030)  (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PoseableMeshComponent.GetBoneScaleByName
+	 */
+	struct UPoseableMeshComponent_GetBoneScaleByName_Params
+	{
+	public:
+		class FName                                                BoneName;                                                // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		Engine_EBoneSpaces                                         BoneSpace;                                               // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             ReturnValue;                                             // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PoseableMeshComponent.GetBoneRotationByName
+	 */
+	struct UPoseableMeshComponent_GetBoneRotationByName_Params
+	{
+	public:
+		class FName                                                BoneName;                                                // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		Engine_EBoneSpaces                                         BoneSpace;                                               // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FRotator                                            ReturnValue;                                             // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PoseableMeshComponent.GetBoneLocationByName
+	 */
+	struct UPoseableMeshComponent_GetBoneLocationByName_Params
+	{
+	public:
+		class FName                                                BoneName;                                                // 0x0000(0x0008)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		Engine_EBoneSpaces                                         BoneSpace;                                               // 0x0000(0x0001)  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+		struct FVector                                             ReturnValue;                                             // 0x0000(0x000C)  (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+	};
+
+	/**
+	 * Function Engine.PoseableMeshComponent.CopyPoseFromSkeletalComponent
+	 */
+	struct UPoseableMeshComponent_CopyPoseFromSkeletalComponent_Params
+	{
+	public:
+		class USkeletalMeshComponent*                              InComponentToCopy;                                       // 0x0000(0x0008)  (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 	};
 

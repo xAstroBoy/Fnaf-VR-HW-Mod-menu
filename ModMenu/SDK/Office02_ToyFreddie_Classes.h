@@ -21,7 +21,7 @@ namespace CG
 	class AOffice02_ToyFreddie_C : public AOffice02_AiBase_BP_C
 	{
 	public:
-		unsigned char                                              UnknownData_QRY5[0x7];                                   // 0x0399(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_S6BG[0x7];                                   // 0x0399(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		struct FPointerToUberGraphFrame                            UberGraphFrame;                                          // 0x03A0(0x0008) ZeroConstructor, Transient, DuplicateTransient
 
 	public:

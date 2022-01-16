@@ -93,11 +93,11 @@ namespace CG
 		struct FAnimNode_StateMachine                              AnimGraphNode_StateMachine_A46CC8C44EDD682381F91FACB27B30F4; // 0x14C8(0x00B0)
 		class AOffice04_NightmareFredBear_C*                       REF_FredBear;                                            // 0x1578(0x0008) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
 		bool                                                       CurrentRoom;                                             // 0x1580(0x0001) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor
-		unsigned char                                              UnknownData_UMET[0x7];                                   // 0x1581(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_V32N[0x7];                                   // 0x1581(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		class ATeleport_Manager_BP_C*                              REF_TeleportManager;                                     // 0x1588(0x0008) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
 		class AOffice04_GameManager_C*                             Ref_OfficeManager;                                       // 0x1590(0x0008) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
 		bool                                                       EnableEyeEmissive;                                       // 0x1598(0x0001) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor
-		unsigned char                                              UnknownData_N1JR[0x3];                                   // 0x1599(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_O0UL[0x3];                                   // 0x1599(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		float                                                      EyeValues;                                               // 0x159C(0x0004) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
 
 	public:
