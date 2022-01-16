@@ -339,120 +339,120 @@ void batteryoff1(float powerbattery)
 	}
 
 }
-
-void ToggleWitheredChicaOn()
-{
-
-	auto Office1Vars = CG::UObject::FindObjects<CG::AOffice02_WitheredChica_C>();
-	if (!Office1Vars.empty())
-	{
-		for (auto& mods : Office1Vars)
-		{
-			if (mods != nullptr)
-			{
-				cout << "[WITHERED CHICA STATUS]: Withered Chica is now activated! \n";
-				mods->DisableAi = false;
-				mods->IsActive = true;
-			}
-
-		}
-
-	}
-}
-
-void ToggleWitheredChicaOff()
-{
-
-	auto Office1Vars = CG::UObject::FindObjects<CG::AOffice02_WitheredChica_C>();
-	if (!Office1Vars.empty())
-	{
-		for (auto& mods : Office1Vars)
-		{
-			if (mods != nullptr)
-			{
-				cout << "[WITHERED CHICA STATUS]: Withered Chica is now deactivated! \n";
-				mods->DisableAi = true;
-				mods->IsActive = false;
-			}
-		}
-	}
-}
-
-void ToggleWitheredFreddyOn()
-{
-
-	auto Office1Vars = CG::UObject::FindObjects<CG::AOffice02_WitheredFreddy_C>();
-	if (!Office1Vars.empty())
-	{
-		for (auto& mods : Office1Vars)
-		{
-			if (mods != nullptr)
-			{
-				cout << "[WITHERED FREDDY STATUS]: Withered Freddy is now activated! \n";
-				mods->DisableAi = false;
-				mods->IsActive = true;
-			}
-
-		}
-
-	}
-}
-
-void ToggleWitheredFreddyOff()
-{
-
-	auto Office1Vars = CG::UObject::FindObjects<CG::AOffice02_WitheredFreddy_C>();
-	if (!Office1Vars.empty())
-	{
-		for (auto& mods : Office1Vars)
-		{
-			if (mods != nullptr)
-			{
-				cout << "[WITHERED FREDDY STATUS]: Withered Freddy is now deactivated! \n";
-				mods->DisableAi = true;
-				mods->IsActive = false;
-			}
-		}
-	}
-}
-
-void ToggleWitheredBonnieOn()
-{
-
-	auto Office1Vars = CG::UObject::FindObjects<CG::AOffice02_WitheredBonnie_C>();
-	if (!Office1Vars.empty())
-	{
-		for (auto& mods : Office1Vars)
-		{
-			if (mods != nullptr)
-			{
-				cout << "[WITHERED CHICA STATUS]: Withered Bonnie is now activated! \n";
-				mods->DisableAi = false;
-				mods->IsActive = true;
-			}
-
-		}
-
-	}
-}
-
-void ToggleWitheredBonnieOff()
-{
-
-	auto Office1Vars = CG::UObject::FindObjects<CG::AOffice02_WitheredBonnie_C>();
-	if (!Office1Vars.empty())
-	{
-		for (auto& mods : Office1Vars)
-		{
-			if (mods != nullptr)
-			{
-				cout << "[WITHERED CHICA STATUS]: Withered Bonnie is now deactivated! \n";
-				mods->DisableAi = true;
-				mods->IsActive = false;
-			}
-		}
-	}
-}
+//
+//void ToggleWitheredChicaOn()
+//{
+//
+//	auto Office1Vars = CG::UObject::FindObjects<CG::AOffice02_WitheredChica_C>();
+//	if (!Office1Vars.empty())
+//	{
+//		for (auto& mods : Office1Vars)
+//		{
+//			if (mods != nullptr)
+//			{
+//				cout << "[WITHERED CHICA STATUS]: Withered Chica is now activated! \n";
+//				mods->DisableAi = false;
+//				mods->IsActive = true;
+//			}
+//
+//		}
+//
+//	}
+//}
+//
+//void ToggleWitheredChicaOff()
+//{
+//
+//	auto Office1Vars = CG::UObject::FindObjects<CG::AOffice02_WitheredChica_C>();
+//	if (!Office1Vars.empty())
+//	{
+//		for (auto& mods : Office1Vars)
+//		{
+//			if (mods != nullptr)
+//			{
+//				cout << "[WITHERED CHICA STATUS]: Withered Chica is now deactivated! \n";
+//				mods->DisableAi = true;
+//				mods->IsActive = false;
+//			}
+//		}
+//	}
+//}
+//
+//void ToggleWitheredFreddyOn()
+//{
+//
+//	auto Office1Vars = CG::UObject::FindObjects<CG::AOffice02_WitheredFreddy_C>();
+//	if (!Office1Vars.empty())
+//	{
+//		for (auto& mods : Office1Vars)
+//		{
+//			if (mods != nullptr)
+//			{
+//				cout << "[WITHERED FREDDY STATUS]: Withered Freddy is now activated! \n";
+//				mods->DisableAi = false;
+//				mods->IsActive = true;
+//			}
+//
+//		}
+//
+//	}
+//}
+//
+//void ToggleWitheredFreddyOff()
+//{
+//
+//	auto Office1Vars = CG::UObject::FindObjects<CG::AOffice02_WitheredFreddy_C>();
+//	if (!Office1Vars.empty())
+//	{
+//		for (auto& mods : Office1Vars)
+//		{
+//			if (mods != nullptr)
+//			{
+//				cout << "[WITHERED FREDDY STATUS]: Withered Freddy is now deactivated! \n";
+//				mods->DisableAi = true;
+//				mods->IsActive = false;
+//			}
+//		}
+//	}
+//}
+//
+//void ToggleWitheredBonnieOn()
+//{
+//
+//	auto Office1Vars = CG::UObject::FindObjects<CG::AOffice02_WitheredBonnie_C>();
+//	if (!Office1Vars.empty())
+//	{
+//		for (auto& mods : Office1Vars)
+//		{
+//			if (mods != nullptr)
+//			{
+//				cout << "[WITHERED CHICA STATUS]: Withered Bonnie is now activated! \n";
+//				mods->DisableAi = false;
+//				mods->IsActive = true;
+//			}
+//
+//		}
+//
+//	}
+//}
+//
+//void ToggleWitheredBonnieOff()
+//{
+//
+//	auto Office1Vars = CG::UObject::FindObjects<CG::AOffice02_WitheredBonnie_C>();
+//	if (!Office1Vars.empty())
+//	{
+//		for (auto& mods : Office1Vars)
+//		{
+//			if (mods != nullptr)
+//			{
+//				cout << "[WITHERED CHICA STATUS]: Withered Bonnie is now deactivated! \n";
+//				mods->DisableAi = true;
+//				mods->IsActive = false;
+//			}
+//		}
+//	}
+//}
 
 //void ToggleEnnardsOn()
 //{
@@ -1029,9 +1029,9 @@ void ConsoleInput()
 		cout << "setbattery <number> [DESC]: Sets the battery power in Office 1 ! \n";
 
 		cout << "toggle_witheredfoxy [DESC]: Toggles  withered foxy in FNAF 2! \n";
-		cout << "toggle_witheredbonnie [DESC]: Toggles withered Bonnie in FNAF 2! \n";
-		cout << "toggle_witheredchica [DESC]: Toggles  withered Chica in FNAF 2! \n";
-		cout << "toggle_witheredfreddy [DESC]: Toggles  withered Freddy in FNAF 2! \n";
+		//cout << "toggle_witheredbonnie [DESC]: Toggles withered Bonnie in FNAF 2! \n";
+		//cout << "toggle_witheredchica [DESC]: Toggles  withered Chica in FNAF 2! \n";
+		//cout << "toggle_witheredfreddy [DESC]: Toggles  withered Freddy in FNAF 2! \n";
 
 		cout << "toggle_withereds [DESC]: Toggles  withereds in FNAF 2! \n";
 		cout << "toggle_puppet [DESC]: Toggles  Puppet in FNAF 2! \n";
@@ -1042,37 +1042,37 @@ void ConsoleInput()
 	// COMMAND REGISTRATION PAGE
 	// ADD ANY FUTURE COMMAND HERE.
 
-	if (input == "toggle_witheredfreddy")
-	{
+	//if (input == "toggle_witheredfreddy")
+	//{
 
-		if (WitheredFreddyActive)
-		{
-			ToggleWitheredFreddyOff();
-			WitheredFreddyActive = false;
-		}
-		else
-		{
-			ToggleWitheredFreddyOn();
-			WitheredFreddyActive = true;
-		}
-		ConsoleInput();
-	}
+	//	if (WitheredFreddyActive)
+	//	{
+	//		ToggleWitheredFreddyOff();
+	//		WitheredFreddyActive = false;
+	//	}
+	//	else
+	//	{
+	//		ToggleWitheredFreddyOn();
+	//		WitheredFreddyActive = true;
+	//	}
+	//	ConsoleInput();
+	//}
 
-	if (input == "toggle_witheredchica")
-	{
+	//if (input == "toggle_witheredchica")
+	//{
 
-		if (WitheredChicaActive)
-		{
-			ToggleWitheredChicaOff();
-			WitheredChicaActive = false;
-		}
-		else
-		{
-			ToggleWitheredChicaOn();
-			WitheredChicaActive = true;
-		}
-		ConsoleInput();
-	}
+	//	if (WitheredChicaActive)
+	//	{
+	//		ToggleWitheredChicaOff();
+	//		WitheredChicaActive = false;
+	//	}
+	//	else
+	//	{
+	//		ToggleWitheredChicaOn();
+	//		WitheredChicaActive = true;
+	//	}
+	//	ConsoleInput();
+	//}
 
 	if (input == "toggle_witheredfoxy")
 	{
@@ -1090,21 +1090,21 @@ void ConsoleInput()
 		ConsoleInput();
 	}
 
-	if (input == "toggle_witheredbonnie")
-	{
+	//if (input == "toggle_witheredbonnie")
+	//{
 
-		if (WitheredBonnieActive)
-		{
-			ToggleWitheredBonnieOff();
-			WitheredBonnieActive = false;
-		}
-		else
-		{
-			ToggleWitheredBonnieOn();
-			WitheredBonnieActive = true;
-		}
-		ConsoleInput();
-	}
+	//	if (WitheredBonnieActive)
+	//	{
+	//		ToggleWitheredBonnieOff();
+	//		WitheredBonnieActive = false;
+	//	}
+	//	else
+	//	{
+	//		ToggleWitheredBonnieOn();
+	//		WitheredBonnieActive = true;
+	//	}
+	//	ConsoleInput();
+	//}
 
 	if (input == "toggle_withereds")
 	{
@@ -1231,7 +1231,7 @@ void ConsoleInput()
 			cheatsactive = true;
 			TorchLevelHacks;
 			Office01Cheat;
-			OfficeLVL3Cheat;
+			Office03Cheat;
 			MonitorCheats;
 		}
 		else
@@ -1281,8 +1281,8 @@ DWORD WINAPI OnAttach(const HMODULE hModule)
 	allocate_console();
 	Sleep(6000);
 
-	CG::InitCG("freddys-Win64-Shipping.exe", gObjectsOffset, gNamesOffset);
-	cout << "\nThis mod has been coded by marcocorriero#0001, enjoy! \n";
+	CG::InitSdk();
+	cout << "\nThis mod has been coded by xAstoBoy#1337, enjoy! \n";
 	cout << " FNAF MISC MODS V" << version + "\n";
 	cout << " FOR STEAM VERSION ONLY! \n";
 
