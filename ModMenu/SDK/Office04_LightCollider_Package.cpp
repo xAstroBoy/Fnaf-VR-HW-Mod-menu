@@ -3,6 +3,7 @@
  * Version: 1
  */
 
+#include "../pch.h"
 #include "Office04_LightCollider_Package.h"
 
 namespace CG

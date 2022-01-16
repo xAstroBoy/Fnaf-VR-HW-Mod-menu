@@ -3,6 +3,7 @@
  * Version: 1
  */
 
+#include "../pch.h"
 #include "NightTerror_CB_GM_Package.h"
 
 namespace CG

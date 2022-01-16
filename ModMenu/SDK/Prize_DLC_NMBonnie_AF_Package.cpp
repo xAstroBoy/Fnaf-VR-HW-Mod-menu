@@ -3,6 +3,7 @@
  * Version: 1
  */
 
+#include "../pch.h"
 #include "Prize_DLC_NMBonnie_AF_Package.h"
 
 namespace CG

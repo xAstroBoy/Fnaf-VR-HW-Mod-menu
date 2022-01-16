@@ -3,6 +3,7 @@
  * Version: 1
  */
 
+#include "../pch.h"
 #include "Chica_Repair_MotionControllerPawn_Package.h"
 
 namespace CG

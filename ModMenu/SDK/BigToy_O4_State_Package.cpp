@@ -3,6 +3,7 @@
  * Version: 1
  */
 
+#include "../pch.h"
 #include "BigToy_O4_State_Package.h"
 
 namespace CG

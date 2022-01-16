@@ -3,6 +3,7 @@
  * Version: 1
  */
 
+#include "../pch.h"
 #include "GM_Chica_Repair_Package.h"
 
 namespace CG

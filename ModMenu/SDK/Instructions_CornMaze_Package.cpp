@@ -3,6 +3,7 @@
  * Version: 1
  */
 
+#include "../pch.h"
 #include "Instructions_CornMaze_Package.h"
 
 namespace CG

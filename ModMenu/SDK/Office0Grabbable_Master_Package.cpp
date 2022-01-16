@@ -3,6 +3,7 @@
  * Version: 1
  */
 
+#include "../pch.h"
 #include "Office0Grabbable_Master_Package.h"
 
 namespace CG

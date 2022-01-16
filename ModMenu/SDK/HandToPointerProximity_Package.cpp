@@ -3,6 +3,7 @@
  * Version: 1
  */
 
+#include "../pch.h"
 #include "HandToPointerProximity_Package.h"
 
 namespace CG

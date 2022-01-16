@@ -3,6 +3,7 @@
  * Version: 1
  */
 
+#include "../pch.h"
 #include "DLC_Office01_FlashBeaconButton_Bp_Package.h"
 
 namespace CG

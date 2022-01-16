@@ -3,6 +3,7 @@
  * Version: 1
  */
 
+#include "../pch.h"
 #include "FNAFGM_FlashlightGame_Package.h"
 
 namespace CG

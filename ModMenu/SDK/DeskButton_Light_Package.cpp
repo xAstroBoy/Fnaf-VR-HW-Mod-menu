@@ -3,6 +3,7 @@
  * Version: 1
  */
 
+#include "../pch.h"
 #include "DeskButton_Light_Package.h"
 
 namespace CG

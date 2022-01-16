@@ -3,6 +3,7 @@
  * Version: 1
  */
 
+#include "../pch.h"
 #include "Prize_Rare_AF_02_Package.h"
 
 namespace CG

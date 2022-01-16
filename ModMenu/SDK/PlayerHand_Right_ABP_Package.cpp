@@ -3,6 +3,7 @@
  * Version: 1
  */
 
+#include "../pch.h"
 #include "PlayerHand_Right_ABP_Package.h"
 
 namespace CG

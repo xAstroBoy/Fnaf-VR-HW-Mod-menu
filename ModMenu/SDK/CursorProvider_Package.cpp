@@ -3,6 +3,7 @@
  * Version: 1
  */
 
+#include "../pch.h"
 #include "CursorProvider_Package.h"
 
 namespace CG

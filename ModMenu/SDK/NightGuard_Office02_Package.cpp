@@ -3,6 +3,7 @@
  * Version: 1
  */
 
+#include "../pch.h"
 #include "NightGuard_Office02_Package.h"
 
 namespace CG

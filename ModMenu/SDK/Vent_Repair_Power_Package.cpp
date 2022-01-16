@@ -3,6 +3,7 @@
  * Version: 1
  */
 
+#include "../pch.h"
 #include "Vent_Repair_Power_Package.h"
 
 namespace CG

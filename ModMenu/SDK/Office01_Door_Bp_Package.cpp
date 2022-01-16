@@ -3,6 +3,7 @@
  * Version: 1
  */
 
+#include "../pch.h"
 #include "Office01_Door_Bp_Package.h"
 
 namespace CG

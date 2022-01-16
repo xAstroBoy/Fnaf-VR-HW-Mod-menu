@@ -3,6 +3,7 @@
  * Version: 1
  */
 
+#include "../pch.h"
 #include "NT_CB_AudioManager_Package.h"
 
 namespace CG

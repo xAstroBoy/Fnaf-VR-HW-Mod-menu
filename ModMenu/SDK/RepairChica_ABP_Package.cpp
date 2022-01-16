@@ -3,6 +3,7 @@
  * Version: 1
  */
 
+#include "../pch.h"
 #include "RepairChica_ABP_Package.h"
 
 namespace CG

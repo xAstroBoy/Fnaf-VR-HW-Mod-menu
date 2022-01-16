@@ -68,12 +68,6 @@
     <ClCompile Include="pch.cpp">
       <Filter>Header Files</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\Basic.cpp">
-      <Filter>SDK_CPP</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\CoreUObject_package.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="SDK\Engine_package.cpp">
       <Filter>SDK_CPP</Filter>
     </ClCompile>
@@ -123,6 +117,9 @@
       <Filter>SDK_CPP</Filter>
     </ClCompile>
     <ClCompile Include="SDK\OfficeAiBase_Bp_Package.cpp">
+      <Filter>SDK_CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\CoreUObject_package.cpp">
       <Filter>SDK_CPP</Filter>
     </ClCompile>
   </ItemGroup>

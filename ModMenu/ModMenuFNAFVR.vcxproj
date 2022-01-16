@@ -182,7 +182,6 @@
   <ItemGroup>
     <ClCompile Include="mem.cpp" />
     <ClCompile Include="proc.cpp" />
-    <ClCompile Include="SDK\Basic.cpp" />
     <ClCompile Include="SDK\CoreUObject_package.cpp" />
     <ClCompile Include="SDK\Engine_package.cpp" />
     <ClCompile Include="SDK\FNAFGM_FlashlightGame_package.cpp" />

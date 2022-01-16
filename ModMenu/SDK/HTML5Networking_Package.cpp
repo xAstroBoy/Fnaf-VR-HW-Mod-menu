@@ -3,6 +3,7 @@
  * Version: 1
  */
 
+#include "../pch.h"
 #include "HTML5Networking_Package.h"
 
 namespace CG

@@ -3,6 +3,7 @@
  * Version: 1
  */
 
+#include "../pch.h"
 #include "MovieSceneTracks_Package.h"
 
 namespace CG

@@ -3,6 +3,7 @@
  * Version: 1
  */
 
+#include "../pch.h"
 #include "Prize_GrimmFoxy_AF_Package.h"
 
 namespace CG

@@ -3,6 +3,7 @@
  * Version: 1
  */
 
+#include "../pch.h"
 #include "Chica_Repair_NM_Cupcake_Placement_Package.h"
 
 namespace CG

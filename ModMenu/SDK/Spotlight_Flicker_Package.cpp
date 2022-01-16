@@ -3,6 +3,7 @@
  * Version: 1
  */
 
+#include "../pch.h"
 #include "Spotlight_Flicker_Package.h"
 
 namespace CG

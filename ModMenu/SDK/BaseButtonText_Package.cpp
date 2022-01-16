@@ -3,6 +3,7 @@
  * Version: 1
  */
 
+#include "../pch.h"
 #include "BaseButtonText_Package.h"
 
 namespace CG

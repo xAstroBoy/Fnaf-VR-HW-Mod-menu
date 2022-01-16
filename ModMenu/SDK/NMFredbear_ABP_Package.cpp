@@ -3,6 +3,7 @@
  * Version: 1
  */
 
+#include "../pch.h"
 #include "NMFredbear_ABP_Package.h"
 
 namespace CG

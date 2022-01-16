@@ -3,6 +3,7 @@
  * Version: 1
  */
 
+#include "../pch.h"
 #include "Player_PointLight_Head_Package.h"
 
 namespace CG

@@ -3,6 +3,7 @@
  * Version: 1
  */
 
+#include "../pch.h"
 #include "Office02_WitheredFreddy_Package.h"
 
 namespace CG

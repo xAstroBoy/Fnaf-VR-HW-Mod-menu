@@ -3,6 +3,7 @@
  * Version: 1
  */
 
+#include "../pch.h"
 #include "Prize_Common_DirtyPaper02_Package.h"
 
 namespace CG

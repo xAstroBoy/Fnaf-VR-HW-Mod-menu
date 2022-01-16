@@ -3,6 +3,7 @@
  * Version: 1
  */
 
+#include "../pch.h"
 #include "Prize_Common_Candy02_Package.h"
 
 namespace CG

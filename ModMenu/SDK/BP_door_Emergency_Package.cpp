@@ -3,6 +3,7 @@
  * Version: 1
  */
 
+#include "../pch.h"
 #include "BP_door_Emergency_Package.h"
 
 namespace CG

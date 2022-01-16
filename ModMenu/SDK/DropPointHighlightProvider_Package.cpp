@@ -3,6 +3,7 @@
  * Version: 1
  */
 
+#include "../pch.h"
 #include "DropPointHighlightProvider_Package.h"
 
 namespace CG

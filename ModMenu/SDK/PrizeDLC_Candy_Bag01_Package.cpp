@@ -3,6 +3,7 @@
  * Version: 1
  */
 
+#include "../pch.h"
 #include "PrizeDLC_Candy_Bag01_Package.h"
 
 namespace CG

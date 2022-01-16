@@ -3,6 +3,7 @@
  * Version: 1
  */
 
+#include "../pch.h"
 #include "Instructions_Office2_Package.h"
 
 namespace CG

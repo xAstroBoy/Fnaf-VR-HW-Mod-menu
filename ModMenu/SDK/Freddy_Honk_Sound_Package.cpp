@@ -3,6 +3,7 @@
  * Version: 1
  */
 
+#include "../pch.h"
 #include "Freddy_Honk_Sound_Package.h"
 
 namespace CG

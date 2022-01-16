@@ -3,6 +3,7 @@
  * Version: 1
  */
 
+#include "../pch.h"
 #include "DLC_MonitorBoard_Office01_Package.h"
 
 namespace CG

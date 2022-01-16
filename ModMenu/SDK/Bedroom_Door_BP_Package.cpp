@@ -3,6 +3,7 @@
  * Version: 1
  */
 
+#include "../pch.h"
 #include "Bedroom_Door_BP_Package.h"
 
 namespace CG

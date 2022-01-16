@@ -3,6 +3,7 @@
  * Version: 1
  */
 
+#include "../pch.h"
 #include "Part2_Bowtie_Package.h"
 
 namespace CG

@@ -3,6 +3,7 @@
  * Version: 1
  */
 
+#include "../pch.h"
 #include "Office_BaseGamemanager_Package.h"
 
 namespace CG

@@ -3,6 +3,7 @@
  * Version: 1
  */
 
+#include "../pch.h"
 #include "PrizeDLC_Pumpkin_Foxy_Package.h"
 
 namespace CG

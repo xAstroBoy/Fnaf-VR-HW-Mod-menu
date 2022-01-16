@@ -3,6 +3,7 @@
  * Version: 1
  */
 
+#include "../pch.h"
 #include "FNAFCamera_Blueprint_Package.h"
 
 namespace CG

@@ -3,6 +3,7 @@
  * Version: 1
  */
 
+#include "../pch.h"
 #include "EditableMesh_Package.h"
 
 namespace CG

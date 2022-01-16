@@ -3,6 +3,7 @@
  * Version: 1
  */
 
+#include "../pch.h"
 #include "PrizeDLC_Pumpkin_Chica_Package.h"
 
 namespace CG

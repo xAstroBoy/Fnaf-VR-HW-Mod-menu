@@ -3,6 +3,7 @@
  * Version: 1
  */
 
+#include "../pch.h"
 #include "Instructions_Funtime_Package.h"
 
 namespace CG

@@ -3,6 +3,7 @@
  * Version: 1
  */
 
+#include "../pch.h"
 #include "SWGVR_Package.h"
 
 namespace CG

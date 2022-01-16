@@ -3,6 +3,7 @@
  * Version: 1
  */
 
+#include "../pch.h"
 #include "Fun_With_PlushTrap_Anim_BP_Package.h"
 
 namespace CG

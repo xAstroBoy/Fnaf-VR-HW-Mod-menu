@@ -3,6 +3,7 @@
  * Version: 1
  */
 
+#include "../pch.h"
 #include "Office03_PhantomFoxy_Package.h"
 
 namespace CG

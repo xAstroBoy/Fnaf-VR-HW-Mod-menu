@@ -3,6 +3,7 @@
  * Version: 1
  */
 
+#include "../pch.h"
 #include "DLC_office_MotionControllerPawn_Package.h"
 
 namespace CG

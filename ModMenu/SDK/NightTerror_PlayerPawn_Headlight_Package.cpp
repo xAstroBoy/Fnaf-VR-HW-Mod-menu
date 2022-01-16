@@ -3,6 +3,7 @@
  * Version: 1
  */
 
+#include "../pch.h"
 #include "NightTerror_PlayerPawn_Headlight_Package.h"
 
 namespace CG

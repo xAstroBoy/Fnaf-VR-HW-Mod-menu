@@ -3,6 +3,7 @@
  * Version: 1
  */
 
+#include "../pch.h"
 #include "Saul_BP_MotionController_Package.h"
 
 namespace CG

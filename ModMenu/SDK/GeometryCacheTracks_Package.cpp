@@ -3,6 +3,7 @@
  * Version: 1
  */
 
+#include "../pch.h"
 #include "GeometryCacheTracks_Package.h"
 
 namespace CG

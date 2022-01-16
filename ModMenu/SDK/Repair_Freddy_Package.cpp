@@ -3,6 +3,7 @@
  * Version: 1
  */
 
+#include "../pch.h"
 #include "Repair_Freddy_Package.h"
 
 namespace CG

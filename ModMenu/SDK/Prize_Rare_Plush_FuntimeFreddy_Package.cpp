@@ -3,6 +3,7 @@
  * Version: 1
  */
 
+#include "../pch.h"
 #include "Prize_Rare_Plush_FuntimeFreddy_Package.h"
 
 namespace CG

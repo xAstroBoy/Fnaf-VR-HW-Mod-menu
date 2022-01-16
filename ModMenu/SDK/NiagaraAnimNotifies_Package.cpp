@@ -3,6 +3,7 @@
  * Version: 1
  */
 
+#include "../pch.h"
 #include "NiagaraAnimNotifies_Package.h"
 
 namespace CG

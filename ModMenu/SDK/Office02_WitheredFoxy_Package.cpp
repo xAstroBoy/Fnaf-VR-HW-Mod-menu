@@ -3,6 +3,7 @@
  * Version: 1
  */
 
+#include "../pch.h"
 #include "Office02_WitheredFoxy_Package.h"
 
 namespace CG

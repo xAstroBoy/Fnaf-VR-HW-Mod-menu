@@ -3,6 +3,7 @@
  * Version: 1
  */
 
+#include "../pch.h"
 #include "Widget_WarningIcon_Package.h"
 
 namespace CG

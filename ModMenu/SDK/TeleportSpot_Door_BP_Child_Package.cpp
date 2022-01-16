@@ -3,6 +3,7 @@
  * Version: 1
  */
 
+#include "../pch.h"
 #include "TeleportSpot_Door_BP_Child_Package.h"
 
 namespace CG

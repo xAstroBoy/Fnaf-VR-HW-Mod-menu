@@ -3,6 +3,7 @@
  * Version: 1
  */
 
+#include "../pch.h"
 #include "Instructions_HallwayCrawl_Package.h"
 
 namespace CG

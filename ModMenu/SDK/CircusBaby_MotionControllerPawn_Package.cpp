@@ -3,6 +3,7 @@
  * Version: 1
  */
 
+#include "../pch.h"
 #include "CircusBaby_MotionControllerPawn_Package.h"
 
 namespace CG

@@ -3,6 +3,7 @@
  * Version: 1
  */
 
+#include "../pch.h"
 #include "NonVR_Office_TurnUI_Package.h"
 
 namespace CG

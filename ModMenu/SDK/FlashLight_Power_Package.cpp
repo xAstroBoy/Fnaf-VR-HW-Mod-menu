@@ -3,6 +3,7 @@
  * Version: 1
  */
 
+#include "../pch.h"
 #include "FlashLight_Power_Package.h"
 
 namespace CG

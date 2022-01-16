@@ -3,6 +3,7 @@
  * Version: 1
  */
 
+#include "../pch.h"
 #include "Bonnie_Office01_AnimBp_Package.h"
 
 namespace CG

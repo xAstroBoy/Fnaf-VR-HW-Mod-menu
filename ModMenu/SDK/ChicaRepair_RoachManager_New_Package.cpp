@@ -3,6 +3,7 @@
  * Version: 1
  */
 
+#include "../pch.h"
 #include "ChicaRepair_RoachManager_New_Package.h"
 
 namespace CG

@@ -3,6 +3,7 @@
  * Version: 1
  */
 
+#include "../pch.h"
 #include "Chica_FaceButton_Package.h"
 
 namespace CG

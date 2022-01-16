@@ -3,6 +3,7 @@
  * Version: 1
  */
 
+#include "../pch.h"
 #include "FreddieMask_BP_Package.h"
 
 namespace CG
