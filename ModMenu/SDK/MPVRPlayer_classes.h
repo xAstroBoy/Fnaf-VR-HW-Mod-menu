@@ -1,40 +1,37 @@
-#pragma once
+﻿#pragma once
 
-// Name: Freddys, Version: 1.0.0
+/**
+ * Name: Fnaf Help Wanted
+ * Version: 1
+ */
 
 #ifdef _MSC_VER
-	#pragma pack(push, 0x8)
+	#pragma pack(push, 0x01)
 #endif
 
-namespace SDK
+namespace CG
 {
-//---------------------------------------------------------------------------
-// Classes
-//---------------------------------------------------------------------------
-
-// BlueprintGeneratedClass MPVRPlayer.MPVRPlayer_C
-// 0x0018 (0x0AA8 - 0x0A90)
-class AMPVRPlayer_C : public AFNAFPlayerPawn_C
-{
-public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0A90(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class UCapsuleComponent*                           ScareTrigger;                                             // 0x0A98(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class AFlashlightBase_C*                           Flashlight;                                               // 0x0AA0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
-
-	static UClass* StaticClass()
+	// --------------------------------------------------
+	// # Classes
+	// --------------------------------------------------
+	/**
+	 * BlueprintGeneratedClass MPVRPlayer.MPVRPlayer_C
+	 * Size -> 0x0018 (FullSize[0x0A08] - InheritedSize[0x09F0])
+	 */
+	class AMPVRPlayer_C : public AFNAFPlayerPawn_C
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass MPVRPlayer.MPVRPlayer_C");
-		return ptr;
-	}
+	public:
+		struct FPointerToUberGraphFrame                            UberGraphFrame;                                          // 0x09F0(0x0008) ZeroConstructor, Transient, DuplicateTransient
+		class UCapsuleComponent*                                   ScareTrigger;                                            // 0x09F8(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
+		class AFlashlightBase_C*                                   Flashlight;                                              // 0x0A00(0x0008) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
 
-
-	void Get_Flash_Light(class AFlashlightBase_C** Flashlight);
-	void UserConstructionScript();
-	void ReceiveBeginPlay();
-	void OnFlashlightChanged(bool FlashLightOn);
-	void ExecuteUbergraph_MPVRPlayer(int EntryPoint);
-};
-
+	public:
+		void Get_Flash_Light(class AFlashlightBase_C** Flashlight);
+		void ReceiveBeginPlay();
+		void OnFlashlightChanged(bool FlashLightOn);
+		void ExecuteUbergraph_MPVRPlayer(int EntryPoint);
+		static UClass* StaticClass();
+	};
 
 }
 

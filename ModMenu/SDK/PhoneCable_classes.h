@@ -1,40 +1,37 @@
-#pragma once
+﻿#pragma once
 
-// Name: Freddys, Version: 1.0.0
+/**
+ * Name: Fnaf Help Wanted
+ * Version: 1
+ */
 
 #ifdef _MSC_VER
-	#pragma pack(push, 0x8)
+	#pragma pack(push, 0x01)
 #endif
 
-namespace SDK
+namespace CG
 {
-//---------------------------------------------------------------------------
-// Classes
-//---------------------------------------------------------------------------
-
-// BlueprintGeneratedClass PhoneCable.PhoneCable_C
-// 0x0021 (0x0349 - 0x0328)
-class APhoneCable_C : public AActor
-{
-public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0328(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class UCableComponent*                             Cable;                                                    // 0x0330(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0338(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class AOfficePhone_Bp_C*                           RefToPhoneBase;                                           // 0x0340(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData)
-	bool                                               EnableCable;                                              // 0x0348(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-
-	static UClass* StaticClass()
+	// --------------------------------------------------
+	// # Classes
+	// --------------------------------------------------
+	/**
+	 * BlueprintGeneratedClass PhoneCable.PhoneCable_C
+	 * Size -> 0x0021 (FullSize[0x0261] - InheritedSize[0x0240])
+	 */
+	class APhoneCable_C : public AActor
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass PhoneCable.PhoneCable_C");
-		return ptr;
-	}
+	public:
+		struct FPointerToUberGraphFrame                            UberGraphFrame;                                          // 0x0240(0x0008) ZeroConstructor, Transient, DuplicateTransient
+		class UCableComponent*                                     Cable;                                                   // 0x0248(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
+		class USceneComponent*                                     DefaultSceneRoot;                                        // 0x0250(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
+		class AOfficePhone_Bp_C*                                   RefToPhoneBase;                                          // 0x0258(0x0008) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		bool                                                       EnableCable;                                             // 0x0260(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor
 
-
-	void UserConstructionScript();
-	void ReceiveBeginPlay();
-	void ExecuteUbergraph_PhoneCable(int EntryPoint);
-};
-
+	public:
+		void ReceiveBeginPlay();
+		void ExecuteUbergraph_PhoneCable(int EntryPoint);
+		static UClass* StaticClass();
+	};
 
 }
 

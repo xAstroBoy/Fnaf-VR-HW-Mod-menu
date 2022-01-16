@@ -1,31 +1,28 @@
-#pragma once
+﻿#pragma once
 
-// Name: Freddys, Version: 1.0.0
+/**
+ * Name: Fnaf Help Wanted
+ * Version: 1
+ */
 
 #ifdef _MSC_VER
-	#pragma pack(push, 0x8)
+	#pragma pack(push, 0x01)
 #endif
 
-namespace SDK
+namespace CG
 {
-//---------------------------------------------------------------------------
-// Classes
-//---------------------------------------------------------------------------
-
-// BlueprintGeneratedClass MPBonnie.MPBonnie_C
-// 0x0000 (0x0792 - 0x0792)
-class AMPBonnie_C : public AMPFreddyPawnBase_C
-{
-public:
-
-	static UClass* StaticClass()
+	// --------------------------------------------------
+	// # Classes
+	// --------------------------------------------------
+	/**
+	 * BlueprintGeneratedClass MPBonnie.MPBonnie_C
+	 * Size -> 0x0000 (FullSize[0x06B2] - InheritedSize[0x06B2])
+	 */
+	class AMPBonnie_C : public AMPFreddyPawnBase_C
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass MPBonnie.MPBonnie_C");
-		return ptr;
-	}
-
-};
-
+	public:
+		static UClass* StaticClass();
+	};
 
 }
 

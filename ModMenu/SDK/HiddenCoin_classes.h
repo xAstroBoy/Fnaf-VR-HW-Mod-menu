@@ -1,58 +1,57 @@
-#pragma once
+﻿#pragma once
 
-// Name: Freddys, Version: 1.0.0
+/**
+ * Name: Fnaf Help Wanted
+ * Version: 1
+ */
 
 #ifdef _MSC_VER
-	#pragma pack(push, 0x8)
+	#pragma pack(push, 0x01)
 #endif
 
-namespace SDK
+namespace CG
 {
-//---------------------------------------------------------------------------
-// Classes
-//---------------------------------------------------------------------------
-
-// BlueprintGeneratedClass HiddenCoin.HiddenCoin_C
-// 0x005C (0x0384 - 0x0328)
-class AHiddenCoin_C : public AActor
-{
-public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0328(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class USphereComponent*                            Sphere;                                                   // 0x0330(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UWidgetComponent*                            CoinAmount;                                               // 0x0338(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UChildActorComponent*                        GrabbableToken_InitiallyFrozen;                           // 0x0340(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0348(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class AGrabbableToken_InitiallyFrozen_C*           RefToCoin;                                                // 0x0350(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
-	class ASaul_MotionControllerPawn_C*                RefToMotionController;                                    // 0x0358(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData)
-	class UCoinCounterForHiddenCoin_C*                 RefTOWidget;                                              // 0x0360(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	int                                                CoinsThisRound;                                           // 0x0368(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	int                                                CoinID;                                                   // 0x036C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UBP_FNAF_GameInstance_C*                     RefToGM;                                                  // 0x0370(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               StartActive;                                              // 0x0378(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               AllowPhysics_;                                            // 0x0379(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               CanTriggerWithGaze;                                       // 0x037A(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x1];                                       // 0x037B(0x0001) MISSED OFFSET
-	float                                              ActivateCounter;                                          // 0x037C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              LookAtTime;                                               // 0x0380(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-
-	static UClass* StaticClass()
+	// --------------------------------------------------
+	// # Classes
+	// --------------------------------------------------
+	/**
+	 * BlueprintGeneratedClass HiddenCoin.HiddenCoin_C
+	 * Size -> 0x005D (FullSize[0x029D] - InheritedSize[0x0240])
+	 */
+	class AHiddenCoin_C : public AActor
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass HiddenCoin.HiddenCoin_C");
-		return ptr;
-	}
+	public:
+		struct FPointerToUberGraphFrame                            UberGraphFrame;                                          // 0x0240(0x0008) ZeroConstructor, Transient, DuplicateTransient
+		class USphereComponent*                                    Sphere;                                                  // 0x0248(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
+		class UWidgetComponent*                                    CoinAmount;                                              // 0x0250(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
+		class UChildActorComponent*                                GrabbableToken_InitiallyFrozen;                          // 0x0258(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
+		class USceneComponent*                                     DefaultSceneRoot;                                        // 0x0260(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
+		class AGrabbableToken_InitiallyFrozen_C*                   RefToCoin;                                               // 0x0268(0x0008) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		class ASaul_MotionControllerPawn_C*                        ReftoMotionController;                                   // 0x0270(0x0008) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		class UCoinCounterForHiddenCoin_C*                         RefTOWidget;                                             // 0x0278(0x0008) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		int                                                        CoinsThisRound;                                          // 0x0280(0x0004) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		int                                                        CoinID;                                                  // 0x0284(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		class UBP_FNAF_GameInstance_C*                             RefToGM;                                                 // 0x0288(0x0008) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		bool                                                       StartActive;                                             // 0x0290(0x0001) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor
+		bool                                                       AllowPhysics_;                                           // 0x0291(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor
+		bool                                                       CanTriggerWithGaze;                                      // 0x0292(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor
+		unsigned char                                              UnknownData_GID7[0x1];                                   // 0x0293(0x0001) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		float                                                      ActivateCounter;                                         // 0x0294(0x0004) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		float                                                      LookAtTime;                                              // 0x0298(0x0004) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		bool                                                       Set_new_location_for_NON_VR;                             // 0x029C(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor
 
-
-	void UserConstructionScript();
-	void ReceiveBeginPlay();
-	void Grabbed();
-	void Released();
-	void Activate();
-	void BndEvt__GazeSphereCollider_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
-	void ReceiveTick(float* DeltaSeconds);
-	void TriggerWithoutDelay();
-	void ExecuteUbergraph_HiddenCoin(int EntryPoint);
-};
-
+	public:
+		void ReceiveBeginPlay();
+		void Grabbed();
+		void Released();
+		void Activate();
+		void BndEvt__GazeSphereCollider_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
+		void ReceiveTick(float DeltaSeconds);
+		void TriggerWithoutDelay();
+		void Enable_Phsyics();
+		void ExecuteUbergraph_HiddenCoin(int EntryPoint);
+		static UClass* StaticClass();
+	};
 
 }
 

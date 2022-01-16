@@ -1,28 +1,30 @@
-#pragma once
+﻿#pragma once
 
-// Name: Freddys, Version: 1.0.0
+/**
+ * Name: Fnaf Help Wanted
+ * Version: 1
+ */
 
 #ifdef _MSC_VER
-	#pragma pack(push, 0x8)
+	#pragma pack(push, 0x01)
 #endif
 
-namespace SDK
+namespace CG
 {
-//---------------------------------------------------------------------------
-// Enums
-//---------------------------------------------------------------------------
-
-// UserDefinedEnum ENiagaraBooleanLogicOps.ENiagaraBooleanLogicOps
-enum class ENiagaraBooleanLogicOps : uint8_t
-{
-	ENiagaraBooleanLogicOps__NewEnumerator0 = 0,
-	ENiagaraBooleanLogicOps__NewEnumerator2 = 1,
-	ENiagaraBooleanLogicOps__NewEnumerator4 = 2,
-	ENiagaraBooleanLogicOps__NewEnumerator5 = 3,
-	ENiagaraBooleanLogicOps__ENiagaraBooleanLogicOps_MAX = 4
-};
-
-
+	// --------------------------------------------------
+	// # Enums
+	// --------------------------------------------------
+	/**
+	 * UserDefinedEnum ENiagaraBooleanLogicOps.ENiagaraBooleanLogicOps
+	 */
+	enum class ENiagaraBooleanLogicOps_ENiagaraBooleanLogicOps : uint8_t
+	{
+		ENiagaraBooleanLogicOps__NewEnumerator0              = 0,
+		ENiagaraBooleanLogicOps__NewEnumerator2              = 1,
+		ENiagaraBooleanLogicOps__NewEnumerator4              = 2,
+		ENiagaraBooleanLogicOps__NewEnumerator5              = 3,
+		ENiagaraBooleanLogicOps__ENiagaraBooleanLogicOps_MAX = 4
+	};
 
 }
 

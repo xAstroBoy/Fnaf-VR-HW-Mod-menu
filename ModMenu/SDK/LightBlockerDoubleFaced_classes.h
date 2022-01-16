@@ -1,36 +1,33 @@
-#pragma once
+﻿#pragma once
 
-// Name: Freddys, Version: 1.0.0
+/**
+ * Name: Fnaf Help Wanted
+ * Version: 1
+ */
 
 #ifdef _MSC_VER
-	#pragma pack(push, 0x8)
+	#pragma pack(push, 0x01)
 #endif
 
-namespace SDK
+namespace CG
 {
-//---------------------------------------------------------------------------
-// Classes
-//---------------------------------------------------------------------------
-
-// BlueprintGeneratedClass LightBlockerDoubleFaced.LightBlockerDoubleFaced_C
-// 0x0018 (0x0340 - 0x0328)
-class ALightBlockerDoubleFaced_C : public AActor
-{
-public:
-	class UStaticMeshComponent*                        StaticMesh;                                               // 0x0328(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UStaticMeshComponent*                        StaticMesh_Plane;                                         // 0x0330(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0338(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-
-	static UClass* StaticClass()
+	// --------------------------------------------------
+	// # Classes
+	// --------------------------------------------------
+	/**
+	 * BlueprintGeneratedClass LightBlockerDoubleFaced.LightBlockerDoubleFaced_C
+	 * Size -> 0x0018 (FullSize[0x0258] - InheritedSize[0x0240])
+	 */
+	class ALightBlockerDoubleFaced_C : public AActor
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass LightBlockerDoubleFaced.LightBlockerDoubleFaced_C");
-		return ptr;
-	}
+	public:
+		class UStaticMeshComponent*                                StaticMesh;                                              // 0x0240(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
+		class UStaticMeshComponent*                                StaticMesh_Plane;                                        // 0x0248(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
+		class USceneComponent*                                     DefaultSceneRoot;                                        // 0x0250(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
 
-
-	void UserConstructionScript();
-};
-
+	public:
+		static UClass* StaticClass();
+	};
 
 }
 

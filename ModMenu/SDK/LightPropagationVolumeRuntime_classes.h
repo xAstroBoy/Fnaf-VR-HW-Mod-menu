@@ -1,35 +1,34 @@
-#pragma once
+﻿#pragma once
 
-// Name: Freddys, Version: 1.0.0
+/**
+ * Name: Fnaf Help Wanted
+ * Version: 1
+ */
 
 #ifdef _MSC_VER
-	#pragma pack(push, 0x8)
+	#pragma pack(push, 0x01)
 #endif
 
-namespace SDK
+namespace CG
 {
-//---------------------------------------------------------------------------
-// Classes
-//---------------------------------------------------------------------------
-
-// Class LightPropagationVolumeRuntime.LightPropagationVolumeBlendable
-// 0x0050 (0x0078 - 0x0028)
-class ULightPropagationVolumeBlendable : public UObject
-{
-public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
-	struct FLightPropagationVolumeSettings             Settings;                                                 // 0x0030(0x0040) (Edit, BlueprintVisible)
-	float                                              BlendWeight;                                              // 0x0070(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x0074(0x0004) MISSED OFFSET
-
-	static UClass* StaticClass()
+	// --------------------------------------------------
+	// # Classes
+	// --------------------------------------------------
+	/**
+	 * Class LightPropagationVolumeRuntime.LightPropagationVolumeBlendable
+	 * Size -> 0x0050 (FullSize[0x0078] - InheritedSize[0x0028])
+	 */
+	class ULightPropagationVolumeBlendable : public UObject
 	{
-		static auto ptr = UObject::FindClass("Class LightPropagationVolumeRuntime.LightPropagationVolumeBlendable");
-		return ptr;
-	}
+	public:
+		unsigned char                                              UnknownData_9L6P[0x8];                                   // 0x0028(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		struct FLightPropagationVolumeSettings                     Settings;                                                // 0x0030(0x0040) Edit, BlueprintVisible, Interp, NoDestructor, NativeAccessSpecifierPublic
+		float                                                      BlendWeight;                                             // 0x0070(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                              UnknownData_HDC5[0x4];                                   // 0x0074(0x0004) MISSED OFFSET (PADDING)
 
-};
-
+	public:
+		static UClass* StaticClass();
+	};
 
 }
 

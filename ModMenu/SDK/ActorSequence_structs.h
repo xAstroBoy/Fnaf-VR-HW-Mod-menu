@@ -1,57 +1,70 @@
-#pragma once
+﻿#pragma once
 
-// Name: Freddys, Version: 1.0.0
+/**
+ * Name: Fnaf Help Wanted
+ * Version: 1
+ */
 
 #ifdef _MSC_VER
-	#pragma pack(push, 0x8)
+	#pragma pack(push, 0x01)
 #endif
 
-namespace SDK
+namespace CG
 {
-//---------------------------------------------------------------------------
-// Enums
-//---------------------------------------------------------------------------
+	// --------------------------------------------------
+	// # Enums
+	// --------------------------------------------------
+	/**
+	 * Enum ActorSequence.EActorSequenceObjectReferenceType
+	 */
+	enum class ActorSequence_EActorSequenceObjectReferenceType : uint8_t
+	{
+		EActorSequenceObjectReferenceType__ContextActor                          = 0,
+		EActorSequenceObjectReferenceType__ExternalActor                         = 1,
+		EActorSequenceObjectReferenceType__Component                             = 2,
+		EActorSequenceObjectReferenceType__EActorSequenceObjectReferenceType_MAX = 3
+	};
 
-// Enum ActorSequence.EActorSequenceObjectReferenceType
-enum class EActorSequenceObjectReferenceType : uint8_t
-{
-	EActorSequenceObjectReferenceType__ContextActor = 0,
-	EActorSequenceObjectReferenceType__ExternalActor = 1,
-	EActorSequenceObjectReferenceType__Component = 2,
-	EActorSequenceObjectReferenceType__EActorSequenceObjectReferenceType_MAX = 3
-};
+	// --------------------------------------------------
+	// # Structs
+	// --------------------------------------------------
+	/**
+	 * ScriptStruct ActorSequence.ActorSequenceObjectReference
+	 * Size -> 0x0028
+	 */
+	struct FActorSequenceObjectReference
+	{
+	public:
+		ActorSequence_EActorSequenceObjectReferenceType            Type;                                                    // 0x0000(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+		unsigned char                                              UnknownData_JMNA[0x3];                                   // 0x0001(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		struct FGuid                                               ActorId;                                                 // 0x0004(0x0010) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+		unsigned char                                              UnknownData_CVZM[0x4];                                   // 0x0014(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class FString                                              PathToComponent;                                         // 0x0018(0x0010) ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
 
+	};
 
+	/**
+	 * ScriptStruct ActorSequence.ActorSequenceObjectReferences
+	 * Size -> 0x0010
+	 */
+	struct FActorSequenceObjectReferences
+	{
+	public:
+		TArray<struct FActorSequenceObjectReference>               Array;                                                   // 0x0000(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
 
-//---------------------------------------------------------------------------
-// Script Structs
-//---------------------------------------------------------------------------
+	};
 
-// ScriptStruct ActorSequence.ActorSequenceObjectReference
-// 0x0028
-struct FActorSequenceObjectReference
-{
-	EActorSequenceObjectReferenceType                  Type;                                                     // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0001(0x0003) MISSED OFFSET
-	struct FGuid                                       ActorId;                                                  // 0x0004(0x0010) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
-	struct FString                                     PathToComponent;                                          // 0x0018(0x0010) (ZeroConstructor)
-};
+	/**
+	 * ScriptStruct ActorSequence.ActorSequenceObjectReferenceMap
+	 * Size -> 0x0020
+	 */
+	struct FActorSequenceObjectReferenceMap
+	{
+	public:
+		TArray<struct FGuid>                                       BindingIds;                                              // 0x0000(0x0010) ZeroConstructor, NativeAccessSpecifierPrivate
+		TArray<struct FActorSequenceObjectReferences>              References;                                              // 0x0010(0x0010) ZeroConstructor, NativeAccessSpecifierPrivate
 
-// ScriptStruct ActorSequence.ActorSequenceObjectReferences
-// 0x0010
-struct FActorSequenceObjectReferences
-{
-	TArray<struct FActorSequenceObjectReference>       Array;                                                    // 0x0000(0x0010) (ZeroConstructor)
-};
-
-// ScriptStruct ActorSequence.ActorSequenceObjectReferenceMap
-// 0x0020
-struct FActorSequenceObjectReferenceMap
-{
-	TArray<struct FGuid>                               BindingIds;                                               // 0x0000(0x0010) (ZeroConstructor)
-	TArray<struct FActorSequenceObjectReferences>      References;                                               // 0x0010(0x0010) (ZeroConstructor)
-};
+	};
 
 }
 

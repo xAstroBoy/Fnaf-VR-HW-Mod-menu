@@ -1,39 +1,37 @@
-#pragma once
+﻿#pragma once
 
-// Name: Freddys, Version: 1.0.0
+/**
+ * Name: Fnaf Help Wanted
+ * Version: 1
+ */
 
 #ifdef _MSC_VER
-	#pragma pack(push, 0x8)
+	#pragma pack(push, 0x01)
 #endif
 
-namespace SDK
+namespace CG
 {
-//---------------------------------------------------------------------------
-// Classes
-//---------------------------------------------------------------------------
-
-// BlueprintGeneratedClass HandToPointerProximitySquare.HandToPointerProximitySquare_C
-// 0x0018 (0x0340 - 0x0328)
-class AHandToPointerProximitySquare_C : public AActor
-{
-public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0328(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class UBoxComponent*                               Box;                                                      // 0x0330(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UPrimitiveComponent*                         WidgetFingerCollider;                                     // 0x0338(0x0008) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-
-	static UClass* StaticClass()
+	// --------------------------------------------------
+	// # Classes
+	// --------------------------------------------------
+	/**
+	 * BlueprintGeneratedClass HandToPointerProximitySquare.HandToPointerProximitySquare_C
+	 * Size -> 0x0018 (FullSize[0x0258] - InheritedSize[0x0240])
+	 */
+	class AHandToPointerProximitySquare_C : public AActor
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass HandToPointerProximitySquare.HandToPointerProximitySquare_C");
-		return ptr;
-	}
+	public:
+		struct FPointerToUberGraphFrame                            UberGraphFrame;                                          // 0x0240(0x0008) ZeroConstructor, Transient, DuplicateTransient
+		class UBoxComponent*                                       Box;                                                     // 0x0248(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
+		class UPrimitiveComponent*                                 WidgetFingerCollider;                                    // 0x0250(0x0008) Edit, BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash
 
-
-	void UserConstructionScript();
-	void ReceiveActorBeginOverlap(class AActor** OtherActor);
-	void ReceiveActorEndOverlap(class AActor** OtherActor);
-	void ExecuteUbergraph_HandToPointerProximitySquare(int EntryPoint);
-};
-
+	public:
+		void ReceiveBeginPlay();
+		void ReceiveActorBeginOverlap(class AActor* OtherActor);
+		void ReceiveActorEndOverlap(class AActor* OtherActor);
+		void ExecuteUbergraph_HandToPointerProximitySquare(int EntryPoint);
+		static UClass* StaticClass();
+	};
 
 }
 

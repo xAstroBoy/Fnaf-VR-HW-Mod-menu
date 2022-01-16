@@ -1,66 +1,75 @@
-#pragma once
+﻿#pragma once
 
-// Name: Freddys, Version: 1.0.0
+/**
+ * Name: Fnaf Help Wanted
+ * Version: 1
+ */
 
 #ifdef _MSC_VER
-	#pragma pack(push, 0x8)
+	#pragma pack(push, 0x01)
 #endif
 
-namespace SDK
+namespace CG
 {
-//---------------------------------------------------------------------------
-// Classes
-//---------------------------------------------------------------------------
-
-// BlueprintGeneratedClass TeleportSpot_BP.TeleportSpot_BP_C
-// 0x007A (0x03A2 - 0x0328)
-class ATeleportSpot_BP_C : public AActor
-{
-public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0328(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class USceneComponent*                             TeleportLocation;                                         // 0x0330(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UCapsuleComponent*                           TeleportCollider;                                         // 0x0338(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UStaticMeshComponent*                        TeleportSpot;                                             // 0x0340(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0348(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	float                                              TeleportGlow_IntensityStrength_0AD8BF8941EF60E43C0953A7D7F175A3;// 0x0350(0x0004) (ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<ETimelineDirection>                    TeleportGlow__Direction_0AD8BF8941EF60E43C0953A7D7F175A3; // 0x0354(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0355(0x0003) MISSED OFFSET
-	class UTimelineComponent*                          TeleportGlow;                                             // 0x0358(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	bool                                               StartingSpot;                                             // 0x0360(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0361(0x0007) MISSED OFFSET
-	class ATeleport_Manager_BP_C*                      Teleportmanager;                                          // 0x0368(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
-	int                                                TeleportID;                                               // 0x0370(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x0374(0x0004) MISSED OFFSET
-	class ALightBlocker_C*                             LightBlockerID;                                           // 0x0378(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData)
-	class ABigToy_Office04_BP_C*                       BigToyRef;                                                // 0x0380(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
-	bool                                               InCurrentSpot;                                            // 0x0388(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x7];                                       // 0x0389(0x0007) MISSED OFFSET
-	class AOffice_BaseGamemanager_C*                   GameManager;                                              // 0x0390(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData)
-	float                                              Capsule_Size_Radius;                                      // 0x0398(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              Capsule_Half_Height;                                      // 0x039C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               Set_player_rotation_to_Collision;                         // 0x03A0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               Disable_Teleporter;                                       // 0x03A1(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-
-	static UClass* StaticClass()
+	// --------------------------------------------------
+	// # Classes
+	// --------------------------------------------------
+	/**
+	 * BlueprintGeneratedClass TeleportSpot_BP.TeleportSpot_BP_C
+	 * Size -> 0x00A8 (FullSize[0x02E8] - InheritedSize[0x0240])
+	 */
+	class ATeleportSpot_BP_C : public AActor
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass TeleportSpot_BP.TeleportSpot_BP_C");
-		return ptr;
-	}
+	public:
+		struct FPointerToUberGraphFrame                            UberGraphFrame;                                          // 0x0240(0x0008) ZeroConstructor, Transient, DuplicateTransient
+		class UArrowComponent*                                     Arrow;                                                   // 0x0248(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
+		class USceneComponent*                                     TeleportLocationNonVR;                                   // 0x0250(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
+		class USceneComponent*                                     TeleportLocation;                                        // 0x0258(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
+		class UCapsuleComponent*                                   TeleportCollider;                                        // 0x0260(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
+		class UStaticMeshComponent*                                TeleportSpot;                                            // 0x0268(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
+		class USceneComponent*                                     DefaultSceneRoot;                                        // 0x0270(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
+		float                                                      Timeline_0_IntensityStrength_9E8BCDD64D99C76B4F0241816B4B20CB; // 0x0278(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		Engine_ETimelineDirection                                  Timeline_0__Direction_9E8BCDD64D99C76B4F0241816B4B20CB;  // 0x027C(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		unsigned char                                              UnknownData_XHJV[0x3];                                   // 0x027D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class UTimelineComponent*                                  Timeline_1;                                              // 0x0280(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		float                                                      TeleportGlow_IntensityStrength_0AD8BF8941EF60E43C0953A7D7F175A3; // 0x0288(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		Engine_ETimelineDirection                                  TeleportGlow__Direction_0AD8BF8941EF60E43C0953A7D7F175A3; // 0x028C(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		unsigned char                                              UnknownData_L9K0[0x3];                                   // 0x028D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class UTimelineComponent*                                  TeleportGlow;                                            // 0x0290(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		bool                                                       StartingSpot;                                            // 0x0298(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor
+		unsigned char                                              UnknownData_OHBW[0x7];                                   // 0x0299(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class ATeleport_Manager_BP_C*                              Teleportmanager;                                         // 0x02A0(0x0008) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		int                                                        TeleportID;                                              // 0x02A8(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		unsigned char                                              UnknownData_RV3N[0x4];                                   // 0x02AC(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class ALightBlocker_C*                                     LightBlockerID;                                          // 0x02B0(0x0008) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		class ABigToy_Office04_BP_C*                               BigToyRef;                                               // 0x02B8(0x0008) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		bool                                                       InCurrentSpot;                                           // 0x02C0(0x0001) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor
+		unsigned char                                              UnknownData_IDV5[0x7];                                   // 0x02C1(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class AOffice_BaseGamemanager_C*                           GameManager;                                             // 0x02C8(0x0008) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		float                                                      Capsule_Size_Radius;                                     // 0x02D0(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		float                                                      Capsule_Half_Height;                                     // 0x02D4(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		bool                                                       Set_player_rotation_to_Collision;                        // 0x02D8(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor
+		bool                                                       Disable_Teleporter;                                      // 0x02D9(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor
+		unsigned char                                              UnknownData_0CC1[0x6];                                   // 0x02DA(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class ASaul_MotionControllerPawn_C*                        PlayerPawnRef;                                           // 0x02E0(0x0008) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
 
-
-	void DisableCollision(bool Disable);
-	void SetRecentlyTeleportedFalse();
-	void TeleportSelected();
-	void EnableCollision(bool enable);
-	void UserConstructionScript();
-	void TeleportGlow__FinishedFunc();
-	void TeleportGlow__UpdateFunc();
-	void ReceiveBeginPlay();
-	void TriggerTeleportGlow();
-	void TriggerTeleportFade();
-	void ExecuteUbergraph_TeleportSpot_BP(int EntryPoint);
-};
-
+	public:
+		void DisableCollision(bool Disable);
+		void SetRecentlyTeleportedFalse();
+		void TeleportSelected();
+		void EnableCollision(bool enable);
+		void UserConstructionScript();
+		void TeleportGlow__FinishedFunc();
+		void TeleportGlow__UpdateFunc();
+		void Timeline_0__FinishedFunc();
+		void Timeline_0__UpdateFunc();
+		void ReceiveBeginPlay();
+		void TriggerTeleportGlow();
+		void TriggerTeleportFade();
+		void ReceiveTick(float DeltaSeconds);
+		void ExecuteUbergraph_TeleportSpot_BP(int EntryPoint);
+		static UClass* StaticClass();
+	};
 
 }
 

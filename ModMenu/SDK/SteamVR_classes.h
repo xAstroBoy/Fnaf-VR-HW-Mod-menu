@@ -1,56 +1,48 @@
-#pragma once
+﻿#pragma once
 
-// Name: Freddys, Version: 1.0.0
+/**
+ * Name: Fnaf Help Wanted
+ * Version: 1
+ */
 
 #ifdef _MSC_VER
-	#pragma pack(push, 0x8)
+	#pragma pack(push, 0x01)
 #endif
 
-namespace SDK
+namespace CG
 {
-//---------------------------------------------------------------------------
-// Classes
-//---------------------------------------------------------------------------
-
-// Class SteamVR.SteamVRChaperoneComponent
-// 0x0028 (0x0118 - 0x00F0)
-class USteamVRChaperoneComponent : public UActorComponent
-{
-public:
-	struct FScriptMulticastDelegate                    OnLeaveBounds;                                            // 0x00F0(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnReturnToBounds;                                         // 0x0100(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0110(0x0008) MISSED OFFSET
-
-	static UClass* StaticClass()
+	// --------------------------------------------------
+	// # Classes
+	// --------------------------------------------------
+	/**
+	 * Class SteamVR.SteamVRChaperoneComponent
+	 * Size -> 0x0028 (FullSize[0x0100] - InheritedSize[0x00D8])
+	 */
+	class USteamVRChaperoneComponent : public UActorComponent
 	{
-		static auto ptr = UObject::FindClass("Class SteamVR.SteamVRChaperoneComponent");
-		return ptr;
-	}
+	public:
+		class FScriptMulticastDelegate                             OnLeaveBounds;                                           // 0x00D8(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
+		class FScriptMulticastDelegate                             OnReturnToBounds;                                        // 0x00E8(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
+		unsigned char                                              UnknownData_DY4X[0x8];                                   // 0x00F8(0x0008) MISSED OFFSET (PADDING)
 
+	public:
+		void SteamVRChaperoneEvent__DelegateSignature();
+		TArray<struct FVector> GetBounds();
+		static UClass* StaticClass();
+	};
 
-	void SteamVRChaperoneEvent__DelegateSignature();
-	TArray<struct FVector> GetBounds();
-};
-
-
-// Class SteamVR.SteamVRFunctionLibrary
-// 0x0000 (0x0028 - 0x0028)
-class USteamVRFunctionLibrary : public UBlueprintFunctionLibrary
-{
-public:
-
-	static UClass* StaticClass()
+	/**
+	 * Class SteamVR.SteamVRFunctionLibrary
+	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+	 */
+	class USteamVRFunctionLibrary : public UBlueprintFunctionLibrary
 	{
-		static auto ptr = UObject::FindClass("Class SteamVR.SteamVRFunctionLibrary");
-		return ptr;
-	}
-
-
-	void STATIC_GetValidTrackedDeviceIds(ESteamVRTrackedDeviceType DeviceType, TArray<int>* OutTrackedDeviceIds);
-	bool STATIC_GetTrackedDevicePositionAndOrientation(int DeviceID, struct FVector* OutPosition, struct FRotator* OutOrientation);
-	bool STATIC_GetHandPositionAndOrientation(int ControllerIndex, EControllerHand Hand, struct FVector* OutPosition, struct FRotator* OutOrientation);
-};
-
+	public:
+		void STATIC_GetValidTrackedDeviceIds(SteamVR_ESteamVRTrackedDeviceType DeviceType, TArray<int>* OutTrackedDeviceIds);
+		bool STATIC_GetTrackedDevicePositionAndOrientation(int DeviceID, struct FVector* OutPosition, struct FRotator* OutOrientation);
+		bool STATIC_GetHandPositionAndOrientation(int ControllerIndex, InputCore_EControllerHand Hand, struct FVector* OutPosition, struct FRotator* OutOrientation);
+		static UClass* StaticClass();
+	};
 
 }
 

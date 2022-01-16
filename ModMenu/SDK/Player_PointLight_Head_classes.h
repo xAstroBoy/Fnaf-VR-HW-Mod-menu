@@ -1,37 +1,34 @@
-#pragma once
+﻿#pragma once
 
-// Name: Freddys, Version: 1.0.0
+/**
+ * Name: Fnaf Help Wanted
+ * Version: 1
+ */
 
 #ifdef _MSC_VER
-	#pragma pack(push, 0x8)
+	#pragma pack(push, 0x01)
 #endif
 
-namespace SDK
+namespace CG
 {
-//---------------------------------------------------------------------------
-// Classes
-//---------------------------------------------------------------------------
-
-// BlueprintGeneratedClass Player_PointLight_Head.Player_PointLight_Head_C
-// 0x0018 (0x0340 - 0x0328)
-class APlayer_PointLight_Head_C : public AActor
-{
-public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0328(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class UPointLightComponent*                        PointLight;                                               // 0x0330(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class USceneComponent*                             Scene;                                                    // 0x0338(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-
-	static UClass* StaticClass()
+	// --------------------------------------------------
+	// # Classes
+	// --------------------------------------------------
+	/**
+	 * BlueprintGeneratedClass Player_PointLight_Head.Player_PointLight_Head_C
+	 * Size -> 0x0018 (FullSize[0x0258] - InheritedSize[0x0240])
+	 */
+	class APlayer_PointLight_Head_C : public AActor
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass Player_PointLight_Head.Player_PointLight_Head_C");
-		return ptr;
-	}
+	public:
+		struct FPointerToUberGraphFrame                            UberGraphFrame;                                          // 0x0240(0x0008) ZeroConstructor, Transient, DuplicateTransient
+		class UPointLightComponent*                                PointLight;                                              // 0x0248(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
+		class USceneComponent*                                     Scene;                                                   // 0x0250(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
 
-
-	void UserConstructionScript();
-	void ExecuteUbergraph_Player_PointLight_Head(int EntryPoint);
-};
-
+	public:
+		void ExecuteUbergraph_Player_PointLight_Head(int EntryPoint);
+		static UClass* StaticClass();
+	};
 
 }
 

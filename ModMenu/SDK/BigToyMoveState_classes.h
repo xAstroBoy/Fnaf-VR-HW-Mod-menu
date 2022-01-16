@@ -1,31 +1,28 @@
-#pragma once
+﻿#pragma once
 
-// Name: Freddys, Version: 1.0.0
+/**
+ * Name: Fnaf Help Wanted
+ * Version: 1
+ */
 
 #ifdef _MSC_VER
-	#pragma pack(push, 0x8)
+	#pragma pack(push, 0x01)
 #endif
 
-namespace SDK
+namespace CG
 {
-//---------------------------------------------------------------------------
-// Classes
-//---------------------------------------------------------------------------
-
-// BlueprintGeneratedClass BigToyMoveState.BigToyMoveState_C
-// 0x0000 (0x0028 - 0x0028)
-class UBigToyMoveState_C : public UBigToy_O4_State_C
-{
-public:
-
-	static UClass* StaticClass()
+	// --------------------------------------------------
+	// # Classes
+	// --------------------------------------------------
+	/**
+	 * BlueprintGeneratedClass BigToyMoveState.BigToyMoveState_C
+	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+	 */
+	class UBigToyMoveState_C : public UBigToy_O4_State_C
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BigToyMoveState.BigToyMoveState_C");
-		return ptr;
-	}
-
-};
-
+	public:
+		static UClass* StaticClass();
+	};
 
 }
 

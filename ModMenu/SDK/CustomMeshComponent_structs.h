@@ -1,25 +1,31 @@
-#pragma once
+﻿#pragma once
 
-// Name: Freddys, Version: 1.0.0
+/**
+ * Name: Fnaf Help Wanted
+ * Version: 1
+ */
 
 #ifdef _MSC_VER
-	#pragma pack(push, 0x8)
+	#pragma pack(push, 0x01)
 #endif
 
-namespace SDK
+namespace CG
 {
-//---------------------------------------------------------------------------
-// Script Structs
-//---------------------------------------------------------------------------
+	// --------------------------------------------------
+	// # Structs
+	// --------------------------------------------------
+	/**
+	 * ScriptStruct CustomMeshComponent.CustomMeshTriangle
+	 * Size -> 0x0024
+	 */
+	struct FCustomMeshTriangle
+	{
+	public:
+		struct FVector                                             Vertex0;                                                 // 0x0000(0x000C) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FVector                                             Vertex1;                                                 // 0x000C(0x000C) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FVector                                             Vertex2;                                                 // 0x0018(0x000C) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 
-// ScriptStruct CustomMeshComponent.CustomMeshTriangle
-// 0x0024
-struct FCustomMeshTriangle
-{
-	struct FVector                                     Vertex0;                                                  // 0x0000(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     Vertex1;                                                  // 0x000C(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     Vertex2;                                                  // 0x0018(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-};
+	};
 
 }
 

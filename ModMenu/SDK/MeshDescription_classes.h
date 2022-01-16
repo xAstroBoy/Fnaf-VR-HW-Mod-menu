@@ -1,31 +1,28 @@
-#pragma once
+﻿#pragma once
 
-// Name: Freddys, Version: 1.0.0
+/**
+ * Name: Fnaf Help Wanted
+ * Version: 1
+ */
 
 #ifdef _MSC_VER
-	#pragma pack(push, 0x8)
+	#pragma pack(push, 0x01)
 #endif
 
-namespace SDK
+namespace CG
 {
-//---------------------------------------------------------------------------
-// Classes
-//---------------------------------------------------------------------------
-
-// Class MeshDescription.MeshDescription
-// 0x0000 (0x0028 - 0x0028)
-class UMeshDescription : public UObject
-{
-public:
-
-	static UClass* StaticClass()
+	// --------------------------------------------------
+	// # Classes
+	// --------------------------------------------------
+	/**
+	 * Class MeshDescription.MeshDescription
+	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+	 */
+	class UMeshDescription : public UObject
 	{
-		static auto ptr = UObject::FindClass("Class MeshDescription.MeshDescription");
-		return ptr;
-	}
-
-};
-
+	public:
+		static UClass* StaticClass();
+	};
 
 }
 

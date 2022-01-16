@@ -1,53 +1,56 @@
-#pragma once
+﻿#pragma once
 
-// Name: Freddys, Version: 1.0.0
+/**
+ * Name: Fnaf Help Wanted
+ * Version: 1
+ */
 
 #ifdef _MSC_VER
-	#pragma pack(push, 0x8)
+	#pragma pack(push, 0x01)
 #endif
 
-namespace SDK
+namespace CG
 {
-//---------------------------------------------------------------------------
-// Classes
-//---------------------------------------------------------------------------
-
-// BlueprintGeneratedClass Teleport_Manager_BP.Teleport_Manager_BP_C
-// 0x0059 (0x0381 - 0x0328)
-class ATeleport_Manager_BP_C : public AActor
-{
-public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0328(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0330(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	TArray<class ATeleportSpot_BP_C*>                  TeleportSpots;                                            // 0x0338(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance)
-	TArray<class UObject*>                             TeleportSpots_Review;                                     // 0x0348(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance)
-	int                                                PlayerLocation;                                           // 0x0358(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	int                                                Spring_Trap_Location;                                     // 0x035C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	int                                                Choice_Path__;                                            // 0x0360(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0364(0x0004) MISSED OFFSET
-	class AJumpScare_C*                                JumpScare;                                                // 0x0368(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData)
-	struct FScriptMulticastDelegate                    Player_Is_Teleporting;                                    // 0x0370(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
-	bool                                               Disable_Light_Box_Collision;                              // 0x0380(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-
-	static UClass* StaticClass()
+	// --------------------------------------------------
+	// # Classes
+	// --------------------------------------------------
+	/**
+	 * BlueprintGeneratedClass Teleport_Manager_BP.Teleport_Manager_BP_C
+	 * Size -> 0x006A (FullSize[0x02AA] - InheritedSize[0x0240])
+	 */
+	class ATeleport_Manager_BP_C : public AActor
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass Teleport_Manager_BP.Teleport_Manager_BP_C");
-		return ptr;
-	}
+	public:
+		struct FPointerToUberGraphFrame                            UberGraphFrame;                                          // 0x0240(0x0008) ZeroConstructor, Transient, DuplicateTransient
+		class USceneComponent*                                     DefaultSceneRoot;                                        // 0x0248(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
+		TArray<class ATeleportSpot_BP_C*>                          TeleportSpots;                                           // 0x0250(0x0010) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance
+		TArray<class UObject*>                                     TeleportSpots_Review;                                    // 0x0260(0x0010) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance
+		int                                                        PlayerLocation;                                          // 0x0270(0x0004) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		int                                                        Spring_Trap_Location;                                    // 0x0274(0x0004) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		int                                                        Choice_Path__;                                           // 0x0278(0x0004) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		unsigned char                                              UnknownData_XEZ8[0x4];                                   // 0x027C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class AJumpScare_C*                                        JumpScare;                                               // 0x0280(0x0008) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		class FScriptMulticastDelegate                             Player_Is_Teleporting;                                   // 0x0288(0x0010) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable
+		bool                                                       Disable_Light_Box_Collision;                             // 0x0298(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor
+		unsigned char                                              UnknownData_VMSQ[0x3];                                   // 0x0299(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		int                                                        StartingLocation;                                        // 0x029C(0x0004) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		class AFlashlight_Battery_C*                               REF_Flashlight;                                          // 0x02A0(0x0008) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		bool                                                       CheckForDoorBlocks;                                      // 0x02A8(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor
+		bool                                                       TeleportControlsLightBlocks;                             // 0x02A9(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor
 
-
-	void CurrentTeleportSpot();
-	void EnableAttachedComponents(class ATeleportSpot_BP_C* TeleportSpots);
-	void DisableAll();
-	void EnableTeleport(int TeleportID, bool enable);
-	void UpdateTeleportSpots(class ATeleportSpot_BP_C* TeleportSpotChange);
-	void UserConstructionScript();
-	void Check_Location();
-	void ReceiveBeginPlay();
-	void ExecuteUbergraph_Teleport_Manager_BP(int EntryPoint);
-	void Player_Is_Teleporting__DelegateSignature(int Player_Location);
-};
-
+	public:
+		void CurrentTeleportSpot();
+		void EnableAttachedComponents(class ATeleportSpot_BP_C* TeleportSpots);
+		void DisableAll();
+		void EnableTeleport(int TeleportID, bool enable);
+		void UpdateTeleportSpots(class ATeleportSpot_BP_C* TeleportSpotChange);
+		void Check_Location();
+		void ReceiveBeginPlay();
+		void ReceiveTick(float DeltaSeconds);
+		void ExecuteUbergraph_Teleport_Manager_BP(int EntryPoint);
+		void Player_Is_Teleporting__DelegateSignature(int Player_Location);
+		static UClass* StaticClass();
+	};
 
 }
 

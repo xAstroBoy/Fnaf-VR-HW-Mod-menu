@@ -1,38 +1,34 @@
-#pragma once
+﻿#pragma once
 
-// Name: Freddys, Version: 1.0.0
+/**
+ * Name: Fnaf Help Wanted
+ * Version: 1
+ */
 
 #ifdef _MSC_VER
-	#pragma pack(push, 0x8)
+	#pragma pack(push, 0x01)
 #endif
 
-namespace SDK
+namespace CG
 {
-//---------------------------------------------------------------------------
-// Classes
-//---------------------------------------------------------------------------
-
-// BlueprintGeneratedClass BedroomClosetDoor_Child_For_CB.BedroomClosetDoor_Child_For_CB_C
-// 0x0013 (0x03E8 - 0x03D5)
-class ABedroomClosetDoor_Child_For_CB_C : public ABedroomClosetDoor_C
-{
-public:
-	unsigned char                                      UnknownData00[0x3];                                       // 0x03D5(0x0003) MISSED OFFSET
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x03D8(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class UMaterialInstanceDynamic*                    DoorMat;                                                  // 0x03E0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-
-	static UClass* StaticClass()
+	// --------------------------------------------------
+	// # Classes
+	// --------------------------------------------------
+	/**
+	 * BlueprintGeneratedClass BedroomClosetDoor_Child_For_CB.BedroomClosetDoor_Child_For_CB_C
+	 * Size -> 0x0010 (FullSize[0x0318] - InheritedSize[0x0308])
+	 */
+	class ABedroomClosetDoor_Child_For_CB_C : public ABedroomClosetDoor_C
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BedroomClosetDoor_Child_For_CB.BedroomClosetDoor_Child_For_CB_C");
-		return ptr;
-	}
+	public:
+		struct FPointerToUberGraphFrame                            UberGraphFrame;                                          // 0x0308(0x0008) ZeroConstructor, Transient, DuplicateTransient
+		class UMaterialInstanceDynamic*                            DoorMat;                                                 // 0x0310(0x0008) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
 
-
-	void UserConstructionScript();
-	void ReceiveBeginPlay();
-	void ExecuteUbergraph_BedroomClosetDoor_Child_For_CB(int EntryPoint);
-};
-
+	public:
+		void ReceiveBeginPlay();
+		void ExecuteUbergraph_BedroomClosetDoor_Child_For_CB(int EntryPoint);
+		static UClass* StaticClass();
+	};
 
 }
 

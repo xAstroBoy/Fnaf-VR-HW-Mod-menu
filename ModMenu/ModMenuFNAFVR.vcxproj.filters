@@ -65,64 +65,64 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>pch</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\Office03_Gamemanager_functions.cpp">
-      <Filter>SDK_CPP</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\Office_BaseGamemanager_functions.cpp">
-      <Filter>SDK_CPP</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\Office01_GameManager_functions.cpp">
-      <Filter>SDK_CPP</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\Office02_GameManager_functions.cpp">
-      <Filter>SDK_CPP</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\FNAFGM_FlashlightGame_functions.cpp">
-      <Filter>SDK_CPP</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\OfficeAiBase-Bp_functions.cpp">
-      <Filter>SDK_CPP</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\Saul_MotionControllerPawn_functions.cpp">
-      <Filter>SDK_CPP</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\Office02_MonitorBoard_BP_functions.cpp">
-      <Filter>SDK_CPP</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\Office03_MonitorBoard_BP_functions.cpp">
-      <Filter>SDK_CPP</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\MonitorBoard_BP_functions.cpp">
-      <Filter>SDK_CPP</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\Office01_MonitorBoard_BP_functions.cpp">
-      <Filter>SDK_CPP</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\LightBlocker_functions.cpp">
-      <Filter>SDK_CPP</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\Engine_functions.cpp">
-      <Filter>SDK_CPP</Filter>
-    </ClCompile>
     <ClCompile Include="pch.cpp">
       <Filter>Header Files</Filter>
     </ClCompile>
     <ClCompile Include="SDK\Basic.cpp">
       <Filter>SDK_CPP</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\CoreUObject_functions.cpp">
+    <ClCompile Include="SDK\CoreUObject_package.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\Engine_package.cpp">
       <Filter>SDK_CPP</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\Office02_WitheredBonnie_functions.cpp">
+    <ClCompile Include="SDK\FNAFGM_FlashlightGame_package.cpp">
       <Filter>SDK_CPP</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\Office02_WitheredFreddy_functions.cpp">
+    <ClCompile Include="SDK\LightBlocker_package.cpp">
       <Filter>SDK_CPP</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\Office02_WitheredFoxy_functions.cpp">
+    <ClCompile Include="SDK\MonitorBoard_BP_package.cpp">
       <Filter>SDK_CPP</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\Office02_WitheredChica_functions.cpp">
+    <ClCompile Include="SDK\Office_BaseGamemanager_package.cpp">
+      <Filter>SDK_CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\Office01_GameManager_package.cpp">
+      <Filter>SDK_CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\Office01_MonitorBoard_BP_package.cpp">
+      <Filter>SDK_CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\Office02_GameManager_package.cpp">
+      <Filter>SDK_CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\Office02_MonitorBoard_BP_package.cpp">
+      <Filter>SDK_CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\Office02_WitheredBonnie_package.cpp">
+      <Filter>SDK_CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\Office02_WitheredChica_package.cpp">
+      <Filter>SDK_CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\Office02_WitheredFoxy_package.cpp">
+      <Filter>SDK_CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\Office02_WitheredFreddy_package.cpp">
+      <Filter>SDK_CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\Office03_Gamemanager_package.cpp">
+      <Filter>SDK_CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\Office03_MonitorBoard_BP_package.cpp">
+      <Filter>SDK_CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\Saul_MotionControllerPawn_package.cpp">
+      <Filter>SDK_CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\OfficeAiBase_Bp_Package.cpp">
       <Filter>SDK_CPP</Filter>
     </ClCompile>
   </ItemGroup>

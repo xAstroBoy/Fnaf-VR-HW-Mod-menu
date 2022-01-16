@@ -1,32 +1,31 @@
-#pragma once
+﻿#pragma once
 
-// Name: Freddys, Version: 1.0.0
+/**
+ * Name: Fnaf Help Wanted
+ * Version: 1
+ */
 
 #ifdef _MSC_VER
-	#pragma pack(push, 0x8)
+	#pragma pack(push, 0x01)
 #endif
 
-namespace SDK
+namespace CG
 {
-//---------------------------------------------------------------------------
-// Classes
-//---------------------------------------------------------------------------
-
-// BlueprintGeneratedClass Actions.Actions_C
-// 0x0038 (0x0128 - 0x00F0)
-class UActions_C : public UActorComponent
-{
-public:
-	struct FActionData                                 Action;                                                   // 0x00F0(0x0038) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-
-	static UClass* StaticClass()
+	// --------------------------------------------------
+	// # Classes
+	// --------------------------------------------------
+	/**
+	 * BlueprintGeneratedClass Actions.Actions_C
+	 * Size -> 0x0038 (FullSize[0x0110] - InheritedSize[0x00D8])
+	 */
+	class UActions_C : public UActorComponent
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass Actions.Actions_C");
-		return ptr;
-	}
+	public:
+		struct FActionData                                         Action;                                                  // 0x00D8(0x0038) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, ContainsInstancedReference, HasGetValueTypeHash
 
-};
-
+	public:
+		static UClass* StaticClass();
+	};
 
 }
 

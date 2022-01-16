@@ -1,32 +1,31 @@
-#pragma once
+﻿#pragma once
 
-// Name: Freddys, Version: 1.0.0
+/**
+ * Name: Fnaf Help Wanted
+ * Version: 1
+ */
 
 #ifdef _MSC_VER
-	#pragma pack(push, 0x8)
+	#pragma pack(push, 0x01)
 #endif
 
-namespace SDK
+namespace CG
 {
-//---------------------------------------------------------------------------
-// Classes
-//---------------------------------------------------------------------------
-
-// BlueprintGeneratedClass followDistance.followDistance_C
-// 0x0008 (0x0330 - 0x0328)
-class AfollowDistance_C : public AActor
-{
-public:
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0328(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-
-	static UClass* StaticClass()
+	// --------------------------------------------------
+	// # Classes
+	// --------------------------------------------------
+	/**
+	 * BlueprintGeneratedClass followDistance.followDistance_C
+	 * Size -> 0x0008 (FullSize[0x0248] - InheritedSize[0x0240])
+	 */
+	class AfollowDistance_C : public AActor
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass followDistance.followDistance_C");
-		return ptr;
-	}
+	public:
+		class USceneComponent*                                     DefaultSceneRoot;                                        // 0x0240(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
 
-};
-
+	public:
+		static UClass* StaticClass();
+	};
 
 }
 

@@ -1,23 +1,29 @@
-#pragma once
+﻿#pragma once
 
-// Name: Freddys, Version: 1.0.0
+/**
+ * Name: Fnaf Help Wanted
+ * Version: 1
+ */
 
 #ifdef _MSC_VER
-	#pragma pack(push, 0x8)
+	#pragma pack(push, 0x01)
 #endif
 
-namespace SDK
+namespace CG
 {
-//---------------------------------------------------------------------------
-// Script Structs
-//---------------------------------------------------------------------------
+	// --------------------------------------------------
+	// # Structs
+	// --------------------------------------------------
+	/**
+	 * ScriptStruct UdpMessaging.UdpMockMessage
+	 * Size -> 0x0010
+	 */
+	struct FUdpMockMessage
+	{
+	public:
+		TArray<unsigned char>                                      Data;                                                    // 0x0000(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
 
-// ScriptStruct UdpMessaging.UdpMockMessage
-// 0x0010
-struct FUdpMockMessage
-{
-	TArray<unsigned char>                              Data;                                                     // 0x0000(0x0010) (ZeroConstructor)
-};
+	};
 
 }
 

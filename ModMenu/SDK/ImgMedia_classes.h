@@ -1,38 +1,36 @@
-#pragma once
+﻿#pragma once
 
-// Name: Freddys, Version: 1.0.0
+/**
+ * Name: Fnaf Help Wanted
+ * Version: 1
+ */
 
 #ifdef _MSC_VER
-	#pragma pack(push, 0x8)
+	#pragma pack(push, 0x01)
 #endif
 
-namespace SDK
+namespace CG
 {
-//---------------------------------------------------------------------------
-// Classes
-//---------------------------------------------------------------------------
-
-// Class ImgMedia.ImgMediaSource
-// 0x0028 (0x0060 - 0x0038)
-class UImgMediaSource : public UBaseMediaSource
-{
-public:
-	struct FFrameRate                                  FrameRateOverride;                                        // 0x0038(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FString                                     ProxyOverride;                                            // 0x0040(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FDirectoryPath                              SequencePath;                                             // 0x0050(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly)
-
-	static UClass* StaticClass()
+	// --------------------------------------------------
+	// # Classes
+	// --------------------------------------------------
+	/**
+	 * Class ImgMedia.ImgMediaSource
+	 * Size -> 0x0028 (FullSize[0x0060] - InheritedSize[0x0038])
+	 */
+	class UImgMediaSource : public UBaseMediaSource
 	{
-		static auto ptr = UObject::FindClass("Class ImgMedia.ImgMediaSource");
-		return ptr;
-	}
+	public:
+		struct FFrameRate                                          FrameRateOverride;                                       // 0x0038(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class FString                                              ProxyOverride;                                           // 0x0040(0x0010) Edit, BlueprintVisible, ZeroConstructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FDirectoryPath                                      SequencePath;                                            // 0x0050(0x0010) Edit, BlueprintVisible, BlueprintReadOnly, Protected, NativeAccessSpecifierProtected
 
-
-	void SetSequencePath(const struct FString& Path);
-	struct FString GetSequencePath();
-	void GetProxies(TArray<struct FString>* OutProxies);
-};
-
+	public:
+		void SetSequencePath(const class FString& Path);
+		class FString GetSequencePath();
+		void GetProxies(TArray<class FString>* OutProxies);
+		static UClass* StaticClass();
+	};
 
 }
 

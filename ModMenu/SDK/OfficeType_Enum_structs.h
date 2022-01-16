@@ -1,27 +1,29 @@
-#pragma once
+﻿#pragma once
 
-// Name: Freddys, Version: 1.0.0
+/**
+ * Name: Fnaf Help Wanted
+ * Version: 1
+ */
 
 #ifdef _MSC_VER
-	#pragma pack(push, 0x8)
+	#pragma pack(push, 0x01)
 #endif
 
-namespace SDK
+namespace CG
 {
-//---------------------------------------------------------------------------
-// Enums
-//---------------------------------------------------------------------------
-
-// UserDefinedEnum OfficeType_Enum.OfficeType_Enum
-enum class EOfficeType_Enum : uint8_t
-{
-	OfficeType_Enum__NewEnumerator0 = 0,
-	OfficeType_Enum__NewEnumerator1 = 1,
-	OfficeType_Enum__NewEnumerator2 = 2,
-	OfficeType_Enum__OfficeType_MAX = 3
-};
-
-
+	// --------------------------------------------------
+	// # Enums
+	// --------------------------------------------------
+	/**
+	 * UserDefinedEnum OfficeType_Enum.OfficeType_Enum
+	 */
+	enum class OfficeType_Enum_EOfficeType_Enum : uint8_t
+	{
+		OfficeType_Enum__NewEnumerator0 = 0,
+		OfficeType_Enum__NewEnumerator1 = 1,
+		OfficeType_Enum__NewEnumerator2 = 2,
+		OfficeType_Enum__OfficeType_MAX = 3
+	};
 
 }
 

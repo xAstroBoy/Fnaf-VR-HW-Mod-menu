@@ -1,41 +1,38 @@
-#pragma once
+﻿#pragma once
 
-// Name: Freddys, Version: 1.0.0
+/**
+ * Name: Fnaf Help Wanted
+ * Version: 1
+ */
 
 #ifdef _MSC_VER
-	#pragma pack(push, 0x8)
+	#pragma pack(push, 0x01)
 #endif
 
-namespace SDK
+namespace CG
 {
-//---------------------------------------------------------------------------
-// Classes
-//---------------------------------------------------------------------------
-
-// BlueprintGeneratedClass MPAIController.MPAIController_C
-// 0x0020 (0x0458 - 0x0438)
-class AMPAIController_C : public AAIController
-{
-public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0438(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	struct FName                                       PlayerTarget;                                             // 0x0440(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FName                                       InFlashLight;                                             // 0x0448(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FName                                       PlayerVis;                                                // 0x0450(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-
-	static UClass* StaticClass()
+	// --------------------------------------------------
+	// # Classes
+	// --------------------------------------------------
+	/**
+	 * BlueprintGeneratedClass MPAIController.MPAIController_C
+	 * Size -> 0x0020 (FullSize[0x0368] - InheritedSize[0x0348])
+	 */
+	class AMPAIController_C : public AAIController
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass MPAIController.MPAIController_C");
-		return ptr;
-	}
+	public:
+		struct FPointerToUberGraphFrame                            UberGraphFrame;                                          // 0x0348(0x0008) ZeroConstructor, Transient, DuplicateTransient
+		class FName                                                PlayerTarget;                                            // 0x0350(0x0008) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		class FName                                                InFlashLight;                                            // 0x0358(0x0008) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		class FName                                                PlayerVis;                                               // 0x0360(0x0008) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
 
-
-	void UserConstructionScript();
-	void ReceiveBeginPlay();
-	void ChangeFlashLightStatus(bool IsInFlashLight);
-	void ChangePlayerVisStatus(bool IsInPlayerVis);
-	void ExecuteUbergraph_MPAIController(int EntryPoint);
-};
-
+	public:
+		void ReceiveBeginPlay();
+		void ChangeFlashLightStatus(bool IsInFlashlight);
+		void ChangePlayerVisStatus(bool IsInPlayerVis);
+		void ExecuteUbergraph_MPAIController(int EntryPoint);
+		static UClass* StaticClass();
+	};
 
 }
 

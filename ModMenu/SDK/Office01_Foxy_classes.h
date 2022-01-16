@@ -1,68 +1,65 @@
-#pragma once
+﻿#pragma once
 
-// Name: Freddys, Version: 1.0.0
+/**
+ * Name: Fnaf Help Wanted
+ * Version: 1
+ */
 
 #ifdef _MSC_VER
-	#pragma pack(push, 0x8)
+	#pragma pack(push, 0x01)
 #endif
 
-namespace SDK
+namespace CG
 {
-//---------------------------------------------------------------------------
-// Classes
-//---------------------------------------------------------------------------
-
-// BlueprintGeneratedClass Office01_Foxy.Office01_Foxy_C
-// 0x0075 (0x04E9 - 0x0474)
-class AOffice01_Foxy_C : public AOffice01_AiBase_BP_C
-{
-public:
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0474(0x0004) MISSED OFFSET
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0478(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class UAudioComponent*                             Audio_RunMovement;                                        // 0x0480(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	bool                                               FoxyIsRunning;                                            // 0x0488(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x0489(0x0003) MISSED OFFSET
-	float                                              PirateCoveChecked_Timer;                                  // 0x048C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              NotChecked_Timer;                                         // 0x0490(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              WestHallChecked_Timer;                                    // 0x0494(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               PiratesCove_Timer_Set;                                    // 0x0498(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               WestHallChecked_Timer_Set;                                // 0x0499(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               NotSeen_Timer_Set;                                        // 0x049A(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x1];                                       // 0x049B(0x0001) MISSED OFFSET
-	float                                              FoxyEscapedTimer;                                         // 0x049C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               UnleashFoxy;                                              // 0x04A0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x3];                                       // 0x04A1(0x0003) MISSED OFFSET
-	float                                              FoxyDeltaTimeStored;                                      // 0x04A4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class AStaticMeshActor*                            Curtain_Right;                                            // 0x04A8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData)
-	class AStaticMeshActor*                            Curtain_Left;                                             // 0x04B0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData)
-	struct FRotator                                    StoreRotation_CurtainR;                                   // 0x04B8(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FRotator                                    StoreRotation_CurtainL;                                   // 0x04C4(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class AStaticMeshActor*                            FoxySign;                                                 // 0x04D0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData)
-	bool                                               NewVar_1;                                                 // 0x04D8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               TriggerCheatPreventionKill;                               // 0x04D9(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x6];                                       // 0x04DA(0x0006) MISSED OFFSET
-	class AOffice01_Bonnie_C*                          BonnieReference;                                          // 0x04E0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
-	bool                                               DoorSound;                                                // 0x04E8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-
-	static UClass* StaticClass()
+	// --------------------------------------------------
+	// # Classes
+	// --------------------------------------------------
+	/**
+	 * BlueprintGeneratedClass Office01_Foxy.Office01_Foxy_C
+	 * Size -> 0x0075 (FullSize[0x0401] - InheritedSize[0x038C])
+	 */
+	class AOffice01_Foxy_C : public AOffice01_AiBase_BP_C
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass Office01_Foxy.Office01_Foxy_C");
-		return ptr;
-	}
+	public:
+		unsigned char                                              UnknownData_L9XB[0x4];                                   // 0x038C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		struct FPointerToUberGraphFrame                            UberGraphFrame;                                          // 0x0390(0x0008) ZeroConstructor, Transient, DuplicateTransient
+		class UAudioComponent*                                     Audio_RunMovement;                                       // 0x0398(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
+		bool                                                       FoxyIsRunning;                                           // 0x03A0(0x0001) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor
+		unsigned char                                              UnknownData_19GJ[0x3];                                   // 0x03A1(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		float                                                      PirateCoveChecked_Timer;                                 // 0x03A4(0x0004) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		float                                                      NotChecked_Timer;                                        // 0x03A8(0x0004) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		float                                                      WestHallChecked_Timer;                                   // 0x03AC(0x0004) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		bool                                                       PiratesCove_Timer_Set;                                   // 0x03B0(0x0001) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor
+		bool                                                       WestHallChecked_Timer_Set;                               // 0x03B1(0x0001) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor
+		bool                                                       NotSeen_Timer_Set;                                       // 0x03B2(0x0001) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor
+		unsigned char                                              UnknownData_SR88[0x1];                                   // 0x03B3(0x0001) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		float                                                      FoxyEscapedTimer;                                        // 0x03B4(0x0004) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		bool                                                       UnleashFoxy;                                             // 0x03B8(0x0001) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor
+		unsigned char                                              UnknownData_S2O6[0x3];                                   // 0x03B9(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		float                                                      FoxyDeltaTimeStored;                                     // 0x03BC(0x0004) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		class AStaticMeshActor*                                    Curtain_Right;                                           // 0x03C0(0x0008) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		class AStaticMeshActor*                                    Curtain_Left;                                            // 0x03C8(0x0008) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		struct FRotator                                            StoreRotation_CurtainR;                                  // 0x03D0(0x000C) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor
+		struct FRotator                                            StoreRotation_CurtainL;                                  // 0x03DC(0x000C) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor
+		class AStaticMeshActor*                                    FoxySign;                                                // 0x03E8(0x0008) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		bool                                                       NewVar_1;                                                // 0x03F0(0x0001) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor
+		bool                                                       TriggerCheatPreventionKill;                              // 0x03F1(0x0001) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor
+		unsigned char                                              UnknownData_8RSP[0x6];                                   // 0x03F2(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class AOffice01_Bonnie_C*                                  BonnieReference;                                         // 0x03F8(0x0008) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		bool                                                       DoorSound;                                               // 0x0400(0x0001) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor
 
-
-	void UserConstructionScript();
-	void ReachedKillZone();
-	void ReceiveBeginPlay();
-	void ReceiveTick(float* DeltaSeconds);
-	void MoveCurtain_1Cb();
-	void MoveCurtain_1Cc();
-	void MoveCurtain_1c_Gone();
-	void MoveCurtain_1Ca();
-	void CheckBonniePosition();
-	void ExecuteUbergraph_Office01_Foxy(int EntryPoint);
-};
-
+	public:
+		void ReachedKillZone();
+		void ReceiveBeginPlay();
+		void ReceiveTick(float DeltaSeconds);
+		void MoveCurtain_1Cb();
+		void MoveCurtain_1Cc();
+		void MoveCurtain_1c_Gone();
+		void MoveCurtain_1Ca();
+		void CheckBonniePosition();
+		void ExecuteUbergraph_Office01_Foxy(int EntryPoint);
+		static UClass* StaticClass();
+	};
 
 }
 

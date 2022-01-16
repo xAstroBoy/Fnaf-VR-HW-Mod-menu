@@ -1,41 +1,48 @@
-#pragma once
+﻿#pragma once
 
-// Name: Freddys, Version: 1.0.0
+/**
+ * Name: Fnaf Help Wanted
+ * Version: 1
+ */
 
 #ifdef _MSC_VER
-	#pragma pack(push, 0x8)
+	#pragma pack(push, 0x01)
 #endif
 
-namespace SDK
+namespace CG
 {
-//---------------------------------------------------------------------------
-// Classes
-//---------------------------------------------------------------------------
-
-// BlueprintGeneratedClass Timer_BP_Child_FunWith.Timer_BP_Child_FunWith_C
-// 0x001C (0x0378 - 0x035C)
-class ATimer_BP_Child_FunWith_C : public ATimer_BP_Base_C
-{
-public:
-	unsigned char                                      UnknownData00[0x4];                                       // 0x035C(0x0004) MISSED OFFSET
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0360(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	int                                                Set_Time;                                                 // 0x0368(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x036C(0x0004) MISSED OFFSET
-	class AFun_With_PlushTrap_BP_C*                    FunWithPlushTrapBP;                                       // 0x0370(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData)
-
-	static UClass* StaticClass()
+	// --------------------------------------------------
+	// # Classes
+	// --------------------------------------------------
+	/**
+	 * BlueprintGeneratedClass Timer_BP_Child_FunWith.Timer_BP_Child_FunWith_C
+	 * Size -> 0x0034 (FullSize[0x02A8] - InheritedSize[0x0274])
+	 */
+	class ATimer_BP_Child_FunWith_C : public ATimer_BP_Base_C
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass Timer_BP_Child_FunWith.Timer_BP_Child_FunWith_C");
-		return ptr;
-	}
+	public:
+		unsigned char                                              UnknownData_0XEN[0x4];                                   // 0x0274(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		struct FPointerToUberGraphFrame                            UberGraphFrame;                                          // 0x0278(0x0008) ZeroConstructor, Transient, DuplicateTransient
+		float                                                      Fade_NewTrack_0_46B13D8C4F9A5C6233499E99A75CEBCF;        // 0x0280(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		Engine_ETimelineDirection                                  Fade__Direction_46B13D8C4F9A5C6233499E99A75CEBCF;        // 0x0284(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		unsigned char                                              UnknownData_YA31[0x3];                                   // 0x0285(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class UTimelineComponent*                                  Fade;                                                    // 0x0288(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		int                                                        Set_Time;                                                // 0x0290(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		unsigned char                                              UnknownData_3AN5[0x4];                                   // 0x0294(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class AFun_With_PlushTrap_BP_C*                            FunWithPlushTrapBP;                                      // 0x0298(0x0008) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		class UTimerNonVR_C*                                       TimerWidget;                                             // 0x02A0(0x0008) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash
 
-
-	void UserConstructionScript();
-	void ReceiveBeginPlay();
-	void Timer_hit_0();
-	void ExecuteUbergraph_Timer_BP_Child_FunWith(int EntryPoint);
-};
-
+	public:
+		void Fade__FinishedFunc();
+		void Fade__UpdateFunc();
+		void ReceiveBeginPlay();
+		void Timer_hit_0();
+		void SetTimeOnWidget(int Timer);
+		void Pause_Timer();
+		void Player_Killed();
+		void ExecuteUbergraph_Timer_BP_Child_FunWith(int EntryPoint);
+		static UClass* StaticClass();
+	};
 
 }
 

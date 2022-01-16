@@ -1,39 +1,38 @@
-#pragma once
+﻿#pragma once
 
-// Name: Freddys, Version: 1.0.0
+/**
+ * Name: Fnaf Help Wanted
+ * Version: 1
+ */
 
 #ifdef _MSC_VER
-	#pragma pack(push, 0x8)
+	#pragma pack(push, 0x01)
 #endif
 
-namespace SDK
+namespace CG
 {
-//---------------------------------------------------------------------------
-// Classes
-//---------------------------------------------------------------------------
-
-// AnimBlueprintGeneratedClass PlayerHand_Right_ABP.PlayerHand_Right_ABP_C
-// 0x0178 (0x04D8 - 0x0360)
-class UPlayerHand_Right_ABP_C : public UAnimInstance
-{
-public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0360(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	struct FAnimNode_Root                              AnimGraphNode_Root_CFF1441341FB1F36B2FAD4A0180C9D62;      // 0x0368(0x0040)
-	struct FAnimNode_BlendSpacePlayer                  AnimGraphNode_BlendSpacePlayer_55719F624DF64AF645B18E80369E57BC;// 0x03A8(0x0128)
-	float                                              Grip;                                                     // 0x04D0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              Proximity;                                                // 0x04D4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-
-	static UClass* StaticClass()
+	// --------------------------------------------------
+	// # Classes
+	// --------------------------------------------------
+	/**
+	 * AnimBlueprintGeneratedClass PlayerHand_Right_ABP.PlayerHand_Right_ABP_C
+	 * Size -> 0x0120 (FullSize[0x0390] - InheritedSize[0x0270])
+	 */
+	class UPlayerHand_Right_ABP_C : public UAnimInstance
 	{
-		static auto ptr = UObject::FindClass("AnimBlueprintGeneratedClass PlayerHand_Right_ABP.PlayerHand_Right_ABP_C");
-		return ptr;
-	}
+	public:
+		struct FPointerToUberGraphFrame                            UberGraphFrame;                                          // 0x0270(0x0008) ZeroConstructor, Transient, DuplicateTransient
+		struct FAnimNode_Root                                      AnimGraphNode_Root_CFF1441341FB1F36B2FAD4A0180C9D62;     // 0x0278(0x0030)
+		struct FAnimNode_BlendSpacePlayer                          AnimGraphNode_BlendSpacePlayer_55719F624DF64AF645B18E80369E57BC; // 0x02A8(0x00E0)
+		float                                                      Grip;                                                    // 0x0388(0x0004) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		float                                                      Proximity;                                               // 0x038C(0x0004) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
 
-
-	void BlueprintUpdateAnimation(float* DeltaTimeX);
-	void ExecuteUbergraph_PlayerHand_Right_ABP(int EntryPoint);
-};
-
+	public:
+		void AnimGraph(struct FPoseLink* AnimGraph);
+		void BlueprintUpdateAnimation(float DeltaTimeX);
+		void ExecuteUbergraph_PlayerHand_Right_ABP(int EntryPoint);
+		static UClass* StaticClass();
+	};
 
 }
 

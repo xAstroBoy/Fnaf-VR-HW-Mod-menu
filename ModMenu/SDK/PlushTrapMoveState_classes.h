@@ -1,34 +1,32 @@
-#pragma once
+﻿#pragma once
 
-// Name: Freddys, Version: 1.0.0
+/**
+ * Name: Fnaf Help Wanted
+ * Version: 1
+ */
 
 #ifdef _MSC_VER
-	#pragma pack(push, 0x8)
+	#pragma pack(push, 0x01)
 #endif
 
-namespace SDK
+namespace CG
 {
-//---------------------------------------------------------------------------
-// Classes
-//---------------------------------------------------------------------------
-
-// BlueprintGeneratedClass PlushTrapMoveState.PlushTrapMoveState_C
-// 0x0004 (0x002C - 0x0028)
-class UPlushTrapMoveState_C : public UPlushTrapState_C
-{
-public:
-	int                                                DirectionID;                                              // 0x0028(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-
-	static UClass* StaticClass()
+	// --------------------------------------------------
+	// # Classes
+	// --------------------------------------------------
+	/**
+	 * BlueprintGeneratedClass PlushTrapMoveState.PlushTrapMoveState_C
+	 * Size -> 0x0004 (FullSize[0x002C] - InheritedSize[0x0028])
+	 */
+	class UPlushTrapMoveState_C : public UPlushTrapState_C
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass PlushTrapMoveState.PlushTrapMoveState_C");
-		return ptr;
-	}
+	public:
+		int                                                        DirectionID;                                             // 0x0028(0x0004) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
 
-
-	void GetMovementDirection(int* Direction);
-};
-
+	public:
+		void GetMovementDirection(int* Direction);
+		static UClass* StaticClass();
+	};
 
 }
 

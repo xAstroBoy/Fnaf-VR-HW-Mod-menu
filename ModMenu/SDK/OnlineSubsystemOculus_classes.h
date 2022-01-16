@@ -1,148 +1,124 @@
-#pragma once
+﻿#pragma once
 
-// Name: Freddys, Version: 1.0.0
+/**
+ * Name: Fnaf Help Wanted
+ * Version: 1
+ */
 
 #ifdef _MSC_VER
-	#pragma pack(push, 0x8)
+	#pragma pack(push, 0x01)
 #endif
 
-namespace SDK
+namespace CG
 {
-//---------------------------------------------------------------------------
-// Classes
-//---------------------------------------------------------------------------
-
-// Class OnlineSubsystemOculus.OculusCreateSessionCallbackProxy
-// 0x0068 (0x0090 - 0x0028)
-class UOculusCreateSessionCallbackProxy : public UOnlineBlueprintCallProxyBase
-{
-public:
-	struct FScriptMulticastDelegate                    OnSuccess;                                                // 0x0028(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnFailure;                                                // 0x0038(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData00[0x48];                                      // 0x0048(0x0048) MISSED OFFSET
-
-	static UClass* StaticClass()
+	// --------------------------------------------------
+	// # Classes
+	// --------------------------------------------------
+	/**
+	 * Class OnlineSubsystemOculus.OculusCreateSessionCallbackProxy
+	 * Size -> 0x0068 (FullSize[0x0090] - InheritedSize[0x0028])
+	 */
+	class UOculusCreateSessionCallbackProxy : public UOnlineBlueprintCallProxyBase
 	{
-		static auto ptr = UObject::FindClass("Class OnlineSubsystemOculus.OculusCreateSessionCallbackProxy");
-		return ptr;
-	}
+	public:
+		class FScriptMulticastDelegate                             OnSuccess;                                               // 0x0028(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
+		class FScriptMulticastDelegate                             OnFailure;                                               // 0x0038(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
+		unsigned char                                              UnknownData_3V3S[0x48];                                  // 0x0048(0x0048) MISSED OFFSET (PADDING)
 
+	public:
+		class UOculusCreateSessionCallbackProxy* STATIC_CreateSession(int PublicConnections, const class FString& OculusMatchmakingPool);
+		static UClass* StaticClass();
+	};
 
-	class UOculusCreateSessionCallbackProxy* STATIC_CreateSession(int PublicConnections, const struct FString& OculusMatchmakingPool);
-};
-
-
-// Class OnlineSubsystemOculus.OculusEntitlementCallbackProxy
-// 0x0020 (0x0048 - 0x0028)
-class UOculusEntitlementCallbackProxy : public UOnlineBlueprintCallProxyBase
-{
-public:
-	struct FScriptMulticastDelegate                    OnSuccess;                                                // 0x0028(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnFailure;                                                // 0x0038(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-
-	static UClass* StaticClass()
+	/**
+	 * Class OnlineSubsystemOculus.OculusEntitlementCallbackProxy
+	 * Size -> 0x0020 (FullSize[0x0048] - InheritedSize[0x0028])
+	 */
+	class UOculusEntitlementCallbackProxy : public UOnlineBlueprintCallProxyBase
 	{
-		static auto ptr = UObject::FindClass("Class OnlineSubsystemOculus.OculusEntitlementCallbackProxy");
-		return ptr;
-	}
+	public:
+		class FScriptMulticastDelegate                             OnSuccess;                                               // 0x0028(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
+		class FScriptMulticastDelegate                             OnFailure;                                               // 0x0038(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
 
+	public:
+		class UOculusEntitlementCallbackProxy* STATIC_VerifyEntitlement();
+		static UClass* StaticClass();
+	};
 
-	class UOculusEntitlementCallbackProxy* STATIC_VerifyEntitlement();
-};
-
-
-// Class OnlineSubsystemOculus.OculusFindSessionsCallbackProxy
-// 0x0068 (0x0090 - 0x0028)
-class UOculusFindSessionsCallbackProxy : public UOnlineBlueprintCallProxyBase
-{
-public:
-	struct FScriptMulticastDelegate                    OnSuccess;                                                // 0x0028(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnFailure;                                                // 0x0038(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData00[0x48];                                      // 0x0048(0x0048) MISSED OFFSET
-
-	static UClass* StaticClass()
+	/**
+	 * Class OnlineSubsystemOculus.OculusFindSessionsCallbackProxy
+	 * Size -> 0x0068 (FullSize[0x0090] - InheritedSize[0x0028])
+	 */
+	class UOculusFindSessionsCallbackProxy : public UOnlineBlueprintCallProxyBase
 	{
-		static auto ptr = UObject::FindClass("Class OnlineSubsystemOculus.OculusFindSessionsCallbackProxy");
-		return ptr;
-	}
+	public:
+		class FScriptMulticastDelegate                             OnSuccess;                                               // 0x0028(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
+		class FScriptMulticastDelegate                             OnFailure;                                               // 0x0038(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
+		unsigned char                                              UnknownData_AIR5[0x48];                                  // 0x0048(0x0048) MISSED OFFSET (PADDING)
 
+	public:
+		class UOculusFindSessionsCallbackProxy* STATIC_FindModeratedSessions(int MaxResults);
+		class UOculusFindSessionsCallbackProxy* STATIC_FindMatchmakingSessions(int MaxResults, const class FString& OculusMatchmakingPool);
+		static UClass* StaticClass();
+	};
 
-	class UOculusFindSessionsCallbackProxy* STATIC_FindModeratedSessions(int MaxResults);
-	class UOculusFindSessionsCallbackProxy* STATIC_FindMatchmakingSessions(int MaxResults, const struct FString& OculusMatchmakingPool);
-};
-
-
-// Class OnlineSubsystemOculus.OculusIdentityCallbackProxy
-// 0x0030 (0x0058 - 0x0028)
-class UOculusIdentityCallbackProxy : public UOnlineBlueprintCallProxyBase
-{
-public:
-	struct FScriptMulticastDelegate                    OnSuccess;                                                // 0x0028(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnFailure;                                                // 0x0038(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0048(0x0010) MISSED OFFSET
-
-	static UClass* StaticClass()
+	/**
+	 * Class OnlineSubsystemOculus.OculusIdentityCallbackProxy
+	 * Size -> 0x0030 (FullSize[0x0058] - InheritedSize[0x0028])
+	 */
+	class UOculusIdentityCallbackProxy : public UOnlineBlueprintCallProxyBase
 	{
-		static auto ptr = UObject::FindClass("Class OnlineSubsystemOculus.OculusIdentityCallbackProxy");
-		return ptr;
-	}
+	public:
+		class FScriptMulticastDelegate                             OnSuccess;                                               // 0x0028(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
+		class FScriptMulticastDelegate                             OnFailure;                                               // 0x0038(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
+		unsigned char                                              UnknownData_DJQA[0x10];                                  // 0x0048(0x0010) MISSED OFFSET (PADDING)
 
+	public:
+		class UOculusIdentityCallbackProxy* STATIC_GetOculusIdentity(int LocalUserNum);
+		static UClass* StaticClass();
+	};
 
-	class UOculusIdentityCallbackProxy* STATIC_GetOculusIdentity(int LocalUserNum);
-};
-
-
-// Class OnlineSubsystemOculus.OculusNetConnection
-// 0x0010 (0x1988 - 0x1978)
-class UOculusNetConnection : public UIpConnection
-{
-public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x1978(0x0010) MISSED OFFSET
-
-	static UClass* StaticClass()
+	/**
+	 * Class OnlineSubsystemOculus.OculusNetConnection
+	 * Size -> 0x0010 (FullSize[0x1A10] - InheritedSize[0x1A00])
+	 */
+	class UOculusNetConnection : public UIpConnection
 	{
-		static auto ptr = UObject::FindClass("Class OnlineSubsystemOculus.OculusNetConnection");
-		return ptr;
-	}
+	public:
+		unsigned char                                              UnknownData_V4F9[0x10];                                  // 0x1A00(0x0010) MISSED OFFSET (PADDING)
 
-};
+	public:
+		static UClass* StaticClass();
+	};
 
-
-// Class OnlineSubsystemOculus.OculusNetDriver
-// 0x00B8 (0x0790 - 0x06D8)
-class UOculusNetDriver : public UIpNetDriver
-{
-public:
-	unsigned char                                      UnknownData00[0xB8];                                      // 0x06D8(0x00B8) MISSED OFFSET
-
-	static UClass* StaticClass()
+	/**
+	 * Class OnlineSubsystemOculus.OculusNetDriver
+	 * Size -> 0x00B8 (FullSize[0x0848] - InheritedSize[0x0790])
+	 */
+	class UOculusNetDriver : public UIpNetDriver
 	{
-		static auto ptr = UObject::FindClass("Class OnlineSubsystemOculus.OculusNetDriver");
-		return ptr;
-	}
+	public:
+		unsigned char                                              UnknownData_FQCV[0xB8];                                  // 0x0790(0x00B8) MISSED OFFSET (PADDING)
 
-};
+	public:
+		static UClass* StaticClass();
+	};
 
-
-// Class OnlineSubsystemOculus.OculusUpdateSessionCallbackProxy
-// 0x0040 (0x0068 - 0x0028)
-class UOculusUpdateSessionCallbackProxy : public UOnlineBlueprintCallProxyBase
-{
-public:
-	struct FScriptMulticastDelegate                    OnSuccess;                                                // 0x0028(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnFailure;                                                // 0x0038(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0048(0x0020) MISSED OFFSET
-
-	static UClass* StaticClass()
+	/**
+	 * Class OnlineSubsystemOculus.OculusUpdateSessionCallbackProxy
+	 * Size -> 0x0040 (FullSize[0x0068] - InheritedSize[0x0028])
+	 */
+	class UOculusUpdateSessionCallbackProxy : public UOnlineBlueprintCallProxyBase
 	{
-		static auto ptr = UObject::FindClass("Class OnlineSubsystemOculus.OculusUpdateSessionCallbackProxy");
-		return ptr;
-	}
+	public:
+		class FScriptMulticastDelegate                             OnSuccess;                                               // 0x0028(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
+		class FScriptMulticastDelegate                             OnFailure;                                               // 0x0038(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
+		unsigned char                                              UnknownData_8LSM[0x20];                                  // 0x0048(0x0020) MISSED OFFSET (PADDING)
 
-
-	class UOculusUpdateSessionCallbackProxy* STATIC_SetSessionEnqueue(bool bShouldEnqueueInMatchmakingPool);
-};
-
+	public:
+		class UOculusUpdateSessionCallbackProxy* STATIC_SetSessionEnqueue(bool bShouldEnqueueInMatchmakingPool);
+		static UClass* StaticClass();
+	};
 
 }
 

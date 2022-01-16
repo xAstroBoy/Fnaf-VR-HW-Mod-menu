@@ -1,50 +1,47 @@
-#pragma once
+﻿#pragma once
 
-// Name: Freddys, Version: 1.0.0
+/**
+ * Name: Fnaf Help Wanted
+ * Version: 1
+ */
 
 #ifdef _MSC_VER
-	#pragma pack(push, 0x8)
+	#pragma pack(push, 0x01)
 #endif
 
-namespace SDK
+namespace CG
 {
-//---------------------------------------------------------------------------
-// Classes
-//---------------------------------------------------------------------------
-
-// BlueprintGeneratedClass BP_FNAFGameState.BP_FNAFGameState_C
-// 0x0058 (0x03E8 - 0x0390)
-class ABP_FNAFGameState_C : public AFNAFGamestate
-{
-public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0390(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0398(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	struct FScriptMulticastDelegate                    GameStateChanged;                                         // 0x03A0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
-	class ABP_FNAFGameMode_C*                          GameMode;                                                 // 0x03B0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
-	struct FScriptMulticastDelegate                    WinConditionChanged;                                      // 0x03B8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    GamePreVictoryMode;                                       // 0x03C8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    GamePreLossMode;                                          // 0x03D8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
-
-	static UClass* StaticClass()
+	// --------------------------------------------------
+	// # Classes
+	// --------------------------------------------------
+	/**
+	 * BlueprintGeneratedClass BP_FNAFGameState.BP_FNAFGameState_C
+	 * Size -> 0x0058 (FullSize[0x0300] - InheritedSize[0x02A8])
+	 */
+	class ABP_FNAFGameState_C : public AFNAFGamestate
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_FNAFGameState.BP_FNAFGameState_C");
-		return ptr;
-	}
+	public:
+		struct FPointerToUberGraphFrame                            UberGraphFrame;                                          // 0x02A8(0x0008) ZeroConstructor, Transient, DuplicateTransient
+		class USceneComponent*                                     DefaultSceneRoot;                                        // 0x02B0(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
+		class FScriptMulticastDelegate                             GameStateChanged;                                        // 0x02B8(0x0010) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable
+		class ABP_FNAFGameMode_C*                                  GameMode;                                                // 0x02C8(0x0008) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		class FScriptMulticastDelegate                             WinConditionChanged;                                     // 0x02D0(0x0010) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable
+		class FScriptMulticastDelegate                             GamePreVictoryMode;                                      // 0x02E0(0x0010) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable
+		class FScriptMulticastDelegate                             GamePreLossMode;                                         // 0x02F0(0x0010) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable
 
-
-	EGLGameState GetGameState();
-	void UserConstructionScript();
-	void ReceiveBeginPlay();
-	void OnVictoryCondition();
-	void SetGameState(EGLGameState* State);
-	void SetVictoryCondition(EGLVictoryState* victory);
-	void ExecuteUbergraph_BP_FNAFGameState(int EntryPoint);
-	void GamePreLossMode__DelegateSignature();
-	void GamePreVictoryMode__DelegateSignature();
-	void WinConditionChanged__DelegateSignature(EGLVictoryState NewParam);
-	void GameStateChanged__DelegateSignature(EGLGameState GameState);
-};
-
+	public:
+		freddys_EGLGameState GetGameState();
+		void ReceiveBeginPlay();
+		void OnVictoryCondition();
+		void SetGameState(freddys_EGLGameState State);
+		void SetVictoryCondition(freddys_EGLVictoryState victory);
+		void ExecuteUbergraph_BP_FNAFGameState(int EntryPoint);
+		void GamePreLossMode__DelegateSignature();
+		void GamePreVictoryMode__DelegateSignature();
+		void WinConditionChanged__DelegateSignature(freddys_EGLVictoryState NewParam);
+		void GameStateChanged__DelegateSignature(freddys_EGLGameState GameState);
+		static UClass* StaticClass();
+	};
 
 }
 

@@ -1,49 +1,45 @@
-#pragma once
+﻿#pragma once
 
-// Name: Freddys, Version: 1.0.0
+/**
+ * Name: Fnaf Help Wanted
+ * Version: 1
+ */
 
 #ifdef _MSC_VER
-	#pragma pack(push, 0x8)
+	#pragma pack(push, 0x01)
 #endif
 
-namespace SDK
+namespace CG
 {
-//---------------------------------------------------------------------------
-// Classes
-//---------------------------------------------------------------------------
-
-// Class HTML5Networking.WebSocketConnection
-// 0x0010 (0x1928 - 0x1918)
-class UWebSocketConnection : public UNetConnection
-{
-public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x1918(0x0010) MISSED OFFSET
-
-	static UClass* StaticClass()
+	// --------------------------------------------------
+	// # Classes
+	// --------------------------------------------------
+	/**
+	 * Class HTML5Networking.WebSocketConnection
+	 * Size -> 0x0010 (FullSize[0x19B0] - InheritedSize[0x19A0])
+	 */
+	class UWebSocketConnection : public UNetConnection
 	{
-		static auto ptr = UObject::FindClass("Class HTML5Networking.WebSocketConnection");
-		return ptr;
-	}
+	public:
+		unsigned char                                              UnknownData_YY27[0x10];                                  // 0x19A0(0x0010) MISSED OFFSET (PADDING)
 
-};
+	public:
+		static UClass* StaticClass();
+	};
 
-
-// Class HTML5Networking.WebSocketNetDriver
-// 0x0010 (0x06A8 - 0x0698)
-class UWebSocketNetDriver : public UNetDriver
-{
-public:
-	int                                                WebSocketPort;                                            // 0x0698(0x0004) (ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData00[0xC];                                       // 0x069C(0x000C) MISSED OFFSET
-
-	static UClass* StaticClass()
+	/**
+	 * Class HTML5Networking.WebSocketNetDriver
+	 * Size -> 0x0010 (FullSize[0x0758] - InheritedSize[0x0748])
+	 */
+	class UWebSocketNetDriver : public UNetDriver
 	{
-		static auto ptr = UObject::FindClass("Class HTML5Networking.WebSocketNetDriver");
-		return ptr;
-	}
+	public:
+		int                                                        WebSocketPort;                                           // 0x0748(0x0004) ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                              UnknownData_MVQ7[0xC];                                   // 0x074C(0x000C) MISSED OFFSET (PADDING)
 
-};
-
+	public:
+		static UClass* StaticClass();
+	};
 
 }
 

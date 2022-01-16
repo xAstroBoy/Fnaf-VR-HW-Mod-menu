@@ -1,34 +1,31 @@
-#pragma once
+﻿#pragma once
 
-// Name: Freddys, Version: 1.0.0
+/**
+ * Name: Fnaf Help Wanted
+ * Version: 1
+ */
 
 #ifdef _MSC_VER
-	#pragma pack(push, 0x8)
+	#pragma pack(push, 0x01)
 #endif
 
-namespace SDK
+namespace CG
 {
-//---------------------------------------------------------------------------
-// Classes
-//---------------------------------------------------------------------------
-
-// BlueprintGeneratedClass PrizeDLC_Pumpkin_Chica.PrizeDLC_Pumpkin_Chica_C
-// 0x0008 (0x03E0 - 0x03D8)
-class APrizeDLC_Pumpkin_Chica_C : public APrize_Parent_C
-{
-public:
-	class UStaticMeshComponent*                        Pumpkin;                                                  // 0x03D8(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-
-	static UClass* StaticClass()
+	// --------------------------------------------------
+	// # Classes
+	// --------------------------------------------------
+	/**
+	 * BlueprintGeneratedClass PrizeDLC_Pumpkin_Chica.PrizeDLC_Pumpkin_Chica_C
+	 * Size -> 0x0008 (FullSize[0x0310] - InheritedSize[0x0308])
+	 */
+	class APrizeDLC_Pumpkin_Chica_C : public APrize_Parent_C
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass PrizeDLC_Pumpkin_Chica.PrizeDLC_Pumpkin_Chica_C");
-		return ptr;
-	}
+	public:
+		class UStaticMeshComponent*                                Pumpkin;                                                 // 0x0308(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
 
-
-	void UserConstructionScript();
-};
-
+	public:
+		static UClass* StaticClass();
+	};
 
 }
 

@@ -1,57 +1,54 @@
-#pragma once
+﻿#pragma once
 
-// Name: Freddys, Version: 1.0.0
+/**
+ * Name: Fnaf Help Wanted
+ * Version: 1
+ */
 
 #ifdef _MSC_VER
-	#pragma pack(push, 0x8)
+	#pragma pack(push, 0x01)
 #endif
 
-namespace SDK
+namespace CG
 {
-//---------------------------------------------------------------------------
-// Classes
-//---------------------------------------------------------------------------
-
-// BlueprintGeneratedClass FNAFCamera_Blueprint.FNAFCamera_Blueprint_C
-// 0x005C (0x0384 - 0x0328)
-class AFNAFCamera_Blueprint_C : public AActor
-{
-public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0328(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class UBoxComponent*                               mangle_point;                                             // 0x0330(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UBoxComponent*                               BB_Point;                                                 // 0x0338(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class USceneComponent*                             CameraComponent;                                          // 0x0340(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class USceneComponent*                             Scene;                                                    // 0x0348(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class USceneCaptureComponent2D*                    SceneCaptureComponent2D;                                  // 0x0350(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	float                                              MaxLeft;                                                  // 0x0358(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              MaxRight;                                                 // 0x035C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              RotationSpeed;                                            // 0x0360(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               CanRotate;                                                // 0x0364(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               bIsEnabled;                                               // 0x0365(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x2];                                       // 0x0366(0x0002) MISSED OFFSET
-	struct FString                                     CameraID;                                                 // 0x0368(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	bool                                               AllowConstantCapture;                                     // 0x0378(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x0379(0x0003) MISSED OFFSET
-	int                                                UpdateFrameCounter;                                       // 0x037C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	int                                                UpdateFrameHoldAmount;                                    // 0x0380(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-
-	static UClass* StaticClass()
+	// --------------------------------------------------
+	// # Classes
+	// --------------------------------------------------
+	/**
+	 * BlueprintGeneratedClass FNAFCamera_Blueprint.FNAFCamera_Blueprint_C
+	 * Size -> 0x005C (FullSize[0x029C] - InheritedSize[0x0240])
+	 */
+	class AFNAFCamera_Blueprint_C : public AActor
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass FNAFCamera_Blueprint.FNAFCamera_Blueprint_C");
-		return ptr;
-	}
+	public:
+		struct FPointerToUberGraphFrame                            UberGraphFrame;                                          // 0x0240(0x0008) ZeroConstructor, Transient, DuplicateTransient
+		class UBoxComponent*                                       mangle_point;                                            // 0x0248(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
+		class UBoxComponent*                                       BB_Point;                                                // 0x0250(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
+		class USceneComponent*                                     CameraComponent;                                         // 0x0258(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
+		class USceneComponent*                                     Scene;                                                   // 0x0260(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
+		class USceneCaptureComponent2D*                            SceneCaptureComponent2D;                                 // 0x0268(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
+		float                                                      MaxLeft;                                                 // 0x0270(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		float                                                      MaxRight;                                                // 0x0274(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		float                                                      RotationSpeed;                                           // 0x0278(0x0004) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		bool                                                       CanRotate;                                               // 0x027C(0x0001) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor
+		bool                                                       bIsEnabled;                                              // 0x027D(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor
+		unsigned char                                              UnknownData_SZVR[0x2];                                   // 0x027E(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class FString                                              CameraID;                                                // 0x0280(0x0010) Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash
+		bool                                                       AllowConstantCapture;                                    // 0x0290(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor
+		unsigned char                                              UnknownData_ZJIR[0x3];                                   // 0x0291(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		int                                                        UpdateFrameCounter;                                      // 0x0294(0x0004) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		int                                                        UpdateFrameHoldAmount;                                   // 0x0298(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash
 
-
-	void GetEnableState(bool* IsEnabled);
-	void DisableCam();
-	void EnableCam();
-	void RotateCamera(float DeltaTime);
-	void UserConstructionScript();
-	void ReceiveBeginPlay();
-	void ReceiveTick(float* DeltaSeconds);
-	void ExecuteUbergraph_FNAFCamera_Blueprint(int EntryPoint);
-};
-
+	public:
+		void GetEnableState(bool* IsEnabled);
+		void DisableCam();
+		void EnableCam();
+		void RotateCamera(float DeltaTime);
+		void ReceiveTick(float DeltaSeconds);
+		void ReceiveBeginPlay();
+		void ExecuteUbergraph_FNAFCamera_Blueprint(int EntryPoint);
+		static UClass* StaticClass();
+	};
 
 }
 

@@ -1,44 +1,62 @@
-#pragma once
+﻿#pragma once
 
-// Name: Freddys, Version: 1.0.0
+/**
+ * Name: Fnaf Help Wanted
+ * Version: 1
+ */
 
 #ifdef _MSC_VER
-	#pragma pack(push, 0x8)
+	#pragma pack(push, 0x01)
 #endif
 
-namespace SDK
+namespace CG
 {
-//---------------------------------------------------------------------------
-// Script Structs
-//---------------------------------------------------------------------------
+	// --------------------------------------------------
+	// # Structs
+	// --------------------------------------------------
+	/**
+	 * ScriptStruct GeometryCache.GeometryCacheMeshData
+	 * Size -> 0x00A8
+	 */
+	struct FGeometryCacheMeshData
+	{
+	public:
+		unsigned char                                              UnknownData_LTMG[0xA8];                                  // 0x0000(0x00A8) MISSED OFFSET (PADDING)
 
-// ScriptStruct GeometryCache.GeometryCacheMeshData
-// 0x00A8
-struct FGeometryCacheMeshData
-{
-	unsigned char                                      UnknownData00[0xA8];                                      // 0x0000(0x00A8) MISSED OFFSET
-};
+	};
 
-// ScriptStruct GeometryCache.TrackRenderData
-// 0x0070
-struct FTrackRenderData
-{
-	unsigned char                                      UnknownData00[0x70];                                      // 0x0000(0x0070) MISSED OFFSET
-};
+	/**
+	 * ScriptStruct GeometryCache.TrackRenderData
+	 * Size -> 0x0070
+	 */
+	struct FTrackRenderData
+	{
+	public:
+		unsigned char                                              UnknownData_LBWZ[0x70];                                  // 0x0000(0x0070) MISSED OFFSET (PADDING)
 
-// ScriptStruct GeometryCache.GeometryCacheVertexInfo
-// 0x0008
-struct FGeometryCacheVertexInfo
-{
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0000(0x0008) MISSED OFFSET
-};
+	};
 
-// ScriptStruct GeometryCache.GeometryCacheMeshBatchInfo
-// 0x000C
-struct FGeometryCacheMeshBatchInfo
-{
-	unsigned char                                      UnknownData00[0xC];                                       // 0x0000(0x000C) MISSED OFFSET
-};
+	/**
+	 * ScriptStruct GeometryCache.GeometryCacheVertexInfo
+	 * Size -> 0x0008
+	 */
+	struct FGeometryCacheVertexInfo
+	{
+	public:
+		unsigned char                                              UnknownData_FPPD[0x8];                                   // 0x0000(0x0008) MISSED OFFSET (PADDING)
+
+	};
+
+	/**
+	 * ScriptStruct GeometryCache.GeometryCacheMeshBatchInfo
+	 * Size -> 0x000C
+	 */
+	struct FGeometryCacheMeshBatchInfo
+	{
+	public:
+		unsigned char                                              UnknownData_FE13[0xC];                                   // 0x0000(0x000C) MISSED OFFSET (PADDING)
+
+	};
 
 }
 

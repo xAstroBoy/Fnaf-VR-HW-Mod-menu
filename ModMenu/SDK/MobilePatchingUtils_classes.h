@@ -1,81 +1,69 @@
-#pragma once
+﻿#pragma once
 
-// Name: Freddys, Version: 1.0.0
+/**
+ * Name: Fnaf Help Wanted
+ * Version: 1
+ */
 
 #ifdef _MSC_VER
-	#pragma pack(push, 0x8)
+	#pragma pack(push, 0x01)
 #endif
 
-namespace SDK
+namespace CG
 {
-//---------------------------------------------------------------------------
-// Classes
-//---------------------------------------------------------------------------
-
-// Class MobilePatchingUtils.MobileInstalledContent
-// 0x0020 (0x0048 - 0x0028)
-class UMobileInstalledContent : public UObject
-{
-public:
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0028(0x0020) MISSED OFFSET
-
-	static UClass* StaticClass()
+	// --------------------------------------------------
+	// # Classes
+	// --------------------------------------------------
+	/**
+	 * Class MobilePatchingUtils.MobileInstalledContent
+	 * Size -> 0x0020 (FullSize[0x0048] - InheritedSize[0x0028])
+	 */
+	class UMobileInstalledContent : public UObject
 	{
-		static auto ptr = UObject::FindClass("Class MobilePatchingUtils.MobileInstalledContent");
-		return ptr;
-	}
+	public:
+		unsigned char                                              UnknownData_8MZ7[0x20];                                  // 0x0028(0x0020) MISSED OFFSET (PADDING)
 
+	public:
+		bool Mount(int PakOrder, const class FString& MountPoint);
+		float GetInstalledContentSize();
+		float GetDiskFreeSpace();
+		static UClass* StaticClass();
+	};
 
-	bool Mount(int PakOrder, const struct FString& MountPoint);
-	float GetInstalledContentSize();
-	float GetDiskFreeSpace();
-};
-
-
-// Class MobilePatchingUtils.MobilePendingContent
-// 0x0040 (0x0088 - 0x0048)
-class UMobilePendingContent : public UMobileInstalledContent
-{
-public:
-	unsigned char                                      UnknownData00[0x40];                                      // 0x0048(0x0040) MISSED OFFSET
-
-	static UClass* StaticClass()
+	/**
+	 * Class MobilePatchingUtils.MobilePendingContent
+	 * Size -> 0x0040 (FullSize[0x0088] - InheritedSize[0x0048])
+	 */
+	class UMobilePendingContent : public UMobileInstalledContent
 	{
-		static auto ptr = UObject::FindClass("Class MobilePatchingUtils.MobilePendingContent");
-		return ptr;
-	}
+	public:
+		unsigned char                                              UnknownData_921Y[0x40];                                  // 0x0048(0x0040) MISSED OFFSET (PADDING)
 
+	public:
+		void StartInstall(const class FScriptDelegate& OnSucceeded, const class FScriptDelegate& OnFailed);
+		float GetTotalDownloadedSize();
+		float GetRequiredDiskSpace();
+		float GetInstallProgress();
+		class FText GetDownloadStatusText();
+		float GetDownloadSpeed();
+		float GetDownloadSize();
+		static UClass* StaticClass();
+	};
 
-	void StartInstall(const struct FScriptDelegate& OnSucceeded, const struct FScriptDelegate& OnFailed);
-	float GetTotalDownloadedSize();
-	float GetRequiredDiskSpace();
-	float GetInstallProgress();
-	struct FText GetDownloadStatusText();
-	float GetDownloadSpeed();
-	float GetDownloadSize();
-};
-
-
-// Class MobilePatchingUtils.MobilePatchingLibrary
-// 0x0000 (0x0028 - 0x0028)
-class UMobilePatchingLibrary : public UBlueprintFunctionLibrary
-{
-public:
-
-	static UClass* StaticClass()
+	/**
+	 * Class MobilePatchingUtils.MobilePatchingLibrary
+	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+	 */
+	class UMobilePatchingLibrary : public UBlueprintFunctionLibrary
 	{
-		static auto ptr = UObject::FindClass("Class MobilePatchingUtils.MobilePatchingLibrary");
-		return ptr;
-	}
-
-
-	void STATIC_RequestContent(const struct FString& RemoteManifestURL, const struct FString& CloudURL, const struct FString& InstallDirectory, const struct FScriptDelegate& OnSucceeded, const struct FScriptDelegate& OnFailed);
-	bool STATIC_HasActiveWiFiConnection();
-	TArray<struct FString> STATIC_GetSupportedPlatformNames();
-	class UMobileInstalledContent* STATIC_GetInstalledContent(const struct FString& InstallDirectory);
-	struct FString STATIC_GetActiveDeviceProfileName();
-};
-
+	public:
+		void STATIC_RequestContent(const class FString& RemoteManifestURL, const class FString& CloudURL, const class FString& InstallDirectory, const class FScriptDelegate& OnSucceeded, const class FScriptDelegate& OnFailed);
+		bool STATIC_HasActiveWiFiConnection();
+		TArray<class FString> STATIC_GetSupportedPlatformNames();
+		class UMobileInstalledContent* STATIC_GetInstalledContent(const class FString& InstallDirectory);
+		class FString STATIC_GetActiveDeviceProfileName();
+		static UClass* StaticClass();
+	};
 
 }
 

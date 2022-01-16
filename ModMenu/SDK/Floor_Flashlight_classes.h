@@ -1,39 +1,36 @@
-#pragma once
+﻿#pragma once
 
-// Name: Freddys, Version: 1.0.0
+/**
+ * Name: Fnaf Help Wanted
+ * Version: 1
+ */
 
 #ifdef _MSC_VER
-	#pragma pack(push, 0x8)
+	#pragma pack(push, 0x01)
 #endif
 
-namespace SDK
+namespace CG
 {
-//---------------------------------------------------------------------------
-// Classes
-//---------------------------------------------------------------------------
-
-// BlueprintGeneratedClass Floor_Flashlight.Floor_Flashlight_C
-// 0x0020 (0x0348 - 0x0328)
-class AFloor_Flashlight_C : public AActor
-{
-public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0328(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class UPointLightComponent*                        PointLight;                                               // 0x0330(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UStaticMeshComponent*                        Flashlight;                                               // 0x0338(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class USpotLightComponent*                         SpotLight;                                                // 0x0340(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-
-	static UClass* StaticClass()
+	// --------------------------------------------------
+	// # Classes
+	// --------------------------------------------------
+	/**
+	 * BlueprintGeneratedClass Floor_Flashlight.Floor_Flashlight_C
+	 * Size -> 0x0020 (FullSize[0x0260] - InheritedSize[0x0240])
+	 */
+	class AFloor_Flashlight_C : public AActor
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass Floor_Flashlight.Floor_Flashlight_C");
-		return ptr;
-	}
+	public:
+		struct FPointerToUberGraphFrame                            UberGraphFrame;                                          // 0x0240(0x0008) ZeroConstructor, Transient, DuplicateTransient
+		class UPointLightComponent*                                PointLight;                                              // 0x0248(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
+		class UStaticMeshComponent*                                Flashlight;                                              // 0x0250(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
+		class USpotLightComponent*                                 SpotLight;                                               // 0x0258(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
 
-
-	void UserConstructionScript();
-	void ReceiveBeginPlay();
-	void ExecuteUbergraph_Floor_Flashlight(int EntryPoint);
-};
-
+	public:
+		void ReceiveBeginPlay();
+		void ExecuteUbergraph_Floor_Flashlight(int EntryPoint);
+		static UClass* StaticClass();
+	};
 
 }
 

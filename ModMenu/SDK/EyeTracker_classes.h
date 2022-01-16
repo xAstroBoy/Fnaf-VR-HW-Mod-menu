@@ -1,37 +1,33 @@
-#pragma once
+﻿#pragma once
 
-// Name: Freddys, Version: 1.0.0
+/**
+ * Name: Fnaf Help Wanted
+ * Version: 1
+ */
 
 #ifdef _MSC_VER
-	#pragma pack(push, 0x8)
+	#pragma pack(push, 0x01)
 #endif
 
-namespace SDK
+namespace CG
 {
-//---------------------------------------------------------------------------
-// Classes
-//---------------------------------------------------------------------------
-
-// Class EyeTracker.EyeTrackerFunctionLibrary
-// 0x0000 (0x0028 - 0x0028)
-class UEyeTrackerFunctionLibrary : public UBlueprintFunctionLibrary
-{
-public:
-
-	static UClass* StaticClass()
+	// --------------------------------------------------
+	// # Classes
+	// --------------------------------------------------
+	/**
+	 * Class EyeTracker.EyeTrackerFunctionLibrary
+	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+	 */
+	class UEyeTrackerFunctionLibrary : public UBlueprintFunctionLibrary
 	{
-		static auto ptr = UObject::FindClass("Class EyeTracker.EyeTrackerFunctionLibrary");
-		return ptr;
-	}
-
-
-	void STATIC_SetEyeTrackedPlayer(class APlayerController* PlayerController);
-	bool STATIC_IsStereoGazeDataAvailable();
-	bool STATIC_IsEyeTrackerConnected();
-	bool STATIC_GetStereoGazeData(struct FEyeTrackerStereoGazeData* OutGazeData);
-	bool STATIC_GetGazeData(struct FEyeTrackerGazeData* OutGazeData);
-};
-
+	public:
+		void STATIC_SetEyeTrackedPlayer(class APlayerController* PlayerController);
+		bool STATIC_IsStereoGazeDataAvailable();
+		bool STATIC_IsEyeTrackerConnected();
+		bool STATIC_GetStereoGazeData(struct FEyeTrackerStereoGazeData* OutGazeData);
+		bool STATIC_GetGazeData(struct FEyeTrackerGazeData* OutGazeData);
+		static UClass* StaticClass();
+	};
 
 }
 

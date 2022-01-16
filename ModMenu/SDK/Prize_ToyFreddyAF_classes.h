@@ -1,35 +1,32 @@
-#pragma once
+﻿#pragma once
 
-// Name: Freddys, Version: 1.0.0
+/**
+ * Name: Fnaf Help Wanted
+ * Version: 1
+ */
 
 #ifdef _MSC_VER
-	#pragma pack(push, 0x8)
+	#pragma pack(push, 0x01)
 #endif
 
-namespace SDK
+namespace CG
 {
-//---------------------------------------------------------------------------
-// Classes
-//---------------------------------------------------------------------------
-
-// BlueprintGeneratedClass Prize_ToyFreddyAF.Prize_ToyFreddyAF_C
-// 0x0010 (0x03E8 - 0x03D8)
-class APrize_ToyFreddyAF_C : public APrize_Parent_C
-{
-public:
-	class USphereComponent*                            Sphere;                                                   // 0x03D8(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UStaticMeshComponent*                        ToyFreddy;                                                // 0x03E0(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-
-	static UClass* StaticClass()
+	// --------------------------------------------------
+	// # Classes
+	// --------------------------------------------------
+	/**
+	 * BlueprintGeneratedClass Prize_ToyFreddyAF.Prize_ToyFreddyAF_C
+	 * Size -> 0x0010 (FullSize[0x0318] - InheritedSize[0x0308])
+	 */
+	class APrize_ToyFreddyAF_C : public APrize_Parent_C
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass Prize_ToyFreddyAF.Prize_ToyFreddyAF_C");
-		return ptr;
-	}
+	public:
+		class USphereComponent*                                    Sphere;                                                  // 0x0308(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
+		class UStaticMeshComponent*                                ToyFreddy;                                               // 0x0310(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
 
-
-	void UserConstructionScript();
-};
-
+	public:
+		static UClass* StaticClass();
+	};
 
 }
 

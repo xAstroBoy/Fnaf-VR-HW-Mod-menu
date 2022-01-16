@@ -1,55 +1,52 @@
-#pragma once
+﻿#pragma once
 
-// Name: Freddys, Version: 1.0.0
+/**
+ * Name: Fnaf Help Wanted
+ * Version: 1
+ */
 
 #ifdef _MSC_VER
-	#pragma pack(push, 0x8)
+	#pragma pack(push, 0x01)
 #endif
 
-namespace SDK
+namespace CG
 {
-//---------------------------------------------------------------------------
-// Classes
-//---------------------------------------------------------------------------
-
-// BlueprintGeneratedClass MPFreddyPawnBase.MPFreddyPawnBase_C
-// 0x0052 (0x0792 - 0x0740)
-class AMPFreddyPawnBase_C : public ACharacter
-{
-public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0740(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class UTexture2D*                                  TrackerImage;                                             // 0x0748(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FTransform                                  SpawnTransform;                                           // 0x0750(0x0030) (Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData)
-	bool                                               InFlashLight;                                             // 0x0780(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0781(0x0007) MISSED OFFSET
-	class AMPAIController_C*                           AICon;                                                    // 0x0788(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
-	bool                                               IsInVision;                                               // 0x0790(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               JumpScare;                                                // 0x0791(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-
-	static UClass* StaticClass()
+	// --------------------------------------------------
+	// # Classes
+	// --------------------------------------------------
+	/**
+	 * BlueprintGeneratedClass MPFreddyPawnBase.MPFreddyPawnBase_C
+	 * Size -> 0x0052 (FullSize[0x06B2] - InheritedSize[0x0660])
+	 */
+	class AMPFreddyPawnBase_C : public ACharacter
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass MPFreddyPawnBase.MPFreddyPawnBase_C");
-		return ptr;
-	}
+	public:
+		struct FPointerToUberGraphFrame                            UberGraphFrame;                                          // 0x0660(0x0008) ZeroConstructor, Transient, DuplicateTransient
+		class UTexture2D*                                          TrackerImage;                                            // 0x0668(0x0008) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		struct FTransform                                          SpawnTransform;                                          // 0x0670(0x0030) Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor
+		bool                                                       InFlashLight;                                            // 0x06A0(0x0001) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor
+		unsigned char                                              UnknownData_4W3Z[0x7];                                   // 0x06A1(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class AMPAIController_C*                                   AICon;                                                   // 0x06A8(0x0008) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		bool                                                       IsInVision;                                              // 0x06B0(0x0001) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor
+		bool                                                       JumpScare;                                               // 0x06B1(0x0001) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor
 
-
-	void IsInPlayerVis(bool* IsInvis);
-	void ChangePlayerVisStatus(bool IsInVision);
-	void IsInFlashLight(bool* InFlashLight);
-	void ChangeFlashStatus(bool IsInFlashLight);
-	void UserConstructionScript();
-	void ReceiveBeginPlay();
-	void OnFlashLightBeginHover(class AFlashlight_Battery_C* Flashlight);
-	void OnFlashLightEndHover(class AFlashlight_Battery_C* Flashlight);
-	void ReceivePossessed(class AController** NewController);
-	void RestartPlayer();
-	void OnPlayerVisionExit(class AFNAFPlayerPawn_C* PlayerPawn);
-	void OnPlayerVisionEnter(class AFNAFPlayerPawn_C* PlayerPawn);
-	void BndEvt__CapsuleComponent_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
-	void ReceiveTick(float* DeltaSeconds);
-	void ExecuteUbergraph_MPFreddyPawnBase(int EntryPoint);
-};
-
+	public:
+		void IsInPlayerVis(bool* IsInVis);
+		void ChangePlayerVisStatus(bool IsInVision);
+		void IsInFlashlight(bool* InFlashLight);
+		void ChangeFlashStatus(bool IsInFlashlight);
+		void ReceiveBeginPlay();
+		void OnFlashLightBeginHover(class AFlashlight_Battery_C* Flashlight);
+		void OnFlashLightEndHover(class AFlashlight_Battery_C* Flashlight);
+		void ReceivePossessed(class AController* NewController);
+		void RestartPlayer();
+		void OnPlayerVisionExit(class AFNAFPlayerPawn_C* PlayerPawn);
+		void OnPlayerVisionEnter(class AFNAFPlayerPawn_C* PlayerPawn);
+		void BndEvt__CapsuleComponent_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
+		void ReceiveTick(float DeltaSeconds);
+		void ExecuteUbergraph_MPFreddyPawnBase(int EntryPoint);
+		static UClass* StaticClass();
+	};
 
 }
 

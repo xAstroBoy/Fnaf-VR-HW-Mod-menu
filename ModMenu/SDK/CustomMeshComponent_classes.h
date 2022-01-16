@@ -1,36 +1,34 @@
-#pragma once
+﻿#pragma once
 
-// Name: Freddys, Version: 1.0.0
+/**
+ * Name: Fnaf Help Wanted
+ * Version: 1
+ */
 
 #ifdef _MSC_VER
-	#pragma pack(push, 0x8)
+	#pragma pack(push, 0x01)
 #endif
 
-namespace SDK
+namespace CG
 {
-//---------------------------------------------------------------------------
-// Classes
-//---------------------------------------------------------------------------
-
-// Class CustomMeshComponent.CustomMeshComponent
-// 0x0010 (0x0590 - 0x0580)
-class UCustomMeshComponent : public UMeshComponent
-{
-public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0580(0x0010) MISSED OFFSET
-
-	static UClass* StaticClass()
+	// --------------------------------------------------
+	// # Classes
+	// --------------------------------------------------
+	/**
+	 * Class CustomMeshComponent.CustomMeshComponent
+	 * Size -> 0x0010 (FullSize[0x0440] - InheritedSize[0x0430])
+	 */
+	class UCustomMeshComponent : public UMeshComponent
 	{
-		static auto ptr = UObject::FindClass("Class CustomMeshComponent.CustomMeshComponent");
-		return ptr;
-	}
+	public:
+		unsigned char                                              UnknownData_58MM[0x10];                                  // 0x0430(0x0010) MISSED OFFSET (PADDING)
 
-
-	bool SetCustomMeshTriangles(TArray<struct FCustomMeshTriangle> Triangles);
-	void ClearCustomMeshTriangles();
-	void AddCustomMeshTriangles(TArray<struct FCustomMeshTriangle> Triangles);
-};
-
+	public:
+		bool SetCustomMeshTriangles(TArray<struct FCustomMeshTriangle> Triangles);
+		void ClearCustomMeshTriangles();
+		void AddCustomMeshTriangles(TArray<struct FCustomMeshTriangle> Triangles);
+		static UClass* StaticClass();
+	};
 
 }
 

@@ -1,51 +1,48 @@
-#pragma once
+﻿#pragma once
 
-// Name: Freddys, Version: 1.0.0
+/**
+ * Name: Fnaf Help Wanted
+ * Version: 1
+ */
 
 #ifdef _MSC_VER
-	#pragma pack(push, 0x8)
+	#pragma pack(push, 0x01)
 #endif
 
-namespace SDK
+namespace CG
 {
-//---------------------------------------------------------------------------
-// Classes
-//---------------------------------------------------------------------------
-
-// BlueprintGeneratedClass MPLobbyGameMode.MPLobbyGameMode_C
-// 0x0050 (0x0418 - 0x03C8)
-class AMPLobbyGameMode_C : public AGameModeBase
-{
-public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x03C8(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x03D0(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UDataTable*                                  CharacterInfoTable;                                       // 0x03D8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class AMPLobbyUIActor_C*                           MPUI;                                                     // 0x03E0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
-	int                                                NumCharacters;                                            // 0x03E8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x03EC(0x0004) MISSED OFFSET
-	TArray<class ALobbyPlayerController_C*>            ActivePlayers;                                            // 0x03F0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance)
-	struct FString                                     SelectedLevel;                                            // 0x0400(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	struct FTimerHandle                                MatchTimer;                                               // 0x0410(0x0008) (Edit, BlueprintVisible, DisableEditOnInstance)
-
-	static UClass* StaticClass()
+	// --------------------------------------------------
+	// # Classes
+	// --------------------------------------------------
+	/**
+	 * BlueprintGeneratedClass MPLobbyGameMode.MPLobbyGameMode_C
+	 * Size -> 0x0050 (FullSize[0x0330] - InheritedSize[0x02E0])
+	 */
+	class AMPLobbyGameMode_C : public AGameModeBase
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass MPLobbyGameMode.MPLobbyGameMode_C");
-		return ptr;
-	}
+	public:
+		struct FPointerToUberGraphFrame                            UberGraphFrame;                                          // 0x02E0(0x0008) ZeroConstructor, Transient, DuplicateTransient
+		class USceneComponent*                                     DefaultSceneRoot;                                        // 0x02E8(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
+		class UDataTable*                                          CharacterInfoTable;                                      // 0x02F0(0x0008) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		class AMPLobbyUIActor_C*                                   MPUI;                                                    // 0x02F8(0x0008) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		int                                                        NumCharacters;                                           // 0x0300(0x0004) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		unsigned char                                              UnknownData_PLW4[0x4];                                   // 0x0304(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		TArray<class ALobbyPlayerController_C*>                    ActivePlayers;                                           // 0x0308(0x0010) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance
+		class FString                                              SelectedLevel;                                           // 0x0318(0x0010) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash
+		struct FTimerHandle                                        MatchTimer;                                              // 0x0328(0x0008) Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash
 
-
-	void AllPlayersReady(bool* AllPlayersReady);
-	void StartMatch();
-	void CheckIfPlayerHasValidSelection(class ALobbyPlayerController_C* Controller, bool* PlayerIsValid);
-	void SelectCharacter(class ALobbyPlayerController_C* Controller, int Desired_Character_ID, int* New_Character_ID, struct FCharacterInfo* New_Character_Info);
-	void UserConstructionScript();
-	void AddLocalPlayer(class ALobbyPlayerController_C* Controller);
-	void ReceiveBeginPlay();
-	void SwitchCharacter(class ALobbyPlayerController_C* Controller, int DesiredCharacterID);
-	void PlayerReady(class ALobbyPlayerController_C* Controller);
-	void ExecuteUbergraph_MPLobbyGameMode(int EntryPoint);
-};
-
+	public:
+		void AllPlayersReady(bool* AllPlayersReady);
+		void StartMatch();
+		void CheckIfPlayerHasValidSelection(class ALobbyPlayerController_C* Controller, bool* PlayerIsValid);
+		void SelectCharacter(class ALobbyPlayerController_C* Controller, int Desired_Character_ID, int* New_Character_ID, struct FCharacterInfo* New_Character_Info);
+		void AddLocalPlayer(class ALobbyPlayerController_C* Controller);
+		void ReceiveBeginPlay();
+		void SwitchCharacter(class ALobbyPlayerController_C* Controller, int DesiredCharacterID);
+		void PlayerReady(class ALobbyPlayerController_C* Controller);
+		void ExecuteUbergraph_MPLobbyGameMode(int EntryPoint);
+		static UClass* StaticClass();
+	};
 
 }
 

@@ -1,46 +1,38 @@
-#pragma once
+﻿#pragma once
 
-// Name: Freddys, Version: 1.0.0
+/**
+ * Name: Fnaf Help Wanted
+ * Version: 1
+ */
 
 #ifdef _MSC_VER
-	#pragma pack(push, 0x8)
+	#pragma pack(push, 0x01)
 #endif
 
-namespace SDK
+namespace CG
 {
-//---------------------------------------------------------------------------
-// Classes
-//---------------------------------------------------------------------------
-
-// Class NiagaraCore.NiagaraMergeable
-// 0x0000 (0x0028 - 0x0028)
-class UNiagaraMergeable : public UObject
-{
-public:
-
-	static UClass* StaticClass()
+	// --------------------------------------------------
+	// # Classes
+	// --------------------------------------------------
+	/**
+	 * Class NiagaraCore.NiagaraMergeable
+	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+	 */
+	class UNiagaraMergeable : public UObject
 	{
-		static auto ptr = UObject::FindClass("Class NiagaraCore.NiagaraMergeable");
-		return ptr;
-	}
+	public:
+		static UClass* StaticClass();
+	};
 
-};
-
-
-// Class NiagaraCore.NiagaraDataInterfaceBase
-// 0x0000 (0x0028 - 0x0028)
-class UNiagaraDataInterfaceBase : public UNiagaraMergeable
-{
-public:
-
-	static UClass* StaticClass()
+	/**
+	 * Class NiagaraCore.NiagaraDataInterfaceBase
+	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+	 */
+	class UNiagaraDataInterfaceBase : public UNiagaraMergeable
 	{
-		static auto ptr = UObject::FindClass("Class NiagaraCore.NiagaraDataInterfaceBase");
-		return ptr;
-	}
-
-};
-
+	public:
+		static UClass* StaticClass();
+	};
 
 }
 

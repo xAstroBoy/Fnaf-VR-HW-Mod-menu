@@ -1,49 +1,45 @@
-#pragma once
+﻿#pragma once
 
-// Name: Freddys, Version: 1.0.0
+/**
+ * Name: Fnaf Help Wanted
+ * Version: 1
+ */
 
 #ifdef _MSC_VER
-	#pragma pack(push, 0x8)
+	#pragma pack(push, 0x01)
 #endif
 
-namespace SDK
+namespace CG
 {
-//---------------------------------------------------------------------------
-// Classes
-//---------------------------------------------------------------------------
-
-// Class MaterialShaderQualitySettings.MaterialShaderQualitySettings
-// 0x0050 (0x0078 - 0x0028)
-class UMaterialShaderQualitySettings : public UObject
-{
-public:
-	TMap<struct FName, class UShaderPlatformQualitySettings*> ForwardSettingMap;                                        // 0x0028(0x0050) (ZeroConstructor)
-
-	static UClass* StaticClass()
+	// --------------------------------------------------
+	// # Classes
+	// --------------------------------------------------
+	/**
+	 * Class MaterialShaderQualitySettings.MaterialShaderQualitySettings
+	 * Size -> 0x0050 (FullSize[0x0078] - InheritedSize[0x0028])
+	 */
+	class UMaterialShaderQualitySettings : public UObject
 	{
-		static auto ptr = UObject::FindClass("Class MaterialShaderQualitySettings.MaterialShaderQualitySettings");
-		return ptr;
-	}
+	public:
+		TMap<class FName, class UShaderPlatformQualitySettings*>   ForwardSettingMap;                                       // 0x0028(0x0050) ZeroConstructor, NativeAccessSpecifierPrivate
 
-};
+	public:
+		static UClass* StaticClass();
+	};
 
-
-// Class MaterialShaderQualitySettings.ShaderPlatformQualitySettings
-// 0x0028 (0x0050 - 0x0028)
-class UShaderPlatformQualitySettings : public UObject
-{
-public:
-	struct FMaterialQualityOverrides                   QualityOverrides[0x3];                                    // 0x0028(0x0008) (Edit, Config)
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0040(0x0010) MISSED OFFSET
-
-	static UClass* StaticClass()
+	/**
+	 * Class MaterialShaderQualitySettings.ShaderPlatformQualitySettings
+	 * Size -> 0x0028 (FullSize[0x0050] - InheritedSize[0x0028])
+	 */
+	class UShaderPlatformQualitySettings : public UObject
 	{
-		static auto ptr = UObject::FindClass("Class MaterialShaderQualitySettings.ShaderPlatformQualitySettings");
-		return ptr;
-	}
+	public:
+		struct FMaterialQualityOverrides                           QualityOverrides[0x3];                                   // 0x0028(0x0018) Edit, Config, NoDestructor, NativeAccessSpecifierPublic
+		unsigned char                                              UnknownData_4DTA[0x10];                                  // 0x0040(0x0010) MISSED OFFSET (PADDING)
 
-};
-
+	public:
+		static UClass* StaticClass();
+	};
 
 }
 

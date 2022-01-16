@@ -1,100 +1,165 @@
-#pragma once
+﻿#pragma once
 
-// Name: Freddys, Version: 1.0.0
+/**
+ * Name: Fnaf Help Wanted
+ * Version: 1
+ */
 
 #ifdef _MSC_VER
-	#pragma pack(push, 0x8)
+	#pragma pack(push, 0x01)
 #endif
 
-namespace SDK
+namespace CG
 {
-//---------------------------------------------------------------------------
-// Script Structs
-//---------------------------------------------------------------------------
+	// --------------------------------------------------
+	// # Structs
+	// --------------------------------------------------
+	/**
+	 * ScriptStruct Serialization.StructSerializerNumericTestStruct
+	 * Size -> 0x0030
+	 */
+	struct FStructSerializerNumericTestStruct
+	{
+	public:
+		int8_t                                                     Int8;                                                    // 0x0000(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                              UnknownData_D5EH[0x1];                                   // 0x0001(0x0001) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		int16_t                                                    Int16;                                                   // 0x0002(0x0002) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		int                                                        Int32;                                                   // 0x0004(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		int64_t                                                    Int64;                                                   // 0x0008(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                              UInt8;                                                   // 0x0010(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                              UnknownData_1Y62[0x1];                                   // 0x0011(0x0001) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		uint16_t                                                   UInt16;                                                  // 0x0012(0x0002) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		uint32_t                                                   UInt32;                                                  // 0x0014(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		uint64_t                                                   UInt64;                                                  // 0x0018(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                      Float;                                                   // 0x0020(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                              UnknownData_6EYZ[0x4];                                   // 0x0024(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		double                                                     Double;                                                  // 0x0028(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 
-// ScriptStruct Serialization.StructSerializerNumericTestStruct
-// 0x0030
-struct FStructSerializerNumericTestStruct
-{
-	int8_t                                             Int8;                                                     // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x1];                                       // 0x0001(0x0001) MISSED OFFSET
-	int16_t                                            Int16;                                                    // 0x0002(0x0002) (ZeroConstructor, IsPlainOldData)
-	int                                                Int32;                                                    // 0x0004(0x0004) (ZeroConstructor, IsPlainOldData)
-	int64_t                                            Int64;                                                    // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UInt8;                                                    // 0x0010(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x1];                                       // 0x0011(0x0001) MISSED OFFSET
-	uint16_t                                           UInt16;                                                   // 0x0012(0x0002) (ZeroConstructor, IsPlainOldData)
-	uint32_t                                           UInt32;                                                   // 0x0014(0x0004) (ZeroConstructor, IsPlainOldData)
-	uint64_t                                           UInt64;                                                   // 0x0018(0x0008) (ZeroConstructor, IsPlainOldData)
-	float                                              Float;                                                    // 0x0020(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x0024(0x0004) MISSED OFFSET
-	double                                             Double;                                                   // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData)
-};
+	};
 
-// ScriptStruct Serialization.StructSerializerBooleanTestStruct
-// 0x0008
-struct FStructSerializerBooleanTestStruct
-{
-	bool                                               BoolFalse;                                                // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData)
-	bool                                               BoolTrue;                                                 // 0x0001(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x2];                                       // 0x0002(0x0002) MISSED OFFSET
-	uint32_t                                           Bitfield;                                                 // 0x0004(0x0004) (ZeroConstructor, IsPlainOldData)
-};
+	/**
+	 * ScriptStruct Serialization.StructSerializerBooleanTestStruct
+	 * Size -> 0x0003
+	 */
+	struct FStructSerializerBooleanTestStruct
+	{
+	public:
+		bool                                                       BoolFalse;                                               // 0x0000(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                       BoolTrue;                                                // 0x0001(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                              Bitfield0 : 1;                                           // 0x0002(0x0001) BIT_FIELD NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                              Bitfield1 : 1;                                           // 0x0002(0x0001) BIT_FIELD NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                              Bitfield2Set : 1;                                        // 0x0002(0x0001) BIT_FIELD NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                              Bitfield3 : 1;                                           // 0x0002(0x0001) BIT_FIELD NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                              Bitfield4Set : 1;                                        // 0x0002(0x0001) BIT_FIELD NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                              Bitfield5Set : 1;                                        // 0x0002(0x0001) BIT_FIELD NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                              Bitfield6 : 1;                                           // 0x0002(0x0001) BIT_FIELD NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                              Bitfield7Set : 1;                                        // 0x0002(0x0001) BIT_FIELD NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 
-// ScriptStruct Serialization.StructSerializerObjectTestStruct
-// 0x0010
-struct FStructSerializerObjectTestStruct
-{
-	class UClass*                                      Class;                                                    // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UObject*                                     ObjectPtr;                                                // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
-};
+	};
 
-// ScriptStruct Serialization.StructSerializerBuiltinTestStruct
-// 0x0060
-struct FStructSerializerBuiltinTestStruct
-{
-	struct FGuid                                       Guid;                                                     // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData)
-	struct FName                                       Name;                                                     // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FString                                     String;                                                   // 0x0018(0x0010) (ZeroConstructor)
-	struct FRotator                                    Rotator;                                                  // 0x0028(0x000C) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0034(0x0004) MISSED OFFSET
-	struct FText                                       Text;                                                     // 0x0038(0x0018)
-	struct FVector                                     Vector;                                                   // 0x0050(0x000C) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x005C(0x0004) MISSED OFFSET
-};
+	/**
+	 * ScriptStruct Serialization.StructSerializerObjectTestStruct
+	 * Size -> 0x00A0
+	 */
+	struct FStructSerializerObjectTestStruct
+	{
+	public:
+		class UClass*                                              Class;                                                   // 0x0000(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UClass*                                              SubClass;                                                // 0x0008(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                              SoftClass[0x28];                                         // 0x0010(0x0028) UNKNOWN PROPERTY: SoftClassProperty Serialization.StructSerializerObjectTestStruct.SoftClass
+		class UObject*                                             Object;                                                  // 0x0038(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		TWeakObjectPtr<class UMetaData>                            WeakObject;                                              // 0x0040(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                              SoftObject[0x28];                                        // 0x0048(0x0028) UNKNOWN PROPERTY: SoftObjectProperty Serialization.StructSerializerObjectTestStruct.SoftObject
+		struct FSoftClassPath                                      ClassPath;                                               // 0x0070(0x0018) ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FSoftObjectPath                                     ObjectPath;                                              // 0x0088(0x0018) ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 
-// ScriptStruct Serialization.StructSerializerArrayTestStruct
-// 0x0040
-struct FStructSerializerArrayTestStruct
-{
-	TArray<int>                                        Int32Array;                                               // 0x0000(0x0010) (ZeroConstructor)
-	int                                                StaticSingleElement;                                      // 0x0010(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                StaticInt32Array[0x3];                                    // 0x0014(0x0004) (ZeroConstructor, IsPlainOldData)
-	float                                              StaticFloatArray[0x3];                                    // 0x0020(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
-	TArray<struct FVector>                             VectorArray;                                              // 0x0030(0x0010) (ZeroConstructor)
-};
+	};
 
-// ScriptStruct Serialization.StructSerializerMapTestStruct
-// 0x00F0
-struct FStructSerializerMapTestStruct
-{
-	TMap<int, struct FString>                          IntToStr;                                                 // 0x0000(0x0050) (ZeroConstructor)
-	TMap<struct FString, struct FString>               StrToStr;                                                 // 0x0050(0x0050) (ZeroConstructor)
-	TMap<struct FString, struct FVector>               StrToVec;                                                 // 0x00A0(0x0050) (ZeroConstructor)
-};
+	/**
+	 * ScriptStruct Serialization.StructSerializerBuiltinTestStruct
+	 * Size -> 0x0090
+	 */
+	struct FStructSerializerBuiltinTestStruct
+	{
+	public:
+		struct FGuid                                               Guid;                                                    // 0x0000(0x0010) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class FName                                                Name;                                                    // 0x0010(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class FString                                              String;                                                  // 0x0018(0x0010) ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class FText                                                Text;                                                    // 0x0028(0x0018) NativeAccessSpecifierPublic
+		struct FVector                                             Vector;                                                  // 0x0040(0x000C) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                              UnknownData_G9XM[0x4];                                   // 0x004C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		struct FVector4                                            Vector4;                                                 // 0x0050(0x0010) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FRotator                                            Rotator;                                                 // 0x0060(0x000C) ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		unsigned char                                              UnknownData_92II[0x4];                                   // 0x006C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		struct FQuat                                               Quat;                                                    // 0x0070(0x0010) IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		struct FColor                                              Color;                                                   // 0x0080(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                              UnknownData_YF0U[0xC];                                   // 0x0084(0x000C) MISSED OFFSET (PADDING)
 
-// ScriptStruct Serialization.StructSerializerTestStruct
-// 0x01D8
-struct FStructSerializerTestStruct
-{
-	struct FStructSerializerNumericTestStruct          Numerics;                                                 // 0x0000(0x0030)
-	struct FStructSerializerBooleanTestStruct          Booleans;                                                 // 0x0030(0x0008)
-	struct FStructSerializerObjectTestStruct           Objects;                                                  // 0x0038(0x0010)
-	struct FStructSerializerBuiltinTestStruct          Builtins;                                                 // 0x0048(0x0060)
-	struct FStructSerializerArrayTestStruct            Arrays;                                                   // 0x00A8(0x0040)
-	struct FStructSerializerMapTestStruct              Maps;                                                     // 0x00E8(0x00F0)
-};
+	};
+
+	/**
+	 * ScriptStruct Serialization.StructSerializerSetTestStruct
+	 * Size -> 0x0140
+	 */
+	struct FStructSerializerSetTestStruct
+	{
+	public:
+		unsigned char                                              StrSet[0x50];                                            // 0x0000(0x0050) UNKNOWN PROPERTY: SetProperty Serialization.StructSerializerSetTestStruct.StrSet
+		unsigned char                                              IntSet[0x50];                                            // 0x0050(0x0050) UNKNOWN PROPERTY: SetProperty Serialization.StructSerializerSetTestStruct.IntSet
+		unsigned char                                              NameSet[0x50];                                           // 0x00A0(0x0050) UNKNOWN PROPERTY: SetProperty Serialization.StructSerializerSetTestStruct.NameSet
+		unsigned char                                              StructSet[0x50];                                         // 0x00F0(0x0050) UNKNOWN PROPERTY: SetProperty Serialization.StructSerializerSetTestStruct.StructSet
+
+	};
+
+	/**
+	 * ScriptStruct Serialization.StructSerializerArrayTestStruct
+	 * Size -> 0x0050
+	 */
+	struct FStructSerializerArrayTestStruct
+	{
+	public:
+		TArray<int>                                                Int32Array;                                              // 0x0000(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
+		int                                                        StaticSingleElement;                                     // 0x0010(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		int                                                        StaticInt32Array[0x3];                                   // 0x0014(0x000C) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                      StaticFloatArray[0x3];                                   // 0x0020(0x000C) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                              UnknownData_DG18[0x4];                                   // 0x002C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		TArray<struct FVector>                                     VectorArray;                                             // 0x0030(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
+		TArray<struct FStructSerializerBuiltinTestStruct>          StructArray;                                             // 0x0040(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
+
+	};
+
+	/**
+	 * ScriptStruct Serialization.StructSerializerMapTestStruct
+	 * Size -> 0x0140
+	 */
+	struct FStructSerializerMapTestStruct
+	{
+	public:
+		TMap<int, class FString>                                   IntToStr;                                                // 0x0000(0x0050) ZeroConstructor, NativeAccessSpecifierPublic
+		TMap<class FString, class FString>                         StrToStr;                                                // 0x0050(0x0050) ZeroConstructor, NativeAccessSpecifierPublic
+		TMap<class FString, struct FVector>                        StrToVec;                                                // 0x00A0(0x0050) ZeroConstructor, NativeAccessSpecifierPublic
+		TMap<class FString, struct FStructSerializerBuiltinTestStruct> StrToStruct;                                             // 0x00F0(0x0050) ZeroConstructor, NativeAccessSpecifierPublic
+
+	};
+
+	/**
+	 * ScriptStruct Serialization.StructSerializerTestStruct
+	 * Size -> 0x0440
+	 */
+	struct FStructSerializerTestStruct
+	{
+	public:
+		struct FStructSerializerNumericTestStruct                  Numerics;                                                // 0x0000(0x0030) NoDestructor, NativeAccessSpecifierPublic
+		struct FStructSerializerBooleanTestStruct                  Booleans;                                                // 0x0030(0x0003) NoDestructor, NativeAccessSpecifierPublic
+		unsigned char                                              UnknownData_AK9N[0x5];                                   // 0x0033(0x0005) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		struct FStructSerializerObjectTestStruct                   Objects;                                                 // 0x0038(0x00A0) NativeAccessSpecifierPublic
+		unsigned char                                              UnknownData_1DR7[0x8];                                   // 0x00D8(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		struct FStructSerializerBuiltinTestStruct                  Builtins;                                                // 0x00E0(0x0090) HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FStructSerializerArrayTestStruct                    Arrays;                                                  // 0x0170(0x0050) NativeAccessSpecifierPublic
+		struct FStructSerializerMapTestStruct                      Maps;                                                    // 0x01C0(0x0140) NativeAccessSpecifierPublic
+		struct FStructSerializerSetTestStruct                      Sets;                                                    // 0x0300(0x0140) NativeAccessSpecifierPublic
+
+	};
 
 }
 

@@ -1,35 +1,33 @@
-#pragma once
+﻿#pragma once
 
-// Name: Freddys, Version: 1.0.0
+/**
+ * Name: Fnaf Help Wanted
+ * Version: 1
+ */
 
 #ifdef _MSC_VER
-	#pragma pack(push, 0x8)
+	#pragma pack(push, 0x01)
 #endif
 
-namespace SDK
+namespace CG
 {
-//---------------------------------------------------------------------------
-// Classes
-//---------------------------------------------------------------------------
-
-// WidgetBlueprintGeneratedClass Timer.Timer_C
-// 0x000C (0x0214 - 0x0208)
-class UTimer_C : public UUserWidget
-{
-public:
-	class UTextBlock*                                  TextBlock_201;                                            // 0x0208(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, RepNotify, Interp, NonTransactional, EditorOnly, NoDestructor, AutoWeak, ContainsInstancedReference, AssetRegistrySearchable, SimpleDisplay, AdvancedDisplay, Protected, BlueprintCallable, BlueprintAuthorityOnly, TextExportTransient, NonPIEDuplicateTransient, ExposeOnSpawn, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, NativeAccessSpecifierProtected, NativeAccessSpecifierPrivate)
-	int                                                Timer;                                                    // 0x0210(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-
-	static UClass* StaticClass()
+	// --------------------------------------------------
+	// # Classes
+	// --------------------------------------------------
+	/**
+	 * WidgetBlueprintGeneratedClass Timer.Timer_C
+	 * Size -> 0x000C (FullSize[0x023C] - InheritedSize[0x0230])
+	 */
+	class UTimer_C : public UUserWidget
 	{
-		static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass Timer.Timer_C");
-		return ptr;
-	}
+	public:
+		class UTextBlock*                                          TextBlock_201;                                           // 0x0230(0x0008) ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash
+		int                                                        Timer;                                                   // 0x0238(0x0004) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
 
-
-	struct FText Time();
-};
-
+	public:
+		class FText Time();
+		static UClass* StaticClass();
+	};
 
 }
 

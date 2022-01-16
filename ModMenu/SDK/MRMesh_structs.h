@@ -1,23 +1,43 @@
-#pragma once
+﻿#pragma once
 
-// Name: Freddys, Version: 1.0.0
+/**
+ * Name: Fnaf Help Wanted
+ * Version: 1
+ */
 
 #ifdef _MSC_VER
-	#pragma pack(push, 0x8)
+	#pragma pack(push, 0x01)
 #endif
 
-namespace SDK
+namespace CG
 {
-//---------------------------------------------------------------------------
-// Script Structs
-//---------------------------------------------------------------------------
+	// --------------------------------------------------
+	// # Enums
+	// --------------------------------------------------
+	/**
+	 * Enum MRMesh.EMeshTrackerVertexColorMode
+	 */
+	enum class MRMesh_EMeshTrackerVertexColorMode : uint8_t
+	{
+		EMeshTrackerVertexColorMode__None                            = 0,
+		EMeshTrackerVertexColorMode__Confidence                      = 1,
+		EMeshTrackerVertexColorMode__Block                           = 2,
+		EMeshTrackerVertexColorMode__EMeshTrackerVertexColorMode_MAX = 3
+	};
 
-// ScriptStruct MRMesh.MRMeshConfiguration
-// 0x0001
-struct FMRMeshConfiguration
-{
-	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
-};
+	// --------------------------------------------------
+	// # Structs
+	// --------------------------------------------------
+	/**
+	 * ScriptStruct MRMesh.MRMeshConfiguration
+	 * Size -> 0x0001
+	 */
+	struct FMRMeshConfiguration
+	{
+	public:
+		unsigned char                                              UnknownData_A5XM[0x1];                                   // 0x0000(0x0001) MISSED OFFSET (PADDING)
+
+	};
 
 }
 

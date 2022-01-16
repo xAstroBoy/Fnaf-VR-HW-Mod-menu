@@ -1,48 +1,45 @@
-#pragma once
+﻿#pragma once
 
-// Name: Freddys, Version: 1.0.0
+/**
+ * Name: Fnaf Help Wanted
+ * Version: 1
+ */
 
 #ifdef _MSC_VER
-	#pragma pack(push, 0x8)
+	#pragma pack(push, 0x01)
 #endif
 
-namespace SDK
+namespace CG
 {
-//---------------------------------------------------------------------------
-// Classes
-//---------------------------------------------------------------------------
-
-// BlueprintGeneratedClass Office01_Bonnie.Office01_Bonnie_C
-// 0x004C (0x04C0 - 0x0474)
-class AOffice01_Bonnie_C : public AOffice01_AiBase_BP_C
-{
-public:
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0474(0x0004) MISSED OFFSET
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0478(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class UAudioComponent*                             Audio_Movement;                                           // 0x0480(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	struct FString                                     BonnieCurrentRoom;                                        // 0x0488(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	class ALocPoint_BP_C*                              OfficeLoc_Ref;                                            // 0x0498(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData)
-	class ARoomInfo_Bp_C*                              OfficeRoom_Ref;                                           // 0x04A0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData)
-	class ARoomInfo_Bp_C*                              WestHall_Room;                                            // 0x04A8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData)
-	class ALocPoint_BP_C*                              WestHall_Loc;                                             // 0x04B0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData)
-	class UBonnie_Office01_AnimBp_C*                   BonnieAMP_Ref;                                            // 0x04B8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-
-	static UClass* StaticClass()
+	// --------------------------------------------------
+	// # Classes
+	// --------------------------------------------------
+	/**
+	 * BlueprintGeneratedClass Office01_Bonnie.Office01_Bonnie_C
+	 * Size -> 0x004C (FullSize[0x03D8] - InheritedSize[0x038C])
+	 */
+	class AOffice01_Bonnie_C : public AOffice01_AiBase_BP_C
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass Office01_Bonnie.Office01_Bonnie_C");
-		return ptr;
-	}
+	public:
+		unsigned char                                              UnknownData_68JU[0x4];                                   // 0x038C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		struct FPointerToUberGraphFrame                            UberGraphFrame;                                          // 0x0390(0x0008) ZeroConstructor, Transient, DuplicateTransient
+		class UAudioComponent*                                     Audio_Movement;                                          // 0x0398(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
+		class FString                                              BonnieCurrentRoom;                                       // 0x03A0(0x0010) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash
+		class ALocPoint_BP_C*                                      OfficeLoc_Ref;                                           // 0x03B0(0x0008) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		class ARoomInfo_Bp_C*                                      OfficeRoom_Ref;                                          // 0x03B8(0x0008) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		class ARoomInfo_Bp_C*                                      WestHall_Room;                                           // 0x03C0(0x0008) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		class ALocPoint_BP_C*                                      WestHall_Loc;                                            // 0x03C8(0x0008) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		class UBonnie_Office01_AnimBp_C*                           BonnieAMP_Ref;                                           // 0x03D0(0x0008) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
 
-
-	void UserConstructionScript();
-	void ReceiveBeginPlay();
-	void MoveAi(class ARoomInfo_Bp_C** Room, class ALocPoint_BP_C** Location);
-	void ForceMoveBonnie();
-	void Bonnie_SpecialDoorMove();
-	void ReceiveTick(float* DeltaSeconds);
-	void ExecuteUbergraph_Office01_Bonnie(int EntryPoint);
-};
-
+	public:
+		void ReceiveBeginPlay();
+		void MoveAi(class ARoomInfo_Bp_C* Room, class ALocPoint_BP_C* Location);
+		void ForceMoveBonnie();
+		void Bonnie_SpecialDoorMove();
+		void ReceiveTick(float DeltaSeconds);
+		void ExecuteUbergraph_Office01_Bonnie(int EntryPoint);
+		static UClass* StaticClass();
+	};
 
 }
 

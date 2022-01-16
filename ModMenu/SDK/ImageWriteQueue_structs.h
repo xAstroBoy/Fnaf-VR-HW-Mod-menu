@@ -1,45 +1,50 @@
-#pragma once
+﻿#pragma once
 
-// Name: Freddys, Version: 1.0.0
+/**
+ * Name: Fnaf Help Wanted
+ * Version: 1
+ */
 
 #ifdef _MSC_VER
-	#pragma pack(push, 0x8)
+	#pragma pack(push, 0x01)
 #endif
 
-namespace SDK
+namespace CG
 {
-//---------------------------------------------------------------------------
-// Enums
-//---------------------------------------------------------------------------
+	// --------------------------------------------------
+	// # Enums
+	// --------------------------------------------------
+	/**
+	 * Enum ImageWriteQueue.EDesiredImageFormat
+	 */
+	enum class ImageWriteQueue_EDesiredImageFormat : uint8_t
+	{
+		EDesiredImageFormat__PNG                     = 0,
+		EDesiredImageFormat__JPG                     = 1,
+		EDesiredImageFormat__BMP                     = 2,
+		EDesiredImageFormat__EXR                     = 3,
+		EDesiredImageFormat__EDesiredImageFormat_MAX = 4
+	};
 
-// Enum ImageWriteQueue.EDesiredImageFormat
-enum class EDesiredImageFormat : uint8_t
-{
-	EDesiredImageFormat__PNG       = 0,
-	EDesiredImageFormat__JPG       = 1,
-	EDesiredImageFormat__BMP       = 2,
-	EDesiredImageFormat__EXR       = 3,
-	EDesiredImageFormat__EDesiredImageFormat_MAX = 4
-};
+	// --------------------------------------------------
+	// # Structs
+	// --------------------------------------------------
+	/**
+	 * ScriptStruct ImageWriteQueue.ImageWriteOptions
+	 * Size -> 0x0060
+	 */
+	struct FImageWriteOptions
+	{
+	public:
+		ImageWriteQueue_EDesiredImageFormat                        Format;                                                  // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                              UnknownData_S0TJ[0x3];                                   // 0x0001(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class FScriptDelegate                                      OnComplete;                                              // 0x0004(0x0010) BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, NativeAccessSpecifierPublic
+		int                                                        CompressionQuality;                                      // 0x0014(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                       bOverwriteFile;                                          // 0x0018(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                       bAsync;                                                  // 0x0019(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                              UnknownData_QD91[0x46];                                  // 0x001A(0x0046) MISSED OFFSET (PADDING)
 
-
-
-//---------------------------------------------------------------------------
-// Script Structs
-//---------------------------------------------------------------------------
-
-// ScriptStruct ImageWriteQueue.ImageWriteOptions
-// 0x0060
-struct FImageWriteOptions
-{
-	EDesiredImageFormat                                Format;                                                   // 0x0000(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
-	struct FScriptDelegate                             OnComplete;                                               // 0x0008(0x0014) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
-	int                                                CompressionQuality;                                       // 0x0018(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bOverwriteFile;                                           // 0x001C(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bAsync;                                                   // 0x001D(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x42];                                      // 0x001E(0x0042) MISSED OFFSET
-};
+	};
 
 }
 

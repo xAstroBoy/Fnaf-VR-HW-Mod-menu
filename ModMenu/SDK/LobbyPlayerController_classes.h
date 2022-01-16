@@ -1,53 +1,50 @@
-#pragma once
+﻿#pragma once
 
-// Name: Freddys, Version: 1.0.0
+/**
+ * Name: Fnaf Help Wanted
+ * Version: 1
+ */
 
 #ifdef _MSC_VER
-	#pragma pack(push, 0x8)
+	#pragma pack(push, 0x01)
 #endif
 
-namespace SDK
+namespace CG
 {
-//---------------------------------------------------------------------------
-// Classes
-//---------------------------------------------------------------------------
-
-// BlueprintGeneratedClass LobbyPlayerController.LobbyPlayerController_C
-// 0x001C (0x0694 - 0x0678)
-class ALobbyPlayerController_C : public APlayerController
-{
-public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0678(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	bool                                               HasJoined;                                                // 0x0680(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0681(0x0003) MISSED OFFSET
-	int                                                CurrentCharacterID;                                       // 0x0684(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              LastDetectedValue;                                        // 0x0688(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               Ready;                                                    // 0x068C(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               CanBecomeReady;                                           // 0x068D(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x2];                                       // 0x068E(0x0002) MISSED OFFSET
-	int                                                PlayerNumber;                                             // 0x0690(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-
-	static UClass* StaticClass()
+	// --------------------------------------------------
+	// # Classes
+	// --------------------------------------------------
+	/**
+	 * BlueprintGeneratedClass LobbyPlayerController.LobbyPlayerController_C
+	 * Size -> 0x001C (FullSize[0x05AC] - InheritedSize[0x0590])
+	 */
+	class ALobbyPlayerController_C : public APlayerController
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass LobbyPlayerController.LobbyPlayerController_C");
-		return ptr;
-	}
+	public:
+		struct FPointerToUberGraphFrame                            UberGraphFrame;                                          // 0x0590(0x0008) ZeroConstructor, Transient, DuplicateTransient
+		bool                                                       HasJoined;                                               // 0x0598(0x0001) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor
+		unsigned char                                              UnknownData_8GHM[0x3];                                   // 0x0599(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		int                                                        CurrentCharacterID;                                      // 0x059C(0x0004) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		float                                                      LastDetectedValue;                                       // 0x05A0(0x0004) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		bool                                                       Ready;                                                   // 0x05A4(0x0001) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor
+		bool                                                       CanBecomeReady;                                          // 0x05A5(0x0001) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor
+		unsigned char                                              UnknownData_L3N4[0x2];                                   // 0x05A6(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		int                                                        PlayerNumber;                                            // 0x05A8(0x0004) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
 
-
-	void GetPlayerNumber(int* PlayerNumber);
-	void IsPlayerReady(bool* IsConfirmed);
-	void GetCharacterID(int* Character_ID);
-	void UserConstructionScript();
-	void InpActEvt_JoinGame_K2Node_InputActionEvent_2(const struct FKey& Key);
-	void InpActEvt_JoinGame_K2Node_InputActionEvent_1(const struct FKey& Key);
-	void InpAxisEvt_HorizontalMovement_K2Node_InputAxisEvent_1(float AxisValue);
-	void ActivatePlayer(int PlayerNumber);
-	void UpdateCharacter(int Character_ID);
-	void OnPlayerAccepted();
-	void OnPlayerRejected();
-	void ExecuteUbergraph_LobbyPlayerController(int EntryPoint);
-};
-
+	public:
+		void GetPlayerNumber(int* PlayerNumber);
+		void IsPlayerReady(bool* IsConfirmed);
+		void GetCharacterID(int* Character_ID);
+		void InpActEvt_JoinGame_K2Node_InputActionEvent_2(const struct FKey& Key);
+		void InpActEvt_JoinGame_K2Node_InputActionEvent_1(const struct FKey& Key);
+		void InpAxisEvt_HorizontalMovement_K2Node_InputAxisEvent_1(float AxisValue);
+		void ActivatePlayer(int PlayerNumber);
+		void UpdateCharacter(int Character_ID);
+		void OnPlayerAccepted();
+		void OnPlayerRejected();
+		void ExecuteUbergraph_LobbyPlayerController(int EntryPoint);
+		static UClass* StaticClass();
+	};
 
 }
 

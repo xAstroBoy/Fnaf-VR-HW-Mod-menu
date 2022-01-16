@@ -1,158 +1,171 @@
-#pragma once
+﻿#pragma once
 
-// Name: Freddys, Version: 1.0.0
+/**
+ * Name: Fnaf Help Wanted
+ * Version: 1
+ */
 
 #ifdef _MSC_VER
-	#pragma pack(push, 0x8)
+	#pragma pack(push, 0x01)
 #endif
 
-namespace SDK
+namespace CG
 {
-//---------------------------------------------------------------------------
-// Classes
-//---------------------------------------------------------------------------
-
-// Class AudioMixer.SynthComponent
-// 0x0380 (0x05C0 - 0x0240)
-class USynthComponent : public USceneComponent
-{
-public:
-	class USoundAttenuation*                           AttenuationSettings;                                      // 0x0240(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FSoundAttenuationSettings                   AttenuationOverrides;                                     // 0x0248(0x02A8) (Edit, BlueprintVisible)
-	class USoundConcurrency*                           ConcurrencySettings;                                      // 0x04F0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USoundClass*                                 SoundClass;                                               // 0x04F8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class USoundEffectSourcePresetChain*               SourceEffectChain;                                        // 0x0500(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class USoundSubmix*                                SoundSubmix;                                              // 0x0508(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	TArray<struct FSoundSubmixSendInfo>                SoundSubmixSends;                                         // 0x0510(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<struct FSoundSourceBusSendInfo>             BusSends;                                                 // 0x0520(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<struct FSoundSourceBusSendInfo>             PreEffectBusSends;                                        // 0x0530(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	unsigned char                                      bIsUISound : 1;                                           // 0x0540(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      bIsPreviewSound : 1;                                      // 0x0540(0x0001)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0541(0x0003) MISSED OFFSET
-	int                                                EnvelopeFollowerAttackTime;                               // 0x0544(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                EnvelopeFollowerReleaseTime;                              // 0x0548(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x054C(0x0004) MISSED OFFSET
-	struct FScriptMulticastDelegate                    OnAudioEnvelopeValue;                                     // 0x0550(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData02[0x20];                                      // 0x0560(0x0020) MISSED OFFSET
-	class USynthSound*                                 Synth;                                                    // 0x0580(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class UAudioComponent*                             AudioComponent;                                           // 0x0588(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x30];                                      // 0x0590(0x0030) MISSED OFFSET
-
-	static UClass* StaticClass()
+	// --------------------------------------------------
+	// # Classes
+	// --------------------------------------------------
+	/**
+	 * Class AudioMixer.SynthComponent
+	 * Size -> 0x0420 (FullSize[0x0640] - InheritedSize[0x0220])
+	 */
+	class USynthComponent : public USceneComponent
 	{
-		static auto ptr = UObject::FindClass("Class AudioMixer.SynthComponent");
-		return ptr;
-	}
+	public:
+		class USoundAttenuation*                                   AttenuationSettings;                                     // 0x0220(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FSoundAttenuationSettings                           AttenuationOverrides;                                    // 0x0228(0x02E8) Edit, BlueprintVisible, NativeAccessSpecifierPublic
+		class USoundConcurrency*                                   ConcurrencySettings;                                     // 0x0510(0x0008) ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                              ConcurrencySet[0x50];                                    // 0x0518(0x0050) UNKNOWN PROPERTY: SetProperty AudioMixer.SynthComponent.ConcurrencySet
+		class USoundClass*                                         SoundClass;                                              // 0x0568(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class USoundEffectSourcePresetChain*                       SourceEffectChain;                                       // 0x0570(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class USoundSubmix*                                        SoundSubmix;                                             // 0x0578(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		TArray<struct FSoundSubmixSendInfo>                        SoundSubmixSends;                                        // 0x0580(0x0010) Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic
+		TArray<struct FSoundSourceBusSendInfo>                     BusSends;                                                // 0x0590(0x0010) Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic
+		struct FSoundModulation                                    Modulation;                                              // 0x05A0(0x0010) Edit, NativeAccessSpecifierPublic
+		TArray<struct FSoundSourceBusSendInfo>                     PreEffectBusSends;                                       // 0x05B0(0x0010) Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic
+		unsigned char                                              bIsUISound : 1;                                          // 0x05C0(0x0001) BIT_FIELD Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                              bIsPreviewSound : 1;                                     // 0x05C0(0x0001) BIT_FIELD NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                              UnknownData_9EVG[0x3];                                   // 0x05C1(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		int                                                        EnvelopeFollowerAttackTime;                              // 0x05C4(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		int                                                        EnvelopeFollowerReleaseTime;                             // 0x05C8(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                              UnknownData_9W7K[0x4];                                   // 0x05CC(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class FScriptMulticastDelegate                             OnAudioEnvelopeValue;                                    // 0x05D0(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
+		unsigned char                                              UnknownData_4BU4[0x20];                                  // 0x05E0(0x0020) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class USynthSound*                                         Synth;                                                   // 0x0600(0x0008) ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+		class UAudioComponent*                                     AudioComponent;                                          // 0x0608(0x0008) ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+		unsigned char                                              UnknownData_T30W[0x30];                                  // 0x0610(0x0030) MISSED OFFSET (PADDING)
 
+	public:
+		void Stop();
+		void Start();
+		void SetVolumeMultiplier(float VolumeMultiplier);
+		void SetSubmixSend(class USoundSubmix* Submix, float SendLevel);
+		bool IsPlaying();
+		static UClass* StaticClass();
+	};
 
-	void Stop();
-	void Start();
-	void SetVolumeMultiplier(float VolumeMultiplier);
-	void SetSubmixSend(class USoundSubmix* Submix, float SendLevel);
-	bool IsPlaying();
-};
-
-
-// Class AudioMixer.AudioMixerBlueprintLibrary
-// 0x0000 (0x0028 - 0x0028)
-class UAudioMixerBlueprintLibrary : public UBlueprintFunctionLibrary
-{
-public:
-
-	static UClass* StaticClass()
+	/**
+	 * Class AudioMixer.AudioGenerator
+	 * Size -> 0x0080 (FullSize[0x00A8] - InheritedSize[0x0028])
+	 */
+	class UAudioGenerator : public UObject
 	{
-		static auto ptr = UObject::FindClass("Class AudioMixer.AudioMixerBlueprintLibrary");
-		return ptr;
-	}
+	public:
+		unsigned char                                              UnknownData_C2VZ[0x80];                                  // 0x0028(0x0080) MISSED OFFSET (PADDING)
 
+	public:
+		static UClass* StaticClass();
+	};
 
-	class USoundWave* STATIC_StopRecordingOutput(class UObject* WorldContextObject, EAudioRecordingExportType ExportType, const struct FString& Name, const struct FString& Path, class USoundSubmix* SubmixToRecord, class USoundWave* ExistingSoundWaveToOverwrite);
-	void STATIC_StartRecordingOutput(class UObject* WorldContextObject, float ExpectedDuration, class USoundSubmix* SubmixToRecord);
-	void STATIC_SetBypassSourceEffectChainEntry(class UObject* WorldContextObject, class USoundEffectSourcePresetChain* PresetChain, int EntryIndex, bool bBypassed);
-	void STATIC_ResumeRecordingOutput(class UObject* WorldContextObject, class USoundSubmix* SubmixToPause);
-	void STATIC_RemoveSourceEffectFromPresetChain(class UObject* WorldContextObject, class USoundEffectSourcePresetChain* PresetChain, int EntryIndex);
-	void STATIC_RemoveMasterSubmixEffect(class UObject* WorldContextObject, class USoundEffectSubmixPreset* SubmixEffectPreset);
-	void STATIC_PauseRecordingOutput(class UObject* WorldContextObject, class USoundSubmix* SubmixToPause);
-	int STATIC_GetNumberOfEntriesInSourceEffectChain(class UObject* WorldContextObject, class USoundEffectSourcePresetChain* PresetChain);
-	void STATIC_ClearMasterSubmixEffects(class UObject* WorldContextObject);
-	void STATIC_AddSourceEffectToPresetChain(class UObject* WorldContextObject, class USoundEffectSourcePresetChain* PresetChain, const struct FSourceEffectChainEntry& Entry);
-	void STATIC_AddMasterSubmixEffect(class UObject* WorldContextObject, class USoundEffectSubmixPreset* SubmixEffectPreset);
-};
-
-
-// Class AudioMixer.SubmixEffectDynamicsProcessorPreset
-// 0x0078 (0x00B8 - 0x0040)
-class USubmixEffectDynamicsProcessorPreset : public USoundEffectSubmixPreset
-{
-public:
-	unsigned char                                      UnknownData00[0x50];                                      // 0x0040(0x0050) MISSED OFFSET
-	struct FSubmixEffectDynamicsProcessorSettings      Settings;                                                 // 0x0090(0x0028) (Edit, BlueprintVisible)
-
-	static UClass* StaticClass()
+	/**
+	 * Class AudioMixer.AudioMixerBlueprintLibrary
+	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+	 */
+	class UAudioMixerBlueprintLibrary : public UBlueprintFunctionLibrary
 	{
-		static auto ptr = UObject::FindClass("Class AudioMixer.SubmixEffectDynamicsProcessorPreset");
-		return ptr;
-	}
+	public:
+		class USoundWave* STATIC_StopRecordingOutput(class UObject* WorldContextObject, Engine_EAudioRecordingExportType ExportType, const class FString& Name, const class FString& Path, class USoundSubmix* SubmixToRecord, class USoundWave* ExistingSoundWaveToOverwrite);
+		void STATIC_StopAnalyzingOutput(class UObject* WorldContextObject, class USoundSubmix* SubmixToStopAnalyzing);
+		void STATIC_StartRecordingOutput(class UObject* WorldContextObject, float ExpectedDuration, class USoundSubmix* SubmixToRecord);
+		void STATIC_StartAnalyzingOutput(class UObject* WorldContextObject, class USoundSubmix* SubmixToAnalyze, AudioMixer_EFFTSize FFTSize, AudioMixer_EFFTPeakInterpolationMethod InterpolationMethod, AudioMixer_EFFTWindowType WindowType, float HopSize);
+		void STATIC_SetBypassSourceEffectChainEntry(class UObject* WorldContextObject, class USoundEffectSourcePresetChain* PresetChain, int EntryIndex, bool bBypassed);
+		void STATIC_ResumeRecordingOutput(class UObject* WorldContextObject, class USoundSubmix* SubmixToPause);
+		void STATIC_RemoveSourceEffectFromPresetChain(class UObject* WorldContextObject, class USoundEffectSourcePresetChain* PresetChain, int EntryIndex);
+		void STATIC_RemoveMasterSubmixEffect(class UObject* WorldContextObject, class USoundEffectSubmixPreset* SubmixEffectPreset);
+		void STATIC_PauseRecordingOutput(class UObject* WorldContextObject, class USoundSubmix* SubmixToPause);
+		void STATIC_GetPhaseForFrequencies(class UObject* WorldContextObject, TArray<float> Frequencies, TArray<float>* Phases, class USoundSubmix* SubmixToAnalyze);
+		int STATIC_GetNumberOfEntriesInSourceEffectChain(class UObject* WorldContextObject, class USoundEffectSourcePresetChain* PresetChain);
+		void STATIC_GetMagnitudeForFrequencies(class UObject* WorldContextObject, TArray<float> Frequencies, TArray<float>* Magnitudes, class USoundSubmix* SubmixToAnalyze);
+		void STATIC_ClearMasterSubmixEffects(class UObject* WorldContextObject);
+		void STATIC_AddSourceEffectToPresetChain(class UObject* WorldContextObject, class USoundEffectSourcePresetChain* PresetChain, const struct FSourceEffectChainEntry& Entry);
+		void STATIC_AddMasterSubmixEffect(class UObject* WorldContextObject, class USoundEffectSubmixPreset* SubmixEffectPreset);
+		static UClass* StaticClass();
+	};
 
-
-	void SetSettings(const struct FSubmixEffectDynamicsProcessorSettings& InSettings);
-};
-
-
-// Class AudioMixer.SubmixEffectSubmixEQPreset
-// 0x0048 (0x0088 - 0x0040)
-class USubmixEffectSubmixEQPreset : public USoundEffectSubmixPreset
-{
-public:
-	unsigned char                                      UnknownData00[0x38];                                      // 0x0040(0x0038) MISSED OFFSET
-	struct FSubmixEffectSubmixEQSettings               Settings;                                                 // 0x0078(0x0010) (Edit, BlueprintVisible)
-
-	static UClass* StaticClass()
+	/**
+	 * Class AudioMixer.SubmixEffectDynamicsProcessorPreset
+	 * Size -> 0x0078 (FullSize[0x00B8] - InheritedSize[0x0040])
+	 */
+	class USubmixEffectDynamicsProcessorPreset : public USoundEffectSubmixPreset
 	{
-		static auto ptr = UObject::FindClass("Class AudioMixer.SubmixEffectSubmixEQPreset");
-		return ptr;
-	}
+	public:
+		unsigned char                                              UnknownData_G8PI[0x50];                                  // 0x0040(0x0050) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		struct FSubmixEffectDynamicsProcessorSettings              Settings;                                                // 0x0090(0x0028) Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic
 
+	public:
+		void SetSettings(const struct FSubmixEffectDynamicsProcessorSettings& InSettings);
+		static UClass* StaticClass();
+	};
 
-	void SetSettings(const struct FSubmixEffectSubmixEQSettings& InSettings);
-};
-
-
-// Class AudioMixer.SubmixEffectReverbPreset
-// 0x0090 (0x00D0 - 0x0040)
-class USubmixEffectReverbPreset : public USoundEffectSubmixPreset
-{
-public:
-	unsigned char                                      UnknownData00[0x5C];                                      // 0x0040(0x005C) MISSED OFFSET
-	struct FSubmixEffectReverbSettings                 Settings;                                                 // 0x009C(0x0034) (Edit, BlueprintVisible)
-
-	static UClass* StaticClass()
+	/**
+	 * Class AudioMixer.SubmixEffectSubmixEQPreset
+	 * Size -> 0x0048 (FullSize[0x0088] - InheritedSize[0x0040])
+	 */
+	class USubmixEffectSubmixEQPreset : public USoundEffectSubmixPreset
 	{
-		static auto ptr = UObject::FindClass("Class AudioMixer.SubmixEffectReverbPreset");
-		return ptr;
-	}
+	public:
+		unsigned char                                              UnknownData_KGYP[0x38];                                  // 0x0040(0x0038) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		struct FSubmixEffectSubmixEQSettings                       Settings;                                                // 0x0078(0x0010) Edit, BlueprintVisible, NativeAccessSpecifierPublic
 
+	public:
+		void SetSettings(const struct FSubmixEffectSubmixEQSettings& InSettings);
+		static UClass* StaticClass();
+	};
 
-	void SetSettingsWithReverbEffect(class UReverbEffect* InReverbEffect, float WetLevel, float DryLevel);
-	void SetSettings(const struct FSubmixEffectReverbSettings& InSettings);
-};
-
-
-// Class AudioMixer.SynthSound
-// 0x0020 (0x0280 - 0x0260)
-class USynthSound : public USoundWaveProcedural
-{
-public:
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0260(0x0020) MISSED OFFSET
-
-	static UClass* StaticClass()
+	/**
+	 * Class AudioMixer.SubmixEffectReverbPreset
+	 * Size -> 0x0090 (FullSize[0x00D0] - InheritedSize[0x0040])
+	 */
+	class USubmixEffectReverbPreset : public USoundEffectSubmixPreset
 	{
-		static auto ptr = UObject::FindClass("Class AudioMixer.SynthSound");
-		return ptr;
-	}
+	public:
+		unsigned char                                              UnknownData_0EQK[0x5C];                                  // 0x0040(0x005C) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		struct FSubmixEffectReverbSettings                         Settings;                                                // 0x009C(0x0034) Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic
 
-};
+	public:
+		void SetSettingsWithReverbEffect(class UReverbEffect* InReverbEffect, float WetLevel, float DryLevel);
+		void SetSettings(const struct FSubmixEffectReverbSettings& InSettings);
+		static UClass* StaticClass();
+	};
 
+	/**
+	 * Class AudioMixer.SubmixEffectReverbFastPreset
+	 * Size -> 0x0090 (FullSize[0x00D0] - InheritedSize[0x0040])
+	 */
+	class USubmixEffectReverbFastPreset : public USoundEffectSubmixPreset
+	{
+	public:
+		unsigned char                                              UnknownData_OMD1[0x5C];                                  // 0x0040(0x005C) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		struct FSubmixEffectReverbFastSettings                     Settings;                                                // 0x009C(0x0034) Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic
+
+	public:
+		void SetSettingsWithReverbEffect(class UReverbEffect* InReverbEffect, float WetLevel, float DryLevel);
+		void SetSettings(const struct FSubmixEffectReverbFastSettings& InSettings);
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class AudioMixer.SynthSound
+	 * Size -> 0x0020 (FullSize[0x0330] - InheritedSize[0x0310])
+	 */
+	class USynthSound : public USoundWaveProcedural
+	{
+	public:
+		class USynthComponent*                                     OwningSynthComponent;                                    // 0x0310(0x0008) ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+		unsigned char                                              UnknownData_ZBZ6[0x18];                                  // 0x0318(0x0018) MISSED OFFSET (PADDING)
+
+	public:
+		static UClass* StaticClass();
+	};
 
 }
 

@@ -1,85 +1,83 @@
-#pragma once
+﻿#pragma once
 
-// Name: Freddys, Version: 1.0.0
+/**
+ * Name: Fnaf Help Wanted
+ * Version: 1
+ */
 
 #ifdef _MSC_VER
-	#pragma pack(push, 0x8)
+	#pragma pack(push, 0x01)
 #endif
 
-namespace SDK
+namespace CG
 {
-//---------------------------------------------------------------------------
-// Classes
-//---------------------------------------------------------------------------
-
-// BlueprintGeneratedClass DLC_MonitorBoard_Office01.DLC_MonitorBoard_Office01_C
-// 0x0A5E (0x0E58 - 0x03FA)
-class ADLC_MonitorBoard_Office01_C : public AMonitorBoard_BP_C
-{
-public:
-	unsigned char                                      UnknownData00[0x6];                                       // 0x03FA(0x0006) MISSED OFFSET
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0400(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class UBoxComponent*                               ClickCollision;                                           // 0x0408(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UStaticMeshComponent*                        StaticMesh;                                               // 0x0410(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UAudioComponent*                             Audio_CameraDisplay;                                      // 0x0418(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	float                                              Timeline_0_0_FlickerIntensity_BF07055E4B61DDB563A58E931BB88593;// 0x0420(0x0004) (ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<ETimelineDirection>                    Timeline_0_0__Direction_BF07055E4B61DDB563A58E931BB88593; // 0x0424(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x0425(0x0003) MISSED OFFSET
-	class UTimelineComponent*                          Timeline_0_1;                                             // 0x0428(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	bool                                               DisableInteractions;                                      // 0x0430(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               Disable_Logic_1;                                          // 0x0431(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x6];                                       // 0x0432(0x0006) MISSED OFFSET
-	TArray<class AMonitorButton_BP_C*>                 MonitorButtons;                                           // 0x0438(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance)
-	class UPostProcessComponent*                       NightmarePostProcess;                                     // 0x0448(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	struct FPostProcessSettings                        PostProcessSettings_Static;                               // 0x0450(0x04E0) (Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FPostProcessSettings                        PostProcessSettings;                                      // 0x0930(0x04E0) (Edit, BlueprintVisible, DisableEditOnInstance)
-	class AOffice01_GameManager_C*                     Office01_Game_Manger;                                     // 0x0E10(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
-	bool                                               BTNCanAddTime;                                            // 0x0E18(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               BTNInteractableIsHeld;                                    // 0x0E19(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x6];                                       // 0x0E1A(0x0006) MISSED OFFSET
-	class ARoomInfo_Bp_C*                              VisibleRoom;                                              // 0x0E20(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
-	bool                                               PowerRebooting;                                           // 0x0E28(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               PowerOutage;                                              // 0x0E29(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               BeaconOnCooldown;                                         // 0x0E2A(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x5];                                       // 0x0E2B(0x0005) MISSED OFFSET
-	class ADLC_Office01_FlashBeaconButton_Bp_C*        FlashBeaconButtonRef;                                     // 0x0E30(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData)
-	class UMaterialInterface*                          StoreOldMonitorScreen;                                    // 0x0E38(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               NewVar_1;                                                 // 0x0E40(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData05[0x3];                                       // 0x0E41(0x0003) MISSED OFFSET
-	float                                              FoxyCameraTimer;                                          // 0x0E44(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               FoxyBeingWatched;                                         // 0x0E48(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData06[0x3];                                       // 0x0E49(0x0003) MISSED OFFSET
-	float                                              DeltaTimeStored;                                          // 0x0E4C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               PirateCoveCameraBroke;                                    // 0x0E50(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData07[0x3];                                       // 0x0E51(0x0003) MISSED OFFSET
-	float                                              TimeBeforeCameraFixed;                                    // 0x0E54(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-
-	static UClass* StaticClass()
+	// --------------------------------------------------
+	// # Classes
+	// --------------------------------------------------
+	/**
+	 * BlueprintGeneratedClass DLC_MonitorBoard_Office01.DLC_MonitorBoard_Office01_C
+	 * Size -> 0x0B05 (FullSize[0x0E18] - InheritedSize[0x0313])
+	 */
+	class ADLC_MonitorBoard_Office01_C : public AMonitorBoard_BP_C
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass DLC_MonitorBoard_Office01.DLC_MonitorBoard_Office01_C");
-		return ptr;
-	}
+	public:
+		unsigned char                                              UnknownData_E7BL[0x5];                                   // 0x0313(0x0005) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		struct FPointerToUberGraphFrame                            UberGraphFrame;                                          // 0x0318(0x0008) ZeroConstructor, Transient, DuplicateTransient
+		class UBoxComponent*                                       ClickCollision;                                          // 0x0320(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
+		class UStaticMeshComponent*                                StaticMesh;                                              // 0x0328(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
+		class UAudioComponent*                                     Audio_CameraDisplay;                                     // 0x0330(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
+		float                                                      Timeline_0_0_FlickerIntensity_BF07055E4B61DDB563A58E931BB88593; // 0x0338(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		Engine_ETimelineDirection                                  Timeline_0_0__Direction_BF07055E4B61DDB563A58E931BB88593; // 0x033C(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		unsigned char                                              UnknownData_BQNM[0x3];                                   // 0x033D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class UTimelineComponent*                                  Timeline_0_1;                                            // 0x0340(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		bool                                                       DisableInteractions;                                     // 0x0348(0x0001) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor
+		bool                                                       Disable_Logic_1;                                         // 0x0349(0x0001) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor
+		unsigned char                                              UnknownData_V6Z8[0x6];                                   // 0x034A(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		TArray<class AMonitorButton_BP_C*>                         MonitorButtons;                                          // 0x0350(0x0010) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance
+		class UPostProcessComponent*                               NightmarePostProcess;                                    // 0x0360(0x0008) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		unsigned char                                              UnknownData_7FCS[0x8];                                   // 0x0368(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		struct FPostProcessSettings                                PostProcessSettings_Static;                              // 0x0370(0x0530) Edit, BlueprintVisible, DisableEditOnInstance
+		struct FPostProcessSettings                                PostProcessSettings;                                     // 0x08A0(0x0530) Edit, BlueprintVisible, DisableEditOnInstance
+		class AOffice01_GameManager_C*                             Office01_Game_Manger;                                    // 0x0DD0(0x0008) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		bool                                                       BTNCanAddTime;                                           // 0x0DD8(0x0001) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor
+		bool                                                       BTNInteractableIsHeld;                                   // 0x0DD9(0x0001) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor
+		unsigned char                                              UnknownData_72M4[0x6];                                   // 0x0DDA(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class ARoomInfo_Bp_C*                                      VisibleRoom;                                             // 0x0DE0(0x0008) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		bool                                                       PowerRebooting;                                          // 0x0DE8(0x0001) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor
+		bool                                                       PowerOutage;                                             // 0x0DE9(0x0001) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor
+		bool                                                       BeaconOnCooldown;                                        // 0x0DEA(0x0001) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor
+		unsigned char                                              UnknownData_QRAZ[0x5];                                   // 0x0DEB(0x0005) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class ADLC_Office01_FlashBeaconButton_Bp_C*                FlashBeaconButtonRef;                                    // 0x0DF0(0x0008) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		class UMaterialInterface*                                  StoreOldMonitorScreen;                                   // 0x0DF8(0x0008) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		bool                                                       NewVar_0_1;                                              // 0x0E00(0x0001) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor
+		unsigned char                                              UnknownData_XVPS[0x3];                                   // 0x0E01(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		float                                                      FoxyCameraTimer;                                         // 0x0E04(0x0004) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		bool                                                       FoxyBeingWatched;                                        // 0x0E08(0x0001) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor
+		unsigned char                                              UnknownData_GZZX[0x3];                                   // 0x0E09(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		float                                                      DeltaTimeStored;                                         // 0x0E0C(0x0004) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		bool                                                       PirateCoveCameraBroke;                                   // 0x0E10(0x0001) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor
+		unsigned char                                              UnknownData_WWQ6[0x3];                                   // 0x0E11(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		float                                                      TimeBeforeCameraFixed;                                   // 0x0E14(0x0004) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
 
-
-	void PirateCoveCameraState(bool PirateCoveCameraBroke);
-	void SubscribeMonitorBtn(class AMonitorButton_BP_C** ItemToFind, int* BtnID);
-	void UserConstructionScript();
-	void Timeline_0_0__FinishedFunc();
-	void Timeline_0_0__UpdateFunc();
-	void Event_Btn_Pressed(int* ID, bool* Pressed, class UMaterial** CameraMaterial, TArray<class ARoomInfo_Bp_C*>* Room, class UStaticMesh** VentLight, class AFNAFCamera_Blueprint_C** FNAFCamera);
-	void ReceiveBeginPlay();
-	void DisableMonitorInteractions(bool Player_Won_Game);
-	void ReceiveTick(float* DeltaSeconds);
-	void EventBtnInteractableIsHeld(bool IsBeingHeld);
-	void Event_Btn_Interactable(bool* IsLightBtn, bool* IsVentBtn, bool* IsAudioBtn, bool* IsMusicBoxBtn, bool* IsRebootBtn, bool* IsHeldDown);
-	void RestartPower();
-	void PowerOutageHasOccured();
-	void PowerRebooted();
-	void PowerOutageEvent();
-	void SetVisualStatic(bool* EnableStatic);
-	void ExecuteUbergraph_DLC_MonitorBoard_Office01(int EntryPoint);
-};
-
+	public:
+		void PirateCoveCameraState(bool PirateCoveCameraBroke);
+		void SubscribeMonitorBtn(class AMonitorButton_BP_C* ItemToFind, int* BtnID);
+		void Timeline_0_0__FinishedFunc();
+		void Timeline_0_0__UpdateFunc();
+		void Event_Btn_Pressed(int ID, bool Pressed, class UMaterial* CameraMaterial, TArray<class ARoomInfo_Bp_C*> Room, class UStaticMesh* VentLight, class AFNAFCamera_Blueprint_C* FNAFCamera);
+		void ReceiveBeginPlay();
+		void DisableMonitorInteractions(bool Player_Won_Game);
+		void ReceiveTick(float DeltaSeconds);
+		void EventBtnInteractableIsHeld(bool IsBeingHeld);
+		void Event_Btn_Interactable(bool IsLightBtn, bool IsVentBtn, bool IsAudioBtn, bool IsMusicBoxBtn, bool IsRebootBtn, bool IsHeldDown);
+		void RestartPower();
+		void PowerOutageHasOccured();
+		void PowerRebooted();
+		void PowerOutageEvent();
+		void SetVisualStatic(bool EnableStatic);
+		void ExecuteUbergraph_DLC_MonitorBoard_Office01(int EntryPoint);
+		static UClass* StaticClass();
+	};
 
 }
 

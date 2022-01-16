@@ -1,51 +1,48 @@
-#pragma once
+﻿#pragma once
 
-// Name: Freddys, Version: 1.0.0
+/**
+ * Name: Fnaf Help Wanted
+ * Version: 1
+ */
 
 #ifdef _MSC_VER
-	#pragma pack(push, 0x8)
+	#pragma pack(push, 0x01)
 #endif
 
-namespace SDK
+namespace CG
 {
-//---------------------------------------------------------------------------
-// Classes
-//---------------------------------------------------------------------------
-
-// BlueprintGeneratedClass Office03_Gamemanager.Office03_Gamemanager_C
-// 0x00C8 (0x0518 - 0x0450)
-class AOffice03_Gamemanager_C : public AOffice_BaseGamemanager_C
-{
-public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0450(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	struct FScriptMulticastDelegate                    OnSoundPlayed;                                            // 0x0458(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
-	TEnumAsByte<EOffice03_PhantomAi_enum>              PhantomAiTypeToUse;                                       // 0x0468(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0469(0x0007) MISSED OFFSET
-	class UDataTable*                                  PhantomDataTable;                                         // 0x0470(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FLevelInfoStruct                            CurrentLevelInfo_1;                                       // 0x0478(0x0078) (Edit, BlueprintVisible, DisableEditOnInstance)
-	class UDataTable*                                  ResourceManagementDataTable;                              // 0x04F0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               DisableAllPhantoms;                                       // 0x04F8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x04F9(0x0007) MISSED OFFSET
-	struct FScriptMulticastDelegate                    DisablePhantoms;                                          // 0x0500(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
-	class AStaticMeshActor*                            MovableVentDoors;                                         // 0x0510(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData)
-
-	static UClass* StaticClass()
+	// --------------------------------------------------
+	// # Classes
+	// --------------------------------------------------
+	/**
+	 * BlueprintGeneratedClass Office03_Gamemanager.Office03_Gamemanager_C
+	 * Size -> 0x00C8 (FullSize[0x0430] - InheritedSize[0x0368])
+	 */
+	class AOffice03_Gamemanager_C : public AOffice_BaseGamemanager_C
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass Office03_Gamemanager.Office03_Gamemanager_C");
-		return ptr;
-	}
+	public:
+		struct FPointerToUberGraphFrame                            UberGraphFrame;                                          // 0x0368(0x0008) ZeroConstructor, Transient, DuplicateTransient
+		class FScriptMulticastDelegate                             OnSoundPlayed;                                           // 0x0370(0x0010) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable
+		Office03_PhantomAi_enum_EOffice03_PhantomAi_enum           PhantomAiTypeToUse;                                      // 0x0380(0x0001) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		unsigned char                                              UnknownData_OQM9[0x7];                                   // 0x0381(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class UDataTable*                                          PhantomDataTable;                                        // 0x0388(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		struct FLevelInfoStruct                                    CurrentLevelInfo_1;                                      // 0x0390(0x0078) Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference, HasGetValueTypeHash
+		class UDataTable*                                          ResourceManagementDataTable;                             // 0x0408(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		bool                                                       DisableAllPhantoms;                                      // 0x0410(0x0001) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor
+		unsigned char                                              UnknownData_BJIJ[0x7];                                   // 0x0411(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class FScriptMulticastDelegate                             DisablePhantoms;                                         // 0x0418(0x0010) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable
+		class AStaticMeshActor*                                    MovableVentDoors;                                        // 0x0428(0x0008) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash
 
-
-	void GetRMData(struct FOffice03_ResourceManagement_struct* AIData_Struct, bool* DataWasFound);
-	void GetPhantomAIData(TEnumAsByte<EOffice03_PhantomAi_enum> PhantomType, struct FOffice03_PhantomData* AIData_Struct, bool* DataWasFound);
-	void UserConstructionScript();
-	void SoundPlayed(class ARoomInfo_Bp_C* Room);
-	void ReceiveBeginPlay();
-	void ExecuteUbergraph_Office03_Gamemanager(int EntryPoint);
-	void DisablePhantoms__DelegateSignature();
-	void OnSoundPlayed__DelegateSignature(class ARoomInfo_Bp_C* Room);
-};
-
+	public:
+		void GetRMData(struct FOffice03_ResourceManagement_struct* AIData_Struct, bool* DataWasFound);
+		void GetPhantomAIData(Office03_PhantomAi_enum_EOffice03_PhantomAi_enum PhantomType, struct FOffice03_PhantomData* AIData_Struct, bool* DataWasFound);
+		void SoundPlayed(class ARoomInfo_Bp_C* Room);
+		void ReceiveBeginPlay();
+		void ExecuteUbergraph_Office03_Gamemanager(int EntryPoint);
+		void DisablePhantoms__DelegateSignature();
+		void OnSoundPlayed__DelegateSignature(class ARoomInfo_Bp_C* Room);
+		static UClass* StaticClass();
+	};
 
 }
 
