@@ -90,6 +90,34 @@ namespace CG
 	};
 
 	/**
+	 * ScriptStruct GameplayTags.GameplayTagQuery
+	 * Size -> 0x0048
+	 */
+	struct FGameplayTagQuery
+	{
+	public:
+		int                                                        TokenStreamVersion;                                      // 0x0000(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+		unsigned char                                              UnknownData_1KI4[0x4];                                   // 0x0004(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		TArray<struct FGameplayTag>                                TagDictionary;                                           // 0x0008(0x0010) ZeroConstructor, NativeAccessSpecifierPrivate
+		TArray<unsigned char>                                      QueryTokenStream;                                        // 0x0018(0x0010) ZeroConstructor, NativeAccessSpecifierPrivate
+		class FString                                              UserDescription;                                         // 0x0028(0x0010) ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+		class FString                                              AutoDescription;                                         // 0x0038(0x0010) ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+
+	};
+
+	/**
+	 * ScriptStruct GameplayTags.GameplayTagContainer
+	 * Size -> 0x0020
+	 */
+	struct FGameplayTagContainer
+	{
+	public:
+		TArray<struct FGameplayTag>                                GameplayTags;                                            // 0x0000(0x0010) BlueprintVisible, ZeroConstructor, SaveGame, Protected, NativeAccessSpecifierProtected
+		TArray<struct FGameplayTag>                                ParentTags;                                              // 0x0010(0x0010) ZeroConstructor, Transient, Protected, NativeAccessSpecifierProtected
+
+	};
+
+	/**
 	 * ScriptStruct GameplayTags.GameplayTagSource
 	 * Size -> 0x0020
 	 */
@@ -98,7 +126,7 @@ namespace CG
 	public:
 		class FName                                                SourceName;                                              // 0x0000(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		GameplayTags_EGameplayTagSourceType                        SourceType;                                              // 0x0008(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_TT8R[0x7];                                   // 0x0009(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_XV9P[0x7];                                   // 0x0009(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		class UGameplayTagsList*                                   SourceTagList;                                           // 0x0010(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		class URestrictedGameplayTagsList*                         SourceRestrictedTagList;                                 // 0x0018(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 
@@ -124,7 +152,7 @@ namespace CG
 	{
 	public:
 		bool                                                       bAllowNonRestrictedChildren;                             // 0x0020(0x0001) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_CR9P[0x7];                                   // 0x0021(0x0007) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_RAFW[0x7];                                   // 0x0021(0x0007) MISSED OFFSET (PADDING)
 
 	};
 
@@ -171,7 +199,7 @@ namespace CG
 	struct FGameplayTagCreationWidgetHelper
 	{
 	public:
-		unsigned char                                              UnknownData_PRDQ[0x1];                                   // 0x0000(0x0001) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_U07B[0x1];                                   // 0x0000(0x0001) MISSED OFFSET (PADDING)
 
 	};
 
@@ -182,7 +210,7 @@ namespace CG
 	struct FGameplayTagReferenceHelper
 	{
 	public:
-		unsigned char                                              UnknownData_E7SK[0x10];                                  // 0x0000(0x0010) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_DMR2[0x10];                                  // 0x0000(0x0010) MISSED OFFSET (PADDING)
 
 	};
 
@@ -193,35 +221,7 @@ namespace CG
 	struct FGameplayTagNode
 	{
 	public:
-		unsigned char                                              UnknownData_M7NS[0x50];                                  // 0x0000(0x0050) MISSED OFFSET (PADDING)
-
-	};
-
-	/**
-	 * ScriptStruct GameplayTags.GameplayTagContainer
-	 * Size -> 0x0020
-	 */
-	struct FGameplayTagContainer
-	{
-	public:
-		TArray<struct FGameplayTag>                                GameplayTags;                                            // 0x0000(0x0010) BlueprintVisible, ZeroConstructor, SaveGame, Protected, NativeAccessSpecifierProtected
-		TArray<struct FGameplayTag>                                ParentTags;                                              // 0x0010(0x0010) ZeroConstructor, Transient, Protected, NativeAccessSpecifierProtected
-
-	};
-
-	/**
-	 * ScriptStruct GameplayTags.GameplayTagQuery
-	 * Size -> 0x0048
-	 */
-	struct FGameplayTagQuery
-	{
-	public:
-		int                                                        TokenStreamVersion;                                      // 0x0000(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		unsigned char                                              UnknownData_A9XO[0x4];                                   // 0x0004(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		TArray<struct FGameplayTag>                                TagDictionary;                                           // 0x0008(0x0010) ZeroConstructor, NativeAccessSpecifierPrivate
-		TArray<unsigned char>                                      QueryTokenStream;                                        // 0x0018(0x0010) ZeroConstructor, NativeAccessSpecifierPrivate
-		class FString                                              UserDescription;                                         // 0x0028(0x0010) ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		class FString                                              AutoDescription;                                         // 0x0038(0x0010) ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+		unsigned char                                              UnknownData_XW0O[0x50];                                  // 0x0000(0x0050) MISSED OFFSET (PADDING)
 
 	};
 

@@ -23,7 +23,7 @@ namespace CG
 	public:
 		class FName                                                CurveSourceBindingName;                                  // 0x0730(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		float                                                      CurveSyncOffset;                                         // 0x0738(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_YD4Z[0x34];                                  // 0x073C(0x0034) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_VJS2[0x34];                                  // 0x073C(0x0034) MISSED OFFSET (PADDING)
 
 	public:
 		static UClass* StaticClass();

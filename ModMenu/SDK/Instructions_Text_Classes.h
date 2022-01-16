@@ -26,7 +26,7 @@ namespace CG
 		class UTextBlock*                                          Instruction;                                             // 0x0240(0x0008) BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash
 		class FText                                                InstructionText;                                         // 0x0248(0x0018) Edit, BlueprintVisible
 		ControllerButtonsEnum_EControllerButtonsEnum               ControllerButton;                                        // 0x0260(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash
-		unsigned char                                              UnknownData_LC7Y[0x7];                                   // 0x0261(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_TJQV[0x7];                                   // 0x0261(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		TMap<unsigned char, ControllerButtonsEnum_EControllerButtonsEnum> ControllerOverrides;                                     // 0x0268(0x0050) Edit, BlueprintVisible, ZeroConstructor, ExposeOnSpawn
 		TMap<SWGVR_ESWGVRControllerType, ControllerButtonsEnum_EControllerButtonsEnum> ControllerTypeOverrides;                                 // 0x02B8(0x0050) Edit, BlueprintVisible, ZeroConstructor
 

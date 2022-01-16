@@ -59,7 +59,7 @@ namespace CG
 		class FScriptMulticastDelegate                             OnFlowGraphDisconnected;                                 // 0x0228(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
 		class UFlowGraphConnector*                                 ConnectedTo;                                             // 0x0238(0x0008) BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
 		float                                                      FlowConnectorDistance;                                   // 0x0240(0x0004) ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		unsigned char                                              UnknownData_TUYD[0xC];                                   // 0x0244(0x000C) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_LABJ[0xC];                                   // 0x0244(0x000C) MISSED OFFSET (PADDING)
 
 	public:
 		void OnDisconnected();
@@ -84,7 +84,7 @@ namespace CG
 	public:
 		bool                                                       bIsFlowSource;                                           // 0x0240(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
 		bool                                                       bIsConnectedToFlow;                                      // 0x0241(0x0001) Edit, ZeroConstructor, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		unsigned char                                              UnknownData_15LE[0x56];                                  // 0x0242(0x0056) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_VDIK[0x56];                                  // 0x0242(0x0056) MISSED OFFSET (PADDING)
 
 	public:
 		void UnregisterConnector(class UFlowGraphConnector* Connector);
@@ -110,7 +110,7 @@ namespace CG
 	public:
 		freddys_EFNAFGameType                                      GameType;                                                // 0x0038(0x0001) Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		bool                                                       HasHalloweenDLC;                                         // 0x0039(0x0001) Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_RU8R[0x6];                                   // 0x003A(0x0006) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_XN6A[0x6];                                   // 0x003A(0x0006) MISSED OFFSET (PADDING)
 
 	public:
 		static UClass* StaticClass();
@@ -141,7 +141,7 @@ namespace CG
 	public:
 		freddys_EGLVictoryState                                    VictoryState;                                            // 0x02A0(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
 		freddys_EGLGameState                                       GameState;                                               // 0x02A1(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		unsigned char                                              UnknownData_ZFSX[0x6];                                   // 0x02A2(0x0006) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_Y87P[0x6];                                   // 0x02A2(0x0006) MISSED OFFSET (PADDING)
 
 	public:
 		void SetVictoryCondition(freddys_EGLVictoryState victory);
@@ -169,9 +169,9 @@ namespace CG
 	{
 	public:
 		int                                                        ForcedVariantNumber;                                     // 0x0168(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_CX5T[0x4];                                   // 0x016C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_O1DY[0x4];                                   // 0x016C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		class UClass*                                              LoadingWidget;                                           // 0x0170(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		unsigned char                                              UnknownData_INYU[0x18];                                  // 0x0178(0x0018) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_22TQ[0x18];                                  // 0x0178(0x0018) MISSED OFFSET (PADDING)
 
 	public:
 		void SwitchFNAFGameType(freddys_EFNAFGameType* GameType);
@@ -208,9 +208,9 @@ namespace CG
 		int                                                        GridHeight;                                              // 0x024C(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
 		float                                                      GridCellSize;                                            // 0x0250(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
 		bool                                                       bShowDebug;                                              // 0x0254(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		unsigned char                                              UnknownData_PPJF[0x3];                                   // 0x0255(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_I5EH[0x3];                                   // 0x0255(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		TArray<class UTextRenderComponent*>                        TextRenderers;                                           // 0x0258(0x0010) Edit, ExportObject, ZeroConstructor, EditConst, ContainsInstancedReference, NativeAccessSpecifierPrivate
-		unsigned char                                              UnknownData_K46Z[0x20];                                  // 0x0268(0x0020) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_PY4S[0x20];                                  // 0x0268(0x0020) MISSED OFFSET (PADDING)
 
 	public:
 		void SetCellDebugDisplay(int CellID, int CellX, int CellY, int CellDistance);
@@ -282,9 +282,9 @@ namespace CG
 	class ASwitchboardbuttons : public AActor
 	{
 	public:
-		unsigned char                                              UnknownData_UBE4[0x8];                                   // 0x0240(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_Z7WY[0x8];                                   // 0x0240(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		class FString                                              buttonID;                                                // 0x0248(0x0010) Edit, ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		unsigned char                                              UnknownData_HAMD[0x8];                                   // 0x0258(0x0008) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_50OX[0x8];                                   // 0x0258(0x0008) MISSED OFFSET (PADDING)
 
 	public:
 		void OnSwitchBoardButtonPessed(const class FString& buttonidentification);
@@ -300,7 +300,7 @@ namespace CG
 	{
 	public:
 		class USWS_GroupComponent*                                 AudioGroupComponent;                                     // 0x0240(0x0008) Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_DHUU[0x10];                                  // 0x0248(0x0010) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_FGZU[0x10];                                  // 0x0248(0x0010) MISSED OFFSET (PADDING)
 
 	public:
 		static UClass* StaticClass();
@@ -314,7 +314,7 @@ namespace CG
 	{
 	public:
 		class UDataTable*                                          AudioAssetData;                                          // 0x0240(0x0008) Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		unsigned char                                              UnknownData_5LM9[0x48];                                  // 0x0248(0x0048) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_RG20[0x48];                                  // 0x0248(0x0048) MISSED OFFSET (PADDING)
 
 	public:
 		void StopAudioByID(int ID);
@@ -339,7 +339,7 @@ namespace CG
 	{
 	public:
 		class USoundCue*                                           SoundCueFile;                                            // 0x0240(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_AE71[0x10];                                  // 0x0248(0x0010) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_IABV[0x10];                                  // 0x0248(0x0010) MISSED OFFSET (PADDING)
 
 	public:
 		void StopAudio(class UObject* WorldContextObject);
@@ -366,7 +366,7 @@ namespace CG
 	{
 	public:
 		TArray<class ASWS_AudioSource*>                            ListOfAudioSources;                                      // 0x00D8(0x0010) Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_5ETQ[0x8];                                   // 0x00E8(0x0008) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_AL1I[0x8];                                   // 0x00E8(0x0008) MISSED OFFSET (PADDING)
 
 	public:
 		void UnRegisterAudioSource(class ASWS_AudioSource* cue);
@@ -387,7 +387,7 @@ namespace CG
 	class USWS_SaveGame : public USaveGame
 	{
 	public:
-		unsigned char                                              UnknownData_C2AO[0x8];                                   // 0x0028(0x0008) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_92EB[0x8];                                   // 0x0028(0x0008) MISSED OFFSET (PADDING)
 
 	public:
 		static UClass* StaticClass();

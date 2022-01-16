@@ -33,13 +33,13 @@ namespace CG
 	public:
 		class UPhysicsAsset*                                       PhysicsAsset;                                            // 0x0048(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		struct FClothConfig                                        ClothConfig;                                             // 0x0050(0x00D4) Edit, NoDestructor, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_LCLI[0x4];                                   // 0x0124(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_C9V3[0x4];                                   // 0x0124(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		TArray<struct FClothLODData>                               LODData;                                                 // 0x0128(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
 		TArray<int>                                                LodMap;                                                  // 0x0138(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
 		TArray<class FName>                                        UsedBoneNames;                                           // 0x0148(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
 		TArray<int>                                                UsedBoneIndices;                                         // 0x0158(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
 		int                                                        ReferenceBoneIndex;                                      // 0x0168(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_AK2E[0x4];                                   // 0x016C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_EKXI[0x4];                                   // 0x016C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		class UClothingAssetCustomData*                            CustomData;                                              // 0x0170(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 
 	public:
@@ -63,7 +63,7 @@ namespace CG
 	class UClothingSimulationInteractorNv : public UClothingSimulationInteractor
 	{
 	public:
-		unsigned char                                              UnknownData_GZLD[0x10];                                  // 0x0030(0x0010) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_QGFX[0x10];                                  // 0x0030(0x0010) MISSED OFFSET (PADDING)
 
 	public:
 		void SetAnimDriveSpringStiffness(float InStiffness);

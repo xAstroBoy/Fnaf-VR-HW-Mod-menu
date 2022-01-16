@@ -35,7 +35,7 @@ namespace CG
 	{
 	public:
 		struct FMaterialQualityOverrides                           QualityOverrides[0x3];                                   // 0x0028(0x0018) Edit, Config, NoDestructor, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_4DTA[0x10];                                  // 0x0040(0x0010) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_O989[0x10];                                  // 0x0040(0x0010) MISSED OFFSET (PADDING)
 
 	public:
 		static UClass* StaticClass();

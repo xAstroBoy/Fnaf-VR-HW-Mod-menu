@@ -21,7 +21,7 @@ namespace CG
 	class UAudioCapture : public UAudioGenerator
 	{
 	public:
-		unsigned char                                              UnknownData_BII6[0x8];                                   // 0x00A8(0x0008) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_TH3E[0x8];                                   // 0x00A8(0x0008) MISSED OFFSET (PADDING)
 
 	public:
 		void StopCapturingAudio();
@@ -50,7 +50,7 @@ namespace CG
 	{
 	public:
 		int                                                        JitterLatencyFrames;                                     // 0x0640(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_XG2J[0xAC];                                  // 0x0644(0x00AC) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_UZMI[0xAC];                                  // 0x0644(0x00AC) MISSED OFFSET (PADDING)
 
 	public:
 		static UClass* StaticClass();

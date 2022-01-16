@@ -21,7 +21,7 @@ namespace CG
 	class AOffice01_MotionControllerPawn_C : public AOffice_MotionControllerPawn_C
 	{
 	public:
-		unsigned char                                              UnknownData_U8IE[0x6];                                   // 0x1042(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_FKZT[0x6];                                   // 0x1042(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		struct FPointerToUberGraphFrame                            UberGraphFrame;                                          // 0x1048(0x0008) ZeroConstructor, Transient, DuplicateTransient
 		class AOffice01_Door_Bp_C*                                 Ref_DoorLeft;                                            // 0x1050(0x0008) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash
 		class AOffice01_Door_Bp_C*                                 Ref_DoorRight;                                           // 0x1058(0x0008) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash

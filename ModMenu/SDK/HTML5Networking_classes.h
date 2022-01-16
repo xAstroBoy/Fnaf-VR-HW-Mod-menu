@@ -21,7 +21,7 @@ namespace CG
 	class UWebSocketConnection : public UNetConnection
 	{
 	public:
-		unsigned char                                              UnknownData_YY27[0x10];                                  // 0x19A0(0x0010) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_JZ49[0x10];                                  // 0x19A0(0x0010) MISSED OFFSET (PADDING)
 
 	public:
 		static UClass* StaticClass();
@@ -35,7 +35,7 @@ namespace CG
 	{
 	public:
 		int                                                        WebSocketPort;                                           // 0x0748(0x0004) ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_MVQ7[0xC];                                   // 0x074C(0x000C) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_LNKS[0xC];                                   // 0x074C(0x000C) MISSED OFFSET (PADDING)
 
 	public:
 		static UClass* StaticClass();

@@ -58,7 +58,7 @@ namespace CG
 		struct FAnimNode_SaveCachedPose                            AnimGraphNode_SaveCachedPose_B1B29E3B4D7F26A1EDEE049D1B0CD4F2; // 0x0F60(0x00B8)
 		struct FAnimNode_UseCachedPose                             AnimGraphNode_UseCachedPose_8F95C1C54126424B8EE05F95E33FA1D7; // 0x1018(0x0028)
 		bool                                                       CanAppear;                                               // 0x1040(0x0001) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor
-		unsigned char                                              UnknownData_DXAI[0x3];                                   // 0x1041(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_R2A7[0x3];                                   // 0x1041(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		float                                                      BasePlayRate;                                            // 0x1044(0x0004) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
 		class ANMHands_BP_C*                                       BP_Ref;                                                  // 0x1048(0x0008) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
 		float                                                      WigglePlayRate;                                          // 0x1050(0x0004) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
@@ -66,7 +66,7 @@ namespace CG
 		bool                                                       CanDisappear;                                            // 0x1058(0x0001) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor
 		bool                                                       IsHit;                                                   // 0x1059(0x0001) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor
 		bool                                                       CanStart;                                                // 0x105A(0x0001) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor
-		unsigned char                                              UnknownData_A27T[0x1];                                   // 0x105B(0x0001) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_WYXK[0x1];                                   // 0x105B(0x0001) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		float                                                      RateMult;                                                // 0x105C(0x0004) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
 
 	public:
